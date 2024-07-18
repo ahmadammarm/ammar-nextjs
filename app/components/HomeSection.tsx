@@ -1,8 +1,9 @@
 import React from "react";
 import { profile } from "@/constants/profile";
+import { DownloadIcon } from "lucide-react";
 
 
-function HomeSection() {
+function HomeSection(): JSX.Element {
     const { nama, role, CV, deskripsi, foto } = profile[0];
 
     return (
@@ -17,18 +18,15 @@ function HomeSection() {
                         {role}
                     </div>
                     <p className="text-md mb-6">{deskripsi}</p>
-                    <div className="flex flex-row">
                         <a
                             href={CV}
                             target="_blank"
                             rel="noopener noreferrer"
-                            download={`${nama}_CV.pdf`}
-                            className="inline-block bg-teal-500 text-white px-6 py-2 rounded
-                hover:bg-teal-600 transition duration-200 ease-in-out"
+                            download={`CV_Ahmad_Ammar`}
+                            className="flex flex-row bg-teal-500 text-white px-4 py-2 lg:px-6 lg: py-4 rounded hover:bg-teal-600 transition duration-200 ease-in-out"
                         >
-                            Download CV
+                            <DownloadIcon className="mr-1"/> Download CV
                         </a>
-                    </div>
                 </div>
                 {/* Content End */}
 
@@ -37,13 +35,10 @@ function HomeSection() {
                     <img
                         src={foto[0]}
                         alt={nama}
-                        width={300}
-                        height={300}
-                        className="rounded-full object-cover
-                        hover:shadow-lg transition duration-200 ease-in-out
-                        "
+                        className="w-64 h-64 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-teal-500"
                     />
                 </div>
+
                 {/* Image Content End*/}
             </div>
         </section>
