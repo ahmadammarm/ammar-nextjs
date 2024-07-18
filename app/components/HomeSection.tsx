@@ -7,7 +7,7 @@ function HomeSection(): JSX.Element {
     const { nama, role, CV, deskripsi, foto } = profile[0];
 
     return (
-        <section id="home" className="min-h-screen flex flex-col justify-center items-center p-4 pt-28">
+        <section id="home" className="min-h-screen flex flex-col justify-center items-center p-4 pt-28 lg:pt-16">
             <div className="max-w-7xl w-full mx-auto flex flex-col-reverse lg:flex-row items-center">
                 {/* Content Start */}
                 <div className="flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4">
