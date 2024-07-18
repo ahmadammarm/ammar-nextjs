@@ -23,7 +23,7 @@ function HomeSection(): JSX.Element {
                             target="_blank"
                             rel="noopener noreferrer"
                             download={`CV_Ahmad_Ammar`}
-                            className="flex flex-row bg-teal-500 text-white px-4 py-2 lg:px-6 lg: py-4 rounded hover:bg-teal-600 transition duration-200 ease-in-out"
+                            className="flex flex-row bg-teal-500 text-white px-4 py-3 lg:px-6 lg:py-4 rounded hover:bg-teal-600 transition duration-200 ease-in-out"
                         >
                             <DownloadIcon className="mr-1"/> Download CV
                         </a>
@@ -38,7 +38,6 @@ function HomeSection(): JSX.Element {
                         className="w-64 h-64 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-teal-500"
                     />
                 </div>
-
                 {/* Image Content End*/}
             </div>
         </section>
