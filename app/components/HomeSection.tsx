@@ -37,9 +37,11 @@ function HomeSection() {
                     <img
                         src={foto[0]}
                         alt={nama}
-                        width={400}
-                        height={400}
-                        className="rounded-full object-cover"
+                        width={300}
+                        height={300}
+                        className="rounded-full object-cover
+                        hover:shadow-lg transition duration-200 ease-in-out
+                        "
                     />
                 </div>
                 {/* Image Content End*/}
