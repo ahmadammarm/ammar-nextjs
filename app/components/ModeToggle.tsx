@@ -19,12 +19,12 @@ export function ModeToggle() {
     >
       {theme === "light" ? (
         <>
-          <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all border-gray-300" />
+          <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 border-gray-300" />
           <span className="sr-only">Dark Mode</span>
         </>
       ) : (
         <>
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all border-gray-900" />
+          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 border-gray-900" />
           <span className="sr-only">Light Mode</span>
         </>
       )}

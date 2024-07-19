@@ -9,8 +9,6 @@ export const metadata: Metadata = {
   title: "Ammar | Personal Website",
   description: "Ammar's personal website to showcase his portfolios. He is a Full Stack Web Developer from Indonesia.",
   keywords: "web developer, full stack, laravel, nextjs, tailwindcss, bootstrap, figma, laravel",
-  viewport: "width=device-width, initial-scale=1.0",
-  robots: "index, follow",
 };
 
 export default function RootLayout({
@@ -25,7 +23,6 @@ export default function RootLayout({
             attribute="class"
             defaultTheme="system"
             enableSystem
-            disableTransitionOnChange
           >
           {children}
         </ThemeProvider>
