@@ -35,7 +35,7 @@ function EducationSection(): React.ReactElement {
                     {organization.map((org, index) => (
                         <Card key={index} className="flex flex-col items-center p-4 mb-5 hover:shadow-teal-500 shadow-md transition-all ease-in-out duration-300 fade-in-element">
                             <img src={org.logo} alt={org.nama} className="w-24 h-20 mb-4" />
-                            <CardHeader className="text-lg font-semibold mb-2 text-teal-500">{org.nama}</CardHeader>
+                            <CardHeader className="text-lg font-semibold mb-2 text-teal-500 text-center">{org.nama}</CardHeader>
                             <CardDescription className="text-sm text-gray-700 dark:text-gray-400">{org.jabatan}</CardDescription>
                             <CardDescription className="text-sm text-gray-700 dark:text-gray-400">{org.tahun}</CardDescription>
                         </Card>
