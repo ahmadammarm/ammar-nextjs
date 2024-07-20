@@ -37,6 +37,7 @@
     "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
+    "aos": "^3.0.0-beta.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
@@ -62,6 +63,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.24.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -72,3 +72,18 @@ body {
   transition: background-color 0.4s, color 0.4s;
 }
 
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 3s ease-out forwards;
+}
+

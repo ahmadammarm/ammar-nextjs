@@ -1,36 +1,90 @@
-import { Card } from '@/components/ui/card'
+"use client"
+
 import { about } from '@/constants/about';
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+import { Separator } from '@/components/ui/separator';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-function AboutSection() {
+function AboutSection(): React.ReactElement {
+    const { nama, negara, role, deskripsi } = about[0];
 
-    const { nama, negara, role, CV, deskripsi, foto } = about[0];
-  return (
-    <div id='about' className=' min-h-screen flex flex-col justify-center items-center p-3 pt-28 lg:pt-16'>
-        <h1 className='text-5xl font-bold mb-[5rem] mt-[3rem]'>
-            About Me
-        </h1>
-        <div className=' max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center'>
-            <div className=' flex justify-center lg:w-1/2 p-4 mb-8 lg:mb-0'>
-                <img src='/images/profile.jpg' alt='Ammar' className=' w-64 h-64 lg:w-80 lg:h-80 rounded-md object-cover border-4 border-teal-500' /> 
+    const titleRef = useRef(null);
+    const imgRef = useRef(null);
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observerCallback = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        if (titleRef.current) observer.observe(titleRef.current);
+        if (imgRef.current) observer.observe(imgRef.current);
+        if (contentRef.current) observer.observe(contentRef.current);
+
+        return () => {
+            if (titleRef.current) observer.unobserve(titleRef.current);
+            if (imgRef.current) observer.unobserve(imgRef.current);
+            if (contentRef.current) observer.unobserve(contentRef.current);
+        };
+    }, []);
+
+    return (
+        <div id='about' className=' min-h-screen flex flex-col justify-center items-center p-3 pt-28 lg:pt-16'>
+            <h1 ref={titleRef} className='opacity-0 transform translate-y-10 transition-all duration-700 text-5xl font-bold mb-[5rem] mt-[3rem]' id='about-title'>
+                About Me
+            </h1>
+            <div className=' max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center'>
+
+                {/* Image Content Start */}
+                <div ref={imgRef} className='opacity-0 transform translate-y-10 transition-all duration-700 flex justify-center lg:w-1/2 p-4 mb-8 lg:mb-0' id='about-img'>
+                    <img src='/assets/foto.jpg' alt='Ammar' className=' w-64 h-64 lg:w-80 lg:h-96 rounded-md object-cover border-4 border-teal-500' /> 
+                </div>
+                {/* Image Content End */}
+
+                {/* Content Start */}
+                <div ref={contentRef} className='opacity-0 transform translate-y-10 transition-all duration-700 flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4 lg:flex lg:flex-col' id='about-content'>
+                    <p className=' text-gray-700 dark:text-gray-400 text-3xl font-bold mb-[1.5rem]'>
+                        Haloo..👋 saya <span className='text-3xl text-teal-500'>{nama}</span>
+                    </p>
+                    <p className='text-gray-700 dark:text-gray-400 text-xl font-bold mb-[4rem] italic'>
+                        Seorang <span className='text-2xl text-teal-500'>{role} 🧑🏻‍💻</span> bertempat tinggal di <span className='text-2xl text-teal-500'>{negara} 🌏</span>.
+                    </p>
+                    <p className=' text-md lg:text-lg mb-6'>
+                        {deskripsi}
+                    </p>
+                    <Separator className="mb-5"/>
+                    <div className='flex flex-col lg:flex-row items-center justify-center'>
+                        <Card className='border border-teal-500 mb-5 lg:mr-5 p-3'>
+                            <CardHeader className='text-center'>
+                                <CardTitle className='text-3xl'>2+</CardTitle>
+                                <CardDescription className='text-xl'>Tahun Pengalaman</CardDescription>
+                            </CardHeader>
+                        </Card>
+                        <Card className='border border-teal-500 mb-5 lg:mr-5 p-3'>
+                            <CardHeader className='text-center'>
+                                <CardTitle className='text-3xl'>5+</CardTitle>
+                                <CardDescription className='text-xl'>Proyek Terselesaikan</CardDescription>
+                            </CardHeader>
+                        </Card>
+                    </div>
+                </div>
+                {/* Content End */}
             </div>
-            <div className='flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4 '>
-                <p className=' text-gray-700 dark:text-gray-400 text-3xl font-bold mb-[1.5rem]'>
-                    Haloo..👋 saya <span className='text-3xl text-teal-500'>{nama}</span>
-                </p>
-                <p className='text-gray-700 dark:text-gray-400 text-xl font-bold mb-[4rem] italic'>
-                    Seorang <span className='text-2xl text-teal-500'>{role} 🧑🏻‍💻</span> bertempat tinggal di <span className='text-2xl text-teal-500'>{negara} 🌏</span>.
-                </p>
-                <p className=' text-md lg:text-lg mb-6'>
-                    {deskripsi}
-                </p>
-            </div>
-            <Card>
-
-            </Card>
         </div>
-    </div>
-  )
+    );
 }
 
-export default AboutSection
+export default AboutSection;
