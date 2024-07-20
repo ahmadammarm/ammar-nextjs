@@ -87,3 +87,33 @@ body {
   animation: fadeInUp 3s ease-out forwards;
 }
 
+.bubble-chat {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  white-space: nowrap;
+  max-width: calc(100vw - 20px);
+  overflow-wrap: break-word;
+  z-index: 10;
+}
+
+.group:hover .bubble-chat {
+  opacity: 1;
+}
+
+.navbar-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-item.active {
+  color: #4FD1C5; /* warna teal */
+}

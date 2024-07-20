@@ -1,6 +1,7 @@
 import HomeSection from "./components/HomeSection";
 import AboutSection from "./components/AboutSection";
 import EducationSection from "./components/EducationSection";
+import SkillSection from "./components/SkillSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <HomeSection />
         <AboutSection />
         <EducationSection />
+        <SkillSection />
     </>
   );
 }
