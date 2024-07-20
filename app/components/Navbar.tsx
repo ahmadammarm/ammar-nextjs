@@ -5,7 +5,7 @@ import { ModeToggle } from './ModeToggle';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-function Navbar() {
+export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('Home');
 
@@ -96,6 +96,4 @@ function Navbar() {
       </header>
     </motion.div>
   );
-}
-
-export default Navbar;
+};

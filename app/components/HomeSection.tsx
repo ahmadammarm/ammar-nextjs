@@ -4,11 +4,10 @@ import React, { useEffect } from "react";
 import { profile } from "@/constants/profile";
 import { DownloadIcon } from "lucide-react";
 
-function HomeSection(): JSX.Element {
+function HomeSection(): React.JSX.Element {
     const { nama, role, CV, deskripsi, foto } = profile[0];
 
     useEffect(() => {
-        // Add class for animation after component is mounted
         document.getElementById("content")?.classList.add("fade-in");
         document.getElementById("image")?.classList.add("fade-in");
     }, []);
@@ -16,6 +15,7 @@ function HomeSection(): JSX.Element {
     return (
         <div id="home" className="min-h-screen flex flex-col justify-center items-center p-4 pt-28 lg:pt-16">
             <div className="max-w-7xl w-full mx-auto flex flex-col-reverse lg:flex-row items-center">
+                
                 {/* Content Start */}
                 <div id="content" className="opacity-0 transform translate-y-10 transition-all duration-700 flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4">
                     <p className="text-gray-700 dark:text-gray-400 text-lg">Haii..👋</p>
@@ -46,6 +46,7 @@ function HomeSection(): JSX.Element {
                     />
                 </div>
                 {/* Image Content End */}
+
             </div>
         </div>
     );

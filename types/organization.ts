@@ -3,4 +3,5 @@ export interface Organization {
     jabatan: string;
     tahun: string;
     deskripsi: string;
+    logo: string;
 }
