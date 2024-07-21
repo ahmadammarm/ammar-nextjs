@@ -19,6 +19,7 @@ function EducationSection(): React.ReactElement {
         <div id="educations" className="py-20">
             <div className="container mx-auto">
                 <h2 className="text-5xl font-bold text-center mb-[5rem] mt-[5rem] fade-in-element">Educations</h2>
+                {/* Educations Content Start */}
                 <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
                     {education.map((edu, index) => (
                         <Card key={index} className="flex flex-col items-center p-4 mb-5 hover:shadow-teal-500 shadow-md transition-all ease-in-out duration-300 fade-in-element">
@@ -29,7 +30,9 @@ function EducationSection(): React.ReactElement {
                         </Card>
                     ))}
                 </div>
-                {/* Organizations */}
+                {/* Education Content End */}
+
+                {/* Organizations Content Start */}
                 <h2 className="text-3xl font-bold text-center mb-[2rem] mt-[5rem] fade-in-element">Organizations</h2>
                 <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
                     {organization.map((org, index) => (
@@ -41,6 +44,7 @@ function EducationSection(): React.ReactElement {
                         </Card>
                     ))}
                 </div>
+                {/* Organizations Content End */}
             </div>
         </div>
     );

@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ammar | Personal Website",
-  description: "Ahmad 'Ammar Musyaffa's personal website to showcase his portfolios. He is a Full Stack Web Developer from Indonesia.",
+  description: "Ahmad 'Ammar Musyaffa' 's personal website to showcase his portfolios. He is a Full Stack Web Developer from Indonesia.",
   keywords: "web developer, full stack, laravel, nextjs, tailwindcss, bootstrap, figma, laravel",
 };
 
