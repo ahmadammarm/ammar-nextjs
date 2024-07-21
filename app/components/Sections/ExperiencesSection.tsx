@@ -32,7 +32,7 @@ function ExperienceSectionComponent() {
   return (
     <div id="experiences" className="w-full py-28">
       <div className="text-center mb-10">
-        <h2 className="text-5xl font-bold text-teal-500">Experiences</h2>
+        <h2 className="text-5xl font-bold">Experiences</h2>
       </div>
 
       <div className="container mx-auto">
@@ -60,7 +60,7 @@ function ExperienceSectionComponent() {
                   >
                     <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-xl dark:shadow-black">
                       <h4 className="text-3xl lg:text-4xl font-semibold text-teal-500 mb-5">{exp.jabatan}</h4>
-                      <p className="text-base text-teal-700 dark:text-teal-500 mb-5">
+                      <p className="text-lg text-teal-700 dark:text-teal-500 mb-5">
                         {exp.nama}<span className="text-base text-black dark:text-white mb-5"> | {exp.kontrak}</span>
                       </p>
                       <div className='flex flex-row m-1'>
@@ -69,7 +69,7 @@ function ExperienceSectionComponent() {
                         ))}
                       </div>
                       <p className="text-sm dark:text-gray-400 text-gray-500 mb-5">{exp.tahun}</p>
-                      <p className="text-sm text-gray-700 dark:text-white mb-5">{exp.deskripsi}</p>
+                      <p className="text-md lg:text-lg text-gray-700 dark:text-white mb-5">{exp.deskripsi}</p>
                     </div>
                   </div>
                 ))}
