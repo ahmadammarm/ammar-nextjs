@@ -10,9 +10,9 @@ function ContactSection() {
 
             <div className="container mx-auto">
                 <div className="text-center mb-12">
-                    <h3 className="text-2xl font-semibold mb-7">Jangan Ragu Untuk Mengontak Saya 📩</h3>
+                    <h3 className="text-2xl font-semibold mb-7">Kontak Saya Melalui Media di Bawah ini 📩</h3>
                     <p className="text-gray-700 dark:text-gray-500">
-                        Saya selalu terbuka untuk berdiskusi tentang pengembangan produk, kolaborasi kerja, atau kemitraan. Hubungi saja saya melalui media di bawah ini.
+                        Saya selalu terbuka untuk berdiskusi tentang pengembangan produk, kolaborasi kerja, atau kemitraan.
                     </p>
                 </div>
 

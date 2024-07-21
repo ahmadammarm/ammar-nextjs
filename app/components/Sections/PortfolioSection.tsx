@@ -40,7 +40,7 @@ function PortfolioSection() {
                 <div className='text-center mb-28'>
                     <h2 className='text-5xl font-bold mb-5'>Portfolio</h2>
                     <p className='text-gray-700 dark:text-gray-500'>
-                        Berikut adalah beberapa proyek yang saya buat ketika saya sedang belajar tentang pengembangan website.
+                        Berikut adalah beberapa proyek yang saya buat ketika saya sedang belajar tentang pengembangan website 🧑🏻‍💻.
                     </p>
                 </div>
 
@@ -49,7 +49,7 @@ function PortfolioSection() {
                     {portfolio.map((port, index) => (
                         <div key={index} className='flex flex-col md:flex-row gap-4 items-center justify-center mb-10 shadow-xl p-5 rounded-md dark:bg-slate-900'>
                             <div className='w-full md:w-1/2'>
-                                <img src={port.gambar} alt={port.nama} className='w-full h-64 rounded-md object-cover' />
+                                <img src={port.gambar} alt={port.nama} className='w-full h-full rounded-md object-cover' />
                             </div>
                             <div className='w-full md:w-1/2'>
                                 <h3 className='text-2xl font-semibold text-teal-500'>{port.nama}</h3>
