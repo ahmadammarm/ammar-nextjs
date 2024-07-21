@@ -39,7 +39,7 @@ function ExperienceSectionComponent() {
         <div className="text-center mb-12">
           <h3 className="text-2xl font-semibold mb-7">Pengalaman Kerja⌛</h3>
           <p className="text-gray-700 dark:text-gray-500">
-            Saya juga berpengalaman dalam beberapa pengembangan situs web yang saya pelajari selama lebih dari 1 tahun akan dijelaskan di bawah ini.
+            Saya juga berpengalaman dalam beberapa pengembangan situs web yang saya pelajari selama lebih dari 2 tahun akan dijelaskan di bawah ini.
           </p>
         </div>
 
