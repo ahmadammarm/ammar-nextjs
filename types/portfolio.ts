@@ -4,5 +4,5 @@ export interface Portfolio {
     deskripsi: string;
     teknologi: string[];
     link?: string;
-    source: string;
+    source?: string;
 }

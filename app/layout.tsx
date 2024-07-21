@@ -28,7 +28,7 @@ export default function RootLayout({
             enableSystem
           >
             <Navbar />
-            {children}
+              {children}
             <Footer />
         </ThemeProvider>
       </body>

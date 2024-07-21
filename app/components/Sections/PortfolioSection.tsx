@@ -1,10 +1,39 @@
+"use client"
+
 import { portfolio } from '@/constants/portfolio'
-import React from 'react'
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React, { useState, useEffect } from 'react'
 import { FaGithub } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 
 
 function PortfolioSection() {
+    const pathname = usePathname();
+    const [activeLink, setActiveLink] = useState('');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ['portfolio'];
+            let currentSection = '';
+
+            sections.forEach((sectionId) => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                        currentSection = sectionId;
+                    }
+                }
+            });
+
+            setActiveLink(currentSection);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <div id='portfolio' className='flex w-full py-28'>
             <div className='container mx-auto'>
@@ -42,7 +71,7 @@ function PortfolioSection() {
 
                 {/* All Projects Link Start */}
                 <div className='text-center mt-20'>
-                    <a href='/portfolio' className='bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300'>Lihat Semua Project</a>
+                    <Link href='/portfolio' className={`link ${pathname === '/portfolio' || activeLink === 'portfolio' ? 'active' : ''} bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300`}>Lihat Semua Project</Link>
                 </div>
                 {/* All Projects Link End */}
             </div>

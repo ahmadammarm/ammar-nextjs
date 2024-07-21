@@ -4,9 +4,11 @@ import React, { useState, useEffect } from 'react';
 import { ModeToggle } from './ModeToggle';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
   const [activeLink, setActiveLink] = useState('Home');
 
   useEffect(() => {
@@ -33,7 +35,10 @@ export default function Navbar() {
         }
       });
 
-      setActiveLink(currentSection.charAt(0).toUpperCase() + currentSection.slice(1));
+      if (currentSection) {
+        setActiveLink(currentSection.charAt(0).toUpperCase() + currentSection.slice(1));
+        localStorage.setItem('activeLink', currentSection.charAt(0).toUpperCase() + currentSection.slice(1));
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -64,7 +69,7 @@ export default function Navbar() {
       <header className="fixed w-full z-50">
         <nav className="bg-white shadow-lg py-6 dark:bg-gray-900">
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-            <a href="/" className="flex items-center">
+            <a href="#home" className="flex items-center" onClick={() => handleLinkClick('Home')}>
               <span className="self-center text-4xl font-semibold whitespace-nowrap text-teal-500">Ammar</span>
             </a>
             <div className="flex items-center lg:order-2">
