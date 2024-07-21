@@ -93,5 +93,17 @@ export const tools: Skill[] = [
         nama: 'Visual Studio Code',
         tingkat: 'Pemula',
         deskripsi: 'Editor kode sumber yang dikembangkan oleh Microsoft.'
+    },
+    {
+        gambar: 'assets/skills/gps.png',
+        nama: 'Google Page Speed',
+        tingkat: 'Pemula',
+        deskripsi: 'Alat yang digunakan untuk mengukur kinerja situs web.'
+    },
+    {
+        gambar: 'assets/skills/spreadsheet.png',
+        nama: 'Google Spreadsheet',
+        tingkat: 'Pemula',
+        deskripsi: 'Aplikasi spreadsheet yang dikembangkan oleh Google.'
     }
 ]

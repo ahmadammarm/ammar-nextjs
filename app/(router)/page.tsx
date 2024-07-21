@@ -1,0 +1,17 @@
+import HomeSection from "../components/Sections/HomeSection";
+import AboutSection from "../components/Sections/AboutSection";
+import EducationSection from "../components/Sections/EducationSection";
+import SkillSection from "../components/Sections/SkillSection";
+import ExperiencesSection from "../components/Sections/ExperiencesSection";
+
+export default function Home() {
+  return (
+    <>
+        <HomeSection />
+        <AboutSection />
+        <EducationSection />
+        <SkillSection />
+        <ExperiencesSection />
+    </>
+  );
+}
