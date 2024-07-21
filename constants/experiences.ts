@@ -6,7 +6,7 @@ export const experiences: Experiences[] = [
         jabatan: "Full Stack Web Developer",
         logo: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         kontrak: "Pekerja Lepas",
-        deskripsi: "Membuat aplikasi berbasis web menggunakan framework Laravel, NextJs, dan Tailwind CSS sesuai dengan kebutuhan klien.",
+        deskripsi: "Bertanggung jawab membuat aplikasi berbasis web menggunakan framework Laravel, NextJs, dan Tailwind CSS sesuai dengan kebutuhan klien.",
         tahun: "Agustus 2023 - Sekarang"
     },
     {
@@ -14,7 +14,7 @@ export const experiences: Experiences[] = [
         jabatan: "Full Stack Web Developer",
         logo: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/bootstrap.png"],
         kontrak: "Pekerja Lepas",
-        deskripsi: "Membuat aplikasi berbasis web menggunakan framework Laravel dan Bootstrap untuk manajemen Exoria.",
+        deskripsi: "Bertanggung jawab membuat aplikasi berbasis web menggunakan framework Laravel dan Bootstrap untuk manajemen Exoria.",
         tahun: "December 2023 - Sekarang"
     },
     {
@@ -23,6 +23,6 @@ export const experiences: Experiences[] = [
         logo: ["assets/skills/gps.png", "assets/skills/spreadsheet.png"],
         kontrak: "Magang",
         tahun: "Maret 2024 - Mei 2024",
-        deskripsi: "Menganalisis website yang ada di Universitas Negeri Malang dengan menggunakan tools seperti PageSpeed Inside dan Lighthouse."
+        deskripsi: "Bertanggung jawab menganalisis website yang ada di Universitas Negeri Malang dengan menggunakan tools seperti PageSpeed Inside dan Lighthouse."
     },
 ]

@@ -42,7 +42,7 @@ function PortfolioSection() {
 
                 {/* All Projects Link Start */}
                 <div className='text-center mt-20'>
-                    <a href='#' className='bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300'>Lihat Semua Project</a>
+                    <a href='/portfolio' className='bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300'>Lihat Semua Project</a>
                 </div>
                 {/* All Projects Link End */}
             </div>

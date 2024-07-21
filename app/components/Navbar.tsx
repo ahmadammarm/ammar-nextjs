@@ -77,7 +77,7 @@ export default function Navbar() {
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 text-lg w-full">
                 {['Home', 'About', 'Educations', 'Skills', 'Experiences', 'Portfolio', 'Contact'].map((link) => (
                   <li key={link} className="w-full lg:w-auto">
-                    <button
+                    <a href={`/#${link.toLowerCase()}`}
                       className={`block py-2 pl-3 pr-4 rounded lg:p-0 transition duration-300 ease-in-out w-full text-left lg:text-center ${
                         activeLink === link
                           ? 'text-white lg:text-teal-500 dark:text-teal-500'
@@ -86,7 +86,7 @@ export default function Navbar() {
                       onClick={() => handleLinkClick(link)}
                     >
                       {link}
-                    </button>
+                    </a>
                   </li>
                 ))}
               </ul>
