@@ -80,7 +80,7 @@ export default function Navbar() {
                     <a href={`/#${link.toLowerCase()}`}
                       className={`block py-2 pl-3 pr-4 rounded lg:p-0 transition duration-300 ease-in-out w-full text-left lg:text-center ${
                         activeLink === link
-                          ? 'text-white lg:text-teal-500 dark:text-teal-500'
+                          ? ' text-teal-500 lg:text-teal-500 dark:text-teal-500'
                           : 'text-gray-700 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-teal-500 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700'
                       }`}
                       onClick={() => handleLinkClick(link)}

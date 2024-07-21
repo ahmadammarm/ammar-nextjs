@@ -9,9 +9,9 @@ function PortfolioSection() {
         <div id='portfolio' className='flex w-full py-28'>
             <div className='container mx-auto'>
                 <div className='text-center mb-28'>
-                    <h2 className='text-5xl font-bold'>Portfolio</h2>
+                    <h2 className='text-5xl font-bold mb-5'>Portfolio</h2>
                     <p className='text-gray-700 dark:text-gray-500'>
-                        Beberapa project yang telah saya kerjakan.
+                        Berikut adalah beberapa proyek yang saya buat ketika saya sedang belajar tentang pengembangan website.
                     </p>
                 </div>
 
