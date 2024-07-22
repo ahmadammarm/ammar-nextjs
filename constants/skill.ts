@@ -15,13 +15,13 @@ export const techStack: Skill[] = [
     },
     {
         gambar: "assets/skills/js.png",
-        nama: "JavaScript",
+        nama: "Javascript",
         tingkat: "Pemula",
         deskripsi: "Bahasa pemrograman tingkat tinggi yang digunakan untuk membuat halaman web interaktif."
     },
     {
         gambar: "assets/skills/ts.png",
-        nama: "TypeScript",
+        nama: "Typescript",
         tingkat: "Pemula",
         deskripsi: "Bahasa pemrograman open-source yang dikembangkan dan dikelola oleh Microsoft."
     },
@@ -84,7 +84,7 @@ export const tools: Skill[] = [
     },
     {
         gambar: "assets/skills/github.png",
-        nama: "GitHub",
+        nama: "Github",
         tingkat: "Pemula",
         deskripsi: "Layanan hosting repositori Git."
     },
@@ -93,17 +93,5 @@ export const tools: Skill[] = [
         nama: 'Visual Studio Code',
         tingkat: 'Pemula',
         deskripsi: 'Editor kode sumber yang dikembangkan oleh Microsoft.'
-    },
-    {
-        gambar: 'assets/skills/gps.png',
-        nama: 'Google Page Speed',
-        tingkat: 'Pemula',
-        deskripsi: 'Alat yang digunakan untuk mengukur kinerja situs web.'
-    },
-    {
-        gambar: 'assets/skills/spreadsheet.png',
-        nama: 'Google Spreadsheet',
-        tingkat: 'Pemula',
-        deskripsi: 'Aplikasi spreadsheet yang dikembangkan oleh Google.'
     }
 ]
