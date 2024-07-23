@@ -35,10 +35,10 @@ function PortfolioSection() {
     }, []);
 
     return (
-        <div id='portfolio' className='flex w-full py-28'>
+        <div id='portfolio' className='flex w-full py-20'>
             <div className='container mx-auto'>
                 <div className='text-center mb-28'>
-                    <h2 className='text-5xl font-bold mb-5'>Portfolio</h2>
+                    <h2 className='text-5xl font-bold mb-[5rem] mt-[5rem]'>Portfolio</h2>
                     <p className='text-gray-700 dark:text-gray-500'>
                         Berikut adalah beberapa proyek yang saya buat ketika saya sedang belajar tentang pengembangan website 🧑🏻‍💻.
                     </p>

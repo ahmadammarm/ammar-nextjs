@@ -26,12 +26,6 @@ export const techStack: Skill[] = [
         deskripsi: "Bahasa pemrograman open-source yang dikembangkan dan dikelola oleh Microsoft."
     },
     {
-        gambar: "assets/skills/python.png",
-        nama: "Python",
-        tingkat: "Pemula",
-        deskripsi: "Bahasa pemrograman tingkat tinggi yang digunakan untuk pengembangan web, desktop, dan mobile."
-    },
-    {
         gambar: "assets/skills/php.png",
         nama: "PHP",
         tingkat: "Pemula",
@@ -67,12 +61,6 @@ export const techStack: Skill[] = [
         tingkat: "Pemula",
         deskripsi: "Framework CSS yang digunakan untuk membangun desain web."
     },
-    {
-        gambar: "assets/skills/shadcn.png",
-        nama: "ShadCN UI",
-        tingkat: "Pemula",
-        deskripsi: "Library Tailwind CSS yang berbasis komponen digunakan untuk membangun desain web."
-    }
 ];
 
 export const tools: Skill[] = [

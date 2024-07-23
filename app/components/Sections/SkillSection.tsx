@@ -55,7 +55,7 @@ function SkillsSection() {
                   {/* Skills Section Tech Stack Content */}
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
                     {techStack.map((skill, index) => (
-                      <div key={index} className="relative group flex flex-col items-center p-4 mb-5 hover:translate-y-[-10px] dark:shadow-black shadow-lg transition-all ease-in-out duration-300">
+                      <div key={index} className="relative group flex flex-col items-center p-4 mb-5 hover:translate-y-[-10px] hover:shadow-teal-500 dark:shadow-black shadow-lg transition-all ease-in-out duration-300 rounded-lg">
                         <img src={skill.gambar} alt={skill.nama} className="w-16 h-16 md:w-20 md:h-20 mb-4" />
                         <h4 className="text-lg font-semibold mb-2 text-teal-500 text-center">{skill.nama}</h4>
                         <p className="text-sm text-gray-700 dark:text-gray-400">{skill.tingkat}</p>
@@ -69,7 +69,7 @@ function SkillsSection() {
                 <div className="tab-panel fade-in-element">
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
                     {tools.map((tool, index) => (
-                      <div key={index} className="relative group flex flex-col items-center p-4 mb-5 hover:translate-y-[-10px] dark:shadow-black shadow-lg transition-all ease-in-out duration-300">
+                      <div key={index} className="relative group flex flex-col items-center p-4 mb-5 hover:translate-y-[-10px] hover:shadow-teal-500 dark:shadow-black shadow-lg transition-all ease-in-out duration-300 rounded-lg">
                         <img src={tool.gambar} alt={tool.nama} className="w-16 h-16 md:w-20 md:h-20 mb-4" />
                         <h4 className="text-lg font-semibold mb-2 text-teal-500 text-center">{tool.nama}</h4>
                         <p className="text-sm text-gray-700 dark:text-gray-400">{tool.tingkat}</p>

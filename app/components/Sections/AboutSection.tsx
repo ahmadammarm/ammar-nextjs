@@ -3,7 +3,6 @@
 import { about } from '@/constants/about';
 import React, { useEffect, useRef } from 'react';
 import { Separator } from '@/components/ui/separator';
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 function AboutSection(): React.ReactElement {
     const { nama, negara, role, deskripsi, foto } = about[0];
@@ -42,8 +41,8 @@ function AboutSection(): React.ReactElement {
     }, []);
 
     return (
-        <div id='about' className=' min-h-screen flex flex-col justify-center items-center p-3 pt-28 lg:pt-16'>
-            <h1 ref={titleRef} className='opacity-0 transform translate-y-10 transition-all duration-700 text-5xl font-bold mb-[5rem] mt-[3rem]' id='about-title'>
+        <div id='about' className=' min-h-screen flex flex-col justify-center items-center p-3 py-20'>
+            <h1 ref={titleRef} className='opacity-0 transform translate-y-10 transition-all duration-700 text-5xl font-bold mb-[5rem] mt-[5rem]' id='about-title'>
                 About Me
             </h1>
             <div className=' max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center'>
@@ -66,20 +65,6 @@ function AboutSection(): React.ReactElement {
                         {deskripsi}
                     </p>
                     <Separator className="mb-5"/>
-                    <div className='flex flex-col lg:flex-row items-center justify-center'>
-                        <Card className='border border-teal-500 mb-5 lg:mr-5 p-3'>
-                            <CardHeader className='text-center'>
-                                <CardTitle className='text-3xl'>2+</CardTitle>
-                                <CardDescription className='text-xl'>Tahun Pengalaman</CardDescription>
-                            </CardHeader>
-                        </Card>
-                        <Card className='border border-teal-500 mb-5 lg:mr-5 p-3'>
-                            <CardHeader className='text-center'>
-                                <CardTitle className='text-3xl'>5+</CardTitle>
-                                <CardDescription className='text-xl'>Proyek Terselesaikan</CardDescription>
-                            </CardHeader>
-                        </Card>
-                    </div>
                 </div>
                 {/* Content End */}
             </div>

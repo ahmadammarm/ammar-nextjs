@@ -30,9 +30,9 @@ function ExperienceSectionComponent() {
   };
 
   return (
-    <div id="experiences" className="w-full py-28">
+    <div id="experiences" className="w-full py-20">
       <div className="text-center mb-10">
-        <h2 className="text-5xl font-bold">Experiences</h2>
+        <h2 className="text-5xl font-bold mb-[5rem] mt-[5rem]">Experiences</h2>
       </div>
 
       <div className="container mx-auto">

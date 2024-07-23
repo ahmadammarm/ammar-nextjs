@@ -3,9 +3,9 @@ import React from 'react'
 
 function ContactSection() {
     return (
-        <div id='contact' className='w-full py-28'>
+        <div id='contact' className='w-full py-20'>
             <div className="text-center mb-10">
-                <h2 className="text-5xl font-bold">Contact</h2>
+                <h2 className="text-5xl font-bold mb-[5rem] mt-[5rem]">Contact</h2>
             </div>
 
             <div className="container mx-auto">
