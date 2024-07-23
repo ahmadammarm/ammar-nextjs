@@ -6,7 +6,7 @@ import { Separator } from '@/components/ui/separator';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 function AboutSection(): React.ReactElement {
-    const { nama, negara, role, deskripsi } = about[0];
+    const { nama, negara, role, deskripsi, foto } = about[0];
 
     const titleRef = useRef(null);
     const imgRef = useRef(null);
@@ -50,7 +50,7 @@ function AboutSection(): React.ReactElement {
 
                 {/* Image Content Start */}
                 <div ref={imgRef} className='opacity-0 transform translate-y-10 transition-all duration-700 flex justify-center lg:w-1/2 p-4 mb-8 lg:mb-0' id='about-img'>
-                    <img src='/assets/foto.jpg' alt='Ammar' className=' w-64 h-64 lg:w-80 lg:h-96 rounded-md object-cover border-4 border-teal-500' /> 
+                    <img src={foto} alt='Ammar' className=' w-64 h-64 lg:w-80 lg:h-96 rounded-md object-cover border-4 border-teal-500' /> 
                 </div>
                 {/* Image Content End */}
 
