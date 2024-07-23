@@ -29,7 +29,7 @@ function SkillsSection() {
             <div className="mb-4">
               <h3 className="text-2xl font-semibold">Tech Stack⚙️ & Tools🛠️</h3>
             </div>
-            <p className="text-gray-700 dark:text-gray-400">Ada beberapa tech stack dan tools yang telah saya pelajari</p>
+            <p className="text-gray-700 dark:text-gray-400">Ada beberapa tech stack dan tools yang telah saya pelajari khususnya dalam pemrograman.</p>
           </div>
 
           {/* Skills Content Start */}

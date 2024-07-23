@@ -38,6 +38,12 @@ export const techStack: Skill[] = [
         deskripsi: "Bahasa pemrograman server-side yang digunakan untuk pengembangan web."
     },
     {
+        gambar: "assets/skills/bootstrap.png",
+        nama: "Bootstrap",
+        tingkat: "Menengah",
+        deskripsi: "Framework CSS yang digunakan untuk membangun desain web."
+    },
+    {
         gambar: "assets/skills/laravel.png",
         nama: "Laravel",
         tingkat: "Pemula",
@@ -62,10 +68,10 @@ export const techStack: Skill[] = [
         deskripsi: "Framework CSS yang digunakan untuk membangun desain web."
     },
     {
-        gambar: "assets/skills/bootstrap.png",
-        nama: "Bootstrap",
-        tingkat: "Menengah",
-        deskripsi: "Framework CSS yang digunakan untuk membangun desain web."
+        gambar: "assets/skills/shadcn.png",
+        nama: "ShadCN UI",
+        tingkat: "Pemula",
+        deskripsi: "Library Tailwind CSS yang berbasis komponen digunakan untuk membangun desain web."
     }
 ];
 
