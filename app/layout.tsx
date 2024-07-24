@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ahmad 'Ammar Musyaffa' | Full Stack Web Developer",
     description: "Ahmad 'Ammar Musyaffa' adalah seorang Full Stack Web Developer dari Indonesia yang memamerkan portofolio dan proyeknya di website pribadi ini.",
-    images: [{ url: "/og-image.png" }],
+    images: [{ url: "/assets/metadata.png" }],
     url: "https://ahmadammar.vercel.app",
     type: "website",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ahmad 'Ammar Musyaffa' | Full Stack Web Developer",
     description: "Ahmad 'Ammar Musyaffa' adalah seorang Full Stack Web Developer dari Indonesia yang memamerkan portofolio dan proyeknya di website pribadi ini.",
-    images: ["/twitter-image.png"],
+    images: ["/assets/metadata.png"],
   },
   icons: {
     icon: "/a.png",
