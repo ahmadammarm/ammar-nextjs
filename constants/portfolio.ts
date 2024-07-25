@@ -63,7 +63,7 @@ export const fullPortfolio: Portfolio[] = [
         gambar: "/assets/portfolios/freelance-notes.png",
         deskripsi: "Sistem pencatatan freelance yang dilengkapi dengan fitur pembuatan invoice secara otomatis yang dapat didownload.",
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png"],
-        source: "https://github.com/ahmadammarm/freelance-notes"
+        link: "https://lynk.id/ahmadammarm/e23xR90"
     },
     {
         nama: "Website Doa dan Dzikir Harian",
