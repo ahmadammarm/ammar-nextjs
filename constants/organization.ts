@@ -11,7 +11,7 @@ export const organization: Organization[] = [
     {
         nama: "Google Developer Student Club UM",
         jabatan: "Core Team Web Development Division",
-        tahun: "2023 - Sekarang",
+        tahun: "2023 - 2024",
         deskripsi: "Komunitas google developer student club di Universitas Negeri Malang",
         logo: "/assets/gdsc.png"
     }

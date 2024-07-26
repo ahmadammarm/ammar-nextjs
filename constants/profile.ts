@@ -3,9 +3,9 @@ import { Profile } from "@/types/profile";
 export const profile: Profile[] = [
     {
         nama: 'Ahmad Ammar Musyaffa',
-        role: 'Full Stack Web Developer',
+        role: 'Mahasiswa Teknik Informatika',
         CV: '/assets/CV_Ahmad_Ammar.pdf',
-        deskripsi: 'Berpengalaman dalam pengembangan web dan saya siap melayani membuat situs web yang menakjubkan untuk bisnis Anda.',
+        deskripsi: 'Yang tertarik dengan teknologi dan pengembangan web dan berusaha untuk belajar hal-hal baru seputar teknologi.',
         foto: ['/assets/Ahmad_Ammar_Fakultas_Teknik.jpg', 'https://ahmadammar.vercel.app/assets/images/ammar-pantai.jpg']
     }
 ]

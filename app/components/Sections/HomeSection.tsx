@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import { profile } from "@/constants/profile";
-import { DownloadIcon } from "lucide-react";
+// import { DownloadIcon } from "lucide-react";
 
 function HomeSection(): React.JSX.Element {
     const { nama, role, CV, deskripsi, foto } = profile[0];
@@ -17,15 +17,15 @@ function HomeSection(): React.JSX.Element {
             <div className="max-w-7xl w-full mx-auto flex flex-col-reverse lg:flex-row items-center">
                 
                 {/* Content Start */}
-                <div id="content" className="opacity-0 transform translate-y-10 transition-all duration-700 flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4">
+                <div id="content" className="transform translate-y-10 transition-all duration-700 flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4">
                     <p className="text-gray-700 dark:text-gray-400 text-lg">Haii..👋</p>
                     <h1 className="text-4xl font-bold mb-4">Saya <span className="text-4xl text-teal-500">{nama}</span></h1>
                     <p className="text-lg font-medium mb-2 text-gray-700 dark:text-gray-400">Seorang</p>
                     <div className="text-3xl font-semibold mb-4 italic text-teal-500">
                         {role}  🧑🏻‍💻
                     </div>
-                    <p className="text-xl mb-6 text-gray-700 dark:text-gray-400">{deskripsi}</p>
-                    <a
+                    {/* <p className="text-xl mb-6 text-gray-700 dark:text-gray-400">{deskripsi}</p> */}
+                    {/* <a
                         href={CV}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -33,7 +33,7 @@ function HomeSection(): React.JSX.Element {
                         className="flex flex-row bg-teal-500 text-white px-4 py-3 lg:px-6 lg:py-4 rounded hover:bg-teal-600 transition duration-200 ease-in-out"
                     >
                         <DownloadIcon className="mr-1" /> Download CV
-                    </a>
+                    </a> */}
                 </div>
                 {/* Content End */}
 

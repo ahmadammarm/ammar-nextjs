@@ -22,7 +22,7 @@ export default function Navbar() {
     }
 
     const handleScroll = () => {
-      const sections = ['home', 'about', 'educations', 'skills', 'experiences', 'portfolio', 'contact'];
+      const sections = ['home', 'about', 'educations', 'portfolio', 'contact'];
       let currentSection = '';
       
       sections.forEach((sectionId) => {
@@ -80,7 +80,7 @@ export default function Navbar() {
             </div>
             <div className={`items-center justify-between ${isMobileMenuOpen ? 'block slide-down' : 'hidden'} w-full lg:flex lg:w-auto lg:order-1 transition-all duration-300 ease-in-out`} id="mobile-menu-2">
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 text-lg w-full">
-                {['Home', 'About', 'Educations', 'Skills', 'Experiences', 'Portfolio', 'Contact'].map((link) => (
+                {['Home', 'About', 'Educations', 'Portfolio', 'Contact'].map((link) => (
                   <li key={link} className="w-full lg:w-auto">
                     <a href={`/#${link.toLowerCase()}`}
                       className={`block py-2 pl-3 pr-4 rounded lg:p-0 transition duration-300 ease-in-out w-full text-left lg:text-center ${
