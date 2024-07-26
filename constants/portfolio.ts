@@ -21,7 +21,7 @@ export const portfolio: Portfolio[] =[
         gambar: "/assets/portfolios/webcademy.png",
         deskripsi: "Platform pembelajaran online yang menyediakan berbagai kursus seputar pemrograman web berbasis video.",
         teknologi: ["/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
-        link: "https://webcademy.vercel.app/",
+        link: "https://webcademy-orcin.vercel.app/",
         source: "https://github.com/ahmadammarm/webcademy"   
     }
 ];
@@ -47,7 +47,7 @@ export const fullPortfolio: Portfolio[] = [
         gambar: "/assets/portfolios/webcademy.png",
         deskripsi: "Platform pembelajaran online yang menyediakan berbagai kursus seputar pemrograman web berbasis video.",
         teknologi: ["/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
-        link: "https://webcademy.vercel.app/",
+        link: "https://webcademy-orcin.vercel.app/",
         source: "https://github.com/ahmadammarm/webcademy"   
     },
     {
