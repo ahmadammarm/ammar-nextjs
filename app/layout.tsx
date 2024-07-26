@@ -8,14 +8,14 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ahmad 'Ammar Musyaffa' | Full Stack Web Developer",
+  title: "Ahmad 'Ammar Musyaffa'",
   description: "Ahmad 'Ammar Musyaffa' adalah seorang Full Stack Web Developer dari Indonesia yang memamerkan portofolio dan proyeknya di website pribadi ini.",
   keywords: ["Ahmad Ammar Musyaffa", "web developer Indonesia", "full stack developer", "Laravel", "Next.js", "TailwindCSS", "Bootstrap", "Figma", "portofolio web developer"],
   authors: [{ name: "Ahmad 'Ammar Musyaffa'", url: "https://ahmadammar.vercel.app" }],
   viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   openGraph: {
-    title: "Ahmad 'Ammar Musyaffa' | Full Stack Web Developer",
+    title: "Ahmad 'Ammar Musyaffa'",
     description: "Ahmad 'Ammar Musyaffa' adalah seorang Full Stack Web Developer dari Indonesia yang memamerkan portofolio dan proyeknya di website pribadi ini.",
     images: [{ url: "/assets/metadata.png" }],
     url: "https://ahmadammar.vercel.app",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ahmad 'Ammar Musyaffa' | Full Stack Web Developer",
+    title: "Ahmad 'Ammar Musyaffa'",
     description: "Ahmad 'Ammar Musyaffa' adalah seorang Full Stack Web Developer dari Indonesia yang memamerkan portofolio dan proyeknya di website pribadi ini.",
     images: ["/assets/metadata.png"],
   },
