@@ -1,4 +1,4 @@
-export interface Experiences {
+export type Experiences = {
     nama: string;
     jabatan: string;
     logo: string[];

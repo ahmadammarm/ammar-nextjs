@@ -1,4 +1,4 @@
-export interface Profile {
+export type Profile = {
     nama: string;
     role: string;
     CV: string;

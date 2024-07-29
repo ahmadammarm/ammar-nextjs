@@ -1,4 +1,4 @@
-export interface Portfolio {
+export type Portfolio = {
     nama: string;
     gambar: string;
     deskripsi: string;

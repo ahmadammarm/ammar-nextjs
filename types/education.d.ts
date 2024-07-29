@@ -1,4 +1,4 @@
-export interface Education {
+export type Education = {
     nama: string;
     jurusan: string;
     tahun: string;

@@ -1,4 +1,4 @@
-export interface About {
+export type About = {
     nama: string;
     negara: string;
     role: string;

@@ -1,4 +1,4 @@
-export interface Organization {
+export type Organization = {
     nama: string;
     jabatan: string;
     tahun: string;
