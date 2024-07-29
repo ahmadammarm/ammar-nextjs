@@ -33,7 +33,7 @@ function EducationSection(): React.ReactElement {
                 {/* Education Content End */}
 
                 {/* Organizations Content Start */}
-                <h2 className="text-3xl font-bold text-center mb-[2rem] mt-[5rem] fade-in-element">Organizations</h2>
+                {/* <h2 className="text-3xl font-bold text-center mb-[2rem] mt-[5rem] fade-in-element">Organizations</h2>
                 <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
                     {organization.map((org, index) => (
                         <Card key={index} className="flex flex-col items-center p-4 mb-5 hover:shadow-teal-500 shadow-md transition-all ease-in-out duration-300 fade-in-element">
@@ -43,7 +43,7 @@ function EducationSection(): React.ReactElement {
                             <CardDescription className="text-sm text-gray-700 dark:text-gray-400">{org.tahun}</CardDescription>
                         </Card>
                     ))}
-                </div>
+                </div> */}
                 {/* Organizations Content End */}
             </div>
         </div>
