@@ -63,12 +63,12 @@ export const fullPortfolio: Portfolio[] = [
         gambar: "/assets/portfolios/freelance-notes.png",
         deskripsi: "Sistem pencatatan freelance yang dilengkapi dengan fitur pembuatan invoice secara otomatis yang dapat didownload.",
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png"],
-        link: "https://lynk.id/ahmadammarm/e23xR90"
     },
     {
         nama: "Website Doa dan Dzikir Harian",
-        gambar: "/assets/portfolios/doa.png",
+        gambar: "/assets/portfolios/doa-dzikir.png",
         deskripsi: "Website yang berisi kumpulan doa dan dzikir harian yang dapat diakses secara online dengan berbagai fitur.",
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/tailwind.png"],
+        link: "https://sinudzi.com"
     },
 ]
