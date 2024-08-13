@@ -56,10 +56,10 @@ function AboutSection(): React.ReactElement {
                 {/* Content Start */}
                 <div ref={contentRef} className='opacity-0 transform translate-y-10 transition-all duration-700 flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4 lg:flex lg:flex-col' id='about-content'>
                     <p className=' text-gray-700 dark:text-gray-400 text-3xl font-bold mb-[1.5rem]'>
-                        Haloo..👋 saya <span className='text-3xl text-teal-500'>{nama}</span>
+                        Hii..👋 Im <span className='text-3xl text-teal-500'>{nama}</span>
                     </p>
                     <p className='text-gray-700 dark:text-gray-400 text-xl font-bold mb-[4rem] italic'>
-                        Seorang <span className='text-2xl text-teal-500'>{role} 🧑🏻‍💻</span> bertempat tinggal di <span className='text-2xl text-teal-500'>{negara} 🌏</span>.
+                        An <span className='text-2xl text-teal-500'>{role} 🧑🏻‍💻</span> and live in <span className='text-2xl text-teal-500'>{negara} 🌏</span>.
                     </p>
                     <p className=' text-md lg:text-lg mb-6'>
                         {deskripsi}

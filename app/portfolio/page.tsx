@@ -8,7 +8,7 @@ function page() {
       <div className="text-center mb-16">
         <h2 className="text-5xl font-bold mb-5 mt-8">Portfolio</h2>
         <p className="text-gray-700 dark:text-gray-500">
-            Berikut adalah semua proyek yang saya buat ketika saya sedang belajar tentang pengembangan website 🧑🏻‍💻.
+          Here are all the projects I created while I was learning about website development. 🧑🏻‍💻.
         </p>
       </div> 
 
@@ -37,7 +37,7 @@ function page() {
 
       {/* Portfolio Before Button */}
       <div className="text-center mt-10">
-        <a href="/#portfolio" className="bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300">Lihat Sebagian Project</a>
+        <a href="/#portfolio" className="bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300">View Some Projects</a>
       </div>
     </div>
   )

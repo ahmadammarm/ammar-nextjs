@@ -10,7 +10,7 @@ function ContactSection() {
 
             <div className="container mx-auto">
                 <div className="text-center mb-12">
-                    <h3 className="text-2xl font-semibold mb-7">Kontak Saya Melalui Media di Bawah ini 📩</h3>
+                    <h3 className="text-2xl font-semibold mb-7">Contact Me Through The Media Below 📩</h3>
                 </div>
 
                 {/* Contact Content Start */}
@@ -22,7 +22,7 @@ function ContactSection() {
                                 <div className="flex flex-col items-center md:items-start">
                                     <span className="text-2xl font-bold">{item.nama}</span>
                                     <span className="text-base text-gray-600 dark:text-gray-400">{item.detail}</span>
-                                    <span className="text-lg text-teal-500 font-bold">Kirim saya pesan</span>
+                                    <span className="text-lg text-teal-500 font-bold">Send me a message</span>
                                 </div>
                             </a>
                         </div>

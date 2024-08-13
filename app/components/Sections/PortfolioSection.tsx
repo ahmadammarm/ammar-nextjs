@@ -40,7 +40,7 @@ function PortfolioSection() {
                 <div className='text-center mb-28'>
                     <h2 className='text-5xl font-bold mb-[5rem] mt-[5rem]'>Portfolio</h2>
                     <p className='text-gray-700 dark:text-gray-500'>
-                        Berikut adalah beberapa proyek yang saya buat ketika saya sedang belajar tentang pengembangan website 🧑🏻‍💻.
+                        Here are some projects I created while I was learning about web development. 🧑🏻‍💻.
                     </p>
                 </div>
 
@@ -71,7 +71,7 @@ function PortfolioSection() {
 
                 {/* All Projects Link Start */}
                 <div className='text-center mt-20'>
-                    <Link href='/portfolio' className={`link ${pathname === '/portfolio' || activeLink === 'portfolio' ? 'active' : ''} bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300`}>Lihat Semua Project</Link>
+                    <Link href='/portfolio' className={`link ${pathname === '/portfolio' || activeLink === 'portfolio' ? 'active' : ''} bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300`}>View All Projects</Link>
                 </div>
                 {/* All Projects Link End */}
             </div>
