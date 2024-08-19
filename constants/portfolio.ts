@@ -71,4 +71,19 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/tailwind.png"],
         link: "https://sinudzi.com"
     },
+    {
+        nama: "Inden Games",
+        gambar: "/assets/portfolios/inden-games.jpg",
+        deskripsi: "Learning platform with the theme of Indonesia's Independent Day.",
+        teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png", "/assets/skills/bootstrap.png"],
+        link: "https://ahmadammarm.github.io/game-kemerdekaan/",
+        source: "https://github.com/ahmadammarm/game-kemerdekaan"
+    },
+    {
+        nama: "Shopee Affiliate Website",
+        gambar: "/assets/portfolios/affiliate.png",
+        deskripsi: "Affiliate website that provides various products from Shopee.",
+        teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png"],
+        source: "https://github.com/ahmadammarm/affiliate-website"
+    },
 ]
