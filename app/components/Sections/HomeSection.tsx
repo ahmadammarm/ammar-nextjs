@@ -20,10 +20,10 @@ function HomeSection(): React.JSX.Element {
                 <div id="content" className="transform translate-y-10 transition-all duration-700 flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4">
                     <p className="text-gray-700 dark:text-gray-400 text-lg">Hii..👋</p>
                     <h1 className="text-4xl font-bold mb-4">Im <span className="text-4xl text-teal-500">{nama}</span></h1>
-                    <p className="text-lg font-medium mb-2 text-gray-700 dark:text-gray-400">A</p>
+                    {/* <p className="text-lg font-medium mb-2 text-gray-700 dark:text-gray-400">A</p>
                     <div className="text-3xl font-semibold mb-4 italic text-teal-500">
                         {role}  🧑🏻‍💻
-                    </div>
+                    </div> */}
                     {/* <p className="text-xl mb-6 text-gray-700 dark:text-gray-400">{deskripsi}</p> */}
                     <a
                         href={CV}
