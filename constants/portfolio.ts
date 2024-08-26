@@ -84,6 +84,7 @@ export const fullPortfolio: Portfolio[] = [
         gambar: "/assets/portfolios/affiliate.png",
         deskripsi: "Affiliate website that provides various products from Shopee.",
         teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png"],
+        link: "https://affiliate-website-one.vercel.app/",
         source: "https://github.com/ahmadammarm/affiliate-website"
     },
 ]
