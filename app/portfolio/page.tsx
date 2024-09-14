@@ -1,6 +1,6 @@
-import { fullPortfolio, portfolio } from '@/constants/portfolio'
+import { fullPortfolio } from '@/constants/portfolio'
 import React from 'react'
-import { FaEye, FaGithub } from 'react-icons/fa'
+import { FaEye } from 'react-icons/fa'
 
 function page() {
   return (
@@ -36,9 +36,9 @@ function page() {
       </div>
 
       {/* Portfolio Before Button */}
-      <div className="text-center mt-10">
+      {/* <div className="text-center mt-10">
         <a href="/#portfolio" className="bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300">View Some Projects</a>
-      </div>
+      </div> */}
     </div>
   )
 }

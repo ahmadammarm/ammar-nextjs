@@ -1,16 +1,27 @@
-import type { Metadata } from "next";
+// rootlayout.tsx (tanpa "use client")
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import RootLayoutClient from './RootLayoutClient';
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Ahmad 'Ammar Musyaffa'",
   description: "Ahmad 'Ammar Musyaffa' adalah seorang Full Stack Web Developer dari Indonesia yang memamerkan portofolio dan proyeknya di website pribadi ini.",
-  keywords: ["Ahmad Ammar Musyaffa", "web developer Indonesia", "full stack developer", "Laravel", "Next.js", "TailwindCSS", "Bootstrap", "Figma", "portofolio web developer"],
+  keywords: [
+    "Ahmad Ammar Musyaffa",
+    "web developer Indonesia",
+    "full stack developer",
+    "Laravel",
+    "Next.js",
+    "TailwindCSS",
+    "Bootstrap",
+    "Figma",
+    "portofolio web developer",
+  ],
   authors: [{ name: "Ahmad 'Ammar Musyaffa'", url: "https://ahmadammar.vercel.app" }],
   viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
@@ -39,18 +50,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="/a.png" type="image/png" />
       <body className={inter.className}>
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-          >
-            <Navbar />
-              {children}
-            <Footer />
-        </ThemeProvider>
+        <RootLayoutClient>
+          {children}
+        </RootLayoutClient>
       </body>
     </html>
   );
 }
+
