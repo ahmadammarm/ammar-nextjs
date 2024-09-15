@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react';
 import { ModeToggle } from './ModeToggle';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
   const [activeLink, setActiveLink] = useState('Home');
+  const router = useRouter();
 
   useEffect(() => {
     const storedActiveLink = localStorage.getItem('activeLink');
@@ -24,7 +24,7 @@ export default function Navbar() {
     const handleScroll = () => {
       const sections = ['home', 'about', 'educations', 'portfolio', 'contact'];
       let currentSection = '';
-      
+
       sections.forEach((sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -58,6 +58,8 @@ export default function Navbar() {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
+
+    router.push(`/#${link.toLowerCase()}`, undefined);
   };
 
   return (
@@ -101,4 +103,4 @@ export default function Navbar() {
       </header>
     </motion.div>
   );
-};
+}

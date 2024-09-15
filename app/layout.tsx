@@ -9,7 +9,7 @@ import RootLayoutClient from './RootLayoutClient';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Ahmad 'Ammar Musyaffa'",
+  title: "Ammar | Personal Website",
   description: "Ahmad 'Ammar Musyaffa' adalah seorang Full Stack Web Developer dari Indonesia yang memamerkan portofolio dan proyeknya di website pribadi ini.",
   keywords: [
     "Ahmad Ammar Musyaffa",
