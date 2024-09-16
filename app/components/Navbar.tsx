@@ -16,7 +16,7 @@ export default function Navbar() {
       const hash = window.location.hash;
 
       if (performance.navigation.type === 1 && hash) {
-        router.push('/'); // Reset to home when page is refreshed
+        router.push('/');
       }
     }
 
@@ -49,7 +49,7 @@ export default function Navbar() {
 
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
-    setIsMobileMenuOpen(false); // Close mobile menu after clicking link
+    setIsMobileMenuOpen(false);
 
     const section = document.getElementById(link.toLowerCase());
 
