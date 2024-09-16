@@ -19,7 +19,7 @@ function HomeSection(): React.JSX.Element {
                 {/* Content Start */}
                 <div id="content" className="transform translate-y-10 transition-all duration-700 flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4">
                     <p className="text-gray-700 dark:text-gray-400 text-lg">Hii..👋</p>
-                    <h1 className="text-4xl font-bold mb-4">Im <span className="text-4xl text-teal-500">{nama}</span></h1>
+                    <h2 className="text-4xl font-bold mb-4">Im <span className="text-4xl text-teal-500">{nama}</span></h2>
                     <div className="text-lg md:text-2xl lg:text-3xl font-semibold mb-4 text-teal-500 font-mono">
                         {role}  🧑🏻‍💻
                     </div>

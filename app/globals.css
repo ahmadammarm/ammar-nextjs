@@ -62,6 +62,27 @@
 html {
   scroll-behavior: smooth;
 }
+
+p::selection {
+  background-color: rgb(15 118 110);
+  color: white;
+}
+
+h3::selection {
+  background-color: rgb(15 118 110);
+  color: white;
+}
+
+span::selection {
+  background-color: white;
+  color: rgb(15 118 110);
+}
+
+h2::selection {
+  background-color: white;
+  color: rgb(15 118 110);
+}
+
 @layer base {
   * {
     @apply border-border;

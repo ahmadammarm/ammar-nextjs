@@ -42,9 +42,9 @@ function AboutSection(): React.ReactElement {
 
     return (
         <div id='about' className=' min-h-screen flex flex-col justify-center items-center p-3 py-20'>
-            <h1 ref={titleRef} className='opacity-0 transform translate-y-10 transition-all duration-700 text-5xl font-bold mb-[5rem] mt-[5rem]' id='about-title'>
+            <h2 ref={titleRef} className='opacity-0 transform translate-y-10 transition-all duration-700 text-5xl font-bold mb-[5rem] mt-[5rem]' id='about-title'>
                 About Me
-            </h1>
+            </h2>
             <div className=' max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center'>
 
                 {/* Image Content Start */}
