@@ -7,23 +7,18 @@ import { DownloadIcon } from "lucide-react";
 function HomeSection(): React.JSX.Element {
     const { nama, role, CV, foto } = profile[0];
 
-    useEffect(() => {
-        document.getElementById("content")?.classList.add("fade-in");
-        document.getElementById("image")?.classList.add("fade-in");
-    }, []);
 
     return (
         <div id="home" className="min-h-screen flex flex-col justify-center items-center p-4 pt-28 lg:pt-16">
             <div className="max-w-7xl w-full mx-auto flex flex-col-reverse lg:flex-row items-center">
                 
                 {/* Content Start */}
-                <div id="content" className="transform translate-y-10 transition-all duration-700 flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4">
+                <div className="transform translate-y-10 transition-all duration-700 flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4">
                     <p className="text-gray-700 dark:text-gray-400 text-lg">Hii..👋</p>
                     <h2 className="text-4xl font-bold mb-4">Im <span className="text-4xl text-teal-500">{nama}</span></h2>
                     <div className="text-lg md:text-2xl lg:text-3xl font-semibold mb-4 text-teal-500 font-mono">
                         {role}  🧑🏻‍💻
                     </div>
-                    {/* <p className="text-xl mb-6 text-gray-700 dark:text-gray-400">{deskripsi}</p> */}
                     <a
                         href={CV}
                         target="_blank"
@@ -37,7 +32,7 @@ function HomeSection(): React.JSX.Element {
                 {/* Content End */}
 
                 {/* Image Content Start */}
-                <div id="image" className="opacity-0 transform translate-y-10 transition-all duration-700 flex justify-center lg:w-1/2 p-4 mb-8 lg:mb-0">
+                <div className="transform translate-y-10 transition-all duration-700 flex justify-center lg:w-1/2 p-4 mb-8 lg:mb-0">
                     <img
                         src={foto[0]}
                         alt={nama}

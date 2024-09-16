@@ -29,6 +29,46 @@ function ContactSection() {
                     ))}
                 </div>
                 {/* Contact Content End */}
+
+                {/* Form Contact */}
+                <div className="mt-12">
+                    <h3 className="text-2xl font-semibold mb-7">
+                        Or You Can Contact Me Through The Form Below 📝
+                    </h3>
+                    <form action="#" method="POST" className="flex flex-col items-center">
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Your Name (Under Development)"
+                            className="w-full p-4 mb-4 bg-white dark:bg-gray-800 shadow-md rounded-lg cursor-not-allowed"
+                            disabled
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Your Email (Under Development)"
+                            className="w-full p-4 mb-4 bg-white dark:bg-gray-800 shadow-md rounded-lg cursor-not-allowed"
+                            disabled
+                        />
+                        <textarea
+                            name="message"
+                            id="message"
+                            placeholder="Your Message (Under Development)"
+                            className="w-full p-4 mb-4 bg-white dark:bg-gray-800 shadow-md rounded-lg cursor-not-allowed"
+                            disabled
+                        ></textarea>
+                        <button
+                            type="submit"
+                            className="bg-teal-500 text-white px-4 py-3 rounded-lg cursor-not-allowed opacity-50"
+                            disabled
+                        >
+                            Send Message (Under Development)
+                        </button>
+                    </form>
+                </div>
+
             </div>
         </div>
     )
