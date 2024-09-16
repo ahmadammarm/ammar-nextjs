@@ -63,7 +63,7 @@ function AboutSection(): React.ReactElement {
                     className='flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4 lg:flex lg:flex-col'
                 >
                     <p className='text-gray-700 dark:text-gray-400 text-3xl font-bold mb-[1.5rem]'>
-                        Hii..👋 I'm <span className='text-3xl text-teal-500'>{nama}</span>
+                        Hii..👋 Im <span className='text-3xl text-teal-500'>{nama}</span>
                     </p>
                     <p className='text-gray-700 dark:text-gray-400 text-xl font-bold mb-[4rem] italic'>
                         An <span className='text-2xl text-teal-500'>{role} 🧑🏻‍💻</span> and live in <span className='text-2xl text-teal-500'>{negara} 🌏</span>.
