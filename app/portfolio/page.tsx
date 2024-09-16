@@ -34,11 +34,6 @@ function page() {
           </div>
         ))}
       </div>
-
-      {/* Portfolio Before Button */}
-      {/* <div className="text-center mt-10">
-        <a href="/#portfolio" className="bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300">View Some Projects</a>
-      </div> */}
     </div>
   )
 }

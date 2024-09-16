@@ -23,7 +23,7 @@ function EducationSection(): React.ReactElement {
                 <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
                     {education.map((edu, index) => (
                         <Card key={index} className="flex flex-col items-center p-4 mb-5 hover:shadow-teal-500 shadow-md transition-all ease-in-out duration-300 fade-in-element">
-                            <img src={edu.logo} alt={edu.nama} className="w-24 h-20 mb-4" />
+                            <img src={edu.logo} alt={edu.nama} className="w-24 h-16 mb-4" />
                             <CardHeader className="text-lg font-semibold mb-2 text-teal-500">{edu.nama}</CardHeader>
                             <CardDescription className="text-sm text-gray-700 dark:text-gray-400">{edu.jurusan}</CardDescription>
                             <CardDescription className="text-sm text-gray-700 dark:text-gray-400">{edu.tahun}</CardDescription>
