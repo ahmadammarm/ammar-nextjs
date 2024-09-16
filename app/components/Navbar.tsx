@@ -12,12 +12,11 @@ export default function Navbar() {
   const router = useRouter();
 
   useEffect(() => {
-    const storedActiveLink = localStorage.getItem('activeLink');
-    if (storedActiveLink) {
-      setActiveLink(storedActiveLink);
-      const section = document.getElementById(storedActiveLink.toLowerCase());
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+    if (typeof window !== 'undefined' && window.performance) {
+      const hash = window.location.hash;
+
+      if (performance.navigation.type === 1 && hash) {
+        router.push('/');
       }
     }
 
@@ -37,13 +36,12 @@ export default function Navbar() {
 
       if (currentSection) {
         setActiveLink(currentSection.charAt(0).toUpperCase() + currentSection.slice(1));
-        localStorage.setItem('activeLink', currentSection.charAt(0).toUpperCase() + currentSection.slice(1));
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [router]);
 
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -51,15 +49,17 @@ export default function Navbar() {
 
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
-    localStorage.setItem('activeLink', link);
     setIsMobileMenuOpen(false);
 
     const section = document.getElementById(link.toLowerCase());
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
 
-    router.push(`/#${link.toLowerCase()}`, undefined);
+    if (window.location.pathname !== '/') {
+      router.push(`/#${link.toLowerCase()}`);
+    } else if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      router.push(`/#${link.toLowerCase()}`);
+    }
   };
 
   return (

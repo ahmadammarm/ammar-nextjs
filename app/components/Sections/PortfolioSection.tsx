@@ -1,10 +1,9 @@
 "use client"
 
-import { portfolio } from '@/constants/portfolio'
+import { fullPortfolio, portfolio } from '@/constants/portfolio'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState, useEffect } from 'react'
-import { FaGithub } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 
 
@@ -45,17 +44,17 @@ function PortfolioSection() {
                 </div>
 
                 {/* Portfolio Content Start */}
-                <div>
-                    {portfolio.map((port, index) => (
-                        <div key={index} className='flex flex-col md:flex-row gap-4 items-center justify-center mb-10 shadow-xl p-5 rounded-md dark:bg-slate-900'>
-                            <div className='w-full md:w-1/2'>
-                                <img src={port.gambar} alt={port.nama} className='w-full h-full rounded-md object-cover' />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+                    {fullPortfolio.map((port, index) => (
+                        <div key={index} className="shadow-xl p-5 rounded-md dark:bg-slate-900">
+                            <div className="w-full mb-4">
+                                <img src={port.gambar} alt={port.nama} className="w-full h-full rounded-md object-cover" />
                             </div>
-                            <div className='w-full md:w-1/2'>
-                                <h3 className='text-2xl font-semibold text-teal-500'>{port.nama}</h3>
-                                <div className='flex flex-row m-1'>
+                            <div className="w-full p-5">
+                                <h3 className="text-2xl font-semibold text-teal-500 mb-3">{port.nama}</h3>
+                                <div className="flex flex-row mb-3">
                                     {port.teknologi.map((tekno, index) => (
-                                        <img key={index} src={tekno} alt={port.nama} className='w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] m-2' />
+                                        <img key={index} src={tekno} alt={port.nama} className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] m-2" />
                                     ))}
                                 </div>
                                 <p className='text-gray-700 dark:text-gray-400'>{port.deskripsi}</p>
@@ -70,9 +69,9 @@ function PortfolioSection() {
                 {/* Portfolio Content End */}
 
                 {/* All Projects Link Start */}
-                <div className='text-center mt-20'>
+                {/* <div className='text-center mt-20'>
                     <Link href='/portfolio' className={`link ${pathname === '/portfolio' || activeLink === 'portfolio' ? 'active' : ''} bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition-all duration-300`}>View All Projects</Link>
-                </div>
+                </div> */}
                 {/* All Projects Link End */}
             </div>
         </div>
