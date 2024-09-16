@@ -16,12 +16,12 @@ export default function Navbar() {
       const hash = window.location.hash;
 
       if (performance.navigation.type === 1 && hash) {
-        router.push('/');
+        router.push('/'); // Reset to home when page is refreshed
       }
     }
 
     const handleScroll = () => {
-      const sections = ['home', 'about', 'educations', 'portfolio', 'contact'];
+      const sections = ['home', 'about', 'portfolio', 'contact'];
       let currentSection = '';
 
       sections.forEach((sectionId) => {
@@ -49,16 +49,16 @@ export default function Navbar() {
 
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
-    setIsMobileMenuOpen(false);
+    setIsMobileMenuOpen(false); // Close mobile menu after clicking link
 
     const section = document.getElementById(link.toLowerCase());
 
     if (window.location.pathname !== '/') {
-      router.push(/#${link.toLowerCase()});
+      router.push(`/#${link.toLowerCase()}`);
     } else if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
-      router.push(/#${link.toLowerCase()});
+      router.push(`/#${link.toLowerCase()}`);
     }
   };
 
@@ -71,25 +71,40 @@ export default function Navbar() {
       <header className="fixed w-full z-50">
         <nav className="bg-white shadow-lg py-6 dark:bg-gray-900">
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-            <a href="/#home" className="flex items-center" onClick={() => handleLinkClick('Home')}>
+            <a
+              href="/#home"
+              className="flex items-center"
+              onClick={() => handleLinkClick('Home')}
+            >
               <span className="self-center text-4xl font-semibold whitespace-nowrap text-teal-500">Ammar</span>
             </a>
             <div className="flex items-center lg:order-2">
               <ModeToggle />
-              <button onClick={handleMobileMenuToggle} data-collapse-toggle="mobile-menu-2" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded={isMobileMenuOpen}>
-                {isMobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+              <button
+                onClick={handleMobileMenuToggle}
+                type="button"
+                className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-expanded={isMobileMenuOpen}
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
-            <div className={items-center justify-between ${isMobileMenuOpen ? 'block slide-down' : 'hidden'} w-full lg:flex lg:w-auto lg:order-1 transition-all duration-300 ease-in-out} id="mobile-menu-2">
+            <div
+              className={`${
+                isMobileMenuOpen ? 'block' : 'hidden'
+              } w-full lg:flex lg:w-auto lg:order-1`}
+              id="mobile-menu-2"
+            >
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 text-lg w-full">
                 {['Home', 'About', 'Portfolio', 'Contact'].map((link) => (
                   <li key={link} className="w-full lg:w-auto">
-                    <a href={/#${link.toLowerCase()}}
-                      className={block py-2 pl-3 pr-4 rounded lg:p-0 transition duration-300 ease-in-out w-full text-left lg:text-center ${
+                    <a
+                      href={`/#${link.toLowerCase()}`}
+                      className={`block py-2 pl-3 pr-4 rounded lg:p-0 transition duration-300 ease-in-out w-full text-left lg:text-center ${
                         activeLink === link
-                          ? ' text-teal-500 lg:text-teal-500 dark:text-teal-500'
+                          ? 'text-teal-500 lg:text-teal-500 dark:text-teal-500'
                           : 'text-gray-700 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-teal-500 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700'
-                      }}
+                      }`}
                       onClick={() => handleLinkClick(link)}
                     >
                       {link}
