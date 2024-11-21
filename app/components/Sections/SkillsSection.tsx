@@ -27,9 +27,11 @@ function SkillsSection() {
         <div className="flex flex-col md:flex-row-reverse gap-10">
           <div className="w-full md:w-1/4 text-center md:text-right">
             <div className="mb-4">
-              <h3 className="text-2xl font-semibold">Tech Stack⚙️ & Tools🛠️</h3>
+              <h3 className="text-2xl font-semibold">Tech Stacks & Tools</h3>
             </div>
-            <p className="text-gray-700 dark:text-gray-400">Ada beberapa tech stack dan tools yang telah saya pelajari khususnya dalam pemrograman.</p>
+            <p className="text-gray-700 dark:text-gray-400">
+                Here are some of the technologies and tools that I have been working with recently
+            </p>
           </div>
 
           {/* Skills Content Start */}
@@ -39,7 +41,7 @@ function SkillsSection() {
                 className={`px-4 py-2 font-semibold text-lg ${activeTab === 'tech-stack' ? 'text-teal-500' : 'text-black dark:text-white'} transition-colors duration-200`}
                 onClick={() => setActiveTab('tech-stack')}
               >
-                <span className="mr-2">⚙️</span> Tech Stack
+                <span className="mr-2">⚙️</span> Tech Stacks
               </button>
               <button
                 className={`px-4 py-2 font-semibold text-lg ${activeTab === 'tools' ? 'text-teal-500' : 'text-black dark:text-white'} transition-colors duration-200`}
