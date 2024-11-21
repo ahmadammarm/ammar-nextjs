@@ -65,13 +65,13 @@ function AboutSection(): React.ReactElement {
                     <p className='text-gray-700 dark:text-gray-400 text-3xl font-bold mb-[1.5rem]'>
                         Hii..👋 Im <span className='text-3xl text-teal-500'>{nama}</span>
                     </p>
-                    <p className='text-gray-700 dark:text-gray-400 text-xl font-bold mb-[4rem] italic'>
+                    {/* <p className='text-gray-700 dark:text-gray-400 text-xl font-bold mb-[4rem] italic'>
                         An <span className='text-2xl text-teal-500'>{role} 🧑🏻‍💻</span> and live in <span className='text-2xl text-teal-500'>{negara} 🌏</span>.
-                    </p>
+                    </p> */}
                     <p className='text-md lg:text-lg mb-6'>
                         {deskripsi}
                     </p>
-                    <Separator className="mb-5" />
+                    <Separator className="mb-10" />
                 </motion.div>
             </div>
 
@@ -81,7 +81,7 @@ function AboutSection(): React.ReactElement {
                 animate="visible"
                 variants={fadeInUp}
                 transition={{ duration: 0.7, ease: 'easeOut', delay: 0.5 }}
-                className="text-md lg:text-lg mb-6 text-gray-700 dark:text-gray-400 mt-5"
+                className="text-md lg:text-lg mb-6 text-gray-700 dark:text-gray-400 mt-20"
             >
                 Here are some of my educations background
             </motion.p>

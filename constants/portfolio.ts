@@ -22,7 +22,7 @@ export const portfolio: Portfolio[] =[
         deskripsi: "An online learning platform that provides various video-based courses on web programming.",
         teknologi: ["/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://webcademy-orcin.vercel.app/",
-        source: "https://github.com/ahmadammarm/webcademy"   
+        source: "https://github.com/ahmadammarm/webcademy"
     }
 ];
 
@@ -33,7 +33,6 @@ export const fullPortfolio: Portfolio[] = [
         deskripsi: "Landing page for the Eclipse Glow website, which is one of the PKM products from State University of Malang in 2023.",
         teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png"],
         link: "https://eclipse-glow.vercel.app/",
-        source: "https://github.com/ahmadammarm/eclipse-glow"
     },
     {
         nama: "Webcademy Learning Platform",
@@ -41,7 +40,6 @@ export const fullPortfolio: Portfolio[] = [
         deskripsi: "An online learning platform that provides various video-based courses on web programming.",
         teknologi: ["/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://webcademy-orcin.vercel.app/",
-        source: "https://github.com/ahmadammarm/webcademy"   
     },
     {
         nama: "Batik Zulpah Company Profile",
@@ -57,19 +55,25 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png"],
         link: "https://sinudzi.com"
     },
-    // {
-    //     nama: "Inden Games",
-    //     gambar: "/assets/portfolios/inden-games.jpg",
-    //     deskripsi: "Learning platform with the theme of Indonesia's Independent Day.",
-    //     teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png", "/assets/skills/bootstrap.png"],
-    //     link: "https://ahmadammarm.github.io/game-kemerdekaan/",
-    //     source: "https://github.com/ahmadammarm/game-kemerdekaan"
-    // },
+    {
+        nama: "Bakso Prima Cak Pen Landing Page",
+        gambar: "/assets/portfolios/bakso.png",
+        deskripsi: "Landing page for Bakso Prima Cak Pen, a meatball restaurant located in Malang City.",
+        teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png", "/assets/skills/bootstrap.png"],
+        link: "https://bakso-prima-cak-pen.vercel.app/",
+    },
     {
         nama: "Aishino Food Landing Page",
         gambar: "/assets/portfolios/aishino.png",
         deskripsi: "Landing page for Aishino Food, a food delivery service located in Malang City.",
         teknologi: ["/assets/skills/react.png", "/assets/skills/tailwind.png"],
         link: "https://aishino-food.vercel.app/",
+    },
+    {
+        nama: "Lentara Learning Platform",
+        gambar: "/assets/portfolios/lentara.png",
+        deskripsi: "An online learning platform that provides various contents about Indonesia.",
+        teknologi: ["/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
+        link: "https://lentara.vercel.app/",
     },
 ]

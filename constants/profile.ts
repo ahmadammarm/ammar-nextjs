@@ -6,6 +6,6 @@ export const profile: Profile[] = [
         role: 'Lifetime Learner',
         CV: '/assets/CV_Ahmad_Ammar.pdf',
         deskripsi: 'Yang tertarik dengan teknologi dan pengembangan web dan berusaha untuk belajar hal-hal baru seputar teknologi.',
-        foto: ['/assets/Ahmad_Ammar_Fakultas_Teknik.jpg', 'https://ahmadammar.vercel.app/assets/images/ammar-pantai.jpg']
+        foto: ['/assets/ammar3.jpg', 'https://ahmadammar.vercel.app/assets/images/ammar-pantai.jpg']
     }
 ]
