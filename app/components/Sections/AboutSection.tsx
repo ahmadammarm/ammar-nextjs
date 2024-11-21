@@ -8,7 +8,7 @@ import { Card, CardHeader, CardDescription } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 
 function AboutSection(): React.ReactElement {
-    const { nama, negara, role, deskripsi, foto } = about[0];
+    const { nama, deskripsi, foto } = about[0];
 
     const fadeInUp = {
         hidden: { opacity: 0, y: 20 },
