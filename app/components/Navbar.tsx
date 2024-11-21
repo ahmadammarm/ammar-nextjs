@@ -21,7 +21,7 @@ export default function Navbar() {
     }
 
     const handleScroll = () => {
-      const sections = ['home', 'about', 'portfolio', 'contact'];
+      const sections = ['home', 'about', 'skills', 'portfolio', 'contact'];
       let currentSection = '';
 
       sections.forEach((sectionId) => {
@@ -96,7 +96,7 @@ export default function Navbar() {
               id="mobile-menu-2"
             >
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 text-lg w-full">
-                {['Home', 'About', 'Portfolio', 'Contact'].map((link) => (
+                {['Home', 'About', 'Skills', 'Portfolio', 'Contact'].map((link) => (
                   <li key={link} className="w-full lg:w-auto">
                     <a
                       href={`/#${link.toLowerCase()}`}
