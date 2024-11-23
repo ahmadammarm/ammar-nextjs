@@ -97,7 +97,7 @@ function ContactSection() {
                                 <img
                                     src={item.icon}
                                     alt={item.nama}
-                                    className="w-12 h-10 md:w-14 md:h-12"
+                                    className="w-10 h-10 md:w-12 md:h-12"
                                 />
                                 <div className="flex flex-col items-center md:items-start">
                                     <span className="text-2xl font-bold">{item.nama}</span>
