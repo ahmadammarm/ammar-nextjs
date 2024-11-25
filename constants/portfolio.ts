@@ -76,4 +76,11 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: ["/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://lentara.vercel.app/",
     },
+    {
+        nama: "Al-Qur'an and Al-Hadits Website",
+        gambar: "/assets/portfolios/my-quran.png",
+        deskripsi: "Website that provides the Al-Qur'an and Al-Hadits list using API.",
+        teknologi: ["/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
+        link: "https://my-quran-steel.vercel.app/",
+    }
 ]
