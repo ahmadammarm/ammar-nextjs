@@ -11,13 +11,13 @@ function HomeSection(): React.JSX.Element {
     return (
         <div id="home" className="min-h-screen flex flex-col justify-center items-center p-4 pt-28 lg:pt-16">
             <div className="max-w-7xl w-full mx-auto flex flex-col-reverse lg:flex-row items-center">
-                
+
                 {/* Content Start */}
                 <div className="transform translate-y-10 transition-all duration-700 flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4">
                     <p className="text-gray-700 dark:text-gray-400 text-lg">Hii..👋</p>
                     <h2 className="text-4xl font-bold mb-4">Im <span className="text-4xl text-teal-500">{nama}</span></h2>
-                    <div className="text-lg md:text-2xl lg:text-3xl font-semibold mb-4 text-teal-500 font-mono">
-                        {role}  🧑🏻‍💻
+                    <div className="text-md md:text-lg lg:text-xl mb-4">
+                        {role}
                     </div>
                     <a
                         href={CV}
