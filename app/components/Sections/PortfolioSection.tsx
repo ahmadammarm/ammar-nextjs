@@ -40,9 +40,9 @@ function PortfolioSection() {
         <p className="text-gray-700 dark:text-gray-500">
           Here are all the projects I created while I was learning about website development. 🧑🏻‍💻.
         </p>
-      </div> 
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
         {fullPortfolio.map((port, index) => (
           <div key={index} className="shadow-xl p-5 rounded-md dark:bg-slate-900">
             <div className="w-full mb-4">
