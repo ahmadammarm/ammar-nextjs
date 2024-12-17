@@ -79,7 +79,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "Al-Qur'an and Al-Hadits Website",
         gambar: "/assets/portfolios/my-quran.png",
-        deskripsi: "Website that provides the Al-Qur'an and Al-Hadits list using API.",
+        deskripsi: "Website that provides the mouslem guides like Al-Quran, Al-Hadits, daily prayer, and more using API.",
         teknologi: ["/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://my-quran-steel.vercel.app/",
     }
