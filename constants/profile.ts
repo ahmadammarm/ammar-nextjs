@@ -6,6 +6,6 @@ export const profile: Profile[] = [
         role: 'A lifetime learner who is interested in technology and web development.',
         CV: '/assets/CV_Ahmad_Ammar.pdf',
         deskripsi: 'Yang tertarik dengan teknologi dan pengembangan web dan berusaha untuk belajar hal-hal baru seputar teknologi.',
-        foto: ['/assets/ammar-baru.jpg']
+        foto: ['/assets/ammar-baru-lagi.jpg']
     }
 ]
