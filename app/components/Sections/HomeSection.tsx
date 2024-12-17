@@ -37,6 +37,7 @@ function HomeSection(): React.JSX.Element {
                         src={foto[0]}
                         alt={nama}
                         className="w-64 h-64 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-teal-500"
+                        loading="lazy"
                     />
                 </div>
                 {/* Image Content End */}
