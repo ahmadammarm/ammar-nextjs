@@ -13,7 +13,7 @@ export const portfolio: Portfolio[] =[
         nama: "Bu Aini's Catering Information System",
         gambar: "/assets/portfolios/sicaba.png",
         deskripsi: "Web-based information system for Bu Aini's catering management located in Malang City.",
-        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/bootstrap.png"],
+        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png"],
         source: "https://github.com/HarunSatr/SICABA"
     },
     {
@@ -38,22 +38,20 @@ export const fullPortfolio: Portfolio[] = [
         nama: "Webcademy Learning Platform",
         gambar: "/assets/portfolios/webcademy.png",
         deskripsi: "An online learning platform that provides various video-based courses on web programming.",
-        teknologi: ["/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
+        teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://webcademy-orcin.vercel.app/",
+    },
+    {
+        nama: "Bu Aini's Catering Information System",
+        gambar: "/assets/portfolios/sicaba.png",
+        deskripsi: "Web-based information system for Bu Aini's catering management located in Malang City.",
+        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png"],
     },
     {
         nama: "Batik Zulpah Company Profile",
         gambar: "/assets/portfolios/batik-zulpah.png",
         deskripsi: "A full-stack web application that serves as a company profile for Batik Zulpah, a batik company located in Tanjung Bumi .",
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png"],
-        link: "https://batikzulpah.com"
-    },
-    {
-        nama: "Daily Prayer and Dhikr Website",
-        gambar: "/assets/portfolios/doa-dzikir.png",
-        deskripsi: "Website that provides daily prayers and dhikr for Muslims.",
-        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png"],
-        link: "https://sinudzi.com"
     },
     {
         nama: "Bakso Prima Cak Pen Landing Page",
@@ -66,21 +64,21 @@ export const fullPortfolio: Portfolio[] = [
         nama: "Aishino Food Landing Page",
         gambar: "/assets/portfolios/aishino.png",
         deskripsi: "Landing page for Aishino Food, a food delivery service located in Malang City.",
-        teknologi: ["/assets/skills/react.png", "/assets/skills/tailwind.png"],
+        teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/tailwind.png"],
         link: "https://aishino-food.vercel.app/",
     },
     {
         nama: "Lentara Learning Platform",
         gambar: "/assets/portfolios/lentara.png",
         deskripsi: "An online learning platform that provides various contents about Indonesia.",
-        teknologi: ["/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
+        teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://lentara.vercel.app/",
     },
     {
         nama: "Al-Qur'an and Al-Hadits Website",
         gambar: "/assets/portfolios/my-quran.png",
         deskripsi: "Website that provides the mouslem guides like Al-Quran, Al-Hadits, daily prayer, and more using API.",
-        teknologi: ["/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://my-quran-steel.vercel.app/",
     }
 ]
