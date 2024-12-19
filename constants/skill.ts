@@ -34,7 +34,7 @@ export const techStack: Skill[] = [
     {
         gambar: "assets/skills/laravel.png",
         nama: "Laravel",
-        tingkat: "Intermediate",
+        tingkat: "Basic",
     },
     {
         gambar: "assets/skills/react.png",
