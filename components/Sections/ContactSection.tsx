@@ -4,6 +4,8 @@ import { contact } from "@/constants/contact";
 import React, { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
+import { footer } from "@/constants/footer";
+import Link from "next/link";
 
 function ContactSection() {
     const [formData, setFormData] = useState({
@@ -22,7 +24,6 @@ function ContactSection() {
 
         const { name, email, pesan } = formData;
 
-        // Validasi input
         if (!name || !email || !pesan) {
             toast({
                 variant: "destructive",
@@ -32,7 +33,6 @@ function ContactSection() {
             return;
         }
 
-        // Integrasi Google Apps Script
         const scriptURL = "https://script.google.com/macros/s/AKfycby-TIGP5hd3qZDQkAWczflI3qVDorrRt3egys1dGRolltGTEX6xI5XdumXT7CQdFqiAvA/exec";
 
         try {
@@ -52,7 +52,6 @@ function ContactSection() {
                     description: "Message sent successfully.",
                 });
 
-                // Reset form setelah berhasil mengirim data
                 setFormData({
                     name: "",
                     email: "",
@@ -72,18 +71,12 @@ function ContactSection() {
     };
 
     return (
-        <div id="contact" className="w-full py-20">
+        <div className="w-full py-20">
             <div className="text-center mb-10">
-                <h2 className="text-5xl font-bold mb-[5rem] mt-[5rem]">Contact</h2>
+                <h2 className="text-5xl font-bold">Contact</h2>
             </div>
 
             <div className="container mx-auto">
-                <div className="text-center mb-12">
-                    <h3 className="text-2xl font-semibold mb-7">
-                        Contact Me Through The Media Below 📩
-                    </h3>
-                </div>
-
                 {/* Contact Content Start */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {contact.map((item, index) => (
@@ -113,11 +106,29 @@ function ContactSection() {
                     ))}
                 </div>
                 {/* Contact Content End */}
+                <div>
+                <h3 className="text-2xl font-semibold mt-10 text-center">
+                        You Can Connect with Me in
+                    </h3>
+                </div>
+                <div className="container mx-auto flex justify-center space-x-4 mt-5">
+                    {footer.map((foot, index) => (
+                        <div key={index} className="flex items-center justify-center mt-5 mb-5">
+                            <Link
+                                href={foot.link}
+                                className="text-teal-500 hover:text-white hover:bg-teal-500 hover:border-white transition duration-300 p-2 lg:p-3 bg-white border border-teal-500 rounded-md dark:bg-slate-900 dark:hover:bg-teal-500 dark:hover:border-gray-700 dark:hover:text-slate-900"
+                                target='_blank'
+                            >
+                                {React.createElement(foot.logo, { className: "w-10 h-10" })}
+                            </Link>
+                        </div>
+                    ))}
+                </div>
 
                 {/* Form Contact */}
                 <div className="mt-12">
-                    <h3 className="text-2xl font-semibold mb-7">
-                        Or You Can Contact Me Through The Form Below 📝
+                    <h3 className="text-2xl font-semibold mb-7 text-center">
+                        You Can Also Contact Me Through The Form Below 📝
                     </h3>
                     <form
                         onSubmit={formSubmit}

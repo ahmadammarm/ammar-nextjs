@@ -1,29 +1,37 @@
 "use client"
 
-import Loading from '@/components/loading/Loading'
 import { fullPortfolio } from '@/constants/portfolio'
-import React, { useEffect, useState } from 'react'
-import { FaEye } from 'react-icons/fa'
+import React, { useState, useEffect } from 'react'
+import { FaEye } from "react-icons/fa";
 
-export default function Page() {
 
-    const [isLoading, setIsLoading] = useState(true)
+function PortfolioSection() {
+    const [activeLink, setActiveLink] = useState('');
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false)
-        }, 1000);
+        const handleScroll = () => {
+            const sections = ['portfolio'];
+            let currentSection = '';
 
-        return () => clearTimeout(timer)
+            sections.forEach((sectionId) => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                        currentSection = sectionId;
+                    }
+                }
+            });
+
+            setActiveLink(currentSection);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    if(isLoading) {
-        return <Loading />
-    }
-
-
     return (
-        <div className="w-full py-28">
+        <div id="portfolio" className="w-full py-28">
             <div className="text-center mb-16">
                 <h2 className="text-5xl font-bold mb-5 mt-8">Portfolio</h2>
                 <p className="text-gray-700 dark:text-gray-500">
@@ -31,7 +39,7 @@ export default function Page() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
                 {fullPortfolio.map((port, index) => (
                     <div key={index} className="shadow-xl p-5 rounded-md dark:bg-slate-900">
                         <div className="w-full mb-4">
@@ -56,3 +64,5 @@ export default function Page() {
         </div>
     )
 }
+
+export default PortfolioSection

@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { Card, CardHeader, CardDescription } from '@/components/ui/card';
 import { education } from '@/constants/education';
-import { organization } from '@/constants/organization';
+import { motion } from 'framer-motion';
 
 function EducationSection(): React.ReactElement {
     useEffect(() => {
@@ -11,13 +11,22 @@ function EducationSection(): React.ReactElement {
         elements.forEach((el, index) => {
             setTimeout(() => {
                 el.classList.add('fade-in');
-            }, index * 150); 
+            }, index * 150);
         });
     }, []);
 
     return (
         <div id="educations">
             <div className="container mx-auto">
+                {/* Education Animation */}
+                <motion.p
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ duration: 0.7, ease: 'easeOut', delay: 0.5 }}
+                    className="text-md lg:text-lg mb-6 text-gray-700 dark:text-gray-400 text-center"
+                >
+                    Here are some of my educations background
+                </motion.p>
                 {/* Educations Content Start */}
                 <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
                     {education.map((edu, index) => (

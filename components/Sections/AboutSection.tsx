@@ -3,8 +3,6 @@
 import { about } from '@/constants/about';
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
-import { education } from '@/constants/education';
-import { Card, CardHeader, CardDescription } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 
 function AboutSection(): React.ReactElement {
@@ -26,7 +24,7 @@ function AboutSection(): React.ReactElement {
     };
 
     return (
-        <div id='about' className='min-h-screen flex flex-col justify-center items-center p-3 py-20'>
+        <div className='min-h-screen flex flex-col justify-center items-center p-3 py-20'>
             {/* Title Animation */}
             <motion.h2
                 initial="hidden"
@@ -76,7 +74,7 @@ function AboutSection(): React.ReactElement {
             </div>
 
             {/* Education Animation */}
-            <motion.p
+            {/* <motion.p
                 initial="hidden"
                 animate="visible"
                 variants={fadeInUp}
@@ -109,7 +107,7 @@ function AboutSection(): React.ReactElement {
                         </CardDescription>
                     </Card>
                 ))}
-            </motion.div>
+            </motion.div> */}
         </div>
     );
 }

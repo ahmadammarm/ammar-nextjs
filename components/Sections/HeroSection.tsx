@@ -1,15 +1,15 @@
 "use client"
 
-import React, { useEffect } from "react";
+import React from "react";
 import { profile } from "@/constants/profile";
 import { DownloadIcon } from "lucide-react";
 
-function HomeSection(): React.JSX.Element {
+function HeroSection(): React.JSX.Element {
     const { nama, role, CV, foto } = profile[0];
 
 
     return (
-        <div id="home" className="min-h-screen flex flex-col justify-center items-center p-4 pt-28 lg:pt-16">
+        <div className="min-h-screen flex flex-col justify-center items-center p-4 pt-28 lg:pt-16">
             <div className="max-w-7xl w-full mx-auto flex flex-col-reverse lg:flex-row items-center">
 
                 {/* Content Start */}
@@ -47,4 +47,4 @@ function HomeSection(): React.JSX.Element {
     );
 };
 
-export default HomeSection;
+export default HeroSection;
