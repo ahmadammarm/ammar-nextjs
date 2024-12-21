@@ -31,7 +31,7 @@ function PortfolioSection() {
     }, []);
 
     return (
-        <div id="portfolio" className="w-full py-28">
+        <div className="w-full py-28">
             <div className="text-center mb-16">
                 <h2 className="text-5xl font-bold mb-5 mt-8">Portfolio</h2>
                 <p className="text-gray-700 dark:text-gray-500">

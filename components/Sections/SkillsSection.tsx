@@ -2,6 +2,7 @@
 
 import { techStack, tools } from '@/constants/skill';
 import React, { useEffect, useState } from 'react';
+import { Button } from '../ui/button';
 
 function SkillsSection() {
     const [activeTab, setActiveTab] = useState('tech-stack');
@@ -31,19 +32,19 @@ function SkillsSection() {
 
                     {/* Skills Content Start */}
                     <div className="w-full md:w-3/4 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg">
-                        <div className="flex justify-center mb-6">
-                            <button
-                                className={`px-4 py-2 font-semibold text-lg ${activeTab === 'tech-stack' ? 'text-teal-500' : 'text-black dark:text-white'} transition-colors duration-200`}
+                        <div className="flex justify-center mb-6 gap-10">
+                            <Button
+                                className={`px-4 py-2 font-semibold text-lg shadow-md dark:shadow-sm dark:shadow-black ${activeTab === 'tech-stack' ? 'text-teal-500 border' : 'bg-transparent text-slate-900 dark:text-white border'} transition-colors duration-200`}
                                 onClick={() => setActiveTab('tech-stack')}
                             >
-                                <span className="mr-2">⚙️</span> Tech Stacks
-                            </button>
-                            <button
-                                className={`px-4 py-2 font-semibold text-lg ${activeTab === 'tools' ? 'text-teal-500' : 'text-black dark:text-white'} transition-colors duration-200`}
+                                Tech Stacks
+                            </Button>
+                            <Button
+                                className={`px-4 py-2 font-semibold text-lg shadow-md dark:shadow-sm dark:shadow-black ${activeTab === 'tools' ? 'text-teal-500 border' : 'bg-transparent text-slate-900 dark:text-white border'} transition-colors duration-200`}
                                 onClick={() => setActiveTab('tools')}
                             >
-                                <span className="mr-2">🛠️</span> Tools
-                            </button>
+                                Tools
+                            </Button>
                         </div>
 
                         <div className="tab-content">
