@@ -9,7 +9,7 @@ function HeroSection(): React.JSX.Element {
 
 
     return (
-        <div className="min-h-screen flex flex-col justify-center items-center p-4 pt-28 lg:pt-16">
+        <div className="flex flex-col justify-center items-center p-4">
             <div className="max-w-7xl w-full mx-auto flex flex-col-reverse lg:flex-row items-center">
 
                 {/* Content Start */}
