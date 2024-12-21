@@ -1,6 +1,6 @@
 "use client"
 
-import Loading from "@/components/loading/Loading";
+import Loading from "@/components/Loading";
 import HeroSection from "@/components/Sections/HeroSection";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";

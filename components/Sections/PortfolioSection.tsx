@@ -33,7 +33,7 @@ function PortfolioSection() {
     return (
         <div className="w-full py-28">
             <div className="text-center mb-16">
-                <h2 className="text-5xl font-bold mb-5 mt-8">Portfolio</h2>
+                <h2 className="text-5xl font-bold mb-5">Portfolio</h2>
                 <p className="text-gray-700 dark:text-gray-500">
                     Here are all the projects I created while I was learning about website development. 🧑🏻‍💻.
                 </p>

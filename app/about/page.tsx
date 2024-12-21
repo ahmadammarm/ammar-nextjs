@@ -1,8 +1,9 @@
 "use client"
 
-import Loading from "@/components/loading/Loading";
+import Loading from "@/components/Loading";
 import AboutSection from "@/components/Sections/AboutSection";
 import EducationSection from "@/components/Sections/EducationSection";
+import ExperienceTimeline from "@/components/Sections/ExperiencesSection";
 import SkillsSection from "@/components/Sections/SkillsSection";
 import { useEffect, useState } from "react";
 
@@ -26,6 +27,7 @@ export default function Page() {
             <AboutSection />
             <EducationSection />
             <SkillsSection />
+            <ExperienceTimeline />
         </div>
     )
 }

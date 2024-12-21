@@ -31,7 +31,7 @@ function AboutSection(): React.ReactElement {
                 animate="visible"
                 variants={fadeInUp}
                 transition={{ duration: 0.7, ease: 'easeOut' }}
-                className='text-5xl font-bold mb-[5rem] mt-[5rem]'
+                className='text-5xl font-bold mb-[5rem]'
             >
                 About Me
             </motion.h2>

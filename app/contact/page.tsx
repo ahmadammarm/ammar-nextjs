@@ -1,6 +1,6 @@
 "use client"
 
-import Loading from "@/components/loading/Loading";
+import Loading from "@/components/Loading";
 import ContactSection from "@/components/Sections/ContactSection";
 import { useEffect, useState } from "react";
 

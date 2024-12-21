@@ -1,6 +1,6 @@
 "use client"
 
-import Loading from '@/components/loading/Loading'
+import Loading from '@/components/Loading'
 import { fullPortfolio } from '@/constants/portfolio'
 import React, { useEffect, useState } from 'react'
 import { FaEye } from 'react-icons/fa'
