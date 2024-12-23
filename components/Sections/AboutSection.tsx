@@ -4,6 +4,7 @@ import { about } from '@/constants/about';
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 function AboutSection(): React.ReactElement {
     const { nama, deskripsi, foto } = about[0];
@@ -45,10 +46,12 @@ function AboutSection(): React.ReactElement {
                     transition={{ duration: 0.7, ease: 'easeOut' }}
                     className='flex justify-center lg:w-1/2 p-4 mb-8 lg:mb-0'
                 >
-                    <img
+                    <Image
                         src={foto}
                         alt='Ammar'
                         className='w-64 h-64 lg:w-80 lg:h-96 rounded-md object-cover border-4 border-teal-500'
+                        width={30}
+                        height={30}
                     />
                 </motion.div>
 
