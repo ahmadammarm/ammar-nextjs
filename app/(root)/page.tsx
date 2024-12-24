@@ -49,6 +49,7 @@ export default function Home() {
                             src={foto}
                             alt='Ammar'
                             className='w-64 h-64 lg:w-80 lg:h-96 rounded-md object-cover border-4 border-teal-500'
+                            loading="lazy"
                         />
                     </div>
 
