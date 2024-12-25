@@ -60,10 +60,10 @@ export default function PortfolioDetail() {
                     </Button>
                     {portfolio.nama}
                 </h1>
-                <p className="text-gray-700 dark:text-gray-400 mb-10 text-lg">
+                <p className="text-gray-700 dark:text-gray-400 mb-10 mt-10 text-lg">
                     {portfolio.deskripsi2}
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <h1 className="text-3xl font-bold mb-5">
                             Tech Stacks
