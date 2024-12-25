@@ -22,7 +22,7 @@ function EducationSection() {
                     {education.map((edu, index) => (
                         <Card key={index} className="flex flex-col items-center p-4 mb-5 hover:shadow-teal-500 shadow-md transition-all ease-in-out duration-300 fade-in-element">
                             {/* <img src={edu.logo} alt={edu.nama} className="w-full h-full mb-4" /> */}
-                            <CardHeader className="text-lg font-semibold mb-2 text-teal-500">{edu.nama}</CardHeader>
+                            <CardHeader className="text-lg font-semibold mb-2 text-teal-500 text-center">{edu.nama}</CardHeader>
                             <CardDescription className="text-sm text-gray-700 dark:text-gray-400">{edu.jurusan}</CardDescription>
                             <CardDescription className="text-sm text-gray-700 dark:text-gray-400">{edu.tahun}</CardDescription>
                         </Card>
