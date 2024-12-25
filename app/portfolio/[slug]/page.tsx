@@ -45,11 +45,14 @@ export default function PortfolioDetail() {
     }
 
     return (
-        <div className="flex items-center justify-center py-28">
-            <div className="max-w-4xl px-4">
-                <h1 className="text-4xl font-bold mb-10 text-teal-500">
+        <div className="flex items-center justify-center py-20">
+            <div className="px-10 md:px-20">
+                <h1 className="text-4xl font-bold text-teal-500">
                     {portfolio.nama}
                 </h1>
+                <p className="mb-10 mt-4 text-black dark:text-white text-lg">
+                    {portfolio.year}
+                </p>
                 <p className="text-gray-700 dark:text-gray-400 mb-20 text-lg">
                     {portfolio.deskripsi2}
                 </p>
@@ -71,7 +74,7 @@ export default function PortfolioDetail() {
                     <img 
                         src={portfolio.gambar} 
                         alt={portfolio.nama} 
-                        className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-10 border"
+                        className="w-full h-full object-cover rounded-lg shadow-lg mb-10 border"
                         loading='lazy'
                     />
                 </div>
@@ -79,7 +82,7 @@ export default function PortfolioDetail() {
                     <img 
                         src={portfolio.gambar2} 
                         alt={portfolio.nama} 
-                        className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-10 border"
+                        className="w-full h-full object-cover rounded-lg shadow-lg mb-10 border"
                         loading='lazy'
                     />
                 </div>
@@ -87,7 +90,7 @@ export default function PortfolioDetail() {
                     <img 
                         src={portfolio.gambar3} 
                         alt={portfolio.nama} 
-                        className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-10 border"
+                        className="w-full h-full object-cover rounded-lg shadow-lg mb-10 border"
                         loading='lazy'
                     />
                 </div>

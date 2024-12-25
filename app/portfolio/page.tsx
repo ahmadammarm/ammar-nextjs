@@ -4,7 +4,7 @@ import Loading from '@/components/Loading'
 import { fullPortfolio } from '@/constants/portfolio'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { FaEye, FaInfoCircle } from 'react-icons/fa'
+import { FaInfoCircle } from 'react-icons/fa'
 
 export default function Page() {
     const [isLoading, setIsLoading] = useState(true)
@@ -30,7 +30,7 @@ export default function Page() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-5">
                 {fullPortfolio.map((port, index) => (
                     <div key={index} className="shadow-xl p-5 rounded-md dark:bg-slate-900">
                         <div className="w-full mb-4">
@@ -38,11 +38,6 @@ export default function Page() {
                         </div>
                         <div className="w-full p-5">
                             <h3 className="text-2xl font-semibold text-teal-500 mb-3">{port.nama}</h3>
-                            {/* <div className="flex flex-row mb-3">
-                                {port.teknologi.map((tekno, index) => (
-                                    <img key={index} src={tekno} alt={port.nama} className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] m-2" />
-                                ))}
-                            </div> */}
                             <p className='text-gray-700 dark:text-gray-400'>{port.deskripsi}</p>
                             <div className='flex gap-4 mt-4'>
                                 <Link 

@@ -10,4 +10,5 @@ export type Portfolio = {
     link?: string;
     source?: string;
     detail?: string;
+    year: string;
 }
