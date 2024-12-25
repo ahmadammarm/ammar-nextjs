@@ -46,7 +46,7 @@ export default function PortfolioDetail() {
 
     return (
         <div className="flex items-center justify-center py-20">
-            <div className="px-10 md:px-20">
+            <div className="px-5 md:px-20">
                 <h1 className="text-4xl font-bold text-teal-500">
                     {portfolio.nama}
                 </h1>
