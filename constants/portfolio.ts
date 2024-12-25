@@ -44,7 +44,7 @@ export const fullPortfolio: Portfolio[] = [
         deskripsi2: "Landing page for Eclipse Glow website, a PKM (Student Creativity Program) product from State University of Malang in 2023. The website showcases comprehensive product details featuring an in-depth product description that highlights the unique features and benefits of Eclipse Glow. It includes a user-friendly guide section that provides step-by-step instructions on how to effectively use the product, ensuring users can maximize its potential. The landing page also spotlights the talented team behind Eclipse Glow, introducing the student innovators who developed this product as part of their PKM project, along with their roles and contributions to the project's success.",
         teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png"],
         link: "https://eclipse-glow.vercel.app/",
-        year: "2023"
+        year: "2023",
     },
     {
         nama: "Webcademy Learning Platform",
@@ -56,7 +56,8 @@ export const fullPortfolio: Portfolio[] = [
         deskripsi2: "An online learning platform that provides various video-based courses on web programming. This website is built using modern web technologies including JavaScript, React, Next.js, and Tailwind CSS. The platform features seamlessly embedded YouTube video content, allowing learners to access high-quality programming tutorials directly within the interface. User authentication is handled through Clerk, providing secure and streamlined sign-up/login functionality with multiple authentication methods. The website also implements a dark mode UI option, enabling users to switch between light and dark themes for comfortable viewing in different lighting conditions or based on personal preference. This thoughtfully designed learning environment combines comprehensive course content with user-friendly features to enhance the learning experience.",
         teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://webcademy-orcin.vercel.app/",
-        year: "2024"
+        year: "2024",
+        source: "https://github.com/ahmadammarm/webcademy"
     },
     {
         nama: "Bu Aini's Catering Information System",
@@ -67,7 +68,7 @@ export const fullPortfolio: Portfolio[] = [
         deskripsi: "Web-based information system for Bu Aini's catering management located in Malang City.",
         deskripsi2: "A web-based information system for Bu Aini's catering management located in Malang City. The system features a robust admin dashboard where administrators can efficiently manage product content, including adding new items, updating descriptions, prices, and inventory levels. The website showcases a diverse catalog of available catering products, displaying detailed information such as menu descriptions, pricing, and serving portions. A user-friendly shopping cart functionality allows customers to easily select multiple items, specify quantities, and review their orders before proceeding to checkout. This comprehensive system streamlines the catering management process while providing a seamless ordering experience for customers.",
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
-        year: "2024"
+        year: "2024",
     },
     {
         nama: "Batik Zulpah Company Profile",
@@ -78,6 +79,7 @@ export const fullPortfolio: Portfolio[] = [
         deskripsi: "A full-stack web application that serves as a company profile for Batik Zulpah, a batik company located in Tanjung Bumi .",
         deskripsi2: "A full-stack web application that serves as a company profile for Batik Zulpah, a batik company located in Tanjung Bumi. The platform features a comprehensive admin panel that enables administrators to manage product content, including updating product descriptions, prices, images, and availability status. The website showcases an extensive collection of available batik products, displaying detailed information about each item's patterns, materials, sizing, and cultural significance. Additionally, the platform includes a dedicated news section where the company can share updates about new collections, batik-making workshops, cultural events, and company milestones. This integrated system effectively presents Batik Zulpah's rich heritage while providing easy content management for administrators. This is my first project since I started to be freelancer in Pastijadi Digital Solutions.",
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
+        link: "https://batikzulpah.com/",
         year: "2024"
     },
     {
@@ -114,7 +116,8 @@ export const fullPortfolio: Portfolio[] = [
         deskripsi2: "An online learning platform that provides a wide range of engaging content about Indonesia, offering users a unique and interactive way to explore the nation's rich culture and history. The website features an interactive map, allowing users to visually navigate and discover information about different regions across the country. Additionally, it includes quizzes to test and enhance knowledge about Indonesia, making learning fun and engaging. The platform also presents detailed statistics on the distribution of religions in Indonesia, offering valuable insights into the country's diverse cultural and spiritual landscape. With its comprehensive features, this platform is a perfect resource for anyone seeking to deepen their understanding of Indonesia. This website is created using JavaScript, React, Next.js, and Tailwind CSS.",
         teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://lentara.vercel.app/",
-        year: "2024"
+        year: "2024",
+        source: "https://github.com/ahmadammarm/sobat-pancasila"
     },
     {
         nama: "My Quran Website",
@@ -126,6 +129,7 @@ export const fullPortfolio: Portfolio[] = [
         deskripsi2: "This website offers a comprehensive Muslim guide, providing access to essential religious resources such as the Quran, Hadith, daily prayers, and more, all through an easy-to-use API. The platform features the full Quran along with its accurate translation, making it accessible to a wider audience seeking to understand its teachings. In addition, the website includes a collection of authentic Hadiths, offering valuable insights from the sayings and actions of the Prophet Muhammad (PBUH). Users can also find daily prayers (duas) for various occasions, helping them stay connected with their faith throughout the day. With its extensive library of resources, this website serves as a convenient and reliable tool for Muslims seeking guidance and spiritual growth. This website is created using TypeScript, Next.js, and Tailwind CSS.",
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://my-quran-steel.vercel.app/",
-        year: "2024"
+        year: "2024",
+        source: "https://github.com/ahmadammarm/my-quran"
     }
 ]
