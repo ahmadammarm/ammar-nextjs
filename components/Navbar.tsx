@@ -18,6 +18,13 @@ export default function Navbar() {
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
 
+    const isActivePath = (path: string) => {
+        if (path === '/portfolio') {
+            return pathname === path || pathname.startsWith('/portfolio/')
+        }
+        return pathname === path
+    }
+
     useEffect(() => {
         document.body.style.paddingTop = '64px'
         return () => {
@@ -40,10 +47,11 @@ export default function Navbar() {
                                 <Link
                                     key={item.href}
                                     href={item.href}
-                                    className={`px-4 py-2 rounded-md text-lg font-medium ${pathname === item.href
+                                    className={`px-4 py-2 rounded-md text-lg font-medium ${
+                                        isActivePath(item.href)
                                             ? 'text-teal-500'
                                             : 'text-foreground'
-                                        }`}
+                                    }`}
                                 >
                                     {item.label}
                                 </Link>
@@ -73,10 +81,11 @@ export default function Navbar() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === item.href
+                                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                                    isActivePath(item.href)
                                         ? 'bg-primary text-primary-foreground'
                                         : 'text-foreground'
-                                    }`}
+                                }`}
                                 onClick={() => setIsOpen(false)}
                             >
                                 {item.label}
@@ -88,4 +97,3 @@ export default function Navbar() {
         </nav>
     )
 }
-

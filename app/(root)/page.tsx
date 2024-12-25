@@ -10,7 +10,7 @@ import { footer } from "@/constants/footer";
 import { portfolio } from "@/constants/portfolio";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaEye } from "react-icons/fa";
+import { FaEye, FaInfoCircle } from "react-icons/fa";
 
 
 export default function Home() {
@@ -91,15 +91,19 @@ export default function Home() {
                             </div>
                             <div className="w-full p-5">
                                 <h3 className="text-2xl font-semibold text-teal-500 mb-3">{port.nama}</h3>
-                                <div className="flex flex-row mb-3">
+                                {/* <div className="flex flex-row mb-3">
                                     {port.teknologi.map((tekno, index) => (
                                         <img key={index} src={tekno} alt={port.nama} className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] m-2" />
                                     ))}
-                                </div>
+                                </div> */}
                                 <p className='text-gray-700 dark:text-gray-400'>{port.deskripsi}</p>
                                 <div className='flex gap-4 mt-4'>
-                                    <a href={port.link} target='_blank' rel='noreferrer' className='bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 transition-all duration-300 flex flex-row'><FaEye className='mt-1 mr-2' /> Demo</a>
-                                    {/* <a href={port.source} target='_blank' rel='noreferrer' className='bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 flex flex-row'><FaGithub className='mt-1 mr-2' /> Source</a> */}
+                                    <Link 
+                                        href={`/portfolio/${port.slug}`}
+                                        className='bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-all duration-300 flex flex-row'
+                                    >
+                                        <FaInfoCircle className='mt-1 mr-2' /> Detail
+                                    </Link>
                                 </div>
                             </div>
                         </div>
