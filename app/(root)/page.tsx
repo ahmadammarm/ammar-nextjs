@@ -79,7 +79,7 @@ export default function Home() {
                 <div className="text-center mb-16">
                     <h2 className="text-5xl font-bold mb-5 mt-8">Portfolio</h2>
                     <p className="text-gray-700 dark:text-gray-500">
-                        Here are all the projects I created while I was learning about website development. 🧑🏻‍💻.
+                        Here are some of the projects I created while I was learning about website development. 🧑🏻‍💻.
                     </p>
                 </div>
 

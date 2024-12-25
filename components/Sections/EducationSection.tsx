@@ -1,20 +1,10 @@
 "use client"
 
-import React, { useEffect } from 'react';
 import { Card, CardHeader, CardDescription } from '@/components/ui/card';
 import { education } from '@/constants/education';
 import { motion } from 'framer-motion';
 
-function EducationSection(): React.ReactElement {
-    useEffect(() => {
-        const elements = document.querySelectorAll('.fade-in-element');
-        elements.forEach((el, index) => {
-            setTimeout(() => {
-                el.classList.add('fade-in');
-            }, index * 150);
-        });
-    }, []);
-
+function EducationSection() {
     return (
         <div id="educations">
             <div className="container mx-auto">

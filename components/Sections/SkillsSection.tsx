@@ -7,15 +7,6 @@ import { Button } from '../ui/button';
 function SkillsSection() {
     const [activeTab, setActiveTab] = useState('tech-stack');
 
-    useEffect(() => {
-        const elements = document.querySelectorAll('.fade-in-element');
-        elements.forEach((el, index) => {
-            setTimeout(() => {
-                el.classList.add('fade-in');
-            }, index * 150);
-        });
-    }, []);
-
     return (
         <div className="w-full py-20">
             {/* Skills Section Content */}

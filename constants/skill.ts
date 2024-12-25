@@ -14,7 +14,7 @@ export const techStack: Skill[] = [
     {
         gambar: "/assets/skills/js.png",
         nama: "Javascript",
-        tingkat: "Intermediate",
+        tingkat: "Basic",
     },
     {
         gambar: "/assets/skills/ts.png",

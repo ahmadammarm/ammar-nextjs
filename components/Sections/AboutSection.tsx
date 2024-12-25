@@ -10,42 +10,17 @@ import { motion } from 'framer-motion';
 function AboutSection(): React.ReactElement {
     const { nama, deskripsi, foto } = about[0];
 
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
-    };
-
-    const fadeInLeft = {
-        hidden: { opacity: 0, x: -50 },
-        visible: { opacity: 1, x: 0 }
-    };
-
-    const fadeInRight = {
-        hidden: { opacity: 0, x: 50 },
-        visible: { opacity: 1, x: 0 }
-    };
 
     return (
         <div className='min-h-screen flex flex-col justify-center items-center p-3 py-20'>
-            {/* Title Animation */}
-            <motion.h2
-                initial="hidden"
-                animate="visible"
-                variants={fadeInUp}
-                transition={{ duration: 0.7, ease: 'easeOut' }}
+            <h2
                 className='text-5xl font-bold mb-[5rem]'
             >
                 About Me
-            </motion.h2>
+            </h2>
 
             <div className='max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center'>
-                {/* Image Animation */}
-                <motion.div
-                    initial="hidden"
-                    animate="visible"
-                    variants={fadeInLeft}
-                    transition={{ duration: 0.7, ease: 'easeOut' }}
-                    className='flex justify-center lg:w-1/2 p-4 mb-8 lg:mb-0'
+                <div className='flex justify-center lg:w-1/2 p-4 mb-8 lg:mb-0'
                 >
                     <img
                         src={foto}
@@ -55,15 +30,10 @@ function AboutSection(): React.ReactElement {
                         height={30}
                         loading="lazy"
                     />
-                </motion.div>
+                </div>
 
                 {/* Content Animation */}
-                <motion.div
-                    initial="hidden"
-                    animate="visible"
-                    variants={fadeInRight}
-                    transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
-                    className='flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4 lg:flex lg:flex-col'
+                <div className='flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4 lg:flex lg:flex-col'
                 >
                     <p className='text-gray-700 dark:text-gray-400 text-3xl font-bold mb-[1.5rem]'>
                         Hii..👋 Im <span className='text-3xl text-teal-500'>{nama}</span>
@@ -75,7 +45,7 @@ function AboutSection(): React.ReactElement {
                         {deskripsi}
                     </p>
                     <Separator className="mb-10" />
-                </motion.div>
+                </div>
             </div>
 
             {/* Education Animation */}
