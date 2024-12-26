@@ -120,15 +120,15 @@ export const fullPortfolio: Portfolio[] = [
         source: "https://github.com/ahmadammarm/sobat-pancasila"
     },
     {
-        nama: "My Quran Website",
-        slug: "my-quran-website",
+        nama: "Mouslemify Website",
+        slug: "mouslemify-website",
         gambar: "/assets/portfolios/my-quran.png",
         gambar2: "/assets/portfolios/my-quran/2.png",
         gambar3: "/assets/portfolios/my-quran/3.png",
         deskripsi: "Website that provides the mouslem guides like Al-Quran, Al-Hadits, daily prayer, and more using API.",
         deskripsi2: "This website offers a comprehensive Muslim guide, providing access to essential religious resources such as the Quran, Hadith, daily prayers, and more, all through an easy-to-use API. The platform features the full Quran along with its accurate translation, making it accessible to a wider audience seeking to understand its teachings. In addition, the website includes a collection of authentic Hadiths, offering valuable insights from the sayings and actions of the Prophet Muhammad (PBUH). Users can also find daily prayers (duas) for various occasions, helping them stay connected with their faith throughout the day. With its extensive library of resources, this website serves as a convenient and reliable tool for Muslims seeking guidance and spiritual growth. This website is created using TypeScript, Next.js, and Tailwind CSS.",
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
-        link: "https://my-quran-steel.vercel.app/",
+        link: "https://mouslemify.vercel.app/",
         year: "2024",
         source: "https://github.com/ahmadammarm/my-quran"
     }
