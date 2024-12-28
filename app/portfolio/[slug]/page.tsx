@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { notFound } from 'next/navigation'
 import Loading from '@/components/Loading'
 import Link from 'next/link'
-import { ArrowLeft, EyeIcon, Github, GithubIcon } from 'lucide-react'
+import { ArrowLeft, EyeIcon, Github } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function PortfolioDetail() {

@@ -117,7 +117,6 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://lentara.vercel.app/",
         year: "2024",
-        source: "https://github.com/ahmadammarm/sobat-pancasila"
     },
     {
         nama: "Mouslemify Website",
