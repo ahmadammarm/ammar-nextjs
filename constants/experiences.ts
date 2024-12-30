@@ -10,14 +10,6 @@ export const experiences: Experiences[] = [
         tahun: "August 2023 - Present"
     },
     {
-        nama: "Exoria Serana Digital",
-        jabatan: "Full Stack Web Developer",
-        logo: ["/assets/skills/laravel.png" , "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
-        kontrak: "Freelance",
-        deskripsi: "Develop the company profile website based on a content management system using Laravel framework ",
-        tahun: "December 2023 - July 2024"
-    },
-    {
         nama: "PUI-PT DLI State University of Malang",
         jabatan: "Full Stack Web Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
