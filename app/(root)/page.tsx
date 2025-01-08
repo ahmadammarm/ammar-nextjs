@@ -98,7 +98,7 @@ export default function Home() {
                                 </div> */}
                                 <p className='text-gray-700 dark:text-gray-400'>{port.deskripsi}</p>
                                 <div className='flex gap-4 mt-4'>
-                                    <Link 
+                                    <Link
                                         href={`/portfolio/${port.slug}`}
                                         className='bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-all duration-300 flex flex-row'
                                     >

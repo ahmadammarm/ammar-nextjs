@@ -1,17 +1,16 @@
 "use client"
 
 import { fullPortfolio } from '@/constants/portfolio'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { notFound } from 'next/navigation'
 import Loading from '@/components/Loading'
 import Link from 'next/link'
-import { ArrowLeft, EyeIcon, Github } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { EyeIcon, Github } from 'lucide-react'
+
 
 export default function PortfolioDetail() {
     const params = useParams();
-    const router = useRouter();
     const [portfolio, setPortfolio] = useState<any>(null)
     const [isLoading, setIsLoading] = useState(true)
 
@@ -47,17 +46,11 @@ export default function PortfolioDetail() {
         return notFound()
     }
 
-    const handleBack = () => {
-        router.back()
-    }
 
     return (
         <div className="flex items-center justify-center py-20">
             <div className="px-5 md:px-20">
                 <h1 className="text-4xl font-bold text-teal-500">
-                    <Button onClick={handleBack} variant="outline" size="icon" className="mb-10 mr-5">
-                        <ArrowLeft />
-                    </Button>
                     {portfolio.nama}
                 </h1>
                 <p className="text-gray-700 dark:text-gray-400 mb-10 mt-10 text-lg">
