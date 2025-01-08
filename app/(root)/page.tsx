@@ -109,7 +109,7 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-                <div className="flex mt-10 justify-center items-center">
+                <div className="flex mt-10 mb-10 justify-center items-center">
                     <Link href={'/portfolio'}>
                         <Button className="bg-teal-500 dark:text-white">
                             More Projects
