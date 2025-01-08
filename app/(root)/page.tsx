@@ -5,12 +5,12 @@ import HeroSection from "@/components/Sections/HeroSection";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { about } from "@/constants/about";
-import { contact } from "@/constants/contact";
-import { footer } from "@/constants/footer";
+// import { contact } from "@/constants/contact";
+// import { footer } from "@/constants/footer";
 import { portfolio } from "@/constants/portfolio";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaEye, FaInfoCircle } from "react-icons/fa";
+import { FaInfoCircle } from "react-icons/fa";
 
 
 export default function Home() {
@@ -121,7 +121,7 @@ export default function Home() {
 
 
             {/* Contact Section Start */}
-            <div className="w-full py-20">
+            {/* <div className="w-full py-20">
                 <div className="text-center mb-10 mt-10">
                     <h2 className="text-5xl font-bold">Contact</h2>
                 </div>
@@ -172,7 +172,7 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* Contact Section End */}
         </>
     );
