@@ -21,11 +21,11 @@ export const techStack: Skill[] = [
         nama: "Typescript",
         tingkat: "Basic",
     },
-    {
-        gambar: "/assets/skills/php.png",
-        nama: "PHP",
-        tingkat: "Basic",
-    },
+    // {
+    //     gambar: "/assets/skills/php.png",
+    //     nama: "PHP",
+    //     tingkat: "Basic",
+    // },
     {
         gambar: "/assets/skills/bootstrap.png",
         nama: "Bootstrap",
