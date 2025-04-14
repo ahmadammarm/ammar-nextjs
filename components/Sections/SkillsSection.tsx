@@ -1,7 +1,7 @@
 "use client"
 
 import { techStack, tools } from '@/constants/skill';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from '../ui/button';
 
 function SkillsSection() {
@@ -9,7 +9,6 @@ function SkillsSection() {
 
     return (
         <div className="w-full py-20">
-            {/* Skills Section Content */}
             <div className="container mx-auto">
                 <div className="flex flex-col md:flex-row-reverse gap-10">
                     <div className="w-full md:w-1/4 text-center md:text-right">
@@ -21,7 +20,6 @@ function SkillsSection() {
                         </p>
                     </div>
 
-                    {/* Skills Content Start */}
                     <div className="w-full md:w-3/4 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg">
                         <div className="flex justify-center mb-6 gap-10">
                             <Button
@@ -68,7 +66,6 @@ function SkillsSection() {
                             )}
                         </div>
                     </div>
-                    {/* Skills Content End */}
                 </div>
             </div>
         </div>
