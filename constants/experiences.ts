@@ -6,7 +6,7 @@ export const experiences: Experiences[] = [
         jabatan: "Full Stack Web Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
         kontrak: "Freelance",
-        deskripsi: "Built landing page for Eclipse Glow, one of the PKM UM 2023 team as the first project as a freelancer.",
+        deskripsi: "Built landing page for Eclipse Glow, one of the PKM UM 2023 team as the first project as a freelancer. Worked according to the timeline and client's requirements.",
         tahun: "August 2023 - October 2023"
     },
     {
@@ -14,7 +14,7 @@ export const experiences: Experiences[] = [
         jabatan: "Junior Back End Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/mysql.png"],
         kontrak: "Freelance",
-        deskripsi: "Built and maintained backend system for Exoria Serana Digital dynamic company profile website.",
+        deskripsi: "Built and maintained backend system for Exoria Serana Digital dynamic company profile website. Implemented the CRUD and multi-user authentication implementations in order to manage the contents.",
         tahun: "December 2023 - April 2024"
     },
     {
@@ -22,7 +22,7 @@ export const experiences: Experiences[] = [
         jabatan: "Full Stack Web Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
         kontrak: "Freelance",
-        deskripsi: "Built the SINUDZI daily prayers education web application with rich features through collaboration between State University of Malang and LP Ma'arif PWNU from East Java.",
+        deskripsi: "Built the SINUDZI daily prayers education web application with rich features through collaboration between State University of Malang and LP Ma'arif PWNU from East Java. Maintained and updated the application based on feedback and runtime requirements.",
         tahun: "June 2024 - November 2024"
     },
     {
