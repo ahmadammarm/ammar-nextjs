@@ -9,7 +9,6 @@ export const portfolio: Portfolio[] =[
         deskripsi2: "This website is created using HTML, CSS, and JavaScript.",
         teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png"],
         link: "https://eclipse-glow.vercel.app/",
-        detail: "https://ahmadammar.vercel.app/portfolio/eclipse-glow",
         year: "2023"
     },
     {
@@ -57,7 +56,6 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://webcademy-orcin.vercel.app/",
         year: "2024",
-        source: "https://github.com/ahmadammarm/webcademy"
     },
     {
         nama: "Bu Aini's Catering Information System",
