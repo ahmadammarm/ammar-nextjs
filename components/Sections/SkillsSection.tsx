@@ -47,7 +47,7 @@ function SkillsSection() {
                                             <div key={index} className="relative group flex flex-col items-center p-4 mb-5 hover:translate-y-[-10px] hover:shadow-teal-500 dark:shadow-black shadow-lg transition-all ease-in-out duration-300 rounded-lg">
                                                 <img src={skill.gambar} alt={skill.nama} className="w-16 h-16 md:w-20 md:h-20 mb-4" />
                                                 <h4 className="text-lg font-semibold mb-2 text-teal-500 text-center">{skill.nama}</h4>
-                                                <p className="text-sm text-gray-700 dark:text-gray-400">{skill.tingkat}</p>
+                                                {/* <p className="text-sm text-gray-700 dark:text-gray-400">{skill.tingkat}</p> */}
                                             </div>
                                         ))}
                                     </div>
@@ -61,7 +61,6 @@ function SkillsSection() {
                                             <div key={index} className="relative group flex flex-col items-center p-4 mb-5 hover:translate-y-[-10px] hover:shadow-teal-500 dark:shadow-black shadow-lg transition-all ease-in-out duration-300 rounded-lg">
                                                 <img src={tool.gambar} alt={tool.nama} className="w-16 h-16 md:w-20 md:h-20 mb-4" />
                                                 <h4 className="text-lg font-semibold mb-2 text-teal-500 text-center">{tool.nama}</h4>
-                                                <p className="text-sm text-gray-700 dark:text-gray-400">{tool.tingkat}</p>
                                             </div>
                                         ))}
                                     </div>

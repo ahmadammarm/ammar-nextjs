@@ -6,23 +6,31 @@ export const experiences: Experiences[] = [
         jabatan: "Full Stack Web Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
         kontrak: "Freelance",
-        deskripsi: "Responsible for providing services in website development according to clients' needs and requirements using frameworks such as Laravel and NextJs.",
-        tahun: "August 2023 - Present"
+        deskripsi: "Built landing page for Eclipse Glow, one of the PKM UM 2023 team as the first project as a freelancer.",
+        tahun: "August 2023 - October 2023"
+    },
+    {
+        nama: "Exoria Serana Digital",
+        jabatan: "Junior Back End Developer",
+        logo: ["/assets/skills/laravel.png", "/assets/skills/mysql.png"],
+        kontrak: "Freelance",
+        deskripsi: "Built and maintained backend system for Exoria Serana Digital dynamic company profile website.",
+        tahun: "December 2023 - April 2024"
     },
     {
         nama: "PUI-PT DLI State University of Malang",
         jabatan: "Full Stack Web Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
         kontrak: "Freelance",
-        deskripsi: "Using Laravel framework to build education web based applications according to clients need. Maintained and updated application based on feedback and runtime requirement.",
-        tahun: "June 2024 - Present"
+        deskripsi: "Built the SINUDZI daily prayers education web application with rich features through collaboration between State University of Malang and LP Ma'arif PWNU from East Java.",
+        tahun: "June 2024 - November 2024"
     },
     {
         nama: "Pastijadi Digital Solutions",
         jabatan: "Full Stack Web Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
         kontrak: "Freelance",
-        deskripsi: "Responsible for developing and customizing websites according to detailed client requirements using framework such as Laravel.",
-        tahun: "August 2024 - Present"
+        deskripsi: "Built Batik Zulpah dynamic company profile website based on CMS and collaborated with the team to built comprehensive accounting web application with many management features such as sales management, products management, debt management, etc.",
+        tahun: "August 2024 - November 2024"
     },
 ]
