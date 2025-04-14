@@ -17,7 +17,7 @@ export default function Page() {
         return () => clearTimeout(timer)
     }, []);
 
-    if(isLoading) {
+    if (isLoading) {
         return <Loading />
     }
 
@@ -26,7 +26,7 @@ export default function Page() {
             <div className="text-center mb-16">
                 <h2 className="text-5xl font-bold mb-5">Portfolio</h2>
                 <p className="text-gray-700 dark:text-gray-500">
-                    Here are all the projects I created while I was learning about website development. 🧑🏻‍💻
+                    Here are some of the projects I created 🧑🏻‍💻.
                 </p>
             </div>
 
@@ -40,7 +40,7 @@ export default function Page() {
                             <h3 className="text-2xl font-semibold text-teal-500 mb-3">{port.nama}</h3>
                             <p className='text-gray-700 dark:text-gray-400'>{port.deskripsi}</p>
                             <div className='flex gap-4 mt-4'>
-                                <Link 
+                                <Link
                                     href={`/portfolio/${port.slug}`}
                                     className='bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-all duration-300 flex flex-row'
                                 >
