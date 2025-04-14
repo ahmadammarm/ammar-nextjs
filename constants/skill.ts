@@ -56,6 +56,11 @@ export const techStack: Skill[] = [
         nama: "MySQL",
         tingkat: "Basic",
     },
+    {
+        gambar: "/assets/skills/postgresql.png",
+        nama: "PostgreSQL",
+        tingkat: "Basic",
+    }
 ];
 
 export const tools: Skill[] = [
