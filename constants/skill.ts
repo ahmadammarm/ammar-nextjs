@@ -21,11 +21,11 @@ export const techStack: Skill[] = [
         nama: "Typescript",
         tingkat: "Basic",
     },
-    // {
-    //     gambar: "/assets/skills/php.png",
-    //     nama: "PHP",
-    //     tingkat: "Basic",
-    // },
+    {
+        gambar: "/assets/skills/go.png",
+        nama: "Go",
+        tingkat: "Basic",
+    },
     {
         gambar: "/assets/skills/bootstrap.png",
         nama: "Bootstrap",
@@ -60,11 +60,6 @@ export const techStack: Skill[] = [
 
 export const tools: Skill[] = [
     {
-        gambar: "/assets/skills/figma.png",
-        nama: "Figma",
-        tingkat: "Basic",
-    },
-    {
         gambar: "/assets/skills/git.png",
         nama: "Git",
         tingkat: "Intermediate",
@@ -78,5 +73,15 @@ export const tools: Skill[] = [
         gambar: '/assets/skills/vscode.png',
         nama: 'Visual Studio Code',
         tingkat: 'Intermediate',
+    },
+    {
+        gambar: "/assets/skills/figma.png",
+        nama: "Figma",
+        tingkat: "Basic",
+    },
+    {
+        gambar: "/assets/skills/docker.png",
+        nama: "Docker",
+        tingkat: "Basic",
     }
 ]
