@@ -69,16 +69,16 @@ export const tools: Skill[] = [
         nama: "Git",
         tingkat: "Intermediate",
     },
-    {
-        gambar: "/assets/skills/github.png",
-        nama: "Github",
-        tingkat: "Intermediate",
-    },
-    {
-        gambar: '/assets/skills/vscode.png',
-        nama: 'Visual Studio Code',
-        tingkat: 'Intermediate',
-    },
+    // {
+    //     gambar: "/assets/skills/github.png",
+    //     nama: "Github",
+    //     tingkat: "Intermediate",
+    // },
+    // {
+    //     gambar: '/assets/skills/vscode.png',
+    //     nama: 'Visual Studio Code',
+    //     tingkat: 'Intermediate',
+    // },
     {
         gambar: "/assets/skills/figma.png",
         nama: "Figma",
