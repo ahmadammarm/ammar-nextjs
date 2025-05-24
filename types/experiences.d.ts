@@ -3,6 +3,6 @@ export type Experiences = {
     jabatan: string;
     logo: string[];
     kontrak?: string;
-    deskripsi: string;
+    deskripsi: string[];
     tahun: string;
 }
