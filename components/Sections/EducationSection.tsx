@@ -18,7 +18,7 @@ function EducationSection() {
                     Here are some of my educations background
                 </motion.p>
                 {/* Educations Content Start */}
-                <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+                <div className="flex flex-col md:flex-row gap-4 items-center justify-center mb-20">
                     {education.map((edu, index) => (
                         <Card key={index} className="flex flex-col items-center p-4 mb-5 hover:shadow-teal-500 shadow-md transition-all ease-in-out duration-300 fade-in-element">
                             {/* <img src={edu.logo} alt={edu.nama} className="w-full h-full mb-4" /> */}
