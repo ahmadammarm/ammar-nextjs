@@ -1,6 +1,6 @@
 import { Portfolio } from "@/types/portfolio";
 
-export const portfolio: Portfolio[] =[
+export const portfolio: Portfolio[] = [
     {
         nama: "Batik Zulpah Company Profile",
         slug: "batik-zulpah-company-profile",
@@ -24,11 +24,13 @@ export const portfolio: Portfolio[] =[
         year: "2024"
     },
     {
-        nama: "Accounting App",
-        slug: "accounting-app",
-        gambar: "/assets/portfolios//accounting/accounting_homepage.jpg",
-        deskripsi: "Web-based information system for Bu Aini's catering management located in Malang City.",
-        deskripsi2: "This website is created using PHP and Laravel.",
+        nama: "Pastijadi Accounting App",
+        slug: "pastijadi-accounting-app",
+        gambar: "/assets/portfolios/accounting/accounting_homepage.jpg",
+        gambar2: "/assets/portfolios/accounting/accounting_code.jpg",
+        gambar3: "/assets/portfolios/accounting/accounting_product.jpg",
+        deskripsi: "Pastijadi Accounting App is a web-based application developed for Pastijadi Digital Solution to manage financial records.",
+        deskripsi2: "Pastijadi Accounting App is a web-based application developed for Pastijadi Digital Solution to manage financial records. The application includes features like income and expense tracking, analytics dashboards, master data management, and other financial operations.",
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png"],
         year: "2024"
     },
