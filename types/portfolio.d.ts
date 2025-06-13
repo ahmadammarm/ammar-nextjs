@@ -7,6 +7,7 @@ export type Portfolio = {
     deskripsi: string;
     deskripsi2: string
     teknologi: string[];
+    features?: string[];
     link?: string;
     source?: string;
     detail?: string;

@@ -2,64 +2,22 @@ import { Portfolio } from "@/types/portfolio";
 
 export const portfolio: Portfolio[] = [
     {
-        nama: "Batik Zulpah Company Profile",
-        slug: "batik-zulpah-company-profile",
-        gambar: "/assets/portfolios/batik-zulpah.png",
-        gambar2: "/assets/portfolios/batik-zulpah/2.png",
-        gambar3: "/assets/portfolios/batik-zulpah/3.png",
-        deskripsi: "A full-stack web application that serves as a company profile for Batik Zulpah, a batik company located in Tanjung Bumi .",
-        deskripsi2: "A full-stack web application that serves as a company profile for Batik Zulpah, a batik company located in Tanjung Bumi. The platform features a comprehensive admin panel that enables administrators to manage product content, including updating product descriptions, prices, images, and availability status. The website showcases an extensive collection of available batik products, displaying detailed information about each item's patterns, materials, sizing, and cultural significance. Additionally, the platform includes a dedicated news section where the company can share updates about new collections, batik-making workshops, cultural events, and company milestones. This integrated system effectively presents Batik Zulpah's rich heritage while providing easy content management for administrators. This is my first project since I started to be freelancer in Pastijadi Digital Solutions.",
+        nama: "SINUDZI",
+        slug: "sinudzi",
+        gambar: "/assets/portfolios/sinudzi.png",
+        gambar2: "/assets/portfolios/sinudzi/2.png",
+        gambar3: "/assets/portfolios/sinudzi/3.png",
+        deskripsi: "SINUDZI is a web-based application in order to the collaboration between State University of Malang and LP Ma'arif PWNU from East Java.",
+        deskripsi2: "SINUDZI is a web-based application in order to the collaboration between State University of Malang and LP Ma'arif PWNU from East Java. This platform has many feature such as prayer literature, prayer community for the users, and etc.",
+        features: [
+            "Prayer literatures and audio records.",
+            "Prayer monitoring for the users.",
+            "Prayer community that provide a chats for the user's discussions.",
+            "Role-based access control for admin and user.",
+        ],
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
-        link: "https://batikzulpah.com/",
+        link: "https://sinudzi.com/",
         year: "2024"
-    },
-    {
-        nama: "Webcademy Learning Platform",
-        slug: "webcademy-learning-platform",
-        gambar: "/assets/portfolios/webcademy.png",
-        deskripsi: "An online learning platform that provides various video-based courses on web programming.",
-        deskripsi2: "An online learning platform that provides various video-based courses on web programming. This website is built using modern web technologies including JavaScript, React, Next.js, and Tailwind CSS. The platform features seamlessly embedded YouTube video content, allowing learners to access high-quality programming tutorials directly within the interface. User authentication is handled through Clerk, providing secure and streamlined sign-up/login functionality with multiple authentication methods. The website also implements a dark mode UI option, enabling users to switch between light and dark themes for comfortable viewing in different lighting conditions or based on personal preference. This thoughtfully designed learning environment combines comprehensive course content with user-friendly features to enhance the learning experience.",
-        teknologi: ["/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
-        link: "https://webcademy-orcin.vercel.app/",
-        year: "2024"
-    },
-    {
-        nama: "Pastijadi Accounting App",
-        slug: "pastijadi-accounting-app",
-        gambar: "/assets/portfolios/accounting/accounting_homepage.jpg",
-        gambar2: "/assets/portfolios/accounting/accounting_code.jpg",
-        gambar3: "/assets/portfolios/accounting/accounting_product.jpg",
-        deskripsi: "Pastijadi Accounting App is a web-based application developed for Pastijadi Digital Solution to manage financial records.",
-        deskripsi2: "Pastijadi Accounting App is a web-based application developed for Pastijadi Digital Solution to manage financial records. The application includes features like income and expense tracking, analytics dashboards, master data management, and other financial operations.",
-        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png"],
-        year: "2024"
-    },
-];
-
-export const fullPortfolio: Portfolio[] = [
-    {
-        nama: "Eclipse Glow Landing Page",
-        slug: "eclipse-glow-landing-page",
-        gambar: "/assets/portfolios/eclipse.png",
-        gambar2: "/assets/portfolios/eclipse/2.png",
-        gambar3: "/assets/portfolios/eclipse/3.png",
-        deskripsi: "Landing page for the Eclipse Glow website, which is one of the PKM products from State University of Malang in 2023.",
-        deskripsi2: "Landing page for Eclipse Glow website, a PKM (Student Creativity Program) product from State University of Malang in 2023. The website showcases comprehensive product details featuring an in-depth product description that highlights the unique features and benefits of Eclipse Glow. It includes a user-friendly guide section that provides step-by-step instructions on how to effectively use the product, ensuring users can maximize its potential. The landing page also spotlights the talented team behind Eclipse Glow, introducing the student innovators who developed this product as part of their PKM project, along with their roles and contributions to the project's success.",
-        teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png"],
-        link: "https://eclipse-glow.vercel.app/",
-        year: "2023",
-    },
-    {
-        nama: "Webcademy Learning Platform",
-        slug: "webcademy-learning-platform",
-        gambar: "/assets/portfolios/webcademy.png",
-        gambar2: "/assets/portfolios/webcademy/2.png",
-        gambar3: "/assets/portfolios/webcademy/3.png",
-        deskripsi: "An online learning platform that provides various video-based courses on web programming.",
-        deskripsi2: "An online learning platform that provides various video-based courses on web programming. This website is built using modern web technologies including JavaScript, React, Next.js, and Tailwind CSS. The platform features seamlessly embedded YouTube video content, allowing learners to access high-quality programming tutorials directly within the interface. User authentication is handled through Clerk, providing secure and streamlined sign-up/login functionality with multiple authentication methods. The website also implements a dark mode UI option, enabling users to switch between light and dark themes for comfortable viewing in different lighting conditions or based on personal preference. This thoughtfully designed learning environment combines comprehensive course content with user-friendly features to enhance the learning experience.",
-        teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
-        link: "https://webcademy-orcin.vercel.app/",
-        year: "2024",
     },
     {
         nama: "Batik Zulpah Company Profile",
@@ -71,18 +29,6 @@ export const fullPortfolio: Portfolio[] = [
         deskripsi2: "A full-stack web application that serves as a company profile for Batik Zulpah, a batik company located in Tanjung Bumi. The platform features a comprehensive admin panel that enables administrators to manage product content, including updating product descriptions, prices, images, and availability status. The website showcases an extensive collection of available batik products, displaying detailed information about each item's patterns, materials, sizing, and cultural significance. Additionally, the platform includes a dedicated news section where the company can share updates about new collections, batik-making workshops, cultural events, and company milestones. This integrated system effectively presents Batik Zulpah's rich heritage while providing easy content management for administrators. This is my first project since I started to be freelancer in Pastijadi Digital Solutions.",
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
         link: "https://batikzulpah.com/",
-        year: "2024"
-    },
-    {
-        nama: "Aishino Food Landing Page",
-        slug: "aishino-food-landing-page",
-        gambar: "/assets/portfolios/aishino.png",
-        gambar2: "/assets/portfolios/aishino/2.png",
-        gambar3: "/assets/portfolios/aishino/3.png",
-        deskripsi: "Landing page for Aishino Food, a food delivery service located in Malang City.",
-        deskripsi2: "The landing page for Aishino Food, a reliable food delivery service located in Malang City, offers a seamless way to explore a diverse list of delicious snack products crafted with quality and care. The website features an easy-to-navigate product catalog, allowing customers to browse and choose their favorite items with just a few clicks. Additionally, an interactive store map is available, making it simple for users to locate the nearest Aishino Food outlet. Designed to prioritize convenience and satisfaction, the platform ensures a smooth ordering experience for all customers. Aishino Food brings tasty snacks and exceptional service to your doorstep with just one click. This website is created using JavaScript, React, and Tailwind CSS.",
-        teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/tailwind.png"],
-        link: "https://aishino-food.vercel.app/",
         year: "2024"
     },
     {
@@ -92,7 +38,68 @@ export const fullPortfolio: Portfolio[] = [
         gambar2: "/assets/portfolios/lentara/2.png",
         gambar3: "/assets/portfolios/lentara/3.png",
         deskripsi: "An online learning platform that provides various contents about Indonesia.",
-        deskripsi2: "An online learning platform that provides a wide range of engaging content about Indonesia, offering users a unique and interactive way to explore the nation's rich culture and history. The website features an interactive map, allowing users to visually navigate and discover information about different regions across the country. Additionally, it includes quizzes to test and enhance knowledge about Indonesia, making learning fun and engaging. The platform also presents detailed statistics on the distribution of religions in Indonesia, offering valuable insights into the country's diverse cultural and spiritual landscape. With its comprehensive features, this platform is a perfect resource for anyone seeking to deepen their understanding of Indonesia. This website is created using JavaScript, React, Next.js, and Tailwind CSS.",
+        deskripsi2: "Lentara is a learning web-based platform that provide the lessons about the territory of Indonesia. Lentara comes from the sentence Learn About Nusantara.",
+        features: [
+            "Interactive learning map by their histories and cultures.",
+            "Various information about the religions and their statistics.",
+            "Interactive learning quiz."
+        ],
+        teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
+        link: "https://lentara.vercel.app/",
+        year: "2024",
+    },
+];
+
+export const fullPortfolio: Portfolio[] = [
+    {
+        nama: "SINUDZI",
+        slug: "sinudzi",
+        gambar: "/assets/portfolios/sinudzi.png",
+        gambar2: "/assets/portfolios/sinudzi/2.png",
+        gambar3: "/assets/portfolios/sinudzi/3.png",
+        deskripsi: "SINUDZI is a web-based application in order to the collaboration between State University of Malang and LP Ma'arif PWNU from East Java.",
+        deskripsi2: "SINUDZI is a web-based application in order to the collaboration between State University of Malang and LP Ma'arif PWNU from East Java. This platform has many feature such as prayer literature, prayer community for the users, and etc.",
+        features: [
+            "Prayer literatures and audio records.",
+            "Prayer monitoring for the users.",
+            "Prayer community that provide a chats for the user's discussions.",
+            "Role-based access control for admin and user.",
+        ],
+        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
+        link: "https://sinudzi.com/",
+        year: "2024"
+    },
+    {
+        nama: "Batik Zulpah Company Profile",
+        slug: "batik-zulpah-company-profile",
+        gambar: "/assets/portfolios/batik-zulpah.png",
+        gambar2: "/assets/portfolios/batik-zulpah/2.png",
+        gambar3: "/assets/portfolios/batik-zulpah/3.png",
+        deskripsi: "A full-stack web application that serves as a company profile for Batik Zulpah, a batik company located in Tanjung Bumi .",
+        deskripsi2: "Batik Zulpah is a hand-drawn batik company based in Indonesia. This company profile aims to introduce this company starting from its history, product catalog and others.",
+        features: [
+            "History of Batik Zulpah Company.",
+            "Product catalogs produced by this company.",
+            "News and article about this company.",
+            "Admin role that can manage content from product catalogs and news."
+        ],
+        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
+        link: "https://batikzulpah.com/",
+        year: "2024"
+    },
+    {
+        nama: "Lentara Learning Platform",
+        slug: "lentara-learning-platform",
+        gambar: "/assets/portfolios/lentara.png",
+        gambar2: "/assets/portfolios/lentara/2.png",
+        gambar3: "/assets/portfolios/lentara/3.png",
+        deskripsi: "An online learning platform that provides various contents about Indonesia.",
+        deskripsi2: "Lentara is a learning web-based platform that provide the lessons about the territory of Indonesia. Lentara comes from the sentence Learn About Nusantara.",
+        features: [
+            "Interactive learning map by their histories and cultures.",
+            "Various information about the religions and their statistics.",
+            "Interactive learning quiz."
+        ],
         teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
         link: "https://lentara.vercel.app/",
         year: "2024",
@@ -105,7 +112,46 @@ export const fullPortfolio: Portfolio[] = [
         gambar3: "/assets/portfolios/accounting/accounting_product.jpg",
         deskripsi: "Pastijadi Accounting App is a web-based application developed for Pastijadi Digital Solution to manage financial records.",
         deskripsi2: "Pastijadi Accounting App is a web-based application developed for Pastijadi Digital Solution to manage financial records. The application includes features like income and expense tracking, analytics dashboards, master data management, and other financial operations.",
-        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png"],
+        features: [
+            "Income and expense tracking.",
+            "Analytics dashboard for financial insights.",
+            "Master data management for clients, products, and accounts.",
+            "Calculation of accounts payable and receivable."
+        ],
+        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
         year: "2024"
+    },
+    {
+        nama: "Parkirin",
+        slug: "parkirin",
+        gambar: "/assets/portfolios/parkirin.png",
+        gambar2: "/assets/portfolios/parkirin/2.png",
+        gambar3: "/assets/portfolios/parkirin/3.png",
+        deskripsi: "Parkirin is a web-based platform designed to connect parking attendants with partners offering job opportunities. The platform enables attendants to apply for jobs and allows partners to approve applications.",
+        deskripsi2: "Parkirin is a web-based platform designed to connect parking attendants with partners offering job opportunities. The platform enables attendants to apply for jobs and allows partners to approve applications.",
+        features: [
+            "Integration of parking attendants and the partners.",
+            "Parking attendants applications.",
+            "Hiring parking job opportunities by partners.",
+            "Hiring parking job opportunities by partners."
+        ],
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/go.png"],
+        year: "2024"
+    },
+    {
+        nama: "Purefit",
+        slug: "purefit",
+        gambar: "/assets/portfolios/purefit.png",
+        gambar2: "/assets/portfolios/pastijadi/2.png",
+        gambar3: "/assets/portfolios/pastijadi/3.png",
+        deskripsi: "Purefit is a web-based platform designed to help users consult with professional nutritionists to achieve their dietary goals.",
+        deskripsi2: "Purefit is a web-based platform designed to help users consult with professional nutritionists to achieve their dietary goals.",
+        features: [
+            "Simple chat feature for diet consultations.",
+            "Informative articles to improve users’ knowledge about health and nutrition.",
+            "Basic payment system for users to access consultation services.",
+        ],
+        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
+        year: "2025"
     },
 ]
