@@ -138,20 +138,4 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/go.png"],
         year: "2024"
     },
-    {
-        nama: "Purefit",
-        slug: "purefit",
-        gambar: "/assets/portfolios/purefit.png",
-        gambar2: "/assets/portfolios/pastijadi/2.png",
-        gambar3: "/assets/portfolios/pastijadi/3.png",
-        deskripsi: "Purefit is a web-based platform designed to help users consult with professional nutritionists to achieve their dietary goals.",
-        deskripsi2: "Purefit is a web-based platform designed to help users consult with professional nutritionists to achieve their dietary goals.",
-        features: [
-            "Simple chat feature for diet consultations.",
-            "Informative articles to improve users’ knowledge about health and nutrition.",
-            "Basic payment system for users to access consultation services.",
-        ],
-        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
-        year: "2025"
-    },
 ]
