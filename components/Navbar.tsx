@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { ModeToggle } from './ModeToggle';
+// import { ModeToggle } from './ModeToggle';
 
 const navItems = [
     { href: '/', label: 'Home' },
@@ -56,11 +56,11 @@ export default function Navbar() {
                                     {item.label}
                                 </Link>
                             ))}
-                            <ModeToggle />
+                            {/* <ModeToggle /> */}
                         </div>
                     </div>
                     <div className="md:hidden">
-                        <ModeToggle />
+                        {/* <ModeToggle /> */}
                         <Button
                             variant="ghost"
                             size="icon"
