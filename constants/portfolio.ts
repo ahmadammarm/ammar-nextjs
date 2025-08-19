@@ -152,7 +152,7 @@ export const fullPortfolio: Portfolio[] = [
             "Monthly and annual history – Displays transaction history for monthly and yearly periods, provides summaries, visual charts, filters, and export options for reports."
         ],
         source: "https://github.com/ahmadammarm/fulusin",
-        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png"],
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/docker.png"],
         year: "2025"
     },
     {
