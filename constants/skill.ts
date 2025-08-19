@@ -2,34 +2,9 @@ import { Skill } from "@/types/skill";
 
 export const techStack: Skill[] = [
     {
-        gambar: "/assets/skills/html.png",
-        nama: "HTML",
-        tingkat: "Advance",
-    },
-    {
-        gambar: "/assets/skills/css.png",
-        nama: "CSS",
-        tingkat: "Intermediate",
-    },
-    {
-        gambar: "/assets/skills/js.png",
-        nama: "Javascript",
-        tingkat: "Basic",
-    },
-    {
-        gambar: "/assets/skills/ts.png",
-        nama: "Typescript",
-        tingkat: "Basic",
-    },
-    {
         gambar: "/assets/skills/go.png",
         nama: "Go",
         tingkat: "Basic",
-    },
-    {
-        gambar: "/assets/skills/bootstrap.png",
-        nama: "Bootstrap",
-        tingkat: "Intermediate",
     },
     {
         gambar: "/assets/skills/laravel.png",
@@ -79,11 +54,6 @@ export const tools: Skill[] = [
     //     nama: 'Visual Studio Code',
     //     tingkat: 'Intermediate',
     // },
-    {
-        gambar: "/assets/skills/figma.png",
-        nama: "Figma",
-        tingkat: "Basic",
-    },
     {
         gambar: "/assets/skills/docker.png",
         nama: "Docker",

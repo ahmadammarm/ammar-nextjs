@@ -138,4 +138,38 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/go.png"],
         year: "2024"
     },
+    {
+        nama: "Fulusin",
+        slug: "fulusin",
+        gambar: "/assets/portfolios/fulusin.png",
+        gambar2: "/assets/portfolios/fulusin/2.png",
+        gambar3: "/assets/portfolios/fulusin/3.png",
+        deskripsi: "Web-based financial tracker platform based on a period to help individuals manage, track, and analyze their financial activities within specific timeframes.",
+        deskripsi2: "Web-based financial tracker platform based on a period to help individuals manage, track, and analyze their financial activities within specific timeframes.",
+        features: [
+            "Currency setting – Allows users to choose their preferred default currency, with automatic formatting and symbol adjustments.",
+            "Transaction category – Enables adding, editing, and organizing categories for income and expenses, complete with icons and colors for easier identification.",
+            "Monthly and annual history – Displays transaction history for monthly and yearly periods, provides summaries, visual charts, filters, and export options for reports."
+        ],
+        source: "https://github.com/ahmadammarm/fulusin",
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png"],
+        year: "2025"
+    },
+    {
+        nama: "SIPRO",
+        slug: "sipro",
+        gambar: "/assets/portfolios/sipro.png",
+        gambar2: "/assets/portfolios/sipro/2.png",
+        gambar3: "/assets/portfolios/sipro/3.png",
+        deskripsi: "SIPRO is a digital learning media designed for high school students focusing on combinatorics with AI-based learning style adjustments and integration of Malang regional ethnomathematics.",
+        deskripsi2: "SIPRO is a digital learning media designed for high school students focusing on combinatorics with AI-based learning style adjustments and integration of Malang regional ethnomathematics.",
+        features: [
+            "AI-powered learning style filtering through quizzes to identify students’ preferences (Visual, Auditory, or Kinesthetic).",
+            "Personalized combinatorics learning materials tailored to each student’s learning style, integrating Malang regional ethnomathematics.",
+            "AI-generated practice questions on permutations or combinations with Malang ethnomathematics elements."
+        ],
+        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png", "/assets/skills/tailwind.png"],
+        link: "https://siproum.my.id",
+        year: "2025"
+    },
 ]
