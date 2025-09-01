@@ -5,17 +5,35 @@ import { fullPortfolio } from '@/constants/portfolio'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaInfoCircle } from 'react-icons/fa'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 export default function Page() {
     const [isLoading, setIsLoading] = useState(true)
+    const [items, setItems] = useState<any[]>([])
+    const [hasMore, setHasMore] = useState(true)
+
+    const ITEMS_PER_LOAD = 4
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false)
-        }, 1000);
+            setItems(fullPortfolio.slice(0, ITEMS_PER_LOAD))
+        }, 1000)
 
         return () => clearTimeout(timer)
-    }, []);
+    }, [])
+
+    const fetchMoreData = () => {
+        if (items.length >= fullPortfolio.length) {
+            setHasMore(false)
+            return
+        }
+
+        const nextItems = fullPortfolio.slice(items.length, items.length + ITEMS_PER_LOAD)
+        setTimeout(() => {
+            setItems([...items, ...nextItems])
+        }, 1000)
+    }
 
     if (isLoading) {
         return <Loading />
@@ -30,27 +48,34 @@ export default function Page() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-5">
-                {fullPortfolio.map((port, index) => (
-                    <div key={index} className="shadow-xl p-5 rounded-md dark:bg-slate-900">
-                        <div className="w-full mb-4">
-                            <img src={port.gambar} alt={port.nama} className="w-full h-full rounded-md object-cover" />
-                        </div>
-                        <div className="w-full p-5">
-                            <h3 className="text-2xl font-semibold text-teal-500 mb-3">{port.nama}</h3>
-                            <p className='text-gray-700 dark:text-gray-400'>{port.deskripsi}</p>
-                            <div className='flex gap-4 mt-4'>
-                                <Link
-                                    href={`/portfolio/${port.slug}`}
-                                    className='bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-all duration-300 flex flex-row'
-                                >
-                                    <FaInfoCircle className='mt-1 mr-2' /> Detail
-                                </Link>
+            <InfiniteScroll
+                dataLength={items.length}
+                next={fetchMoreData}
+                hasMore={hasMore}
+                loader={<p className="text-center text-gray-500 py-5 mt-5">Please wait...</p>}
+            >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-5">
+                    {items.map((port, index) => (
+                        <div key={index} className="shadow-xl p-5 rounded-md dark:bg-slate-900">
+                            <div className="w-full mb-4">
+                                <img src={port.gambar} alt={port.nama} className="w-full h-full rounded-md object-cover" />
+                            </div>
+                            <div className="w-full p-5">
+                                <h3 className="text-2xl font-semibold text-teal-500 mb-3">{port.nama}</h3>
+                                <p className='text-gray-700 dark:text-gray-400'>{port.deskripsi}</p>
+                                <div className='flex gap-4 mt-4'>
+                                    <Link
+                                        href={`/portfolio/${port.slug}`}
+                                        className='bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-all duration-300 flex flex-row'
+                                    >
+                                        <FaInfoCircle className='mt-1 mr-2' /> Detail
+                                    </Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
+            </InfiniteScroll>
         </div>
     )
 }
