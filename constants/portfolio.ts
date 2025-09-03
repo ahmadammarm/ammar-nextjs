@@ -172,4 +172,21 @@ export const fullPortfolio: Portfolio[] = [
         link: "https://siproum.my.id",
         year: "2025"
     },
+    {
+        nama: "Brightlife",
+        slug: "brightlife",
+        gambar: "/assets/portfolios/brightlife.png",
+        gambar2: "/assets/portfolios/brightlife/2.png",
+        gambar3: "/assets/portfolios/brightlife/3.png",
+        deskripsi: "Brightlife is an internship career center web-based platform based in President University. This platform provided as the bridge between students and companies in order to making it easier to find internships.",
+        deskripsi2: "Brightlife is an internship career center web-based platform based in President University. This platform provided as the bridge between students and companies in order to making it easier to find internships.",
+        features: [
+            "Companies can post and manage job vacancies that students can access in real time.",
+            "Students can generate a professional smart resume automatically.",
+            "The system provides skill gap analysis to highlight missing skills and recommend improvements.",
+            "Students can apply to job vacancies directly and track their application status."
+        ],
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png"],
+        year: "2025"
+    },
 ]
