@@ -47,7 +47,7 @@ export default function PortfolioDetail() {
         return notFound()
     }
 
-    const images = [portfolio.gambar, portfolio.gambar2, portfolio.gambar3].filter(Boolean)
+    const images = [portfolio.gambar, portfolio.gambar2, portfolio.gambar3, portfolio.gambar4].filter(Boolean)
 
     return (
         <div className="min-h-screen">
