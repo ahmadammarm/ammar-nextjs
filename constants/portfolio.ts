@@ -142,8 +142,9 @@ export const fullPortfolio: Portfolio[] = [
         nama: "Fulusin",
         slug: "fulusin",
         gambar: "/assets/portfolios/fulusin.png",
-        gambar2: "/assets/portfolios/fulusin/2.png",
-        gambar3: "/assets/portfolios/fulusin/3.png",
+        gambar2: "/assets/portfolios/fulusin/1.png",
+        gambar3: "/assets/portfolios/fulusin/2.png",
+        gambar4: "/assets/portfolios/fulusin/3.png",
         deskripsi: "Web-based financial tracker platform based on a period to help individuals manage, track, and analyze their financial activities within specific timeframes.",
         deskripsi2: "Web-based financial tracker platform based on a period to help individuals manage, track, and analyze their financial activities within specific timeframes.",
         features: [

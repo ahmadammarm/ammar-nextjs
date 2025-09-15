@@ -4,6 +4,7 @@ export type Portfolio = {
     gambar: string;
     gambar2?: string;
     gambar3?: string;
+    gambar4?:string;
     deskripsi: string;
     deskripsi2: string
     teknologi: string[];
