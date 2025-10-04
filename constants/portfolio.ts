@@ -32,21 +32,21 @@ export const portfolio: Portfolio[] = [
         year: "2024"
     },
     {
-        nama: "Lentara Learning Platform",
-        slug: "lentara-learning-platform",
-        gambar: "/assets/portfolios/lentara.png",
-        gambar2: "/assets/portfolios/lentara/2.png",
-        gambar3: "/assets/portfolios/lentara/3.png",
-        deskripsi: "An online learning platform that provides various contents about Indonesia.",
-        deskripsi2: "Lentara is a learning web-based platform that provide the lessons about the territory of Indonesia. Lentara comes from the sentence Learn About Nusantara.",
+        nama: "Accounting App",
+        slug: "accounting-app",
+        gambar: "/assets/portfolios/accounting/accounting_homepage.jpg",
+        gambar2: "/assets/portfolios/accounting/accounting_code.jpg",
+        gambar3: "/assets/portfolios/accounting/accounting_product.jpg",
+        deskripsi: "Pastijadi Accounting App is a web-based application developed for Pastijadi Digital Solution to manage financial records.",
+        deskripsi2: "Pastijadi Accounting App is a web-based application developed for Pastijadi Digital Solution to manage financial records. The application includes features like income and expense tracking, analytics dashboards, master data management, and other financial operations.",
         features: [
-            "Interactive learning map by their histories and cultures.",
-            "Various information about the religions and their statistics.",
-            "Interactive learning quiz."
+            "Income and expense tracking.",
+            "Analytics dashboard for financial insights.",
+            "Master data management for clients, products, and accounts.",
+            "Calculation of accounts payable and receivable."
         ],
-        teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
-        link: "https://lentara.vercel.app/",
-        year: "2024",
+        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
+        year: "2024"
     },
 ];
 
@@ -86,23 +86,6 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
         link: "https://batikzulpah.com/",
         year: "2024"
-    },
-    {
-        nama: "Lentara Learning Platform",
-        slug: "lentara-learning-platform",
-        gambar: "/assets/portfolios/lentara.png",
-        gambar2: "/assets/portfolios/lentara/2.png",
-        gambar3: "/assets/portfolios/lentara/3.png",
-        deskripsi: "An online learning platform that provides various contents about Indonesia.",
-        deskripsi2: "Lentara is a learning web-based platform that provide the lessons about the territory of Indonesia. Lentara comes from the sentence Learn About Nusantara.",
-        features: [
-            "Interactive learning map by their histories and cultures.",
-            "Various information about the religions and their statistics.",
-            "Interactive learning quiz."
-        ],
-        teknologi: ["/assets/skills/js.png", "/assets/skills/react.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png"],
-        link: "https://lentara.vercel.app/",
-        year: "2024",
     },
     {
         nama: "Accounting App",
