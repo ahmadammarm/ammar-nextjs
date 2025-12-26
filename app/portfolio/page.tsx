@@ -43,7 +43,7 @@ export default function Page() {
         <div className="w-full py-28">
             <div className="text-center mb-16">
                 <h2 className="text-5xl font-bold mb-5">Portfolio</h2>
-                <p className="text-gray-700 dark:text-gray-500">
+                <p className="text-gray-700 dark:text-gray-500 px-3">
                     Here are some of the projects I have worked on, including collaborations with the teams. Click the detail button to learn more about each project.
                 </p>
             </div>
