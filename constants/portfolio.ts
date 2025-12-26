@@ -20,18 +20,6 @@ export const portfolio: Portfolio[] = [
         year: "2024"
     },
     {
-        nama: "Batik Zulpah Company Profile",
-        slug: "batik-zulpah-company-profile",
-        gambar: "/assets/portfolios/batik-zulpah.png",
-        gambar2: "/assets/portfolios/batik-zulpah/2.png",
-        gambar3: "/assets/portfolios/batik-zulpah/3.png",
-        deskripsi: "A full-stack web application that serves as a company profile for Batik Zulpah, a batik company located in Tanjung Bumi .",
-        deskripsi2: "A full-stack web application that serves as a company profile for Batik Zulpah, a batik company located in Tanjung Bumi. The platform features a comprehensive admin panel that enables administrators to manage product content, including updating product descriptions, prices, images, and availability status. The website showcases an extensive collection of available batik products, displaying detailed information about each item's patterns, materials, sizing, and cultural significance. Additionally, the platform includes a dedicated news section where the company can share updates about new collections, batik-making workshops, cultural events, and company milestones. This integrated system effectively presents Batik Zulpah's rich heritage while providing easy content management for administrators. This is my first project since I started to be freelancer in Pastijadi Digital Solutions.",
-        teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
-        link: "https://batikzulpah.com/",
-        year: "2024"
-    },
-    {
         nama: "Accounting App",
         slug: "accounting-app",
         gambar: "/assets/portfolios/accounting/accounting_homepage.jpg",
@@ -47,6 +35,24 @@ export const portfolio: Portfolio[] = [
         ],
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
         year: "2024"
+    },
+    {
+        nama: "Fulusin",
+        slug: "fulusin",
+        gambar: "/assets/portfolios/fulusin.png",
+        gambar2: "/assets/portfolios/fulusin/1.png",
+        gambar3: "/assets/portfolios/fulusin/2.png",
+        gambar4: "/assets/portfolios/fulusin/3.png",
+        deskripsi: "Web-based financial tracker platform based on a period to help individuals manage, track, and analyze their financial activities within specific timeframes.",
+        deskripsi2: "Web-based financial tracker platform based on a period to help individuals manage, track, and analyze their financial activities within specific timeframes.",
+        features: [
+            "Currency setting – Allows users to choose their preferred default currency, with automatic formatting and symbol adjustments.",
+            "Transaction category – Enables adding, editing, and organizing categories for income and expenses, complete with icons and colors for easier identification.",
+            "Monthly and annual history – Displays transaction history for monthly and yearly periods, provides summaries, visual charts, filters, and export options for reports."
+        ],
+        source: "https://github.com/ahmadammarm/fulusin",
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/docker.png"],
+        year: "2025"
     },
 ];
 
