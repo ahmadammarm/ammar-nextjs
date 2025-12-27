@@ -51,6 +51,7 @@ export const portfolio: Portfolio[] = [
             "Monthly and annual history – Displays transaction history for monthly and yearly periods, provides summaries, visual charts, filters, and export options for reports."
         ],
         source: "https://github.com/ahmadammarm/fulusin",
+        link: "https://fulusin.vercel.app",
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/docker.png"],
         year: "2025"
     },
@@ -142,6 +143,7 @@ export const fullPortfolio: Portfolio[] = [
             "Monthly and annual history – Displays transaction history for monthly and yearly periods, provides summaries, visual charts, filters, and export options for reports."
         ],
         source: "https://github.com/ahmadammarm/fulusin",
+        link: "https://fulusin.vercel.app",
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/docker.png"],
         year: "2025"
     },
@@ -177,6 +179,42 @@ export const fullPortfolio: Portfolio[] = [
             "Students can apply to job vacancies directly and track their application status."
         ],
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png"],
+        year: "2025"
+    },
+    {
+        nama: "NetZero Palm",
+        slug: "netzero-palm",
+        gambar: "/assets/portfolios/netzero-palm/netzero-palm.png",
+        gambar2: "/assets/portfolios/netzero-palm/netzero-palm2.webp",
+        gambar3: "/assets/portfolios/netzero-palm/netzero-palm3.webp",
+        deskripsi: "Advanced technology for accurate carbon emission estimation and intelligent analysis in oil palm plantations.",
+        deskripsi2: "It provides optimal recommendations for carbon-absorbing plants to support sustainable and environmentally responsible plantation management.",
+        features: [
+            "Comprehensive data on carbon emissions from palm oil plantations.",
+            "Educational resources on sustainable practices to reduce carbon footprint.",
+            "Tools and calculators to help plantation managers assess and plan for net-zero goals."
+        ],
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png"],
+        link: "https://netzero-palm.vercel.app",
+        year: "2025"
+    },
+    {
+        nama: "Curio",
+        slug: "curio",
+        gambar: "/assets/portfolios/curio/curio.webp",
+        gambar2: "/assets/portfolios/curio/curio2.webp",
+        gambar3: "/assets/portfolios/curio/curio3.webp",
+        gambar4: "/assets/portfolios/curio/curio4.webp",
+        gambar5: "/assets/portfolios/curio/curio5.webp",
+        deskripsi: "Curio is a web-based system for managing product curation assessments equipped with self-assessment features, AI analysis, and comprehensive reports.",
+        deskripsi2: "This multi-category assessment form features real-time validation and AI integration for intelligent analysis.",
+        features: [
+            "A multi-category assessment form equipped with real-time validation.",
+            "Integration with AI systems to enable intelligent analysis and personalized recommendations.",
+            "Automated score calculation based on predefined criteria."
+        ],
+        teknologi: ["/assets/skills/php.png", "/assets/skills/nextjs.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
+        link: "https://mycurio.id",
         year: "2025"
     },
 ]
