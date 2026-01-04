@@ -217,4 +217,24 @@ export const fullPortfolio: Portfolio[] = [
         link: "https://mycurio.id",
         year: "2025"
     },
+    {
+        nama: "Learnalyzer",
+        slug: "learnalyzer",
+        gambar: "/assets/portfolios/learnalyzer.png",
+        gambar2: "/assets/portfolios/learnalyzer/1.png",
+        gambar3: "/assets/portfolios/learnalyzer/2.png",
+        gambar4: "/assets/portfolios/learnalyzer/3.png",
+        deskripsi: "Learnalyzer is a learning analytics platform that visualizes student fatigue levels across subjects through interactive graphs and data trends.",
+        deskripsi2: "Learnalyzer is a learning analytics platform that visualizes student fatigue levels across subjects through interactive graphs and data trends.",
+        features: [
+            "User authentication system to securely manage user access and sessions.",
+            "Data visualization dashboards displaying student fatigue levels using interactive graphs.",
+            "Tabular data views for detailed analysis of fatigue metrics across subjects.",
+            "Trend analysis features to monitor changes and patterns in student fatigue over time."
+        ],
+        source: "https://github.com/ahmadammarm/learnalyzer",
+        link: "https://learnalyzer.vercel.app",
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png"],
+        year: "2025"
+    },
 ]
