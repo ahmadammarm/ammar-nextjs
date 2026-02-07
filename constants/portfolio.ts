@@ -237,4 +237,22 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png"],
         year: "2025"
     },
+    {
+        nama: "Projmanagem",
+        slug: "projmanagem",
+        gambar: "/assets/portfolios/projmanagem.png",
+        gambar2: "/assets/portfolios/projmanagem/2.png",
+        gambar3: "/assets/portfolios/projmanagem/3.png",
+        gambar4: "/assets/portfolios/projmanagem/4.png",
+        deskripsi: "This is project management platform that provides users to create multiple organizations, invite team members, and collaborate efficiently.",
+        deskripsi2: "This is project management platform that provides users to create multiple organizations, invite team members, and collaborate efficiently. The system integrates automated email notifications, background job processing, and secure authentication to provide a reliable workflow management experience. Built with Clerk for authentication, Inngest for background job orchestration, and Neon PostgreSQL for data persistence.",
+        features: [
+            "Users can create and manage multiple organizations, each with its own workspaces, members, and projects.",
+            "Organization owners can invite members, manage team roles, and control access levels within each organization.",
+            "Users receive automatic emails when new tasks are assigned and additional reminder emails on task due dates.",
+        ],
+        link: "https://projmanagem.vercel.app",
+        teknologi: ["/assets/skills/react.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/expressjs.svg"],
+        year: "2026"
+    },
 ]

@@ -2,6 +2,11 @@ import { Skill } from "@/types/skill";
 
 export const techStack: Skill[] = [
     {
+        gambar: "/assets/skills/python.png",
+        nama: "Python",
+        tingkat: "Basic",
+    },
+    {
         gambar: "/assets/skills/go.png",
         nama: "Go",
         tingkat: "Basic",
@@ -19,6 +24,16 @@ export const techStack: Skill[] = [
     {
         gambar: "/assets/skills/nextjs.png",
         nama: "NextJs",
+        tingkat: "Basic",
+    },
+    {
+        gambar: "/assets/skills/expressjs.svg",
+        nama: "ExpressJs",
+        tingkat: "Basic",
+    },
+    {
+        gambar: "/assets/skills/nestjs.svg",
+        nama: "NestJs",
         tingkat: "Basic",
     },
     {
