@@ -3,6 +3,8 @@
 import React from "react";
 import { profile } from "@/constants/profile";
 import { DownloadIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 function HeroSection(): React.JSX.Element {
     const { nama, role, CV, foto } = profile[0];
@@ -19,7 +21,7 @@ function HeroSection(): React.JSX.Element {
                     <div className="text-md md:text-lg lg:text-xl mb-14">
                         {role}
                     </div>
-                    <a
+                    <Link
                         href={CV}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -27,17 +29,18 @@ function HeroSection(): React.JSX.Element {
                         className="flex flex-row bg-teal-500 text-white px-4 py-3 lg:px-6 lg:py-4 rounded hover:bg-teal-600 transition duration-200 ease-in-out"
                     >
                         <DownloadIcon className="mr-1" /> Download CV
-                    </a>
+                    </Link>
                 </div>
                 {/* Content End */}
 
                 {/* Image Content Start */}
                 <div className="transform translate-y-10 transition-all duration-700 flex justify-center lg:w-1/2 p-4 mb-8 lg:mb-0">
-                    <img
+                    <Image
                         src={foto[0]}
                         alt={nama}
                         className="w-64 h-64 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-teal-500"
-                        loading="lazy"
+                        width={384}
+                        height={384}
                     />
                 </div>
                 {/* Image Content End */}

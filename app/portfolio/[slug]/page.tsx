@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import Loading from '@/components/Loading'
 import Link from 'next/link'
 import { Calendar, Code, ExternalLink, EyeIcon, Github, Star, ArrowLeft, Sparkles } from 'lucide-react'
+import Image from 'next/image'
 
 
 export default function PortfolioDetail() {
@@ -100,11 +101,12 @@ export default function PortfolioDetail() {
                                     className="group/tech relative p-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-700 dark:to-slate-600 rounded-2xl hover:scale-110 hover:rotate-3 transition-all duration-500 shadow-lg hover:shadow-2xl cursor-pointer"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-teal-500/20 rounded-2xl opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300"></div>
-                                    <img
+                                    <Image
                                         src={tekno}
                                         alt={`Technology ${index + 1}`}
                                         className="relative w-12 h-12 object-contain filter group-hover/tech:drop-shadow-2xl transition-all duration-300 mx-auto"
-                                        loading='lazy'
+                                        width={48}
+                                        height={48}
                                     />
                                 </div>
                             ))}
@@ -206,11 +208,12 @@ export default function PortfolioDetail() {
 
                         {/* Main Image */}
                         <div className="relative group mb-6">
-                            <img
+                            <Image
                                 src={images[activeImage]}
                                 alt={`${portfolio.nama} - Image ${activeImage + 1}`}
                                 className="w-full h-auto rounded-3xl shadow-lg transition-transform duration-500"
-                                loading='lazy'
+                                width={800}
+                                height={450}
                             />
                         </div>
 
@@ -226,11 +229,12 @@ export default function PortfolioDetail() {
                                             : 'border-transparent hover:border-gray-300 dark:hover:border-gray-600 hover:scale-105'
                                             }`}
                                     >
-                                        <img
+                                        <Image
                                             src={image}
                                             alt={`${portfolio.nama} - Thumbnail ${index + 1}`}
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                                            loading='lazy'
+                                            width={96}
+                                            height={96}
                                         />
                                         {activeImage !== index && (
                                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>

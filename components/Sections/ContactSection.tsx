@@ -6,6 +6,7 @@ import { toast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import { footer } from "@/constants/footer";
 import Link from "next/link";
+import Image from "next/image";
 
 function ContactSection() {
     const [formData, setFormData] = useState({
@@ -81,16 +82,18 @@ function ContactSection() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {contact.map((item, index) => (
                         <div key={index} className="flex items-center justify-center">
-                            <a
+                            <Link
                                 href={item.link}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4 bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 w-full"
                             >
-                                <img
+                                <Image
                                     src={item.icon}
                                     alt={item.nama}
                                     className="w-10 h-10 md:w-12 md:h-12"
+                                    width={48}
+                                    height={48}
                                 />
                                 <div className="flex flex-col items-center md:items-start">
                                     <span className="text-2xl font-bold">{item.nama}</span>
@@ -101,7 +104,7 @@ function ContactSection() {
                                         Send me a message
                                     </span>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </div>

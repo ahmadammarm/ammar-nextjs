@@ -90,13 +90,13 @@ export default function Home() {
                     {portfolio.map((port, index) => (
                         <div key={index} className="shadow-xl p-5 rounded-md dark:bg-slate-900">
                             <div className="w-full mb-4">
-                                <img src={port.gambar} alt={port.nama} className="w-full h-full rounded-md object-cover" />
+                                <Image src={port.gambar} alt={port.nama} className="w-full h-full rounded-md object-cover" width={400} height={250} />
                             </div>
                             <div className="w-full p-5">
                                 <h3 className="text-2xl font-semibold text-teal-500 mb-3">{port.nama}</h3>
                                 {/* <div className="flex flex-row mb-3">
                                     {port.teknologi.map((tekno, index) => (
-                                        <img key={index} src={tekno} alt={port.nama} className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] m-2" />
+                                        <Image key={index} src={tekno} alt={port.nama} className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] m-2" width={40} height={40} />
                                     ))}
                                 </div> */}
                                 <p className='text-gray-700 dark:text-gray-400'>{port.deskripsi}</p>

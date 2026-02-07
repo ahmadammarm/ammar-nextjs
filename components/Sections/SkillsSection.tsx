@@ -3,6 +3,7 @@
 import { techStack, tools } from '@/constants/skill';
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
+import Image from 'next/image';
 
 function SkillsSection() {
     const [activeTab, setActiveTab] = useState('tech-stack');
@@ -43,7 +44,7 @@ function SkillsSection() {
                                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
                                         {techStack.map((skill, index) => (
                                             <div key={index} className="relative group flex flex-col items-center p-4 mb-5 hover:translate-y-[-10px] hover:shadow-teal-500 dark:shadow-black shadow-lg transition-all ease-in-out duration-300 rounded-lg">
-                                                <img src={skill.gambar} alt={skill.nama} className="w-16 h-16 md:w-20 md:h-20 mb-4" />
+                                                <Image src={skill.gambar} alt={skill.nama} className="w-16 h-16 md:w-20 md:h-20 mb-4" width={80} height={80} />
                                                 <h4 className="text-lg font-semibold mb-2 text-teal-500 text-center">{skill.nama}</h4>
                                                 {/* <p className="text-sm text-gray-700 dark:text-gray-400">{skill.tingkat}</p> */}
                                             </div>
@@ -57,7 +58,7 @@ function SkillsSection() {
                                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
                                         {tools.map((tool, index) => (
                                             <div key={index} className="relative group flex flex-col items-center p-4 mb-5 hover:translate-y-[-10px] hover:shadow-teal-500 dark:shadow-black shadow-lg transition-all ease-in-out duration-300 rounded-lg">
-                                                <img src={tool.gambar} alt={tool.nama} className="w-16 h-16 md:w-20 md:h-20 mb-4" />
+                                                <Image src={tool.gambar} alt={tool.nama} className="w-16 h-16 md:w-20 md:h-20 mb-4" width={80} height={80} />
                                                 <h4 className="text-lg font-semibold mb-2 text-teal-500 text-center">{tool.nama}</h4>
                                             </div>
                                         ))}

@@ -2,6 +2,7 @@
 
 import Loading from '@/components/Loading'
 import { fullPortfolio } from '@/constants/portfolio'
+import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaInfoCircle } from 'react-icons/fa'
@@ -58,7 +59,7 @@ export default function Page() {
                     {items.map((port, index) => (
                         <div key={index} className="shadow-xl p-5 rounded-md dark:bg-slate-900">
                             <div className="w-full mb-4">
-                                <img src={port.gambar} alt={port.nama} className="w-full h-full rounded-md object-cover" />
+                                <Image src={port.gambar} alt={port.nama} className="w-full h-full rounded-md object-cover" width={400} height={250} />
                             </div>
                             <div className="w-full p-5">
                                 <h3 className="text-2xl font-semibold text-teal-500 mb-3">{port.nama}</h3>
