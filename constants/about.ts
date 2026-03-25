@@ -6,7 +6,7 @@ export const about: About[] = [
         negara: 'Malang City',
         role: 'Undergraduate Informatics Engineering Student',
         CV: '/assets/CV_Ahmad_Ammar.pdf',
-        deskripsi: "My name is Ahmad Ammar Musyaffa, and Im an Informatics Engineering student at State University of Malang with a passion for web development. To sharpen my skills and gain hands-on experience, I work as a freelance web developer to building custom web-based applications tailored to client needs. I primarily work with Next.js, Laravel, and NodeJs. I'm always eager to learn, improve, and stay updated with the latest advancements in the tech world. I'm excited to collaborate, connect, and explore new opportunities where I can grow and contribute to impactful projects.",
+        deskripsi: "Junior software engineer with passion to building backend web applications using technologies such as Node.js, Laravel, and Go. Enjoy with the implementation of backend services, business logic, and RESTful APIs. Familiar with managing relational databases such as MySQL and PostgreSQL to build maintainable systems. Alongside backend development, I explore the integration of artificial intelligence into modern applications, particularly in developing data-driven features and intelligent automation. I continue to refine my engineering skills while staying up to date with modern backend technologies and emerging AI tools, with the goal of growing as a backend-focused engineer with a strong interest in AI-powered software systems.",
         foto: '/assets/ammar-baru.webp'
     }
 ]

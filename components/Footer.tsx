@@ -1,12 +1,16 @@
 import React from 'react';
 
 function Footer(): React.ReactElement {
+    const currentYear = new Date().getFullYear();
+
     return (
-        <div className="bg-teal-500 text-white py-6 px-4">
-            <div className="text-center text-sm lg:text-base">
-                <p className="dark:text-slate-900">&copy; {new Date().getFullYear()} Created by Ahmad Ammar Musyaffa. All Rights Reserved.</p>
+        <footer className="bg-teal-500 text-white py-8 px-4">
+            <div className="max-w-6xl mx-auto">
+                <p className="text-center text-sm lg:text-base font-light tracking-wide">
+                    &copy; {currentYear} Created by <span className="font-semibold">Ahmad Ammar Musyaffa</span>. All Rights Reserved.
+                </p>
             </div>
-        </div>
+        </footer>
     );
 }
 

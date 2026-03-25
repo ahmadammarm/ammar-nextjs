@@ -5,14 +5,12 @@ import HeroSection from "@/components/Sections/HeroSection";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { about } from "@/constants/about";
-// import { contact } from "@/constants/contact";
-// import { footer } from "@/constants/footer";
 import { portfolio } from "@/constants/portfolio";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaInfoCircle } from "react-icons/fa";
-
+import { FaInfoCircle, FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Home() {
     const { nama, deskripsi, foto } = about[0];
@@ -35,148 +33,221 @@ export default function Home() {
             <HeroSection />
 
             {/* About Section Start */}
-            <div className='min-h-screen flex flex-col justify-center items-center p-3 py-20'>
-                <h2
-                    className='text-5xl font-bold mb-[5rem] mt-[5rem]'
+            <div className='relative min-h-screen flex flex-col justify-center items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden'>
+                {/* Minimal Background Decoration */}
+                <div className="absolute top-20 left-10 w-72 h-72 bg-teal-500/3 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-500/3 rounded-full blur-3xl"></div>
+
+                {/* Section Title */}
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="relative z-10 mb-12 md:mb-16 lg:mb-20"
                 >
-                    About Me
-                </h2>
+                    <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-center bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent mb-3'>
+                        About Me
+                    </h2>
+                </motion.div>
 
-                <div className='max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center'>
-                    <div
-                        className='flex justify-center lg:w-1/2 p-4 mb-8 lg:mb-0'
-                    >
-                        <Image
-                            src={foto}
-                            alt='Ammar'
-                            className='w-64 h-64 lg:w-80 lg:h-96 rounded-md object-cover border-4 border-teal-500'
-                            loading="lazy"
-                            width={320}
-                            height={384}
-                        />
-                    </div>
+                {/* Content Container */}
+                <div className='relative z-10 max-w-6xl w-full mx-auto px-4'>
+                    <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-10'>
 
-                    <div
-                        className='flex flex-col items-center lg:items-start lg:w-1/2 text-center lg:text-left p-4 lg:flex lg:flex-col'
-                    >
-                        <p className='text-gray-700 dark:text-gray-400 text-3xl font-bold mb-[1.5rem]'>
-                            Hii.. Im <span className='text-3xl text-teal-500'>{nama}</span>
-                        </p>
-                        <p className='text-md lg:text-lg mb-6'>
-                            {deskripsi}
-                        </p>
-                        <Separator className="mb-10" />
-                        <Link href={'/about'}>
-                            <Button className="bg-teal-500 dark:text-white">
-                                More About Me
-                            </Button>
-                        </Link>
+                        {/* Image Section */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            viewport={{ once: true }}
+                            className='w-full lg:w-5/12 flex justify-center lg:justify-start'
+                        >
+                            <div className='relative group w-80 h-96'>
+                                {/* Decorative border frame */}
+                                <div className='absolute -inset-4 bg-gradient-to-br from-teal-500/20 to-teal-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>
+
+                                {/* Image container */}
+                                <div className='relative h-full'>
+                                    <div className='absolute -inset-1 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-300'></div>
+                                    <div className='relative bg-white dark:bg-slate-900 p-2 rounded-2xl h-full'>
+                                        <Image
+                                            src={foto}
+                                            alt={nama}
+                                            className='w-full h-full rounded-xl object-cover transform group-hover:scale-[1.02] transition-transform duration-500'
+                                            loading="lazy"
+                                            width={320}
+                                            height={384}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Text Content Section */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            viewport={{ once: true }}
+                            className='w-full lg:w-7/12'
+                        >
+                            <div className='bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 dark:border-slate-800'>
+
+                                {/* Greeting */}
+                                <div className='mb-6 md:mb-8'>
+                                    <p className='text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100 leading-tight'>
+                                        Hi, I'm{' '}
+                                        <span className='relative inline-block'>
+                                            <span className='relative z-10 text-teal-500'>{nama}</span>
+                                        </span>
+                                    </p>
+                                </div>
+
+                                {/* Separator with style */}
+                                <div className='relative mb-6 md:mb-8'>
+                                    <Separator className="bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent" />
+                                    <div className='absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-teal-500 rounded-full'></div>
+                                    <div className='absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-teal-500 rounded-full'></div>
+                                </div>
+
+                                {/* Description */}
+                                <div className='mb-8'>
+                                    <p className='text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed'>
+                                        {deskripsi}
+                                    </p>
+                                </div>
+
+                                {/* CTA Button */}
+                                <div className='flex justify-start'>
+                                    <Link href={'/about'}>
+                                        <Button className="group relative bg-teal-500 hover:bg-teal-600 dark:text-white px-6 py-3 text-base font-semibold shadow-lg hover:shadow-xl hover:shadow-teal-500/30 transition-all duration-300 overflow-hidden hover:-translate-y-1">
+                                            {/* Button gradient overlay */}
+                                            <span className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-500 transform translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></span>
+
+                                            {/* Button content */}
+                                            <span className="relative z-10 flex items-center gap-2">
+                                                More About Me
+                                                <FaArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                                            </span>
+                                        </Button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
             {/* About Section End */}
 
-
             {/* Portfolio Section Start */}
-            <div className="w-full">
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl font-bold mb-5 mt-8">Portfolio</h2>
-                    <p className="text-gray-700 dark:text-gray-500">
-                        Here are some of the projects I have worked on, including collaborations with the teams. Click the detail button to learn more about each project.
-                    </p>
-                </div>
+            <div className="relative w-full py-16 md:py-20 lg:py-24 overflow-hidden">
+                {/* Minimal Background Decoration */}
+                <div className="absolute top-20 right-0 w-72 h-72 bg-teal-500/3 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-40 left-0 w-96 h-96 bg-teal-500/3 rounded-full blur-3xl"></div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
-                    {portfolio.map((port, index) => (
-                        <div key={index} className="shadow-xl p-5 rounded-md dark:bg-slate-900">
-                            <div className="w-full mb-4">
-                                <Image src={port.gambar} alt={port.nama} className="w-full h-full rounded-md object-cover" width={400} height={250} />
-                            </div>
-                            <div className="w-full p-5">
-                                <h3 className="text-2xl font-semibold text-teal-500 mb-3">{port.nama}</h3>
-                                {/* <div className="flex flex-row mb-3">
-                                    {port.teknologi.map((tekno, index) => (
-                                        <Image key={index} src={tekno} alt={port.nama} className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] m-2" width={40} height={40} />
-                                    ))}
-                                </div> */}
-                                <p className='text-gray-700 dark:text-gray-400'>{port.deskripsi}</p>
-                                <div className='flex gap-4 mt-4'>
-                                    <Link
-                                        href={`/portfolio/${port.slug}`}
-                                        className='bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-all duration-300 flex flex-row'
-                                    >
-                                        <FaInfoCircle className='mt-1 mr-2' /> Detail
-                                    </Link>
+                <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+                    {/* Section Title */}
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12 md:mb-16 max-w-4xl mx-auto"
+                    >
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
+                            Portfolio
+                        </h2>
+                        <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 leading-relaxed px-4">
+                            Here are some of the projects I have worked on, including collaborations with teams. Click the detail button to learn more about each project.
+                        </p>
+                    </motion.div>
+
+                    {/* Portfolio Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 mb-12">
+                        {portfolio.map((port, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                className="group h-full"
+                            >
+                                <div className="relative h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-500 border border-gray-100 dark:border-slate-800 hover:border-teal-500/30">
+                                    {/* Image Container */}
+                                    <div className="relative w-full h-56 md:h-64 overflow-hidden bg-gray-100 dark:bg-slate-800">
+                                        <Image
+                                            src={port.gambar}
+                                            alt={port.nama}
+                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                            width={600}
+                                            height={400}
+                                            loading="lazy"
+                                        />
+                                        {/* Gradient overlay on image */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    </div>
+
+                                    {/* Content Container */}
+                                    <div className="p-6 md:p-7 lg:p-8">
+                                        {/* Title */}
+                                        <h3 className="text-xl md:text-2xl font-bold text-teal-500 group-hover:text-teal-600 mb-3 transition-colors duration-300 line-clamp-1">
+                                            {port.nama}
+                                        </h3>
+
+                                        {/* Divider */}
+                                        <div className="w-12 h-0.5 bg-gradient-to-r from-teal-500 to-transparent mb-4 group-hover:w-20 transition-all duration-300"></div>
+
+                                        {/* Description */}
+                                        <p className='text-sm md:text-base text-gray-700 dark:text-gray-400 leading-relaxed mb-6 line-clamp-3'>
+                                            {port.deskripsi}
+                                        </p>
+
+                                        {/* Action Button */}
+                                        <Link
+                                            href={`/portfolio/${port.slug}`}
+                                            className='inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-teal-500 hover:to-teal-600 text-white rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-teal-500/30 group/btn'
+                                        >
+                                            <FaInfoCircle className='text-base group-hover/btn:scale-110 transition-transform duration-300' />
+                                            <span>View Details</span>
+                                            <FaArrowRight className='text-sm opacity-0 -translate-x-2 group-hover/btn:opacity-100 group-hover/btn:translate-x-0 transition-all duration-300' />
+                                        </Link>
+                                    </div>
+
+                                    {/* Subtle corner decoration */}
+                                    <div className="absolute top-0 right-0 w-24 h-24 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        <div className="absolute top-0 right-0 w-full h-full border-t-2 border-r-2 border-teal-500/20 rounded-tr-2xl"></div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="flex mt-10 mb-10 justify-center items-center">
-                    <Link href={'/portfolio'}>
-                        <Button className="bg-teal-500 dark:text-white">
-                            More Projects
-                        </Button>
-                    </Link>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* More Projects Button */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        className="flex justify-center items-center"
+                    >
+                        <Link href={'/portfolio'}>
+                            <Button className="group relative bg-teal-500 hover:bg-teal-600 dark:text-white px-8 py-4 text-base font-semibold shadow-lg hover:shadow-xl hover:shadow-teal-500/30 transition-all duration-300 overflow-hidden hover:-translate-y-1">
+                                {/* Button gradient overlay */}
+                                <span className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-500 transform translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></span>
+
+                                {/* Button content */}
+                                <span className="relative z-10 flex items-center gap-2">
+                                    More Projects
+                                    <FaArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                                </span>
+                            </Button>
+                        </Link>
+                    </motion.div>
                 </div>
             </div>
             {/* Portfolio Section End */}
-
-
-            {/* Contact Section Start */}
-            {/* <div className="w-full py-20">
-                <div className="text-center mb-10 mt-10">
-                    <h2 className="text-5xl font-bold">Contact</h2>
-                </div>
-                <div className="container mx-auto">
-                    <div className="text-center mb-12">
-                        <h3 className="text-2xl font-semibold mb-7">
-                            Contact Me Through The Media Below 📩
-                        </h3>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {contact.map((item, index) => (
-                            <div key={index} className="flex items-center justify-center">
-                                <a
-                                    href={item.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4 bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 w-full"
-                                >
-                                    <img
-                                        src={item.icon}
-                                        alt={item.nama}
-                                        className="w-10 h-10 md:w-12 md:h-12"
-                                    />
-                                    <div className="flex flex-col items-center md:items-start">
-                                        <span className="text-2xl font-bold">{item.nama}</span>
-                                        <span className="text-base text-gray-600 dark:text-gray-400">
-                                            {item.detail}
-                                        </span>
-                                        <span className="text-lg text-teal-500 font-bold">
-                                            Send me a message
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="container mx-auto flex justify-center space-x-4 mt-5">
-                        {footer.map((foot, index) => (
-                            <div key={index} className="flex items-center justify-center mt-5 mb-5">
-                                <a
-                                    href={foot.link}
-                                    className="text-teal-500 hover:text-white hover:bg-teal-500 hover:border-white transition duration-300 p-2 lg:p-3 bg-white border border-teal-500 rounded-md dark:bg-slate-900 dark:hover:bg-teal-500 dark:hover:border-gray-700 dark:hover:text-slate-900"
-                                    target='_blank'
-                                >
-                                    {React.createElement(foot.logo, { className: "w-10 h-10" })}
-                                </a>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div> */}
-            {/* Contact Section End */}
         </>
     );
 }
