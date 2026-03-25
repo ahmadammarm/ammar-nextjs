@@ -97,7 +97,7 @@ export default function Home() {
                                 {/* Greeting */}
                                 <div className='mb-6 md:mb-8'>
                                     <p className='text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100 leading-tight'>
-                                        Hi, I'm{' '}
+                                        Hi, Im{' '}
                                         <span className='relative inline-block'>
                                             <span className='relative z-10 text-teal-500'>{nama}</span>
                                         </span>
