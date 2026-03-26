@@ -96,10 +96,6 @@ function HeroSection(): React.JSX.Element {
                                     <span className="text-teal-500 font-bold text-sm md:text-base">Available</span>
                                 </div>
                             </div>
-
-                            {/* Decorative elements */}
-                            <div className="absolute top-0 -left-4 w-20 h-20 border-4 border-teal-500/30 rounded-full animate-spin-slow"></div>
-                            <div className="absolute bottom-10 -right-8 w-16 h-16 border-4 border-teal-500/20 rounded-full animate-spin-reverse"></div>
                         </div>
                     </div>
 
