@@ -2,19 +2,35 @@ import { Experiences } from "@/types/experiences";
 
 export const experiences: Experiences[] = [
     {
-        nama: "State University of Malang",
-        jabatan: "Full Stack Web Developer",
+        nama: "Universitas Negeri Malang",
+        jabatan: "Software Engineer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
-        kontrak: "Seasonal",
-        deskripsi: ["Developed a dynamic company profile website for Batik Zulpah using a CMS-based architecture to ensure ease of content management and scalability.", "Collaborated with the team to build a comprehensive accounting web application, integrating key features such as sales management, product management, and debt tracking.", "Utilized Laravel and MySQL as the core technology stack for the backend development and efficient data management.", "Maintained and enhanced the applications based on user feedback and evolving runtime requirements.", "Managed deployment processes and successfully deployed all projects to production using a shared hosting platform.", "Actively participated in weekly team meetings to review progress, resolve blockers, and align on project goals."],
-        tahun: "June 2024 - November 2024"
+        kontrak: "Freelance",
+        deskripsi: ["Developed a chemistry e-learning platform used in educational research targeting senior high school students.", "Designed and implemented 20+ API endpoints to support core application workflows.", "Integrated LLM-based functionality by applying few-shot prompting techniques and structured output formatting to generate consistent responses."],
+        tahun: "April 2025 - November 2025"
+    },
+    {
+        nama: "PT Cendana Teknika Utama",
+        jabatan: "Software Engineer Intern",
+        logo: ["/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
+        kontrak: "Internship",
+        deskripsi: ["Developed a dynamic internal course information system with role-based access control (RBAC) to manage course data and user permissions.", "Implemented an MVC-based architecture to organize application logic, presentation layers, and data handling for better maintainability.", "Utilized containerized development environments to support consistent setup, efficient testing, and reliable application deployment."],
+        tahun: "January 2025 - May 2025"
     },
     {
         nama: "Pastijadi Digital Solutions",
-        jabatan: "Full Stack Web Developer",
+        jabatan: "Software Engineer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
-        kontrak: "Contract",
-        deskripsi: ["Collaborated with Directory of Innovation team to develop an Islamic educational platform, through a collaborative project between State University of Malang and LP Ma'arif PWNU East Java.", "Utilized Laravel and MySQL for building a secure, scalable, and feature-rich application.", "Maintained and improved the application by incorporating user feedback and addressing runtime requirements.", "Ensured development stayed on track by following a defined project timeline and participating in regular team meetings to coordinate tasks and resolve challenges."],
-        tahun: "August 2024 - November 2024"
+        kontrak: "Freelance",
+        deskripsi: ["Developed the Pastijadi internal accounting system to support operational workflows and structured financial data management.", "Managed the application deployment to production environments and maintained system stability during release cycles, including monitoring and resolving deployment-related issues.", " Implemented the application features and fixing issues under guidance, gaining hands-on experience in software development practices and system architecture."],
+        tahun: "July 2024 - March 2025"
+    },
+    {
+        nama: "PUI-PT DLI Universitas Negeri Malang",
+        jabatan: "Software Engineer Intern",
+        logo: ["/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
+        kontrak: "Internship",
+        deskripsi: ["Developed an Islamic educational platform with a primary focus on backend system development and application logic.", "Implemented 10+ application routes and backend handlers supporting authentication, content management, and user workflows.", "Implemented JWT-based authentication and role-based access control (RBAC) to manage secure user access and enforce permission-based resource authorization."],
+        tahun: "June 2024 - November 2024"
     },
 ]
