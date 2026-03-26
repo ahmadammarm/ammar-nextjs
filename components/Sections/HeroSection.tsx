@@ -68,9 +68,7 @@ function HeroSection(): React.JSX.Element {
                     {/* Image Section */}
                     <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-8 lg:mb-0">
                         <div className="relative group">
-                            {/* Animated rings */}
-                            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-teal-500/20 to-teal-600/20 blur-2xl group-hover:blur-3xl transition-all duration-500 animate-pulse-slow"></div>
-
+                            
                             {/* Main border with gradient */}
                             <div className="relative">
                                 <div className="absolute -inset-1 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full opacity-75 group-hover:opacity-100 blur-sm group-hover:blur-md transition-all duration-500"></div>

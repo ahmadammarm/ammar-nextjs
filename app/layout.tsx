@@ -3,27 +3,46 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
     metadataBase: new URL("https://ahmadammar.my.id"),
 
-    title: {
-        default: "Ammar | Full Stack Web Developer",
-        template: "%s | Ammar Developer",
-    },
+    title: "Ammar | Personal Website",
 
     description:
-        "Ahmad Ammar Musyaffa adalah Full Stack Web Developer dari Indonesia yang fokus pada Laravel, Next.js, dan modern web development.",
+        "Junior software engineer with passion in building backend web applications using Node.js, Laravel, and Go. Focused on backend services, RESTful APIs, and database systems, while exploring AI integration for intelligent and data-driven applications.",
 
     keywords: [
+        "Ahmad Ammar",
+        "Ammar",
+        "Musyaffa",
         "Ahmad Ammar Musyaffa",
-        "Full Stack Developer Indonesia",
-        "Next.js Developer",
+        "Ammar developer",
+        "Ammar backend developer",
+        "Ammar software engineer",
+        "Software Engineer Indonesia",
+        "Backend Developer Indonesia",
+        "Backend Engineer",
+        "Junior Software Engineer",
+        "Fullstack Developer Indonesia",
+        "Node.js Developer",
         "Laravel Developer",
+        "Go Developer",
+        "REST API Developer",
+        "Backend API Development",
+        "MySQL Developer",
+        "PostgreSQL Developer",
+        "Relational Database Developer",
+        "AI Enthusiast",
+        "Artificial Intelligence Developer",
+        "Machine Learning Integration",
+        "AI Backend Engineer",
         "Portfolio Web Developer",
-        "Go Developer"
+        "Web Developer Indonesia Portfolio",
+        "Backend Developer Portfolio",
     ],
 
     authors: [
@@ -48,9 +67,9 @@ export const metadata = {
     },
 
     openGraph: {
-        title: "Ammar | Full Stack Web Developer",
+        title: "Ammar | Software Engineer Backend & AI Enthusiast",
         description:
-            "Portfolio Ahmad Ammar Musyaffa, Full Stack Developer yang membangun aplikasi modern menggunakan Next.js dan Laravel.",
+            "Portfolio Ahmad Ammar Musyaffa, backend-focused software engineer specializing in Node.js, Laravel, Go, and AI-powered applications.",
         url: "https://ahmadammar.my.id",
         siteName: "Ammar Developer",
         images: [
@@ -58,7 +77,7 @@ export const metadata = {
                 url: "/assets/metadata.png",
                 width: 1200,
                 height: 630,
-                alt: "Ammar Portfolio Website",
+                alt: "Ammar Backend & AI Portfolio",
             },
         ],
         locale: "id_ID",
@@ -67,9 +86,9 @@ export const metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Ammar | Full Stack Developer",
+        title: "Software Engineer | Backend & AI Enthusiast",
         description:
-            "Portfolio Ahmad Ammar Musyaffa, Web Developer dari Indonesia.",
+            "Backend-focused developer with experience in Node.js, Laravel, Go, and AI integration.",
         images: ["/assets/metadata.png"],
     },
 
@@ -88,7 +107,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="id">
+        <html lang="en">
             <body className={inter.className}>
                 <ThemeProvider
                     attribute="class"
