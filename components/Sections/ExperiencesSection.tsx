@@ -21,7 +21,7 @@ const ExperiencesSection = () => {
                     className="text-center mb-12 md:mb-16 lg:mb-20"
                 >
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
-                        Work Experience
+                        Work Experiences
                     </h2>
                     <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
                         Here are some of my work experiences that I have gained
