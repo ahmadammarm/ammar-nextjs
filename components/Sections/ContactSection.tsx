@@ -213,7 +213,7 @@ function ContactSection() {
                                 Send Me a Message
                             </h3>
                             <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
-                                Fill out the form below and I'll get back to you as soon as possible 📝
+                                Fill out the form below and I&quot;ll get back to you as soon as possible
                             </p>
                         </div>
 
