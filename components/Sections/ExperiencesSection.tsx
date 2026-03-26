@@ -45,7 +45,7 @@ const ExperiencesSection = () => {
                                 className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'
                                     }`}
                             >
-                                {/* Timeline Node */}
+                                {/* Timeline Node - No Animation */}
                                 <div className="absolute left-1/2 transform -translate-x-1/2 z-20">
                                     <div className="relative">
                                         {/* Outer ring */}
