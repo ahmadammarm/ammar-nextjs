@@ -169,9 +169,6 @@ function ContactSection() {
                     <h3 className="text-2xl md:text-3xl font-bold mb-3 text-gray-800 dark:text-gray-100">
                         Connect With Me
                     </h3>
-                    <div className='flex justify-center mb-8'>
-                        <div className='w-16 h-0.5 bg-gradient-to-r from-transparent via-teal-500 to-transparent rounded-full'></div>
-                    </div>
 
                     {/* Social Icons */}
                     <div className="flex justify-center flex-wrap gap-4">
@@ -215,9 +212,6 @@ function ContactSection() {
                             <h3 className="text-2xl md:text-3xl font-bold mb-3 text-gray-800 dark:text-gray-100">
                                 Send Me a Message
                             </h3>
-                            <div className='flex justify-center mb-4'>
-                                <div className='w-16 h-0.5 bg-gradient-to-r from-transparent via-teal-500 to-transparent rounded-full'></div>
-                            </div>
                             <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
                                 Fill out the form below and I'll get back to you as soon as possible 📝
                             </p>
