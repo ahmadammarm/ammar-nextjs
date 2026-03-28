@@ -7,7 +7,7 @@ export const experiences: Experiences[] = [
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
         kontrak: "Part-time",
         deskripsi: ["Collaborated in a fast-paced startup environment to develop and maintain a SaaS AI-powered career preparation platform.", "Shipped new features across frontend and backend aligned with evolving product and business goals.", "Performed bug fixing and issue resolution across staging and production environments, contributing to improved application stability and reduced user-reported issues."],
-        tahun: "April 2025 - November 2025"
+        tahun: "November 2025 - present"
     },
     {
         nama: "Freelancer",
@@ -15,7 +15,7 @@ export const experiences: Experiences[] = [
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
         kontrak: "Freelance",
         deskripsi: ["Delivered 10+ end-to-end software solutions for multiple clients, covering requirements analysis, project planning, development, deployment, and post-release support.", "Conducted technical planning and solution mapping to translate business needs into structured development roadmaps, defining scope, milestones, and appropriate technology stacks.", "Performed regular maintenance cycles, completing UI enhancements, bug fixes, and performance optimizations."],
-        tahun: "April 2025 - November 2025"
+        tahun: "January 2025 - present"
     },
     {
         nama: "Universitas Negeri Malang",
