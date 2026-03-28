@@ -33,7 +33,7 @@ const ExperiencesSection = () => {
                     {/* Timeline Vertical Line */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-teal-500/30 via-teal-500/50 to-teal-500/30"></div>
 
-                    {/* Timeline Items 
+                    {/* Timeline Items */}
                     <div className="space-y-16">
                         {experiences.map((exp, index) => (
                             <motion.div
