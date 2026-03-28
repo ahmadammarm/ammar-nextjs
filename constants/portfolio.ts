@@ -255,4 +255,22 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: ["/assets/skills/react.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/expressjs.svg"],
         year: "2026"
     },
+    {
+        nama: "Eduvoka",
+        slug: "eduvoka",
+        gambar: "/assets/portfolios/eduvoka.png",
+        gambar2: "/assets/portfolios/eduvoka/2.png",
+        gambar3: "/assets/portfolios/eduvoka/3.png",
+        gambar4: "/assets/portfolios/eduvoka/4.png",
+        deskripsi: "Eduvoka is an adaptive e-learning platform powered by Learning Analytics & AI.",
+        deskripsi2: "Eduvoka is an adaptive e-learning platform powered by Learning Analytics & AI. The platform helps students learn more effectively through real-time learning analytics, early burnout detection, and an AI-powered Socratic tutor that guides students through problem-solving rather than simply providing answers. Using artificial intelligence, Eduvoka delivers personalized educational experiences tailored to each student's unique learning journey.",
+        features: [
+            "Socratic AI Tutor: Integrates Google Gemini to guide students through wrong answers via multi-turn deep reasoning (Probe-Analyze-Evaluate), not just corrections.",
+            "Adaptive Engine: Dynamic question difficulty adjustment based on Item Response Theory (IRT).",
+            "Metacognitive Analytics: Tracks Learning Velocity and Burnout Risk using real-time response latency and decision consistency.",
+        ],
+        link: "https://eduvoka.com",
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
+        year: "2026"
+    },
 ]
