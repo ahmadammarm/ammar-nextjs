@@ -22,7 +22,7 @@ export const experiences: Experiences[] = [
         jabatan: "Backend Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
         kontrak: "Freelance",
-        deskripsi: ["Developed a chemistry e-learning platform used in educational research targeting senior high school students.", "Designed and implemented 20+ API endpoints to support core application workflows.", "Integrated LLM-based functionality by applying few-shot prompting techniques and structured output formatting to generate consistent responses."],
+        deskripsi: ["Developed a chemistry e-learning platform used in educational research targeting senior high school students.", "Designed and implemented 15 API endpoints to support core application workflows.", "Integrated LLM-based functionality by applying few-shot prompting techniques and structured output formatting to generate consistent responses."],
         tahun: "April 2025 - November 2025"
     },
     {
@@ -46,7 +46,7 @@ export const experiences: Experiences[] = [
         jabatan: "Backend Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
         kontrak: "Internship",
-        deskripsi: ["Developed an Islamic educational platform with a primary focus on backend system development and application logic.", "Implemented 10+ application routes and backend handlers supporting authentication, content management, and user workflows.", "Implemented JWT-based authentication and role-based access control (RBAC) to manage secure user access and enforce permission-based resource authorization."],
+        deskripsi: ["Developed an Islamic educational platform with a primary focus on backend system development and application logic.", "Implemented multiple application routes and backend handlers supporting authentication, content management, and user workflows.", "Implemented JWT-based authentication and role-based access control (RBAC) to manage secure user access and enforce permission-based resource authorization."],
         tahun: "June 2024 - November 2024"
     },
 ]
