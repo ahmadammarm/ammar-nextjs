@@ -26,14 +26,6 @@ export const experiences: Experiences[] = [
         tahun: "April 2025 - November 2025"
     },
     {
-        nama: "PT Cendana Teknika Utama",
-        jabatan: "Fullstack Web Developer",
-        logo: ["/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
-        kontrak: "Internship",
-        deskripsi: ["Developed a dynamic internal course information system with role-based access control (RBAC) to manage course data and user permissions.", "Implemented an MVC-based architecture to organize application logic, presentation layers, and data handling for better maintainability.", "Utilized containerized development environments to support consistent setup, efficient testing, and reliable application deployment."],
-        tahun: "January 2025 - May 2025"
-    },
-    {
         nama: "Pastijadi Digital Solutions",
         jabatan: "Fullstack Web Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
