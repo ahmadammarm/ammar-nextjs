@@ -25,14 +25,14 @@ function HeroSection(): React.JSX.Element {
                             <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg mb-2 font-medium animate-fade-in">
                                 Hi there!
                             </p>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 leading-tight animate-fade-in-up">
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 leading-tight animate-fade-in-up">
                                 Im{' '}
                                 <span className="relative inline-block">
                                     <span className="relative z-10 text-teal-500 hover:text-teal-600 transition-colors duration-300">
                                         {nama}
                                     </span>
                                 </span>
-                            </h2>
+                            </h1>
                         </div>
 
                         {/* Role/Title with typing effect style */}

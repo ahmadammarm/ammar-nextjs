@@ -88,9 +88,9 @@ function ContactSection() {
                     viewport={{ once: true }}
                     className="text-center mb-12 md:mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
                         Get In Touch
-                    </h2>
+                    </h1>
                     <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                         Feel free to reach out through any of these channels
                     </p>
