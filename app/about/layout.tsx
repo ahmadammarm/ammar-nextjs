@@ -24,6 +24,9 @@ export const metadata: Metadata = {
             },
         ],
     },
+    alternates: {
+        canonical: "https://ahmadammar.my.id/about",
+    },
 };
 
 export default function AboutLayout({

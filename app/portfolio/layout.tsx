@@ -26,6 +26,9 @@ export const metadata: Metadata = {
             },
         ],
     },
+    alternates: {
+        canonical: "https://ahmadammar.my.id/portfolio",
+    },
 };
 
 export default function PortfolioLayout({

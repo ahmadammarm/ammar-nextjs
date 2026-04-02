@@ -49,6 +49,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             description: seoDescription,
             images: [portfolio.gambar],
         },
+        alternates: {
+            canonical: `https://ahmadammar.my.id/portfolio/${slug}`,
+        },
     };
 }
 

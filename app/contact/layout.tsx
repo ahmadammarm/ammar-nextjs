@@ -24,6 +24,9 @@ export const metadata: Metadata = {
             },
         ],
     },
+    alternates: {
+        canonical: "https://ahmadammar.my.id/contact",
+    },
 };
 
 export default function ContactLayout({
