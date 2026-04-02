@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import JsonLd from "@/components/JsonLd";
 import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -101,6 +102,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
+                <JsonLd />
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
