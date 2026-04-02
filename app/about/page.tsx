@@ -7,21 +7,21 @@ import ExperiencesSection from "@/components/Sections/ExperiencesSection";
 import SkillsSection from "@/components/Sections/SkillsSection";
 import { useEffect, useState } from "react";
 
-
-export default function Page() {
-    const [isLoading, setIsLoading] = useState(true)
+export default function AboutPage() {
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setIsLoading(false)
+            setIsLoading(false);
         }, 1000);
 
-        return () => clearTimeout(timer)
+        return () => clearTimeout(timer);
     }, []);
 
-    if(isLoading) {
-        return <Loading />
+    if (isLoading) {
+        return <Loading />;
     }
+
     return (
         <div>
             <AboutSection />
@@ -29,5 +29,5 @@ export default function Page() {
             <SkillsSection />
             <ExperiencesSection />
         </div>
-    )
+    );
 }
