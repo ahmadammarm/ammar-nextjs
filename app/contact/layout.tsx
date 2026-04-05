@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Contact | Ahmad Ammar Musyaffa",
+    title: "Ammar | Contact",
     description:
         "Get in touch with Ahmad Ammar Musyaffa for collaboration opportunities, project inquiries, or just to say hello. Find contact information and social media links here.",
     keywords: [

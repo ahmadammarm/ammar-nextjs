@@ -1,6 +1,9 @@
+export type PortfolioCategory = "landing-page" | "web-app" | "company-profile";
+
 export type Portfolio = {
     nama: string;
     slug: string;
+    category: PortfolioCategory;
     gambar: string;
     gambar2?: string;
     gambar3?: string;

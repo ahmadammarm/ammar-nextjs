@@ -1,38 +1,57 @@
 "use client"
 
 import Loading from '@/components/Loading'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { fullPortfolio } from '@/constants/portfolio'
+import { PortfolioCategory } from '@/types/portfolio'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaInfoCircle, FaArrowRight } from 'react-icons/fa'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
+type PortfolioTab = 'all' | PortfolioCategory
+
 export default function Page() {
     const [isLoading, setIsLoading] = useState(true)
-    const [items, setItems] = useState<any[]>([])
+    const [activeCategory, setActiveCategory] = useState<PortfolioTab>('all')
+    const [items, setItems] = useState<(typeof fullPortfolio)[number][]>([])
     const [hasMore, setHasMore] = useState(true)
 
     const ITEMS_PER_LOAD = 4
 
+    const filteredPortfolio =
+        activeCategory === 'all'
+            ? fullPortfolio
+            : fullPortfolio.filter((item) => item.category === activeCategory)
+
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false)
-            setItems(fullPortfolio.slice(0, ITEMS_PER_LOAD))
         }, 1000)
 
         return () => clearTimeout(timer)
     }, [])
 
+    useEffect(() => {
+        if (isLoading) return
+
+        setItems(filteredPortfolio.slice(0, ITEMS_PER_LOAD))
+        setHasMore(filteredPortfolio.length > ITEMS_PER_LOAD)
+    }, [activeCategory, isLoading])
+
     const fetchMoreData = () => {
-        if (items.length >= fullPortfolio.length) {
+        if (items.length >= filteredPortfolio.length) {
             setHasMore(false)
             return
         }
 
-        const nextItems = fullPortfolio.slice(items.length, items.length + ITEMS_PER_LOAD)
+        const nextItems = filteredPortfolio.slice(items.length, items.length + ITEMS_PER_LOAD)
         setTimeout(() => {
-            setItems([...items, ...nextItems])
+            setItems((prevItems) => [...prevItems, ...nextItems])
+            if (items.length + nextItems.length >= filteredPortfolio.length) {
+                setHasMore(false)
+            }
         }, 1000)
     }
 
@@ -47,6 +66,37 @@ export default function Page() {
                 <p className="text-gray-700 dark:text-gray-500 mx-4">
                     Here are some of the projects I have worked on, including collaborations with the teams. Click the detail button to learn more about each project.
                 </p>
+
+                <div className='mt-8 flex justify-center'>
+                    <Tabs value={activeCategory} onValueChange={(value) => setActiveCategory(value as PortfolioTab)}>
+                        <TabsList className='h-auto flex flex-wrap gap-2 bg-transparent p-0'>
+                            <TabsTrigger
+                                value='all'
+                                className='rounded-full border border-teal-500/30 px-4 py-2 text-sm data-[state=active]:bg-teal-500 data-[state=active]:text-white data-[state=active]:border-teal-500'
+                            >
+                                All
+                            </TabsTrigger>
+                            <TabsTrigger
+                                value='landing-page'
+                                className='rounded-full border border-teal-500/30 px-4 py-2 text-sm data-[state=active]:bg-teal-500 data-[state=active]:text-white data-[state=active]:border-teal-500'
+                            >
+                                Landing Page
+                            </TabsTrigger>
+                            <TabsTrigger
+                                value='web-app'
+                                className='rounded-full border border-teal-500/30 px-4 py-2 text-sm data-[state=active]:bg-teal-500 data-[state=active]:text-white data-[state=active]:border-teal-500'
+                            >
+                                Web App
+                            </TabsTrigger>
+                            <TabsTrigger
+                                value='company-profile'
+                                className='rounded-full border border-teal-500/30 px-4 py-2 text-sm data-[state=active]:bg-teal-500 data-[state=active]:text-white data-[state=active]:border-teal-500'
+                            >
+                                Company Profile
+                            </TabsTrigger>
+                        </TabsList>
+                    </Tabs>
+                </div>
             </div>
 
             <InfiniteScroll

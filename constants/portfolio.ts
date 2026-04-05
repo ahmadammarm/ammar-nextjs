@@ -4,6 +4,7 @@ export const portfolio: Portfolio[] = [
     {
         nama: "SINUDZI",
         slug: "sinudzi",
+        category: "web-app",
         gambar: "/assets/portfolios/sinudzi.png",
         gambar2: "/assets/portfolios/sinudzi/2.png",
         gambar3: "/assets/portfolios/sinudzi/3.png",
@@ -22,6 +23,7 @@ export const portfolio: Portfolio[] = [
     {
         nama: "Accounting App",
         slug: "accounting-app",
+        category: "web-app",
         gambar: "/assets/portfolios/accounting/accounting_homepage.jpg",
         gambar2: "/assets/portfolios/accounting/accounting_code.jpg",
         gambar3: "/assets/portfolios/accounting/accounting_product.jpg",
@@ -39,6 +41,7 @@ export const portfolio: Portfolio[] = [
     {
         nama: "Fulusin",
         slug: "fulusin",
+        category: "web-app",
         gambar: "/assets/portfolios/fulusin.png",
         gambar2: "/assets/portfolios/fulusin/1.png",
         gambar3: "/assets/portfolios/fulusin/2.png",
@@ -59,8 +62,28 @@ export const portfolio: Portfolio[] = [
 
 export const fullPortfolio: Portfolio[] = [
     {
+        nama: "Bakso Cak Pendik Landing Page",
+        slug: "bakso-cak-pendik",
+        category: "landing-page",
+        gambar: "/assets/portfolios/bakso.png",
+        gambar2: "/assets/portfolios/bakso/2.png",
+        gambar3: "/assets/portfolios/bakso/3.png",
+        deskripsi: "Bakso Cak Pendik is a local bakso restaurant in Malang.",
+        deskripsi2: "Bakso Cak Pendik is a local bakso restaurant in Malang. This platform has many feature such as menu display, location information, and contact details.",
+        features: [
+            "Menu display with clear categories, highlighted best sellers, and updated pricing to help visitors quickly choose their preferred food and drinks.",
+            "Location information that includes a complete address, easy-to-follow directions, and map support so customers can find the restaurant without confusion.",
+            "Testimonial section featuring customer reviews and dining experiences to build trust and show the quality of service and taste.",
+            "Contact details with phone number and social media links to make reservations, ask questions, or place orders more easily."
+        ],
+        teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png"],
+        link: "https://bakso-prima-cak-pen.vercel.app/",
+        year: "2024"
+    },
+    {
         nama: "SINUDZI",
         slug: "sinudzi",
+        category: "web-app",
         gambar: "/assets/portfolios/sinudzi.png",
         gambar2: "/assets/portfolios/sinudzi/2.png",
         gambar3: "/assets/portfolios/sinudzi/3.png",
@@ -77,8 +100,27 @@ export const fullPortfolio: Portfolio[] = [
         year: "2024"
     },
     {
+        nama: "Aishino Food Planning Page",
+        slug: "aishino-food-planning-page",
+        category: "landing-page",
+        gambar: "/assets/portfolios/aishino.png",
+        gambar2: "/assets/portfolios/aishino/2.png",
+        gambar3: "/assets/portfolios/aishino/3.png",
+        deskripsi: "Aishino Food is one of the MSMEs in Malang that sells snacks and beverages.",
+        deskripsi2: "Aishino Food is one of the MSMEs in Malang that sells snacks and beverages.",
+        features: [
+            "Product catalog with organized categories, detailed item descriptions, and clear pricing to help customers quickly discover snacks and beverages.",
+            "Location maps integrated with address details and route directions so visitors can find the store easily from their current location.",
+            "Contact information that includes phone number and social media channels for inquiries, product orders, and customer support."
+        ],
+        teknologi: ["/assets/skills/react.png", "/assets/skills/tailwind.png"],
+        link: "https://aishino-food.vercel.app/",
+        year: "2024"
+    },
+    {
         nama: "Batik Zulpah Company Profile",
         slug: "batik-zulpah-company-profile",
+        category: "company-profile",
         gambar: "/assets/portfolios/batik-zulpah.png",
         gambar2: "/assets/portfolios/batik-zulpah/2.png",
         gambar3: "/assets/portfolios/batik-zulpah/3.png",
@@ -97,6 +139,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "Accounting App",
         slug: "accounting-app",
+        category: "web-app",
         gambar: "/assets/portfolios/accounting/accounting_homepage.jpg",
         gambar2: "/assets/portfolios/accounting/accounting_code.jpg",
         gambar3: "/assets/portfolios/accounting/accounting_product.jpg",
@@ -114,6 +157,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "Parkirin",
         slug: "parkirin",
+        category: "web-app",
         gambar: "/assets/portfolios/parkirin.png",
         gambar2: "/assets/portfolios/parkirin/2.png",
         gambar3: "/assets/portfolios/parkirin/3.png",
@@ -131,6 +175,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "Fulusin",
         slug: "fulusin",
+        category: "web-app",
         gambar: "/assets/portfolios/fulusin.png",
         gambar2: "/assets/portfolios/fulusin/1.png",
         gambar3: "/assets/portfolios/fulusin/2.png",
@@ -150,6 +195,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "SIPRO",
         slug: "sipro",
+        category: "web-app",
         gambar: "/assets/portfolios/sipro.png",
         gambar2: "/assets/portfolios/sipro/2.png",
         gambar3: "/assets/portfolios/sipro/3.png",
@@ -167,6 +213,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "Brightlife",
         slug: "brightlife",
+        category: "web-app",
         gambar: "/assets/portfolios/brightlife.png",
         gambar2: "/assets/portfolios/brightlife/2.png",
         gambar3: "/assets/portfolios/brightlife/3.png",
@@ -184,6 +231,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "NetZero Palm",
         slug: "netzero-palm",
+        category: "web-app",
         gambar: "/assets/portfolios/netzero-palm/netzero-palm.png",
         gambar2: "/assets/portfolios/netzero-palm/netzero-palm2.webp",
         gambar3: "/assets/portfolios/netzero-palm/netzero-palm3.webp",
@@ -201,6 +249,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "Curio",
         slug: "curio",
+        category: "web-app",
         gambar: "/assets/portfolios/curio/curio.webp",
         gambar2: "/assets/portfolios/curio/curio2.webp",
         gambar3: "/assets/portfolios/curio/curio3.webp",
@@ -220,6 +269,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "Learnalyzer",
         slug: "learnalyzer",
+        category: "web-app",
         gambar: "/assets/portfolios/learnalyzer.png",
         gambar2: "/assets/portfolios/learnalyzer/1.png",
         gambar3: "/assets/portfolios/learnalyzer/2.png",
@@ -240,6 +290,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "Projmanagem",
         slug: "projmanagem",
+        category: "web-app",
         gambar: "/assets/portfolios/projmanagem.png",
         gambar2: "/assets/portfolios/projmanagem/2.png",
         gambar3: "/assets/portfolios/projmanagem/3.png",
@@ -258,6 +309,7 @@ export const fullPortfolio: Portfolio[] = [
     {
         nama: "Eduvoka",
         slug: "eduvoka",
+        category: "web-app",
         gambar: "/assets/portfolios/eduvoka.png",
         gambar2: "/assets/portfolios/eduvoka/2.png",
         gambar3: "/assets/portfolios/eduvoka/3.png",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About | Ahmad Ammar Musyaffa",
+    title: "Ammar | About",
     description:
         "Learn more about Ahmad Ammar Musyaffa, a backend-focused software engineer with expertise in Node.js, Laravel, Go, and AI-powered applications. Discover his education, skills, and professional experience.",
     keywords: [
