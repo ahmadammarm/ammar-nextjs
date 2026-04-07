@@ -4,9 +4,9 @@ export const about: About[] = [
     {
         nama: 'Ahmad Ammar Musyaffa',
         negara: 'Malang City',
-        role: 'Undergraduate Informatics Engineering Student',
+        role: 'Fullstack Developer',
         CV: '/assets/CV_Ahmad_Ammar.pdf',
-        deskripsi: "Junior software engineer with passion to building backend web applications using technologies such as Node.js, Laravel, and Go. Enjoy with the implementation of backend services, business logic, and RESTful APIs. Familiar with managing relational databases such as MySQL and PostgreSQL to build maintainable systems. Alongside backend development, I explore the integration of artificial intelligence into modern applications, particularly in developing data-driven features and intelligent automation. I continue to refine my engineering skills while staying up to date with modern backend technologies and emerging AI tools, with the goal of growing as a backend-focused engineer with a strong interest in AI-powered software systems.",
+        deskripsi: "Developer with experience building web applications across both backend and frontend layers, using technologies such as Laravel and Go alongside modern frameworks like Next.js. As a freelance web developer, I have delivered end-to-end solutions for multiple clients, handling requirements analysis, development, and deployment while adapting to diverse business needs. Alongside web development, I explore the integration of artificial intelligence into modern applications, particularly in developing data-driven features and intelligent automation. I continue to refine my engineering skills while staying up to date with modern technologies and emerging AI tools, with the goal of growing as a fullstack developer with a strong interest in AI-powered software systems.",
         foto: '/assets/ammar-baru.webp'
     }
 ]

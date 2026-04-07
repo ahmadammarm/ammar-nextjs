@@ -19,7 +19,8 @@ export default function JsonLd() {
         ],
         email: "mailto:ahmadammarmusyaffa@gmail.com",
         knowsAbout: [
-            "Backend Development",
+            "Fullstack Development",
+            "Frontend Development",
             "Node.js",
             "Laravel",
             "Go",

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Ammar | Personal Website",
 
     description:
-        "Junior software engineer with passion in building backend web applications using Node.js, Laravel, and Go. Focused on backend services, RESTful APIs, and database systems, while exploring AI integration for intelligent and data-driven applications.",
+        "Fullstack developer with experience building end-to-end web applications using Next.js, Node.js, Laravel, and Go, while exploring AI integration for intelligent and data-driven applications.",
 
     keywords: [
         "ahmad ammar musyaffa",
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: "Ammar | Software Engineer Backend & AI Enthusiast",
+        title: "Ammar | Fullstack Developer & AI Enthusiast",
         description:
-            "Portfolio Ahmad Ammar Musyaffa, backend-focused software engineer specializing in Node.js, Laravel, Go, and AI-powered applications.",
+            "Portfolio Ahmad Ammar Musyaffa, a fullstack developer specializing in Next.js, Node.js, Laravel, Go, and AI-powered applications.",
         url: "https://ahmadammar.my.id",
         siteName: "Ammar Developer",
         images: [
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
                 url: "/assets/metadata.png",
                 width: 1200,
                 height: 630,
-                alt: "Ammar Backend & AI Portfolio",
+                alt: "Ammar Fullstack & AI Portfolio",
             },
         ],
         locale: "id_ID",
@@ -74,9 +74,9 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Software Engineer | Backend & AI Enthusiast",
+        title: "Fullstack Developer | AI Enthusiast",
         description:
-            "Backend-focused developer with experience in Node.js, Laravel, Go, and AI integration.",
+            "Fullstack developer with experience in Next.js, Node.js, Laravel, Go, and AI integration.",
         images: ["/assets/metadata.png"],
     },
 

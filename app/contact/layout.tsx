@@ -8,7 +8,7 @@ export const metadata: Metadata = {
         "contact ahmad ammar",
         "ahmad ammar musyaffa contact",
         "hire software engineer",
-        "backend developer contact",
+        "fullstack developer contact",
     ],
     openGraph: {
         title: "Contact | Ahmad Ammar Musyaffa",

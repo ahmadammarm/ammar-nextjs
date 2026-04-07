@@ -3,17 +3,17 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Ammar | About",
     description:
-        "Learn more about Ahmad Ammar Musyaffa, a backend-focused software engineer with expertise in Node.js, Laravel, Go, and AI-powered applications. Discover his education, skills, and professional experience.",
+        "Learn more about Ahmad Ammar Musyaffa, a fullstack developer with expertise in Next.js, Node.js, Laravel, Go, and AI-powered applications. Discover his education, skills, and professional experience.",
     keywords: [
         "about ahmad ammar",
         "ahmad ammar musyaffa biography",
         "software engineer portfolio",
-        "backend developer indonesia",
+        "fullstack developer indonesia",
     ],
     openGraph: {
         title: "About | Ahmad Ammar Musyaffa",
         description:
-            "Backend-focused software engineer specializing in Node.js, Laravel, Go, and AI-powered applications.",
+            "Fullstack developer specializing in Next.js, Node.js, Laravel, Go, and AI-powered applications.",
         url: "https://ahmadammar.my.id/about",
         images: [
             {

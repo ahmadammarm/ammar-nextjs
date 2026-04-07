@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 14 personal portfolio website for Ahmad Ammar Musyaffa, a backend-focused software engineer. The site showcases his projects, experience, skills, and contact information.
+This is a Next.js 14 personal portfolio website for Ahmad Ammar Musyaffa, a fullstack developer. The site showcases his projects, experience, skills, and contact information.
 
 ## Commands
 

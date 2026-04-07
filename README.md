@@ -1,6 +1,6 @@
 # Ammar Next.js Portfolio
 
-Website portofolio personal untuk Ahmad Ammar Musyaffa, seorang software engineer yang berfokus pada backend dan integrasi AI. Proyek ini dibangun dengan Next.js App Router, TypeScript, Tailwind CSS, serta komponen UI berbasis Radix (shadcn/ui).
+Website portofolio personal untuk Ahmad Ammar Musyaffa, seorang fullstack developer dengan ketertarikan pada integrasi AI. Proyek ini dibangun dengan Next.js App Router, TypeScript, Tailwind CSS, serta komponen UI berbasis Radix (shadcn/ui).
 
 ## Daftar Isi
 
