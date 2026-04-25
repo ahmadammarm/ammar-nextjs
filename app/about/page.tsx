@@ -27,7 +27,7 @@ export default function AboutPage() {
             <AboutSection />
             <EducationSection />
             <SkillsSection />
-            <ExperiencesSection />
+            {/* <ExperiencesSection /> */}
         </div>
     );
 }
