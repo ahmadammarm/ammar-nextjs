@@ -188,7 +188,7 @@ export default function PortfolioDetailClient() {
                         </div>
                         <div className="px-4 border-l-2 border-black/10 dark:border-white/10">
                             <span className="block text-[10px] uppercase tracking-[0.2em] font-black text-gray-400 mb-2">Tech</span>
-                            <span className="text-xl font-bold text-foreground">{portfolio.teknologi.length} Stack</span>
+                            <span className="text-xl font-bold text-foreground">{portfolio.teknologi.length} Stacks</span>
                         </div>
                     </div>
 
@@ -270,7 +270,13 @@ export default function PortfolioDetailClient() {
                                                 key={index}
                                                 className="flex items-center gap-3 p-4 px-6 bg-background border-2 border-black dark:border-white rounded-md shadow-neo dark:shadow-neo-dark"
                                             >
-                                                <Image src={tekno} alt="tech" className="w-8 h-8 object-contain" width={32} height={32} />
+                                                <div className={`p-1 rounded ${
+                                                    tekno.includes('nextjs') || tekno.includes('expressjs') 
+                                                    ? 'bg-white' 
+                                                    : ''
+                                                }`}>
+                                                    <Image src={tekno} alt="tech" className="w-8 h-8 object-contain" width={32} height={32} />
+                                                </div>
                                                 <span className="font-black uppercase tracking-tighter text-sm text-foreground">
                                                     {techLabels[tekno] || "Tech"}
                                                 </span>

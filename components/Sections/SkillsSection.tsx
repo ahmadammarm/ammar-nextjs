@@ -59,7 +59,11 @@ function SkillsSection() {
                                         style={{ animationDelay: `${index * 50}ms` }}
                                     >
                                         <div className="relative z-10 flex flex-col items-center">
-                                            <div className="mb-3 md:mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                                            <div className={`mb-3 md:mb-4 transform group-hover:scale-110 transition-transform duration-300 p-2 rounded-md ${
+                                                skill.gambar.includes('nextjs') || skill.gambar.includes('expressjs') 
+                                                ? 'bg-white shadow-sm' 
+                                                : ''
+                                            }`}>
                                                 <Image
                                                     src={skill.gambar}
                                                     alt={skill.nama}
@@ -88,7 +92,11 @@ function SkillsSection() {
                                         style={{ animationDelay: `${index * 50}ms` }}
                                     >
                                         <div className="relative z-10 flex flex-col items-center">
-                                            <div className="mb-3 md:mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                                            <div className={`mb-3 md:mb-4 transform group-hover:scale-110 transition-transform duration-300 p-2 rounded-md ${
+                                                tool.gambar.includes('nextjs') || tool.gambar.includes('expressjs') 
+                                                ? 'bg-white shadow-sm' 
+                                                : ''
+                                            }`}>
                                                 <Image
                                                     src={tool.gambar}
                                                     alt={tool.nama}
