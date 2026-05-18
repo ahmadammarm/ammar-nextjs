@@ -111,239 +111,188 @@ export default function PortfolioDetailClient() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             <div className="relative min-h-screen bg-background">
-                {/* Background Grid Pattern */}
-                <div className="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" 
-                     style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
+                {/* Subtle Background pattern */}
+                <div className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none"
+                     style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
                 </div>
 
-                <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16 pt-24">
-                    {/* Header Navigation */}
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+                <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-20 pt-28">
+
+                    {/* Top Navigation & Category */}
+                    <div className="flex items-center justify-between mb-16">
                         <Link
                             href="/portfolio"
                             className="inline-flex items-center gap-2 text-foreground font-bold hover:text-brand-blue transition-all duration-300 group bg-background border-2 border-black dark:border-white p-2 px-4 rounded-md shadow-neo dark:shadow-neo-dark hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]"
                         >
                             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300" />
-                            <span className="text-sm">Back to Portfolio</span>
+                            <span className="text-sm uppercase tracking-widest">Back</span>
                         </Link>
-
-                        <div className="flex flex-wrap gap-3">
-                            <span className="bg-brand-blue text-black border-2 border-black px-4 py-1 rounded-md text-sm font-bold shadow-neo">
-                                {portfolio.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-                            </span>
-                            <span className="bg-background text-foreground border-2 border-black dark:border-white px-4 py-1 rounded-md text-sm font-bold shadow-neo dark:shadow-neo-dark">
-                                {portfolio.year}
-                            </span>
+                        <div className="bg-brand-blue text-black border-2 border-black px-4 py-1.5 rounded-md text-xs font-black uppercase tracking-tighter shadow-neo">
+                            {portfolio.category.replace(/-/g, ' ')}
                         </div>
                     </div>
 
-                    {/* Main Title Section */}
-                    <div className="max-w-4xl mb-16">
-                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
+                    {/* Massive Project Title */}
+                    <div className="mb-20">
+                        <h1 className="text-5xl sm:text-7xl lg:text-[10rem] font-black text-foreground leading-[0.9] tracking-tighter mb-12">
                             {portfolio.nama}
                         </h1>
-                        <div className="w-24 h-2 bg-brand-blue border-2 border-black mb-8"></div>
-                        <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
-                            {portfolio.deskripsi2}
-                        </p>
+
+                        {/* Summary Description */}
+                        <div className="max-w-3xl ml-auto">
+                            <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed font-medium mb-12">
+                                {portfolio.deskripsi2}
+                            </p>
+
+                            {/* Primary Action Buttons */}
+                            <div className="flex flex-wrap gap-4">
+                                {portfolio.link && (
+                                    <Link
+                                        href={portfolio.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group/btn relative bg-brand-blue text-black px-8 py-4 rounded-md border-2 border-black transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
+                                    >
+                                        <span className="font-black uppercase tracking-tighter text-lg">Live Preview</span>
+                                        <ExternalLink className="w-5 h-5" />
+                                    </Link>
+                                )}
+                                {portfolio.source && (
+                                    <Link
+                                        href={portfolio.source}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group/btn relative bg-background text-foreground px-8 py-4 rounded-md border-2 border-black dark:border-white transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-neo dark:shadow-neo-dark hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
+                                    >
+                                        <span className="font-black uppercase tracking-tighter text-lg">Source Code</span>
+                                        <Github className="w-5 h-5" />
+                                    </Link>
+                                )}
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Image Gallery - Polished with Browser Frame */}
-                    {images.length > 0 && (
-                        <div className="mb-20">
-                            {/* Main Image Viewport with Browser Frame */}
-                            <div className="relative group mb-8 bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark rounded-md overflow-hidden">
-                                {/* Browser Top Bar */}
-                                <div className="bg-background border-b-2 border-black dark:border-white px-4 py-3 flex items-center gap-2">
-                                    <div className="flex gap-1.5">
-                                        <div className="w-3 h-3 rounded-full border border-black bg-[#FF5F57]"></div>
-                                        <div className="w-3 h-3 rounded-full border border-black bg-[#FFBD2E]"></div>
-                                        <div className="w-3 h-3 rounded-full border border-black bg-[#28C840]"></div>
-                                    </div>
-                                    <div className="mx-auto bg-gray-100 dark:bg-slate-900 border border-black rounded px-4 py-0.5 text-[10px] text-gray-500 font-bold truncate max-w-[200px] md:max-w-md uppercase tracking-wider">
-                                        {portfolio.nama.toLowerCase().replace(/\s+/g, '-')}.app
-                                    </div>
-                                </div>
-                                
-                                {/* Image Content */}
-                                <div className="relative aspect-video">
-                                    <Image
-                                        src={images[activeImage]!}
-                                        alt={`${portfolio.nama} - Image ${activeImage + 1}`}
-                                        className="w-full h-full object-cover"
-                                        width={1920}
-                                        height={1080}
-                                        priority
-                                    />
-                                    
-                                    {/* Navigation Arrows on Hover */}
-                                    {images.length > 1 && (
-                                        <>
-                                            <button 
-                                                onClick={() => setActiveImage((prev) => (prev === 0 ? images.length - 1 : prev - 1))}
-                                                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white border-2 border-black p-2 rounded-md shadow-neo opacity-0 group-hover:opacity-100 transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
-                                            >
-                                                <ArrowLeft className="w-5 h-5 text-black" />
-                                            </button>
-                                            <button 
-                                                onClick={() => setActiveImage((prev) => (prev === images.length - 1 ? 0 : prev + 1))}
-                                                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white border-2 border-black p-2 rounded-md shadow-neo opacity-0 group-hover:opacity-100 transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
-                                            >
-                                                <div className="rotate-180">
-                                                    <ArrowLeft className="w-5 h-5 text-black" />
-                                                </div>
-                                            </button>
-                                        </>
-                                    )}
-                                </div>
-                            </div>
+                    {/* Metadata Grid Bar */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-t-2 border-b-2 border-black dark:border-white mb-20 bg-gray-50/50 dark:bg-white/5">
+                        <div className="px-4">
+                            <span className="block text-[10px] uppercase tracking-[0.2em] font-black text-gray-400 mb-2">Year</span>
+                            <span className="text-xl font-bold text-foreground">{portfolio.year}</span>
+                        </div>
+                        <div className="px-4 border-l-2 border-black/10 dark:border-white/10">
+                            <span className="block text-[10px] uppercase tracking-[0.2em] font-black text-gray-400 mb-2">Role</span>
+                            <span className="text-xl font-bold text-foreground">{portfolio.role}</span>
+                        </div>
+                        <div className="px-4 border-l-2 border-black/10 dark:border-white/10">
+                            <span className="block text-[10px] uppercase tracking-[0.2em] font-black text-gray-400 mb-2">Platform</span>
+                            <span className="text-xl font-bold text-foreground">{portfolio.platform}</span>
+                        </div>
+                        <div className="px-4 border-l-2 border-black/10 dark:border-white/10">
+                            <span className="block text-[10px] uppercase tracking-[0.2em] font-black text-gray-400 mb-2">Tech</span>
+                            <span className="text-xl font-bold text-foreground">{portfolio.teknologi.length} Stack</span>
+                        </div>
+                    </div>
 
-                            {/* Thumbnail Track */}
-                            {images.length > 1 && (
-                                <div className="flex flex-wrap justify-center gap-4">
-                                    {images.map((image, index) => (
-                                        <button
-                                            key={index}
-                                            onClick={() => setActiveImage(index)}
-                                            className={`group relative flex-shrink-0 w-20 h-20 sm:w-28 sm:h-28 rounded-md overflow-hidden border-2 transition-all duration-300 ${activeImage === index
-                                                    ? 'border-black dark:border-white shadow-neo scale-105 z-10'
-                                                    : 'border-black/20 dark:border-white/20 hover:border-black dark:hover:border-white hover:scale-105'
-                                                }`}
-                                        >
-                                            <Image
-                                                src={image}
-                                                alt={`${portfolio.nama} - Thumbnail ${index + 1}`}
-                                                className="w-full h-full object-cover transition-transform duration-300"
-                                                width={120}
-                                                height={120}
-                                            />
-                                            {activeImage !== index && (
-                                                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
-                                            )}
-                                        </button>
+                    {/* Main Full-width Image Showcase */}
+                    <div className="mb-32">
+                        <div className="relative group bg-background p-2 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark rounded-md overflow-hidden mb-12">
+                            <div className="relative aspect-video lg:aspect-[21/9]">
+                                <Image
+                                    src={images[activeImage]!}
+                                    alt={portfolio.nama}
+                                    className="w-full h-full object-cover"
+                                    width={2400}
+                                    height={1200}
+                                    priority
+                                />
+                            </div>
+                        </div>
+
+                        {/* Thumbnail Selector */}
+                        <div className="flex flex-wrap justify-center gap-6">
+                            {images.map((image, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setActiveImage(index)}
+                                    className={`group relative w-24 h-24 sm:w-32 sm:h-32 rounded-md overflow-hidden border-2 transition-all duration-500 ${activeImage === index
+                                            ? 'border-brand-blue shadow-neo scale-110 z-10'
+                                            : 'border-black/20 dark:border-white/20 grayscale hover:grayscale-0 hover:border-black dark:hover:border-white'
+                                        }`}
+                                >
+                                    <Image
+                                        src={image}
+                                        alt={`Slide ${index + 1}`}
+                                        className="w-full h-full object-cover"
+                                        width={160}
+                                        height={160}
+                                    />
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Detailed Content Sections */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+
+                        {/* Features List */}
+                        <div className="lg:col-span-7 space-y-12">
+                            <div>
+                                <h2 className="text-4xl font-black uppercase tracking-tighter mb-8 flex items-center gap-4">
+                                    <span className="w-12 h-1 bg-brand-blue border border-black"></span>
+                                    Core Features
+                                </h2>
+                                <div className="space-y-6">
+                                    {portfolio.features?.map((feature: string, index: number) => (
+                                        <div key={index} className="group flex items-start gap-6 p-6 bg-white dark:bg-white/5 border-2 border-black dark:border-white rounded-md transition-all">
+                                            <div className="p-3 bg-brand-blue border-2 border-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-black">
+                                                <Star className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <h4 className="font-bold text-foreground mb-1">Feature {index + 1}</h4>
+                                                <p className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed">{feature}</p>
+                                            </div>
+                                        </div>
                                     ))}
                                 </div>
-                            )}
+                            </div>
                         </div>
-                    )}
 
-                    {/* Info Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
-                        {/* Features & Content (Left Column) */}
-                        <div className="lg:col-span-8 space-y-8">
-                            {/* Key Features Card */}
-                            {portfolio.features && (
-                                <div className="bg-background rounded-md p-8 shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white">
-                                    <div className="flex items-center gap-4 mb-8">
-                                        <div className="p-3 bg-brand-blue border-2 border-black rounded-md shadow-neo">
-                                            <Star className="w-6 h-6 text-black" />
-                                        </div>
-                                        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Key Features</h2>
-                                    </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {portfolio.features.map((feature: string, index: number) => (
+                        {/* Tech Stack Sidebar */}
+                        <div className="lg:col-span-5">
+                            <div className="sticky top-24 space-y-12">
+                                <div>
+                                    <h2 className="text-4xl font-black uppercase tracking-tighter mb-8 flex items-center gap-4">
+                                        <span className="w-12 h-1 bg-brand-blue border border-black"></span>
+                                        Tech Stack
+                                    </h2>
+                                    <div className="flex flex-wrap gap-4">
+                                        {portfolio.teknologi.map((tekno: string, index: number) => (
                                             <div
                                                 key={index}
-                                                className="flex items-start gap-4 p-4 bg-background border-2 border-black dark:border-white rounded-md transition-all duration-300 hover:bg-gray-50 dark:hover:bg-slate-900"
+                                                className="flex items-center gap-3 p-4 px-6 bg-background border-2 border-black dark:border-white rounded-md shadow-neo dark:shadow-neo-dark"
                                             >
-                                                <div className="w-2 h-2 bg-brand-blue border border-black rounded-full mt-2 flex-shrink-0"></div>
-                                                <p className="text-gray-700 dark:text-gray-300 text-sm font-medium leading-relaxed">
-                                                    {feature}
-                                                </p>
+                                                <Image src={tekno} alt="tech" className="w-8 h-8 object-contain" width={32} height={32} />
+                                                <span className="font-black uppercase tracking-tighter text-sm text-foreground">
+                                                    {techLabels[tekno] || "Tech"}
+                                                </span>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
-                            )}
 
-                            {/* Full Tech Stack */}
-                            <div className="bg-background rounded-md p-8 shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white">
-                                <div className="flex items-center gap-4 mb-8">
-                                    <div className="p-3 bg-brand-blue border-2 border-black rounded-md shadow-neo">
-                                        <Code className="w-6 h-6 text-black" />
-                                    </div>
-                                    <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Technologies Used</h2>
-                                </div>
-                                <div className="flex flex-wrap gap-4">
-                                    {portfolio.teknologi.map((tekno: string, index: number) => (
-                                        <div
-                                            key={index}
-                                            className="flex items-center gap-3 p-3 px-5 bg-background border-2 border-black dark:border-white rounded-md transition-all duration-300 hover:bg-gray-50 dark:hover:bg-slate-900"
-                                        >
-                                            <div className="relative w-8 h-8 flex-shrink-0">
-                                                <Image
-                                                    src={tekno}
-                                                    alt={techLabels[tekno] || "Tech"}
-                                                    className="w-full h-full object-contain"
-                                                    width={32}
-                                                    height={32}
-                                                />
-                                            </div>
-                                            <span className="font-bold text-sm text-foreground whitespace-nowrap">
-                                                {techLabels[tekno] || "Tech"}
-                                            </span>
-                                        </div>
-                                    ))}
+                                {/* Additional Call to action */}
+                                <div className="p-10 bg-brand-blue border-2 border-black rounded-md shadow-neo text-black">
+                                    <h3 className="text-3xl font-black uppercase tracking-tighter mb-4">Interested?</h3>
+                                    <p className="font-bold mb-8 text-black/70">Let&apos;s build something similar together.</p>
+                                    <Link
+                                        href="/contact"
+                                        className="inline-flex items-center justify-center w-full py-4 bg-white border-2 border-black text-black font-black uppercase tracking-widest shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
+                                    >
+                                        Start Project
+                                    </Link>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Actions & Meta (Right Column) */}
-                        <div className="lg:col-span-4 space-y-8">
-                            <div className="bg-background rounded-md p-8 shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white sticky top-24">
-                                <div className="flex items-center gap-4 mb-8">
-                                    <div className="p-3 bg-brand-blue border-2 border-black rounded-md shadow-neo">
-                                        <Calendar className="w-6 h-6 text-black" />
-                                    </div>
-                                    <h2 className="text-2xl font-bold text-foreground">Project Links</h2>
-                                </div>
-
-                                <div className="space-y-4">
-                                    {portfolio.link && (
-                                        <Link
-                                            href={portfolio.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="group/btn relative bg-brand-blue text-black px-6 py-4 rounded-md border-2 border-black dark:border-white transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-neo dark:shadow-neo-dark hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none w-full"
-                                        >
-                                            <EyeIcon className="w-5 h-5 group-hover/btn:scale-110 transition-transform duration-300 relative z-10" />
-                                            <span className="font-bold relative z-10 text-lg">Live Preview</span>
-                                            <ExternalLink className="w-4 h-4 opacity-70 relative z-10" />
-                                        </Link>
-                                    )}
-
-                                    {portfolio.source && (
-                                        <Link
-                                            href={portfolio.source}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="group/btn relative bg-background text-foreground px-6 py-4 rounded-md border-2 border-black dark:border-white transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-neo dark:shadow-neo-dark hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none w-full"
-                                        >
-                                            <Github className="w-5 h-5 group-hover/btn:scale-110 transition-transform duration-300 relative z-10" />
-                                            <span className="font-bold relative z-10 text-lg">Source Code</span>
-                                            <ExternalLink className="w-4 h-4 opacity-70 relative z-10" />
-                                        </Link>
-                                    )}
-
-                                    {!portfolio.link && !portfolio.source && (
-                                        <div className="p-4 bg-gray-100 dark:bg-slate-900 border-2 border-black dark:border-white rounded-md border-dashed text-center">
-                                            <p className="text-gray-500 font-medium italic">Links not available for this project</p>
-                                        </div>
-                                    )}
-                                </div>
-
-                                <div className="mt-8 pt-8 border-t-2 border-black dark:border-white border-dashed">
-                                    <div className="flex justify-between items-center mb-4">
-                                        <span className="text-gray-500 font-bold uppercase text-xs tracking-widest">Platform</span>
-                                        <span className="font-bold text-foreground">Web Application</span>
-                                    </div>
-                                    <div className="flex justify-between items-center">
-                                        <span className="text-gray-500 font-bold uppercase text-xs tracking-widest">Role</span>
-                                        <span className="font-bold text-foreground">Fullstack Developer</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

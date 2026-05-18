@@ -18,7 +18,9 @@ export const portfolio: Portfolio[] = [
         ],
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
         link: "https://sinudzi.com/",
-        year: "2024"
+        year: "2024",
+        role: "Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "Accounting App",
@@ -36,7 +38,9 @@ export const portfolio: Portfolio[] = [
             "Calculation of accounts payable and receivable."
         ],
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
-        year: "2024"
+        year: "2024",
+        role: "Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "Fulusin",
@@ -56,7 +60,9 @@ export const portfolio: Portfolio[] = [
         source: "https://github.com/ahmadammarm/fulusin",
         link: "https://fulusin.vercel.app",
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/docker.png"],
-        year: "2025"
+        year: "2025",
+        role: "Fullstack Developer",
+        platform: "Web Application"
     },
 ];
 
@@ -78,7 +84,9 @@ export const fullPortfolio: Portfolio[] = [
         ],
         teknologi: ["/assets/skills/html.png", "/assets/skills/css.png", "/assets/skills/js.png"],
         link: "https://bakso-prima-cak-pen.vercel.app/",
-        year: "2024"
+        year: "2024",
+        role: "Frontend Developer",
+        platform: "Landing Page"
     },
     {
         nama: "SINUDZI",
@@ -97,7 +105,9 @@ export const fullPortfolio: Portfolio[] = [
         ],
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
         link: "https://sinudzi.com/",
-        year: "2024"
+        year: "2024",
+        role: "Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "Aishino Food Planning Page",
@@ -115,7 +125,9 @@ export const fullPortfolio: Portfolio[] = [
         ],
         teknologi: ["/assets/skills/react.png", "/assets/skills/tailwind.png"],
         link: "https://aishino-food.vercel.app/",
-        year: "2024"
+        year: "2024",
+        role: "Frontend Developer",
+        platform: "Landing Page"
     },
     {
         nama: "Batik Zulpah Company Profile",
@@ -134,7 +146,9 @@ export const fullPortfolio: Portfolio[] = [
         ],
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
         link: "https://batikzulpah.com/",
-        year: "2024"
+        year: "2024",
+        role: "Fullstack Developer",
+        platform: "Company Profile"
     },
     {
         nama: "Accounting App",
@@ -152,7 +166,9 @@ export const fullPortfolio: Portfolio[] = [
             "Calculation of accounts payable and receivable."
         ],
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
-        year: "2024"
+        year: "2024",
+        role: "Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "Parkirin",
@@ -170,7 +186,9 @@ export const fullPortfolio: Portfolio[] = [
             "Hiring parking job opportunities by partners."
         ],
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/go.png"],
-        year: "2024"
+        year: "2024",
+        role: "Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "Fulusin",
@@ -190,7 +208,9 @@ export const fullPortfolio: Portfolio[] = [
         source: "https://github.com/ahmadammarm/fulusin",
         link: "https://fulusin.vercel.app",
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/docker.png"],
-        year: "2025"
+        year: "2025",
+        role: "Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "SIPRO",
@@ -208,25 +228,9 @@ export const fullPortfolio: Portfolio[] = [
         ],
         teknologi: ["/assets/skills/php.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png", "/assets/skills/tailwind.png"],
         link: "https://siproum.my.id",
-        year: "2025"
-    },
-    {
-        nama: "Brightlife",
-        slug: "brightlife",
-        category: "web-app",
-        gambar: "/assets/portfolios/brightlife.png",
-        gambar2: "/assets/portfolios/brightlife/2.png",
-        gambar3: "/assets/portfolios/brightlife/3.png",
-        deskripsi: "Brightlife is an internship career center web-based platform based in President University. This platform provided as the bridge between students and companies in order to making it easier to find internships.",
-        deskripsi2: "Brightlife is an internship career center web-based platform based in President University. This platform provided as the bridge between students and companies in order to making it easier to find internships.",
-        features: [
-            "Companies can post and manage job vacancies that students can access in real time.",
-            "Students can generate a professional smart resume automatically.",
-            "The system provides skill gap analysis to highlight missing skills and recommend improvements.",
-            "Students can apply to job vacancies directly and track their application status."
-        ],
-        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png"],
-        year: "2025"
+        year: "2025",
+        role: "AI Integration & Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "NetZero Palm",
@@ -244,7 +248,9 @@ export const fullPortfolio: Portfolio[] = [
         ],
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png"],
         link: "https://netzero-palm.vercel.app",
-        year: "2025"
+        year: "2025",
+        role: "Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "Curio",
@@ -264,7 +270,9 @@ export const fullPortfolio: Portfolio[] = [
         ],
         teknologi: ["/assets/skills/php.png", "/assets/skills/nextjs.png", "/assets/skills/laravel.png", "/assets/skills/mysql.png"],
         link: "https://mycurio.id",
-        year: "2025"
+        year: "2025",
+        role: "AI Integration & Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "Learnalyzer",
@@ -285,7 +293,9 @@ export const fullPortfolio: Portfolio[] = [
         source: "https://github.com/ahmadammarm/learnalyzer",
         link: "https://learnalyzer.vercel.app",
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png"],
-        year: "2025"
+        year: "2025",
+        role: "Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "Projmanagem",
@@ -304,7 +314,9 @@ export const fullPortfolio: Portfolio[] = [
         ],
         link: "https://projmanagem.vercel.app",
         teknologi: ["/assets/skills/react.png", "/assets/skills/tailwind.png", "/assets/skills/postgresql.png", "/assets/skills/expressjs.svg"],
-        year: "2026"
+        year: "2026",
+        role: "Fullstack Developer",
+        platform: "Web Application"
     },
     {
         nama: "Eduvoka",
@@ -323,6 +335,8 @@ export const fullPortfolio: Portfolio[] = [
         ],
         link: "https://eduvoka.com",
         teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
-        year: "2026"
+        year: "2026",
+        role: "AI Integration & Fullstack Developer",
+        platform: "Web Application"
     },
 ]

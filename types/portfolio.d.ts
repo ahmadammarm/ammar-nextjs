@@ -19,4 +19,6 @@ export type Portfolio = {
     source?: string;
     detail?: string;
     year: string;
+    role: string;
+    platform: string;
 }
