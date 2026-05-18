@@ -6,7 +6,7 @@ import { fullPortfolio } from '@/constants/portfolio'
 import { PortfolioCategory } from '@/types/portfolio'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import { FaInfoCircle, FaArrowRight } from 'react-icons/fa'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
@@ -20,10 +20,11 @@ export default function Page() {
 
     const ITEMS_PER_LOAD = 4
 
-    const filteredPortfolio =
+    const filteredPortfolio = useMemo(() => 
         activeCategory === 'all'
             ? fullPortfolio
-            : fullPortfolio.filter((item) => item.category === activeCategory)
+            : fullPortfolio.filter((item) => item.category === activeCategory),
+    [activeCategory])
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -38,7 +39,7 @@ export default function Page() {
 
         setItems(filteredPortfolio.slice(0, ITEMS_PER_LOAD))
         setHasMore(filteredPortfolio.length > ITEMS_PER_LOAD)
-    }, [activeCategory, isLoading])
+    }, [filteredPortfolio, isLoading])
 
     const fetchMoreData = () => {
         if (items.length >= filteredPortfolio.length) {
@@ -62,38 +63,23 @@ export default function Page() {
     return (
         <div className="w-full py-28">
             <div className="text-center mb-16">
-                <h1 className="text-5xl font-bold mb-5">Portfolio</h1>
-                <p className="text-gray-700 dark:text-gray-500 mx-4">
+                <h1 className="text-5xl font-bold mb-5 text-foreground">Portfolio</h1>
+                <p className="text-gray-700 dark:text-gray-400 mx-4 max-w-2xl mx-auto">
                     Here are some of the projects I have worked on, including collaborations with the teams. Click the detail button to learn more about each project.
                 </p>
 
                 <div className='mt-8 flex justify-center'>
                     <Tabs value={activeCategory} onValueChange={(value) => setActiveCategory(value as PortfolioTab)}>
-                        <TabsList className='h-auto flex flex-wrap gap-2 bg-transparent p-0'>
-                            <TabsTrigger
-                                value='all'
-                                className='rounded-full border border-teal-500/30 px-4 py-2 text-sm data-[state=active]:bg-teal-500 data-[state=active]:text-white data-[state=active]:border-teal-500'
-                            >
-                                All
-                            </TabsTrigger>
-                            <TabsTrigger
-                                value='landing-page'
-                                className='rounded-full border border-teal-500/30 px-4 py-2 text-sm data-[state=active]:bg-teal-500 data-[state=active]:text-white data-[state=active]:border-teal-500'
-                            >
-                                Landing Page
-                            </TabsTrigger>
-                            <TabsTrigger
-                                value='web-app'
-                                className='rounded-full border border-teal-500/30 px-4 py-2 text-sm data-[state=active]:bg-teal-500 data-[state=active]:text-white data-[state=active]:border-teal-500'
-                            >
-                                Web App
-                            </TabsTrigger>
-                            <TabsTrigger
-                                value='company-profile'
-                                className='rounded-full border border-teal-500/30 px-4 py-2 text-sm data-[state=active]:bg-teal-500 data-[state=active]:text-white data-[state=active]:border-teal-500'
-                            >
-                                Company Profile
-                            </TabsTrigger>
+                        <TabsList className='h-auto flex flex-wrap justify-center gap-4 bg-transparent p-0'>
+                            {['all', 'landing-page', 'web-app', 'company-profile'].map((tab) => (
+                                <TabsTrigger
+                                    key={tab}
+                                    value={tab}
+                                    className='rounded-md border-2 border-black dark:border-white px-4 py-2 text-sm font-bold bg-background text-foreground data-[state=active]:bg-brand-blue data-[state=active]:text-black shadow-neo data-[state=active]:shadow-neo-hover transition-all'
+                                >
+                                    {tab.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+                                </TabsTrigger>
+                            ))}
                         </TabsList>
                     </Tabs>
                 </div>
@@ -109,11 +95,11 @@ export default function Page() {
                     {items.map((port, index) => (
                         <div
                             key={index}
-                            className="group relative shadow-xl p-5 rounded-md dark:bg-slate-900 bg-white border border-transparent hover:border-teal-500/30 hover:shadow-2xl hover:shadow-teal-500/20 transition-all duration-500 hover:-translate-y-2"
+                            className="group relative shadow-neo dark:shadow-neo-dark p-5 rounded-md dark:bg-slate-900 bg-background border-2 border-black dark:border-white"
                         >
 
                             {/* Image Container */}
-                            <div className="relative w-full mb-4 overflow-hidden rounded-md">
+                            <div className="relative w-full mb-4 overflow-hidden rounded-md border-2 border-black dark:border-white shadow-neo">
                                 <Image
                                     src={port.gambar}
                                     alt={port.nama}
@@ -121,45 +107,34 @@ export default function Page() {
                                     width={400}
                                     height={250}
                                 />
-                                {/* Image overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-md"></div>
                             </div>
 
                             {/* Content */}
                             <div className="relative w-full p-5">
                                 {/* Title with hover effect */}
-                                <h3 className="text-2xl font-semibold text-teal-500 mb-3 group-hover:text-teal-600 transition-colors duration-300">
+                                <h3 className="text-2xl font-bold text-brand-blue mb-3">
                                     {port.nama}
                                 </h3>
 
                                 {/* Animated divider */}
-                                <div className="w-12 h-0.5 bg-gradient-to-r from-teal-500 to-transparent mb-3 group-hover:w-20 transition-all duration-300"></div>
+                                <div className="w-12 h-1 bg-black dark:bg-white mb-3 group-hover:w-20 transition-all duration-300"></div>
 
                                 {/* Description */}
-                                <p className='text-gray-700 dark:text-gray-400 mb-4 group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors duration-300'>
+                                <p className='text-gray-700 dark:text-gray-400 mb-4'>
                                     {port.deskripsi}
                                 </p>
 
-                                {/* Button with enhanced hover */}
+                                {/* Button with Neobrutalist interaction */}
                                 <div className='flex gap-4 mt-4'>
                                     <Link
                                         href={`/portfolio/${port.slug}`}
-                                        className='group/btn relative bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-teal-500 transition-all duration-300 flex flex-row items-center overflow-hidden shadow-md hover:shadow-lg hover:shadow-teal-500/30'
+                                        className='group/btn relative bg-brand-blue text-black px-6 py-2 rounded-md border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-y-[2px] hover:translate-x-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all flex flex-row items-center font-bold'
                                     >
-                                        {/* Button gradient overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-500 transform translate-x-[-100%] group-hover/btn:translate-x-0 transition-transform duration-300"></div>
-
-                                        {/* Button content */}
                                         <FaInfoCircle className='relative z-10 mt-0.5 mr-2 group-hover/btn:scale-110 transition-transform duration-300' />
                                         <span className='relative z-10'>Detail</span>
                                         <FaArrowRight className='relative z-10 ml-1 text-sm opacity-0 -translate-x-2 group-hover/btn:opacity-100 group-hover/btn:translate-x-1 transition-all duration-300' />
                                     </Link>
                                 </div>
-                            </div>
-
-                            {/* Corner decoration on hover */}
-                            <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <div className="absolute top-0 right-0 w-full h-full border-t-2 border-r-2 border-teal-500/30 rounded-tr-md"></div>
                             </div>
                         </div>
                     ))}

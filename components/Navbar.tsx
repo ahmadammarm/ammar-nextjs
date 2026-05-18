@@ -33,11 +33,11 @@ export default function Navbar() {
     }, [])
 
     return (
-        <nav className="bg-background shadow-md fixed top-0 left-0 right-0 z-50 dark:border-b dark:border-slate-600">
+        <nav className="bg-background border-b-2 border-black dark:border-white fixed top-0 left-0 right-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
-                        <Link href="/" className="text-4xl font-bold text-teal-500">
+                        <Link href="/" className="text-4xl font-bold text-brand-blue">
                             
                         </Link>
                     </div>
@@ -47,10 +47,10 @@ export default function Navbar() {
                                 <Link
                                     key={item.href}
                                     href={item.href}
-                                    className={`px-4 py-2 rounded-md text-lg font-medium ${
+                                    className={`px-4 py-2 rounded-md text-lg font-bold transition-all ${
                                         isActivePath(item.href)
-                                            ? 'text-teal-500'
-                                            : 'text-foreground'
+                                            ? 'bg-primary text-primary-foreground border-2 border-black dark:border-white shadow-neo'
+                                            : 'text-foreground hover:bg-accent hover:text-accent-foreground'
                                     }`}
                                 >
                                     {item.label}
@@ -62,7 +62,7 @@ export default function Navbar() {
                     <div className="md:hidden">
                         {/* <ModeToggle /> */}
                         <Button
-                            variant="ghost"
+                            variant="outline"
                             size="icon"
                             onClick={() => setIsOpen(!isOpen)}
                             aria-label="Toggle menu"
@@ -75,16 +75,16 @@ export default function Navbar() {
             </div>
 
             {isOpen && (
-                <div className="md:hidden fixed top-16 left-0 right-0 bg-background shadow-md mt-8">
+                <div className="md:hidden fixed top-16 left-0 right-0 bg-background border-b-2 border-black dark:border-white mt-8">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {navItems.map((item) => (
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                                className={`block px-3 py-2 rounded-md text-base font-bold ${
                                     isActivePath(item.href)
-                                        ? 'bg-primary text-primary-foreground'
-                                        : 'text-foreground'
+                                        ? 'bg-primary text-primary-foreground border-2 border-black'
+                                        : 'text-foreground hover:bg-accent'
                                 }`}
                                 onClick={() => setIsOpen(false)}
                             >

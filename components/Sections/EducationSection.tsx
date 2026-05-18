@@ -14,7 +14,7 @@ function EducationSection() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
-                        className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent"
+                        className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground"
                     >
                         Education Background
                     </motion.h2>
@@ -22,7 +22,7 @@ function EducationSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
-                        className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed"
+                        className="text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed"
                     >
                         Here are some of my education background
                     </motion.p>
@@ -43,15 +43,15 @@ function EducationSection() {
                             whileHover={{ y: -8 }}
                             className="h-full"
                         >
-                            <Card className="relative h-full group overflow-hidden bg-white dark:bg-slate-900 border-2 border-gray-100 dark:border-slate-800 hover:border-teal-500/50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-teal-500/20">
+                            <Card className="relative h-full group overflow-hidden bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark transition-all duration-300 rounded-md">
                                 {/* Card Content */}
                                 <div className="relative z-10 p-6 md:p-8 flex flex-col items-center text-center h-full">
-                                    {/* Icon/Logo placeholder with background */}
+                                    {/* Icon/Logo placeholder with Neobrutalist background */}
                                     <div className="mb-6 relative">
-                                        <div className="relative w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-teal-500/10 to-teal-600/10 rounded-full flex items-center justify-center border-2 border-teal-500/30 group-hover:border-teal-500 group-hover:scale-110 transition-all duration-300">
-                                            {/* Icon - you can replace with actual logo */}
+                                        <div className="relative w-20 h-20 md:w-24 md:h-24 bg-brand-blue rounded-full flex items-center justify-center border-2 border-black dark:border-white shadow-neo group-hover:scale-110 transition-all duration-300">
+                                            {/* Icon */}
                                             <svg
-                                                className="w-10 h-10 md:w-12 md:h-12 text-teal-500"
+                                                className="w-10 h-10 md:w-12 md:h-12 text-black"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -68,13 +68,13 @@ function EducationSection() {
 
                                     {/* School/University Name */}
                                     <CardHeader className="p-0 mb-4">
-                                        <h3 className="text-xl md:text-2xl font-bold text-teal-500 group-hover:text-teal-600 transition-colors duration-300 leading-tight">
+                                        <h3 className="text-xl md:text-2xl font-bold text-brand-blue group-hover:text-brand-blue transition-colors duration-300 leading-tight">
                                             {edu.nama}
                                         </h3>
                                     </CardHeader>
 
                                     {/* Divider */}
-                                    <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-teal-500 to-transparent mb-4 group-hover:w-24 transition-all duration-300"></div>
+                                    <div className="w-16 h-1 bg-black dark:bg-white mb-4 group-hover:w-24 transition-all duration-300"></div>
 
                                     {/* Major/Program */}
                                     <CardDescription className="text-base md:text-lg font-medium text-gray-700 dark:text-gray-300 mb-3 leading-relaxed">
@@ -82,9 +82,9 @@ function EducationSection() {
                                     </CardDescription>
 
                                     {/* Year with icon */}
-                                    <div className="flex items-center gap-2 text-sm md:text-base text-gray-600 dark:text-gray-400 mt-auto pt-4">
+                                    <div className="flex items-center gap-2 text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium mt-auto pt-4">
                                         <svg
-                                            className="w-5 h-5 text-teal-500"
+                                            className="w-5 h-5 text-brand-blue"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
@@ -96,12 +96,7 @@ function EducationSection() {
                                                 d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                                             />
                                         </svg>
-                                        <span className="font-semibold">{edu.tahun}</span>
-                                    </div>
-
-                                    {/* Decorative corner element */}
-                                    <div className="absolute bottom-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                        <div className="absolute bottom-0 right-0 w-full h-full border-b-2 border-r-2 border-teal-500/20 rounded-bl-3xl"></div>
+                                        <span className="font-bold">{edu.tahun}</span>
                                     </div>
                                 </div>
                             </Card>
@@ -109,9 +104,9 @@ function EducationSection() {
                     ))}
                 </div>
 
-                {/* Optional: Timeline connector for larger screens */}
+                {/* Timeline connector - Simplified for Neobrutalism */}
                 {education.length > 1 && (
-                    <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-0.5 bg-gradient-to-r from-transparent via-teal-500/20 to-transparent -z-10"></div>
+                    <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-1 bg-black dark:bg-white -z-10 opacity-10"></div>
                 )}
             </div>
         </div>

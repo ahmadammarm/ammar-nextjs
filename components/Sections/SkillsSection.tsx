@@ -13,32 +13,32 @@ function SkillsSection() {
             <div className="container mx-auto px-4 md:px-6 lg:px-8">
                 {/* Header Section */}
                 <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
                         Tech Stacks & Tools
                     </h3>
-                    <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-base md:text-lg text-gray-700 dark:text-gray-400 leading-relaxed">
                         Here are some of the technologies and tools that I have been working with recently
                     </p>
                 </div>
 
                 {/* Tabs Navigation */}
                 <div className="flex justify-center mb-8 md:mb-12">
-                    <div className="inline-flex bg-gray-100 dark:bg-slate-800 rounded-full p-1.5 gap-2 shadow-inner">
+                    <div className="inline-flex rounded-md p-1.5 gap-2">
                         <Button
-                            className={`px-6 md:px-8 py-2.5 md:py-3 font-semibold text-sm md:text-base rounded-full transition-all duration-300 ${
+                            className={`px-6 md:px-8 py-2.5 md:py-3 font-bold text-sm md:text-base rounded-md transition-all duration-300 ${
                                 activeTab === 'tech-stack'
-                                    ? 'bg-white dark:bg-slate-900 text-teal-500 shadow-lg scale-105'
-                                    : 'bg-transparent text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400'
+                                    ? 'bg-primary text-primary-foreground border-2 border-black dark:border-white shadow-neo'
+                                    : 'bg-transparent text-foreground hover:bg-accent border-2 border-transparent'
                             }`}
                             onClick={() => setActiveTab('tech-stack')}
                         >
                             Tech Stacks
                         </Button>
                         <Button
-                            className={`px-6 md:px-8 py-2.5 md:py-3 font-semibold text-sm md:text-base rounded-full transition-all duration-300 ${
+                            className={`px-6 md:px-8 py-2.5 md:py-3 font-bold text-sm md:text-base rounded-md transition-all duration-300 ${
                                 activeTab === 'tools'
-                                    ? 'bg-white dark:bg-slate-900 text-teal-500 shadow-lg scale-105'
-                                    : 'bg-transparent text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400'
+                                    ? 'bg-primary text-primary-foreground border-2 border-black dark:border-white shadow-neo'
+                                    : 'bg-transparent text-foreground hover:bg-accent border-2 border-transparent'
                             }`}
                             onClick={() => setActiveTab('tools')}
                         >
@@ -55,12 +55,9 @@ function SkillsSection() {
                                 {techStack.map((skill, index) => (
                                     <div
                                         key={index}
-                                        className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl hover:shadow-teal-500/20 dark:hover:shadow-teal-500/10 transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-slate-800 hover:border-teal-500/30"
+                                        className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-background rounded-md shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white"
                                         style={{ animationDelay: `${index * 50}ms` }}
                                     >
-                                        {/* Glow effect on hover */}
-                                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-teal-500/0 to-teal-600/0 group-hover:from-teal-500/5 group-hover:to-teal-600/5 transition-all duration-300" />
-
                                         <div className="relative z-10 flex flex-col items-center">
                                             <div className="mb-3 md:mb-4 transform group-hover:scale-110 transition-transform duration-300">
                                                 <Image
@@ -71,7 +68,7 @@ function SkillsSection() {
                                                     height={80}
                                                 />
                                             </div>
-                                            <h4 className="text-xs md:text-sm lg:text-base font-semibold text-teal-500 text-center leading-tight">
+                                            <h4 className="text-xs md:text-sm lg:text-base font-semibold text-brand-blue text-center leading-tight">
                                                 {skill.nama}
                                             </h4>
                                         </div>
@@ -87,12 +84,9 @@ function SkillsSection() {
                                 {tools.map((tool, index) => (
                                     <div
                                         key={index}
-                                        className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl hover:shadow-teal-500/20 dark:hover:shadow-teal-500/10 transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-slate-800 hover:border-teal-500/30"
+                                        className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-background rounded-md shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white"
                                         style={{ animationDelay: `${index * 50}ms` }}
                                     >
-                                        {/* Glow effect on hover */}
-                                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-teal-500/0 to-teal-600/0 group-hover:from-teal-500/5 group-hover:to-teal-600/5 transition-all duration-300" />
-
                                         <div className="relative z-10 flex flex-col items-center">
                                             <div className="mb-3 md:mb-4 transform group-hover:scale-110 transition-transform duration-300">
                                                 <Image
@@ -103,7 +97,7 @@ function SkillsSection() {
                                                     height={80}
                                                 />
                                             </div>
-                                            <h4 className="text-xs md:text-sm lg:text-base font-semibold text-teal-500 text-center leading-tight">
+                                            <h4 className="text-xs md:text-sm lg:text-base font-bold text-brand-blue text-center leading-tight">
                                                 {tool.nama}
                                             </h4>
                                         </div>

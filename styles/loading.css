@@ -4,7 +4,7 @@
   display: grid;
   border: 4px solid #0000;
   border-radius: 50%;
-  border-right-color: #25b09b;
+  border-right-color: #007AFF;
   animation: l15 1s infinite linear;
 }
 .loader::before,

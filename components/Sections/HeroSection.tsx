@@ -11,9 +11,9 @@ function HeroSection(): React.JSX.Element {
 
     return (
         <div className="relative min-h-screen flex flex-col justify-center items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden">
-            {/* Minimal Background Decoration */}
-            <div className="absolute top-1/4 -right-20 w-96 h-96 bg-teal-500/3 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-teal-500/3 rounded-full blur-3xl"></div>
+            {/* Minimal Background Decoration - Simplified for Neobrutalism */}
+            <div className="absolute top-1/4 -right-20 w-96 h-96 border-4 border-brand-blue/10 rounded-full"></div>
+            <div className="absolute bottom-1/4 -left-20 w-80 h-80 border-4 border-brand-blue/10 rounded-full"></div>
 
             <div className="relative z-10 max-w-7xl w-full mx-auto">
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
@@ -28,14 +28,14 @@ function HeroSection(): React.JSX.Element {
                             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 leading-tight animate-fade-in-up">
                                 Im{' '}
                                 <span className="relative inline-block">
-                                    <span className="relative z-10 text-teal-500 hover:text-teal-600 transition-colors duration-300">
+                                    <span className="relative z-10 text-brand-blue hover:text-brand-blue/80 transition-colors duration-300">
                                         {nama}
                                     </span>
                                 </span>
                             </h1>
                         </div>
 
-                        {/* Role/Title with typing effect style */}
+                        {/* Role/Title with simpler style */}
                         <div className="mb-8 md:mb-10 lg:mb-12">
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-slate-800 rounded-full border border-gray-200 dark:border-slate-700 shadow-sm">
                                 <p className="text-sm md:text-base lg:text-lg text-gray-700 dark:text-gray-300 font-medium">
@@ -44,24 +44,18 @@ function HeroSection(): React.JSX.Element {
                             </div>
                         </div>
 
-                        {/* CTA Button with enhanced hover */}
+                        {/* CTA Button with Neobrutalist push-down */}
                         <Link
                             href={CV}
                             target="_blank"
                             rel="noopener noreferrer"
                             download={`CV_Ahmad_Ammar`}
-                            className="group relative inline-flex items-center gap-2 bg-teal-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-sm md:text-base shadow-lg hover:shadow-xl hover:shadow-teal-500/30 transition-all duration-300 overflow-hidden hover:-translate-y-1"
+                            className="group relative inline-flex items-center gap-2 bg-brand-blue text-black px-6 py-3 md:px-8 md:py-4 rounded-md font-bold text-sm md:text-base border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-y-[2px] hover:translate-x-[2px] transition-all active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
                         >
-                            {/* Button gradient overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-500 transform translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
-
                             {/* Button content */}
-                            <DownloadIcon className="relative z-10 w-5 h-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
+                            <DownloadIcon className="relative z-10 w-5 h-5 group-hover:scale-110 transition-all duration-300" />
                             <span className="relative z-10">Download CV</span>
                             <ArrowRight className="relative z-10 w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-
-                            {/* Shine effect */}
-                            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></div>
                         </Link>
                     </div>
 
@@ -69,13 +63,11 @@ function HeroSection(): React.JSX.Element {
                     <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-8 lg:mb-0">
                         <div className="relative group">
                             
-                            {/* Main border with gradient */}
+                            {/* Main border - Neobrutalist style */}
                             <div className="relative">
-                                <div className="absolute -inset-1 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full opacity-75 group-hover:opacity-100 blur-sm group-hover:blur-md transition-all duration-500"></div>
-
                                 {/* Image container */}
-                                <div className="relative bg-white dark:bg-slate-900 p-2 rounded-full">
-                                    <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] rounded-full overflow-hidden">
+                                <div className="relative bg-white dark:bg-slate-900 p-2 border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,122,255,1)] dark:shadow-[8px_8px_0px_0px_rgba(0,122,255,1)] rounded-full overflow-hidden">
+                                    <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] rounded-full overflow-hidden border-2 border-black dark:border-white">
                                         <Image
                                             src={foto[0]}
                                             alt={nama}
@@ -84,16 +76,14 @@ function HeroSection(): React.JSX.Element {
                                             height={448}
                                             priority
                                         />
-                                        {/* Overlay gradient on hover */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-teal-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Floating badge */}
-                            <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white dark:bg-slate-900 px-4 py-3 md:px-6 md:py-4 rounded-full shadow-xl border-2 border-teal-500 group-hover:scale-110 transition-transform duration-300">
+                            <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white dark:bg-slate-900 px-4 py-3 md:px-6 md:py-4 rounded-md shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white group-hover:scale-110 transition-transform duration-300">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-teal-500 font-bold text-sm md:text-base">Available</span>
+                                    <span className="text-brand-blue font-bold text-sm md:text-base">Available</span>
                                 </div>
                             </div>
                         </div>

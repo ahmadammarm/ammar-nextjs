@@ -52,6 +52,13 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "brand-blue": "#007AFF",
+      },
+      boxShadow: {
+        neo: "4px 4px 0px 0px rgba(0,0,0,1)",
+        "neo-hover": "6px 6px 0px 0px rgba(0,0,0,1)",
+        "neo-dark": "4px 4px 0px 0px rgba(255,255,255,1)",
+        "neo-hover-dark": "6px 6px 0px 0px rgba(255,255,255,1)",
       },
       borderRadius: {
         lg: "var(--radius)",
