@@ -49,7 +49,19 @@ export default function JsonLd() {
         ],
     };
 
-    const schemas = [personSchema, breadcrumbsSchema];
+    const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: `${nama} | Personal Website`,
+        url: "https://ahmadammar.my.id",
+        description: deskripsi,
+        author: {
+            "@type": "Person",
+            name: nama,
+        },
+    };
+
+    const schemas = [personSchema, websiteSchema, breadcrumbsSchema];
 
     return (
         <>

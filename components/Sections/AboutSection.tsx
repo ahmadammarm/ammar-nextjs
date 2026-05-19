@@ -29,7 +29,7 @@ function AboutSection(): React.ReactElement {
                                 <div className='relative bg-background p-2 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark rounded-md'>
                                     <Image
                                         src={foto}
-                                        alt={nama}
+                                        alt={`${nama} - Ahmad Ammar Musyaffa Biography`}
                                         className='w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-[28rem] xl:w-[26rem] xl:h-[32rem] rounded-md object-cover transform group-hover:scale-[1.02] transition-transform duration-500 border-2 border-black dark:border-white'
                                         width={416}
                                         height={512}

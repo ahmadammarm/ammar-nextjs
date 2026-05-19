@@ -56,5 +56,33 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function PortfolioDetailPage({ params }: PageProps) {
-    return <PortfolioDetailClient />;
+    const { slug } = await params;
+    const portfolio = fullPortfolio.find((item) => item.slug === slug);
+
+    const softwareSchema = portfolio ? {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": portfolio.nama,
+        "description": portfolio.deskripsi,
+        "applicationCategory": portfolio.category === "web-app" ? "WebApplication" : "BusinessApplication",
+        "operatingSystem": "Web",
+        "author": {
+            "@type": "Person",
+            "name": "Ahmad Ammar Musyaffa"
+        },
+        "screenshot": `https://ahmadammar.my.id${portfolio.gambar}`,
+        "softwareRequirements": portfolio.teknologi.map(t => t.split("/").pop()?.replace(".png", "").replace(".svg", "") || "").join(", ")
+    } : null;
+
+    return (
+        <>
+            {softwareSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+                />
+            )}
+            <PortfolioDetailClient />
+        </>
+    );
 }

@@ -13,9 +13,9 @@ function SkillsSection() {
             <div className="container mx-auto px-4 md:px-6 lg:px-8">
                 {/* Header Section */}
                 <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
                         Tech Stacks & Tools
-                    </h3>
+                    </h2>
                     <p className="text-base md:text-lg text-gray-700 dark:text-gray-400 leading-relaxed">
                         Here are some of the technologies and tools that I have been working with recently
                     </p>

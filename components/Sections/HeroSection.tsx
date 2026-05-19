@@ -66,7 +66,7 @@ function HeroSection(): React.JSX.Element {
                                     <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] rounded-full overflow-hidden border-2 border-black dark:border-white">
                                         <Image
                                             src={foto[0]}
-                                            alt={nama}
+                                            alt={`${nama} - Fullstack Developer Portfolio`}
                                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                                             width={448}
                                             height={448}
