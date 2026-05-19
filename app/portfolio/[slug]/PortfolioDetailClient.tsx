@@ -47,13 +47,15 @@ export default function PortfolioDetailClient() {
         "/assets/skills/laravel.png": "Laravel",
         "/assets/skills/mysql.png": "MySQL",
         "/assets/skills/ts.png": "TypeScript",
-        "/assets/skills/nextjs.png": "Next.js",
+        "/assets/skills/nextjs.png": "NextJs",
         "/assets/skills/tailwind.png": "Tailwind CSS",
         "/assets/skills/postgresql.png": "PostgreSQL",
         "/assets/skills/docker.png": "Docker",
         "/assets/skills/go.png": "Go",
         "/assets/skills/react.png": "React",
-        "/assets/skills/expressjs.svg": "Express.js",
+        "/assets/skills/expressjs.svg": "ExpressJs",
+        "/assets/skills/nestjs.svg": "NestJs",
+        "/assets/skills/vue.png": "VueJs"
     };
 
     const softwareSchema = {
