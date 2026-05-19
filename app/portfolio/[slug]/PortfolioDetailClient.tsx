@@ -58,60 +58,8 @@ export default function PortfolioDetailClient() {
         "/assets/skills/vue.png": "Vue"
     };
 
-    const softwareSchema = {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        name: portfolio.nama,
-        description: portfolio.deskripsi2,
-        applicationCategory: "WebApplication",
-        operatingSystem: "Web Browser",
-        offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-        },
-        creator: {
-            "@type": "Person",
-            name: "Ahmad Ammar Musyaffa",
-            url: "https://ahmadammar.my.id",
-        },
-    };
-
-    const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-            {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://ahmadammar.my.id",
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
-                name: "Portfolio",
-                item: "https://ahmadammar.my.id/portfolio",
-            },
-            {
-                "@type": "ListItem",
-                position: 3,
-                name: portfolio.nama,
-                item: `https://ahmadammar.my.id/portfolio/${portfolio.slug}`,
-            },
-        ],
-    };
-
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-            />
             <div className="relative min-h-screen bg-background">
                 {/* Subtle Background pattern */}
                 <div className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none"

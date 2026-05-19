@@ -63,14 +63,17 @@ export default function JsonLd() {
 
     const schemas = [personSchema, websiteSchema, breadcrumbsSchema];
 
+    const sanitize = (json: object) => JSON.stringify(json).replace(/</g, '\\u003c');
+
     return (
         <>
             {schemas.map((schema, index) => (
                 <script
                     key={index}
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-                />
+                >
+                    {sanitize(schema)}
+                </script>
             ))}
         </>
     );

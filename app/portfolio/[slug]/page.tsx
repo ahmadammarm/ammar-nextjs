@@ -59,7 +59,9 @@ export default async function PortfolioDetailPage({ params }: PageProps) {
     const { slug } = await params;
     const portfolio = fullPortfolio.find((item) => item.slug === slug);
 
-    const softwareSchema = portfolio ? {
+    if (!portfolio) return <PortfolioDetailClient />;
+
+    const softwareSchema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": portfolio.nama,
@@ -72,16 +74,47 @@ export default async function PortfolioDetailPage({ params }: PageProps) {
         },
         "screenshot": `https://ahmadammar.my.id${portfolio.gambar}`,
         "softwareRequirements": portfolio.teknologi.map(t => t.split("/").pop()?.replace(".png", "").replace(".svg", "") || "").join(", ")
-    } : null;
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ahmadammar.my.id",
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Portfolio",
+                "item": "https://ahmadammar.my.id/portfolio",
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": portfolio.nama,
+                "item": `https://ahmadammar.my.id/portfolio/${portfolio.slug}`,
+            },
+        ],
+    };
+
+    const sanitize = (json: object) => JSON.stringify(json).replace(/</g, '\\u003c');
 
     return (
         <>
-            {softwareSchema && (
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-                />
-            )}
+            <script
+                type="application/ld+json"
+            >
+                {sanitize(softwareSchema)}
+            </script>
+            <script
+                type="application/ld+json"
+            >
+                {sanitize(breadcrumbSchema)}
+            </script>
             <PortfolioDetailClient />
         </>
     );
