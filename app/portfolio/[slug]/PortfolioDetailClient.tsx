@@ -55,7 +55,7 @@ export default function PortfolioDetailClient() {
         "/assets/skills/react.png": "React",
         "/assets/skills/expressjs.svg": "ExpressJs",
         "/assets/skills/nestjs.svg": "NestJs",
-        "/assets/skills/vue.png": "VueJs"
+        "/assets/skills/vue.png": "Vue"
     };
 
     const softwareSchema = {
