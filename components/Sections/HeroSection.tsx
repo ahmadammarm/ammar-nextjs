@@ -11,10 +11,6 @@ function HeroSection(): React.JSX.Element {
 
     return (
         <div className="relative min-h-screen flex flex-col justify-center items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden">
-            {/* Minimal Background Decoration - Simplified for Neobrutalism */}
-            <div className="absolute top-1/4 -right-20 w-96 h-96 border-4 border-brand-blue/10 rounded-full"></div>
-            <div className="absolute bottom-1/4 -left-20 w-80 h-80 border-4 border-brand-blue/10 rounded-full"></div>
-
             <div className="relative z-10 max-w-7xl w-full mx-auto">
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
 
@@ -62,11 +58,11 @@ function HeroSection(): React.JSX.Element {
                     {/* Image Section */}
                     <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-8 lg:mb-0">
                         <div className="relative group">
-                            
+
                             {/* Main border - Neobrutalist style */}
                             <div className="relative">
                                 {/* Image container */}
-                                <div className="relative bg-white dark:bg-slate-900 p-2 border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,122,255,1)] dark:shadow-[8px_8px_0px_0px_rgba(0,122,255,1)] rounded-full overflow-hidden">
+                                <div className="relative bg-white dark:bg-slate-900 p-2 border-2 border-black dark:border-white rounded-full overflow-hidden">
                                     <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] rounded-full overflow-hidden border-2 border-black dark:border-white">
                                         <Image
                                             src={foto[0]}
@@ -77,13 +73,6 @@ function HeroSection(): React.JSX.Element {
                                             priority
                                         />
                                     </div>
-                                </div>
-                            </div>
-
-                            {/* Floating badge */}
-                            <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white dark:bg-slate-900 px-4 py-3 md:px-6 md:py-4 rounded-md shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white group-hover:scale-110 transition-transform duration-300">
-                                <div className="flex items-center gap-2">
-                                    <span className="text-brand-blue font-bold text-sm md:text-base">Available</span>
                                 </div>
                             </div>
                         </div>

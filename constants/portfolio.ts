@@ -339,4 +339,29 @@ export const fullPortfolio: Portfolio[] = [
         role: "AI Integration & Fullstack Developer",
         platform: "Web Application"
     },
+    {
+         "nama": "Ujian CBT",
+         "slug": "ujian-cbt",
+         "category": "web-app",
+         "gambar": "/assets/portfolios/ujian-cbt.png",
+         "gambar2": "/assets/portfolios/ujian-cbt/2.png",
+         "gambar3": "/assets/portfolios/ujian-cbt/3.png",
+         "deskripsi": "Ujian CBT is a modern Computer Based Test platform built with Laravel 11 and Vue 3 for seamless examinations.",
+         "deskripsi2": "Ujian CBT is a comprehensive web-based application designed to facilitate online learning and testing. It features a robust administration system for teachers to manage courses and question banks, alongside a real-time testing interface for students that provides instant scoring and performance analytics.",
+        "features": [
+            "Advanced question bank management with multimedia support.",
+            "Real-time assessment interface with automated countdown timers.",
+            "Instant scoring and generation of detailed performance reports.",
+           "Role-based access control (RBAC) for Teachers and Students.",
+           "Interactive analytics dashboard for monitoring platform-wide metrics.",
+       ],
+       "teknologi": [
+           "/assets/skills/php.png",
+           "/assets/skills/laravel.png",
+           "/assets/skills/vue.png",
+          "/assets/skills/tailwind.png",
+          "/assets/skills/mysql.png"
+      ],
+      "link": "https://github.com/user/ujian-cbt",
+    }
 ]
