@@ -37,6 +37,11 @@ export const techStack: Skill[] = [
         tingkat: "Basic",
     },
     {
+        gambar: "/assets/skills/vue.png",
+        nama: "VueJs",
+        tingkat: "Basic",
+    },
+    {
         gambar: "/assets/skills/tailwind.png",
         nama: "Tailwind CSS",
         tingkat: "Intermediate",

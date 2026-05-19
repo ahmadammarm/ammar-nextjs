@@ -363,7 +363,7 @@ export const fullPortfolio: Portfolio[] = [
             "/assets/skills/tailwind.png",
             "/assets/skills/mysql.png"
         ],
-        link: "https://github.com/user/ujian-cbt",
+        source: "https://github.com/ahmadammarm/ujian-cbt",
         year: "2026",
         role: "Fullstack Developer",
         platform: "Web Application"
