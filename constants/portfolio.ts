@@ -359,7 +359,6 @@ export const fullPortfolio: Portfolio[] = [
         teknologi: [
             "/assets/skills/php.png",
             "/assets/skills/laravel.png",
-            "/assets/skills/vue.png",
             "/assets/skills/tailwind.png",
             "/assets/skills/mysql.png"
         ],
