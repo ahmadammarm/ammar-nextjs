@@ -12,9 +12,9 @@ function AboutSection(): React.ReactElement {
         <div className='relative min-h-screen flex flex-col justify-center items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden'>
             {/* Section Title */}
             <div className='relative z-10 mb-12 md:mb-16 lg:mb-20'>
-                <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-3'>
+                <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-3'>
                     About Me
-                </h2>
+                </h1>
             </div>
 
             {/* Content Container */}

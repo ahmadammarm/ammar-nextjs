@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { fullPortfolio } from "@/constants/portfolio";
 import PortfolioDetailClient from "./PortfolioDetailClient";
 
 interface PageProps {
-    params: Promise<{ slug: string }>;
+    params: { slug: string };
 }
 
+const cleanTechName = (path: string) => {
+    const name = path.split("/").pop()?.replace(/\.(png|svg|jpg|jpeg)$/, "") || "";
+    return name.charAt(0).toUpperCase() + name.slice(1);
+};
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { slug } = await params;
+    const { slug } = params;
     const portfolio = fullPortfolio.find((item) => item.slug === slug);
 
     if (!portfolio) {
@@ -28,10 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             "software project",
             "web application",
             "Ahmad Ammar Musyaffa",
-            ...(portfolio.teknologi.map(t => {
-                const name = t.split("/").pop()?.replace(".png", "").replace(".svg", "").replace(".jpg", "").replace(".jpeg", "") || "";
-                return name.charAt(0).toUpperCase() + name.slice(1); // Clean name
-            })),
+            ...(portfolio.teknologi.map(cleanTechName)),
         ],
         openGraph: {
             title: seoTitle,
@@ -60,10 +63,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function PortfolioDetailPage({ params }: PageProps) {
-    const { slug } = await params;
+    const { slug } = params;
     const portfolio = fullPortfolio.find((item) => item.slug === slug);
 
-    if (!portfolio) return <PortfolioDetailClient />;
+    if (!portfolio) notFound();
 
     const softwareSchema = {
         "@context": "https://schema.org",
@@ -77,10 +80,7 @@ export default async function PortfolioDetailPage({ params }: PageProps) {
             "name": "Ahmad Ammar Musyaffa"
         },
         "screenshot": `https://ahmadammar.my.id${portfolio.gambar}`,
-        "softwareRequirements": portfolio.teknologi.map(t => {
-            const name = t.split("/").pop()?.replace(".png", "").replace(".svg", "").replace(".jpg", "").replace(".jpeg", "") || "";
-            return name.charAt(0).toUpperCase() + name.slice(1);
-        }).join(", ")
+        "softwareRequirements": portfolio.teknologi.map(cleanTechName).join(", ")
     };
 
     const breadcrumbSchema = {
