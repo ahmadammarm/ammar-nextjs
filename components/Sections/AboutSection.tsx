@@ -12,9 +12,9 @@ function AboutSection(): React.ReactElement {
         <div className='relative min-h-screen flex flex-col justify-center items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden'>
             {/* Section Title */}
             <div className='relative z-10 mb-12 md:mb-16 lg:mb-20'>
-                <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-3'>
+                <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-3'>
                     About Me
-                </h1>
+                </h2>
             </div>
 
             {/* Content Container */}
@@ -29,7 +29,7 @@ function AboutSection(): React.ReactElement {
                                 <div className='relative bg-background p-2 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark rounded-md'>
                                     <Image
                                         src={foto}
-                                        alt={`${nama} - Ahmad Ammar Musyaffa Biography`}
+                                        alt="Ahmad Ammar Musyaffa Biography - Fullstack Developer Portfolio"
                                         className='w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-[28rem] xl:w-[26rem] xl:h-[32rem] rounded-md object-cover transform group-hover:scale-[1.02] transition-transform duration-500 border-2 border-black dark:border-white'
                                         width={416}
                                         height={512}
