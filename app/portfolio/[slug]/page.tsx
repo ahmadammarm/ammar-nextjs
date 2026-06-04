@@ -27,7 +27,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             "ahmad ammar portfolio",
             "software project",
             "web application",
-            ...(portfolio.teknologi.map(t => t.split("/").pop()?.replace(".png", "").replace(".svg", "") || "")),
+            "Ahmad Ammar Musyaffa",
+            ...(portfolio.teknologi.map(t => {
+                const name = t.split("/").pop()?.replace(".png", "").replace(".svg", "").replace(".jpg", "").replace(".jpeg", "") || "";
+                return name.charAt(0).toUpperCase() + name.slice(1); // Clean name
+            })),
         ],
         openGraph: {
             title: seoTitle,
@@ -73,7 +77,10 @@ export default async function PortfolioDetailPage({ params }: PageProps) {
             "name": "Ahmad Ammar Musyaffa"
         },
         "screenshot": `https://ahmadammar.my.id${portfolio.gambar}`,
-        "softwareRequirements": portfolio.teknologi.map(t => t.split("/").pop()?.replace(".png", "").replace(".svg", "") || "").join(", ")
+        "softwareRequirements": portfolio.teknologi.map(t => {
+            const name = t.split("/").pop()?.replace(".png", "").replace(".svg", "").replace(".jpg", "").replace(".jpeg", "") || "";
+            return name.charAt(0).toUpperCase() + name.slice(1);
+        }).join(", ")
     };
 
     const breadcrumbSchema = {
