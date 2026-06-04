@@ -12,6 +12,12 @@ export default function JsonLd() {
         description: deskripsi,
         url: "https://ahmadammar.my.id",
         image: "https://ahmadammar.my.id/assets/metadata.png",
+        jobTitle: ["Fullstack Developer", "Software Engineer", "AI Enthusiast"],
+        alumniOf: {
+            "@type": "CollegeOrUniversity",
+            "name": "Universitas Negeri Malang",
+            "url": "https://um.ac.id"
+        },
         sameAs: [
             "https://github.com/ahmadammarm",
             "https://linkedin.com/in/ahmadammarmusyaffa",
