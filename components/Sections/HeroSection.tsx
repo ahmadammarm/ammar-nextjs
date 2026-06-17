@@ -2,7 +2,7 @@
 
 import React from "react";
 import { profile } from "@/constants/profile";
-import { DownloadIcon, ArrowRight } from "lucide-react";
+import { DownloadIcon, ArrowRight, Briefcase } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -40,19 +40,28 @@ function HeroSection(): React.JSX.Element {
                             </div>
                         </div>
 
-                        {/* CTA Button with Neobrutalist push-down */}
-                        <Link
-                            href={CV}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            download={`CV_Ahmad_Ammar`}
-                            className="group relative inline-flex items-center gap-2 bg-brand-blue text-black px-6 py-3 md:px-8 md:py-4 rounded-md font-bold text-sm md:text-base border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-y-[2px] hover:translate-x-[2px] transition-all active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
-                        >
-                            {/* Button content */}
-                            <DownloadIcon className="relative z-10 w-5 h-5 group-hover:scale-110 transition-all duration-300" />
-                            <span className="relative z-10">Download CV</span>
-                            <ArrowRight className="relative z-10 w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                        </Link>
+                        {/* CTA Buttons with Neobrutalist push-down */}
+                        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                            <Link
+                                href="/services"
+                                className="group relative inline-flex items-center gap-2 bg-brand-blue text-black px-6 py-3 md:px-8 md:py-4 rounded-md font-bold text-sm md:text-base border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-y-[2px] hover:translate-x-[2px] transition-all active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
+                            >
+                                <Briefcase className="relative z-10 w-5 h-5 group-hover:scale-110 transition-all duration-300" />
+                                <span className="relative z-10">View Services</span>
+                                <ArrowRight className="relative z-10 w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                            </Link>
+
+                            <Link
+                                href={CV}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                download={`CV_Ahmad_Ammar`}
+                                className="group relative inline-flex items-center gap-2 bg-white dark:bg-slate-800 text-black dark:text-white px-6 py-3 md:px-8 md:py-4 rounded-md font-bold text-sm md:text-base border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-y-[2px] hover:translate-x-[2px] transition-all active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
+                            >
+                                <DownloadIcon className="relative z-10 w-5 h-5 group-hover:scale-110 transition-all duration-300" />
+                                <span className="relative z-10">Download CV</span>
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Image Section */}

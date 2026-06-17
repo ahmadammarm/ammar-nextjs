@@ -2,7 +2,7 @@ import { Contact } from "@/types/contacts";
 
 export const contact: Contact[] = [
     {
-        nama: "Whats App",
+        nama: "WhatsApp",
         detail: "+62 812 1795 2403",
         icon: "/assets/contacts/wa.png",
         link: "https://wa.me/6281217952403"

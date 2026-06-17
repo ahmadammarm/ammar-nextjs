@@ -4,9 +4,9 @@ export const about: About[] = [
     {
         nama: 'Ahmad Ammar Musyaffa',
         negara: 'Malang City',
-        role: 'Fullstack Developer',
+        role: 'Fullstack Developer & AI Integration Specialist',
         CV: '/assets/CV_Ahmad_Ammar.pdf',
-        deskripsi: "Developer with experience building web applications across both backend and frontend layers, using technologies such as Laravel and Go alongside modern frameworks like Next.js. As a freelance web developer, I have delivered end-to-end solutions for multiple clients, handling requirements analysis, development, and deployment while adapting to diverse business needs. Alongside web development, I explore the integration of artificial intelligence into modern applications, particularly in developing data-driven features and intelligent automation. I continue to refine my engineering skills while staying up to date with modern technologies and emerging AI tools, with the goal of growing as a fullstack developer with a strong interest in AI-powered software systems.",
+        deskripsi: "I am a Fullstack Developer and AI Integration Specialist dedicated to building high-performance web applications that drive business value. With expertise in Next.js, Laravel, and Go, I bridge the gap between robust software engineering and cutting-edge Artificial Intelligence. My mission is to provide end-to-end freelance solutions—from initial requirement analysis to final deployment—ensuring every project is scalable, secure, and intelligently automated to meet modern business demands.",
         foto: '/assets/ammar-baru.webp'
     }
 ]

@@ -4,6 +4,7 @@ import { about } from '@/constants/about';
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function AboutSection(): React.ReactElement {
     const { nama, deskripsi, foto } = about[0];
@@ -68,10 +69,18 @@ function AboutSection(): React.ReactElement {
                             </div>
 
                             {/* Description */}
-                            <div className='space-y-4'>
+                            <div className='space-y-6'>
                                 <p className='text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed'>
                                     {deskripsi}
                                 </p>
+                                <div className='pt-4'>
+                                    <Link 
+                                        href="/services"
+                                        className='inline-flex items-center gap-2 bg-brand-blue text-black font-bold py-3 px-8 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all'
+                                    >
+                                        View My Services
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
