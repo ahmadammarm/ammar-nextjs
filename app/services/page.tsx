@@ -1,6 +1,7 @@
 "use client"
 
 import { services } from "@/constants/services";
+import { contact } from "@/constants/contact";
 import { motion } from "framer-motion";
 import { Layout, Bot, Cpu, Check, MessageCircle } from "lucide-react";
 
@@ -11,6 +12,9 @@ const icons: any = {
 };
 
 export default function ServicesPage() {
+    const whatsappContact = contact.find(c => c.nama === "WhatsApp");
+    const baseWhatsappUrl = whatsappContact ? whatsappContact.link : "https://wa.me/6281217952403";
+
     return (
         <div className="min-h-screen py-20 px-4 md:px-8 max-w-7xl mx-auto mt-16">
             <motion.div 
@@ -49,7 +53,7 @@ export default function ServicesPage() {
                             ))}
                         </ul>
                         <a 
-                            href={`https://wa.me/6281217952403?text=${encodeURIComponent(service.whatsappMessage)}`}
+                            href={`${baseWhatsappUrl}?text=${encodeURIComponent(service.whatsappMessage)}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-brand-blue text-black font-bold py-4 px-6 border-2 border-black shadow-neo hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-2"
