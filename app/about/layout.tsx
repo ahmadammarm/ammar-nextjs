@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Ammar | About",
+    title: "About Me",
     description:
         "Learn more about Ahmad Ammar Musyaffa, a fullstack developer with expertise in Next.js, Node.js, Laravel, Go, and AI-powered applications. Discover his education, skills, and professional experience.",
     keywords: [
