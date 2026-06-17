@@ -14,8 +14,8 @@ export default function AboutPage() {
             <StatsSection />
             <SkillsSection />
             <ProcessSection />
+            <ExperiencesSection />
             <EducationSection />
-            {/* <ExperiencesSection /> */}
         </div>
     );
 }
