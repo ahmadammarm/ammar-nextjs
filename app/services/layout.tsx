@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Services | Ahmad Ammar - Fullstack & AI Developer",
+    title: "Freelance Services",
     description: "Professional freelance web development and AI integration services. High-performance Next.js apps and intelligent AI solutions for your business.",
 };
 

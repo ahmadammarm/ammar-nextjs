@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
-    const seoTitle = portfolio.seoTitle || `${portfolio.nama} | Ahmad Ammar Portfolio`;
+    const seoTitle = portfolio.seoTitle || `${portfolio.nama} | Projects`;
     const seoDescription = portfolio.seoDescription || portfolio.deskripsi;
 
     return {
