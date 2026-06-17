@@ -6,7 +6,7 @@ export const about: About[] = [
         negara: 'Malang City',
         role: 'Fullstack Developer & AI Integration Specialist',
         CV: '/assets/CV_Ahmad_Ammar.pdf',
-        deskripsi: "I am a Fullstack Developer and AI Integration Specialist dedicated to building high-performance web applications that drive business value. With expertise in Next.js, Laravel, and Go, I bridge the gap between robust software engineering and cutting-edge Artificial Intelligence. My mission is to provide end-to-end freelance solutions—from initial requirement analysis to final deployment—ensuring every project is scalable, secure, and intelligently automated to meet modern business demands.",
+        deskripsi: "I am a Fullstack Developer and AI Integration Specialist who bridges the gap between business goals and technical execution. I specialize in building high-performance web applications that don't just work—they drive growth and automate complexity. With deep expertise in Next.js, Laravel, and AI integration, I provide end-to-end solutions from initial strategy to final deployment, ensuring your project is engineered for scale, security, and intelligent performance.",
         foto: '/assets/ammar-baru.webp'
     }
 ]
