@@ -80,3 +80,10 @@ export const tools: Skill[] = [
         tingkat: "Basic",
     }
 ]
+
+export const aiSkills: Skill[] = [
+    { gambar: "/assets/skills/openai.png", nama: "OpenAI API", tingkat: "Intermediate" },
+    { gambar: "/assets/skills/gemini.png", nama: "Gemini API", tingkat: "Intermediate" },
+    { gambar: "/assets/skills/prompt.png", nama: "Prompt Engineering", tingkat: "Advance" },
+    { gambar: "/assets/skills/rag.png", nama: "RAG Architecture", tingkat: "Basic" }
+];

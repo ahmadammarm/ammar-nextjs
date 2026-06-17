@@ -6,7 +6,7 @@ export const experiences: Experiences[] = [
         jabatan: "Software Engineer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
         kontrak: "Part-time",
-        deskripsi: ["Collaborated in a fast-paced startup environment to develop and maintain a SaaS AI-powered career preparation platform.", "Shipped new features across frontend and backend aligned with evolving product and business goals.", "Performed bug fixing and issue resolution across staging and production environments, contributing to improved application stability and reduced user-reported issues."],
+        deskripsi: ["Engineered a SaaS AI-powered career platform, enabling automated career guidance for thousands of users.", "Shipped new features across frontend and backend aligned with evolving product and business goals.", "Performed bug fixing and issue resolution across staging and production environments, contributing to improved application stability and reduced user-reported issues."],
         tahun: "November 2025 - present"
     },
     {
@@ -14,7 +14,7 @@ export const experiences: Experiences[] = [
         jabatan: "Freelance Software Engineer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
         kontrak: "Freelance",
-        deskripsi: ["Delivered 10+ end-to-end software solutions for multiple clients, covering requirements analysis, project planning, development, deployment, and post-release support.", "Conducted technical planning and solution mapping to translate business needs into structured development roadmaps, defining scope, milestones, and appropriate technology stacks.", "Performed regular maintenance cycles, completing UI enhancements, bug fixes, and performance optimizations."],
+        deskripsi: ["Delivered 10+ end-to-end solutions for diverse businesses, ensuring high-quality delivery and client satisfaction through robust requirement mapping.", "Conducted technical planning and solution mapping to translate business needs into structured development roadmaps, defining scope, milestones, and appropriate technology stacks.", "Performed regular maintenance cycles, completing UI enhancements, bug fixes, and performance optimizations."],
         tahun: "January 2025 - present"
     },
     {
@@ -22,7 +22,7 @@ export const experiences: Experiences[] = [
         jabatan: "Backend Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
         kontrak: "Freelance",
-        deskripsi: ["Developed a chemistry e-learning platform used in educational research targeting senior high school students.", "Designed and implemented 15 API endpoints to support core application workflows.", "Integrated LLM-based functionality by applying few-shot prompting techniques and structured output formatting to generate consistent responses."],
+        deskripsi: ["Developed an AI-driven e-learning platform, integrating LLMs with structured prompting to provide personalized learning experiences.", "Designed and implemented 15 API endpoints to support core application workflows.", "Integrated LLM-based functionality by applying few-shot prompting techniques and structured output formatting to generate consistent responses."],
         tahun: "April 2025 - November 2025"
     },
     {
