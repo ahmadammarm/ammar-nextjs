@@ -1,6 +1,5 @@
 "use client"
 
-import Loading from "@/components/Loading";
 import HeroSection from "@/components/Sections/HeroSection";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -14,19 +13,6 @@ import { motion } from "framer-motion";
 
 export default function Home() {
     const { nama, deskripsi, foto } = about[0];
-    const [isLoading, setIsLoading] = useState(true)
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false)
-        }, 1000);
-
-        return () => clearTimeout(timer)
-    }, []);
-
-    if (isLoading) {
-        return <Loading />
-    }
 
     return (
         <>

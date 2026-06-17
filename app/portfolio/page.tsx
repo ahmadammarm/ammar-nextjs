@@ -1,6 +1,5 @@
 "use client"
 
-import Loading from '@/components/Loading'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { fullPortfolio } from '@/constants/portfolio'
 import { PortfolioCategory } from '@/types/portfolio'
@@ -13,7 +12,6 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 type PortfolioTab = 'all' | PortfolioCategory
 
 export default function Page() {
-    const [isLoading, setIsLoading] = useState(true)
     const [activeCategory, setActiveCategory] = useState<PortfolioTab>('all')
     const [items, setItems] = useState<(typeof fullPortfolio)[number][]>([])
     const [hasMore, setHasMore] = useState(true)
@@ -27,19 +25,9 @@ export default function Page() {
     [activeCategory])
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false)
-        }, 1000)
-
-        return () => clearTimeout(timer)
-    }, [])
-
-    useEffect(() => {
-        if (isLoading) return
-
         setItems(filteredPortfolio.slice(0, ITEMS_PER_LOAD))
         setHasMore(filteredPortfolio.length > ITEMS_PER_LOAD)
-    }, [filteredPortfolio, isLoading])
+    }, [filteredPortfolio])
 
     const fetchMoreData = () => {
         if (items.length >= filteredPortfolio.length) {
@@ -54,10 +42,6 @@ export default function Page() {
                 setHasMore(false)
             }
         }, 1000)
-    }
-
-    if (isLoading) {
-        return <Loading />
     }
 
     return (
