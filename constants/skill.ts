@@ -82,8 +82,7 @@ export const tools: Skill[] = [
 ]
 
 export const aiSkills: Skill[] = [
-    { gambar: "/assets/skills/openai.png", nama: "OpenAI API", tingkat: "Intermediate" },
-    { gambar: "/assets/skills/gemini.png", nama: "Gemini API", tingkat: "Intermediate" },
-    { gambar: "/assets/skills/prompt.png", nama: "Prompt Engineering", tingkat: "Advance" },
-    { gambar: "/assets/skills/rag.png", nama: "RAG Architecture", tingkat: "Basic" }
+    { gambar: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg", nama: "Gemini API", tingkat: "Intermediate" },
+    { gambar: "https://img.icons8.com/fluency/512/artificial-intelligence.png", nama: "Prompt Engineering", tingkat: "Advance" },
+    { gambar: "https://img.icons8.com/fluency/512/database-restore.png", nama: "RAG Architecture", tingkat: "Basic" }
 ];

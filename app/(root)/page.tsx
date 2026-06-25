@@ -100,15 +100,6 @@ export default function Home() {
                                     </p>
                                 </div>
 
-                                {/* CTA Button */}
-                                <div className='flex justify-start'>
-                                    <Link href={'/services'}>
-                                        <Button className="group relative bg-brand-blue text-black px-6 py-3 text-base font-bold border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-300 hover:translate-y-[2px] hover:translate-x-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
-                                            View My Services
-                                            <FaArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                                        </Button>
-                                    </Link>
-                                </div>
                             </div>
                         </motion.div>
                     </div>

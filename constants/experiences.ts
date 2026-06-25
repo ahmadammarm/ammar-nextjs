@@ -10,10 +10,10 @@ export const experiences: Experiences[] = [
         tahun: "November 2025 - present"
     },
     {
-        nama: "Freelancer",
-        jabatan: "Freelance Software Engineer",
+        nama: "Independent Professional",
+        jabatan: "Fullstack Software Engineer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
-        kontrak: "Freelance",
+        kontrak: "Contract",
         deskripsi: ["Delivered 10+ end-to-end solutions for diverse businesses, ensuring high-quality delivery and client satisfaction through robust requirement mapping.", "Conducted technical planning and solution mapping to translate business needs into structured development roadmaps, defining scope, milestones, and appropriate technology stacks.", "Performed regular maintenance cycles, completing UI enhancements, bug fixes, and performance optimizations."],
         tahun: "January 2025 - present"
     },
@@ -21,7 +21,7 @@ export const experiences: Experiences[] = [
         nama: "Universitas Negeri Malang",
         jabatan: "Backend Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
-        kontrak: "Freelance",
+        kontrak: "Contract",
         deskripsi: ["Developed an AI-driven e-learning platform, integrating LLMs with structured prompting to provide personalized learning experiences.", "Designed and implemented 15 API endpoints to support core application workflows.", "Integrated LLM-based functionality by applying few-shot prompting techniques and structured output formatting to generate consistent responses."],
         tahun: "April 2025 - November 2025"
     },
@@ -29,7 +29,7 @@ export const experiences: Experiences[] = [
         nama: "Pastijadi Digital Solutions",
         jabatan: "Fullstack Web Developer",
         logo: ["/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
-        kontrak: "Freelance",
+        kontrak: "Contract",
         deskripsi: ["Developed the Pastijadi internal accounting system to support operational workflows and structured financial data management.", "Managed the application deployment to production environments and maintained system stability during release cycles, including monitoring and resolving deployment-related issues.", " Implemented the application features and fixing issues under guidance, gaining hands-on experience in software development practices and system architecture."],
         tahun: "July 2024 - March 2025"
     },

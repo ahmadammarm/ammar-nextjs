@@ -25,34 +25,24 @@ function SkillsSection() {
                 <div className="flex justify-center mb-8 md:mb-12">
                     <div className="inline-flex rounded-md p-1.5 gap-2 flex-wrap justify-center">
                         <Button
-                            className={`px-6 md:px-8 py-2.5 md:py-3 font-bold text-sm md:text-base rounded-md transition-all duration-300 ${
+                            className={`px-6 md:px-8 py-2.5 md:py-3 font-semibold text-sm md:text-base rounded-md transition-all duration-300 ${
                                 activeTab === 'tech-stack'
-                                    ? 'bg-primary text-primary-foreground border-2 border-black dark:border-white shadow-neo'
-                                    : 'bg-transparent text-foreground hover:bg-accent border-2 border-transparent'
+                                    ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
+                                    : 'bg-transparent text-foreground hover:bg-accent hover:shadow-sm'
                             }`}
                             onClick={() => setActiveTab('tech-stack')}
                         >
-                            Tech Stacks
+                            Tech Stacks & Tools
                         </Button>
                         <Button
-                            className={`px-6 md:px-8 py-2.5 md:py-3 font-bold text-sm md:text-base rounded-md transition-all duration-300 ${
+                            className={`px-6 md:px-8 py-2.5 md:py-3 font-semibold text-sm md:text-base rounded-md transition-all duration-300 ${
                                 activeTab === 'ai-integration'
-                                    ? 'bg-primary text-primary-foreground border-2 border-black dark:border-white shadow-neo'
-                                    : 'bg-transparent text-foreground hover:bg-accent border-2 border-transparent'
+                                    ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
+                                    : 'bg-transparent text-foreground hover:bg-accent hover:shadow-sm'
                             }`}
                             onClick={() => setActiveTab('ai-integration')}
                         >
                             AI Integration
-                        </Button>
-                        <Button
-                            className={`px-6 md:px-8 py-2.5 md:py-3 font-bold text-sm md:text-base rounded-md transition-all duration-300 ${
-                                activeTab === 'tools'
-                                    ? 'bg-primary text-primary-foreground border-2 border-black dark:border-white shadow-neo'
-                                    : 'bg-transparent text-foreground hover:bg-accent border-2 border-transparent'
-                            }`}
-                            onClick={() => setActiveTab('tools')}
-                        >
-                            Tools
                         </Button>
                     </div>
                 </div>
@@ -62,10 +52,10 @@ function SkillsSection() {
                     {activeTab === 'tech-stack' && (
                         <div className="animate-fadeIn">
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6 lg:gap-8">
-                                {techStack.map((skill, index) => (
+                                {[...techStack, ...tools].map((skill, index) => (
                                     <div
                                         key={index}
-                                        className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-background rounded-md shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white"
+                                        className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:-translate-y-1"
                                         style={{ animationDelay: `${index * 50}ms` }}
                                     >
                                         <div className="relative z-10 flex flex-col items-center">
@@ -98,7 +88,7 @@ function SkillsSection() {
                                 {aiSkills.map((skill, index) => (
                                     <div
                                         key={index}
-                                        className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-background rounded-md shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white"
+                                        className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:-translate-y-1"
                                         style={{ animationDelay: `${index * 50}ms` }}
                                     >
                                         <div className="relative z-10 flex flex-col items-center">
@@ -113,39 +103,6 @@ function SkillsSection() {
                                             </div>
                                             <h4 className="text-xs md:text-sm lg:text-base font-semibold text-brand-blue text-center leading-tight">
                                                 {skill.nama}
-                                            </h4>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-
-                    {activeTab === 'tools' && (
-                        <div className="animate-fadeIn">
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6 lg:gap-8">
-                                {tools.map((tool, index) => (
-                                    <div
-                                        key={index}
-                                        className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-background rounded-md shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white"
-                                        style={{ animationDelay: `${index * 50}ms` }}
-                                    >
-                                        <div className="relative z-10 flex flex-col items-center">
-                                            <div className={`mb-3 md:mb-4 transform group-hover:scale-110 transition-transform duration-300 p-2 rounded-md ${
-                                                tool.gambar.includes('nextjs') || tool.gambar.includes('expressjs') 
-                                                ? 'bg-white shadow-sm' 
-                                                : ''
-                                            }`}>
-                                                <Image
-                                                    src={tool.gambar}
-                                                    alt={tool.nama}
-                                                    className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
-                                                    width={80}
-                                                    height={80}
-                                                />
-                                            </div>
-                                            <h4 className="text-xs md:text-sm lg:text-base font-bold text-brand-blue text-center leading-tight">
-                                                {tool.nama}
                                             </h4>
                                         </div>
                                     </div>
