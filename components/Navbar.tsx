@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-// import { ModeToggle } from './ModeToggle';
+import { ModeToggle } from './ModeToggle';
 
 const navItems = [
     { href: '/', label: 'Home' },
@@ -37,9 +37,9 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
-                        <Link href="/" className="text-4xl font-bold text-brand-blue"></Link>
+                        <Link href="/" className="text-4xl font-bold text-brand-blue">Musyaffa</Link>
                     </div>
-                    <div className="hidden md:block">
+                    <div className="hidden md:flex items-center space-x-4">
                         <div className="ml-10 flex items-baseline space-x-4">
                             {navItems.map((item) => (
                                 <Link
@@ -54,11 +54,11 @@ export default function Navbar() {
                                     {item.label}
                                 </Link>
                             ))}
-                            {/* <ModeToggle /> */}
+                            <ModeToggle />
                         </div>
                     </div>
-                    <div className="md:hidden">
-                        {/* <ModeToggle /> */}
+                    <div className="md:hidden flex items-center">
+                        <ModeToggle />
                         <Button
                             variant="outline"
                             size="icon"

@@ -5,6 +5,7 @@ import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 function AboutSection(): React.ReactElement {
     const { nama, deskripsi, foto } = about[0];
@@ -12,18 +13,30 @@ function AboutSection(): React.ReactElement {
     return (
         <div className='relative min-h-screen flex flex-col justify-center items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden'>
             {/* Section Title */}
-            <div className='relative z-10 mb-12 md:mb-16 lg:mb-20'>
+            <motion.div 
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className='relative z-10 mb-12 md:mb-16 lg:mb-20'
+            >
                 <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-3'>
                     About Me
                 </h1>
-            </div>
+            </motion.div>
 
             {/* Content Container */}
             <div className='relative z-10 max-w-7xl w-full mx-auto'>
                 <div className='flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 xl:gap-16'>
 
                     {/* Image Section */}
-                    <div className='w-full lg:w-5/12 xl:w-2/5 flex justify-center lg:justify-end'>
+                    <motion.div 
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className='w-full lg:w-5/12 xl:w-2/5 flex justify-center lg:justify-end'
+                    >
                         <div className='relative group'>
                             {/* Image container with Neobrutalist styling */}
                             <div className='relative'>
@@ -45,10 +58,16 @@ function AboutSection(): React.ReactElement {
                                 <span className='text-primary-foreground font-bold text-sm md:text-base'>Hello!</span>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Text Content Section */}
-                    <div className='w-full lg:w-7/12 xl:w-3/5 flex flex-col justify-center'>
+                    <motion.div 
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        viewport={{ once: true }}
+                        className='w-full lg:w-7/12 xl:w-3/5 flex flex-col justify-center'
+                    >
                         <div className='bg-background rounded-md p-6 md:p-8 lg:p-10 shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white'>
 
                             {/* Greeting */}
@@ -83,7 +102,7 @@ function AboutSection(): React.ReactElement {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 

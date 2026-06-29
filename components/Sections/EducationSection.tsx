@@ -12,7 +12,8 @@ function EducationSection() {
                 <div className="text-center mb-12 md:mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                         className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground"
                     >
@@ -20,7 +21,8 @@ function EducationSection() {
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
                         className="text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed"
                     >
@@ -34,7 +36,8 @@ function EducationSection() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                             transition={{
                                 duration: 0.5,
                                 ease: 'easeOut',

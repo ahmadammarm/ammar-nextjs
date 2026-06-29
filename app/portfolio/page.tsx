@@ -8,6 +8,7 @@ import Link from 'next/link'
 import React, { useEffect, useState, useMemo } from 'react'
 import { FaInfoCircle, FaArrowRight } from 'react-icons/fa'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import { motion } from 'framer-motion'
 
 type PortfolioTab = 'all' | PortfolioCategory
 
@@ -46,7 +47,13 @@ export default function Page() {
 
     return (
         <div className="w-full py-28">
-            <div className="text-center mb-16">
+            <motion.div 
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center mb-16"
+            >
                 <h1 className="text-5xl font-bold mb-5 text-foreground">Portfolio</h1>
                 <p className="text-gray-700 dark:text-gray-400 mx-4 max-w-2xl mx-auto">
                     Here are some of the projects I have worked on, including collaborations with the teams. Click the detail button to learn more about each project.
@@ -67,7 +74,7 @@ export default function Page() {
                         </TabsList>
                     </Tabs>
                 </div>
-            </div>
+            </motion.div>
 
             <InfiniteScroll
                 dataLength={items.length}
@@ -77,8 +84,12 @@ export default function Page() {
             >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-5">
                     {items.map((port, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
+                            viewport={{ once: true }}
                             className="group relative shadow-neo dark:shadow-neo-dark p-5 rounded-md dark:bg-slate-900 bg-background border-2 border-black dark:border-white"
                         >
 
@@ -136,7 +147,7 @@ export default function Page() {
                                     </Link>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </InfiniteScroll>
