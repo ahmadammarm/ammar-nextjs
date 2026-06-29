@@ -103,6 +103,22 @@ export default function Page() {
                                 {/* Animated divider */}
                                 <div className="w-12 h-1 bg-black dark:bg-white mb-3 group-hover:w-20 transition-all duration-300"></div>
 
+                                {/* Tech Stack Badges */}
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    {port.teknologi.map((tech, i) => {
+                                        const techName = tech.split('/').pop()?.split('.')[0] || 'Tech stack';
+                                        return (
+                                            <div 
+                                                key={i} 
+                                                className="flex items-center justify-center p-1.5 bg-gray-100 dark:bg-slate-800 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
+                                                title={techName}
+                                            >
+                                                <Image src={tech} alt={techName} width={20} height={20} className="w-5 h-5 object-contain" />
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+
                                 {/* Description */}
                                 <p className='text-gray-700 dark:text-gray-400 mb-4'>
                                     {port.deskripsi}

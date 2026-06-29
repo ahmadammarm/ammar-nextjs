@@ -55,6 +55,21 @@ export const techStack: Skill[] = [
         gambar: "/assets/skills/postgresql.png",
         nama: "PostgreSQL",
         tingkat: "Basic",
+    },
+    {
+        gambar: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg",
+        nama: "TensorFlow",
+        tingkat: "Basic",
+    },
+    {
+        gambar: "https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg",
+        nama: "Django",
+        tingkat: "Basic",
+    },
+    {
+        gambar: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg",
+        nama: "Flask",
+        tingkat: "Basic",
     }
 ];
 
@@ -78,11 +93,14 @@ export const tools: Skill[] = [
         gambar: "/assets/skills/docker.png",
         nama: "Docker",
         tingkat: "Basic",
+    },
+    {
+        gambar: "https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg",
+        nama: "WordPress",
+        tingkat: "Basic",
     }
 ]
 
 export const aiSkills: Skill[] = [
-    { gambar: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg", nama: "Gemini API", tingkat: "Intermediate" },
-    { gambar: "https://img.icons8.com/fluency/512/artificial-intelligence.png", nama: "Prompt Engineering", tingkat: "Advance" },
-    { gambar: "https://img.icons8.com/fluency/512/database-restore.png", nama: "RAG Architecture", tingkat: "Basic" }
+    { gambar: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg", nama: "Gemini API", tingkat: "Intermediate" }
 ];

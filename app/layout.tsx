@@ -12,18 +12,18 @@ export const metadata: Metadata = {
     metadataBase: new URL("https://ahmadammar.my.id"),
 
     title: {
-        default: "Ahmad Ammar Musyaffa | Freelance Fullstack Developer & AI Integration Expert",
-        template: "%s | Ahmad Ammar Musyaffa"
+        default: "Ahmad Ammar Musyaffa | Personal Website",
+        template: "Ahmad Ammar Musyaffa | %s"
     },
 
     description:
-        "Professional Freelance Fullstack Developer specializing in Next.js, AI integration, and automation. Ahmad Ammar Musyaffa builds intelligent, scalable web applications and SaaS solutions.",
+        "Professional Fullstack Developer specializing in Next.js, AI integration, and automation. Ahmad Ammar Musyaffa builds intelligent, scalable web applications and SaaS solutions.",
 
     keywords: [
         "ahmad ammar musyaffa",
         "ahmad ammar",
         "ammar musyaffa",
-        "freelance fullstack developer",
+        "fullstack developer",
         "next.js developer indonesia",
         "AI integration specialist",
         "web automation expert",
