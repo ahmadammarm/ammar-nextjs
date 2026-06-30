@@ -79,9 +79,14 @@ const ExperiencesSection = () => {
                                                 <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
                                                     {exp.tahun}
                                                 </div>
-                                                {/* Badge */}
-                                                <div className="inline-flex items-center rounded-full bg-brand-blue/10 px-3 py-1 text-xs font-semibold text-brand-blue ring-1 ring-inset ring-brand-blue/20">
-                                                    {exp.kontrak}
+                                                {/* Badges */}
+                                                <div className="flex gap-2 mt-1">
+                                                    <div className="inline-flex items-center rounded-full bg-brand-blue/10 px-3 py-1 text-xs font-semibold text-brand-blue ring-1 ring-inset ring-brand-blue/20">
+                                                        {exp.kontrak}
+                                                    </div>
+                                                    <div className="inline-flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-600 dark:text-green-400 ring-1 ring-inset ring-green-500/20">
+                                                        Remote
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

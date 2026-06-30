@@ -8,6 +8,14 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'smpn1-mlg.sch.id',
+            },
+            {
+                protocol: 'https',
+                hostname: 'media.licdn.com',
+            },
+            {
+                protocol: 'https',
                 hostname: 'img.icons8.com',
             },
             {
