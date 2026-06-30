@@ -2,43 +2,60 @@ import { Experiences } from "@/types/experiences";
 
 export const experiences: Experiences[] = [
     {
+        nama: "SMA Islam Sabilillah Malang",
+        jabatan: "Fullstack Developer",
+        logo: [
+            "/assets/skills/nextjs.png", 
+            "/assets/skills/react.png",
+            "/assets/skills/ts.png",
+            "/assets/skills/tailwind.png", 
+            "/assets/skills/postgresql.png",
+            "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"
+        ],
+        kontrak: "Contract",
+        deskripsi: [
+            "Developed an AI-powered FinTech/EdTech platform serving SMA Islam Sabilillah students using Next.js, Tailwind CSS, PostgreSQL, and Drizzle ORM.",
+            "Built end-to-end full-stack workflows for expense tracking, budgeting, product management, and parental monitoring through responsive UIs, server actions, backend business logic, and relational data models.",
+            "Integrated Google Gemini to implement AI-powered financial recommendations using context-aware prompting, structured JSON outputs, schema validation, and fallback mechanisms.",
+            "Optimized serverless application performance through efficient API design, relational database optimization, and scalable data access patterns while powering real-time financial operations."
+        ],
+        tahun: "April 2026 - present"
+    },
+    {
         nama: "PT Intervyou Labs Indonesia",
         jabatan: "Software Engineer",
-        logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
+        logo: [
+            "/assets/skills/nextjs.png", 
+            "/assets/skills/react.png",
+            "/assets/skills/tailwind.png", 
+            "/assets/skills/postgresql.png", 
+            "/assets/skills/mysql.png", 
+            "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"
+        ],
         kontrak: "Part-time",
-        deskripsi: ["Engineered a SaaS AI-powered career platform, enabling automated career guidance for thousands of users.", "Shipped new features across frontend and backend aligned with evolving product and business goals.", "Performed bug fixing and issue resolution across staging and production environments, contributing to improved application stability and reduced user-reported issues."],
+        deskripsi: [
+            "Collaborated with the engineering team to develop and maintain an AI-powered career preparation SaaS platform serving 4,000+ users.", 
+            "Delivered 10+ production features across AI workflows, analytics, job recommendations, payment modules, and platform administration.", 
+            "Refactored 15+ legacy modules, improving code maintainability, scalability, and engineering productivity.",
+            "Participated in technical on-call rotations to monitor production systems, resolve incidents, and improve platform reliability."
+        ],
         tahun: "November 2025 - present"
     },
     {
-        nama: "Independent Professional",
-        jabatan: "Fullstack Software Engineer",
-        logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
-        kontrak: "Contract",
-        deskripsi: ["Delivered 10+ end-to-end solutions for diverse businesses, ensuring high-quality delivery and client satisfaction through robust requirement mapping.", "Conducted technical planning and solution mapping to translate business needs into structured development roadmaps, defining scope, milestones, and appropriate technology stacks.", "Performed regular maintenance cycles, completing UI enhancements, bug fixes, and performance optimizations."],
-        tahun: "January 2025 - present"
-    },
-    {
-        nama: "Universitas Negeri Malang",
-        jabatan: "Backend Developer",
-        logo: ["/assets/skills/laravel.png", "/assets/skills/tailwind.png", "/assets/skills/mysql.png"],
-        kontrak: "Contract",
-        deskripsi: ["Developed an AI-driven e-learning platform, integrating LLMs with structured prompting to provide personalized learning experiences.", "Designed and implemented 15 API endpoints to support core application workflows.", "Integrated LLM-based functionality by applying few-shot prompting techniques and structured output formatting to generate consistent responses."],
-        tahun: "April 2025 - November 2025"
-    },
-    {
-        nama: "Pastijadi Digital Solutions",
-        jabatan: "Fullstack Web Developer",
-        logo: ["/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
-        kontrak: "Contract",
-        deskripsi: ["Developed the Pastijadi internal accounting system to support operational workflows and structured financial data management.", "Managed the application deployment to production environments and maintained system stability during release cycles, including monitoring and resolving deployment-related issues.", " Implemented the application features and fixing issues under guidance, gaining hands-on experience in software development practices and system architecture."],
-        tahun: "July 2024 - March 2025"
-    },
-    {
         nama: "PUI-PT DLI Universitas Negeri Malang",
-        jabatan: "Backend Developer",
-        logo: ["/assets/skills/laravel.png", "/assets/skills/bootstrap.png", "/assets/skills/mysql.png"],
+        jabatan: "Fullstack Developer",
+        logo: [
+            "/assets/skills/laravel.png", 
+            "/assets/skills/tailwind.png", 
+            "/assets/skills/mysql.png"
+        ],
         kontrak: "Internship",
-        deskripsi: ["Developed an Islamic educational platform with a primary focus on backend system development and application logic.", "Implemented multiple application routes and backend handlers supporting authentication, content management, and user workflows.", "Implemented JWT-based authentication and role-based access control (RBAC) to manage secure user access and enforce permission-based resource authorization."],
+        deskripsi: [
+            "Developed an Islamic educational platform using Laravel and MySQL.", 
+            "Delivered 10+ production features across authentication, content management, role administration, and user services.", 
+            "Strengthened application security through RBAC, session-based authentication, and secure access control for administrative modules.",
+            "Optimized 15+ database operations using indexing, eager loading, and efficient query strategies to improve application performance."
+        ],
         tahun: "June 2024 - November 2024"
-    },
+    }
 ]

@@ -31,11 +31,7 @@ export const techStack: Skill[] = [
         nama: "ExpressJs",
         tingkat: "Basic",
     },
-    {
-        gambar: "/assets/skills/nestjs.svg",
-        nama: "NestJs",
-        tingkat: "Basic",
-    },
+
     {
         gambar: "/assets/skills/vue.png",
         nama: "VueJs",
@@ -56,21 +52,6 @@ export const techStack: Skill[] = [
         nama: "PostgreSQL",
         tingkat: "Basic",
     },
-    {
-        gambar: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg",
-        nama: "TensorFlow",
-        tingkat: "Basic",
-    },
-    {
-        gambar: "https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg",
-        nama: "Django",
-        tingkat: "Basic",
-    },
-    {
-        gambar: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg",
-        nama: "Flask",
-        tingkat: "Basic",
-    }
 ];
 
 export const tools: Skill[] = [
@@ -89,16 +70,6 @@ export const tools: Skill[] = [
     //     nama: 'Visual Studio Code',
     //     tingkat: 'Intermediate',
     // },
-    {
-        gambar: "/assets/skills/docker.png",
-        nama: "Docker",
-        tingkat: "Basic",
-    },
-    {
-        gambar: "https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg",
-        nama: "WordPress",
-        tingkat: "Basic",
-    }
 ]
 
 export const aiSkills: Skill[] = [
