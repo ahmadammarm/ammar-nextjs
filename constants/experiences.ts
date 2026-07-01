@@ -2,26 +2,6 @@ import { Experiences } from "@/types/experiences";
 
 export const experiences: Experiences[] = [
     {
-        nama: "SMA Islam Sabilillah Malang",
-        jabatan: "Fullstack Developer",
-        logo: [
-            "/assets/skills/nextjs.png", 
-            "/assets/skills/react.png",
-            "/assets/skills/ts.png",
-            "/assets/skills/tailwind.png", 
-            "/assets/skills/postgresql.png",
-            "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"
-        ],
-        kontrak: "Contract",
-        deskripsi: [
-            "Developed an AI-powered FinTech/EdTech platform for students using Next.js, Tailwind, and PostgreSQL.",
-            "Built full-stack workflows for expense tracking, budgeting, and parental monitoring.",
-            "Integrated Google Gemini for AI-powered financial recommendations.",
-            "Optimized API and database performance for real-time financial operations."
-        ],
-        tahun: "April 2026 - present"
-    },
-    {
         nama: "PT Intervyou Labs Indonesia",
         jabatan: "Software Engineer",
         logo: [
@@ -40,6 +20,26 @@ export const experiences: Experiences[] = [
             "Participated in on-call rotations to resolve incidents and ensure reliability."
         ],
         tahun: "November 2025 - present"
+    },
+    {
+        nama: "Independent / Freelancer",
+        jabatan: "Freelance Software Developer",
+        logo: [
+            "/assets/skills/nextjs.png", 
+            "/assets/skills/react.png",
+            "/assets/skills/laravel.png",
+            "/assets/skills/vue.png",
+            "/assets/skills/mysql.png",
+            "/assets/skills/postgresql.png",
+            "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"
+        ],
+        kontrak: "Freelance",
+        deskripsi: [
+            "Delivered 10+ software projects (e-learning, business platforms, information systems, etc.) using Next.js, Laravel, and Vue.js.",
+            "Developed core features including authentication, AI workflows, and payment integrations.",
+            "Integrated Google Gemini and LLMs to power automated content and recommendations."
+        ],
+        tahun: "August 2023 - June 2026"
     },
     {
         nama: "PUI-PT DLI Universitas Negeri Malang",
