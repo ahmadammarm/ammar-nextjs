@@ -19,92 +19,68 @@ export default function Home() {
             <HeroSection />
 
             {/* About Section Start */}
-            <div className='relative min-h-screen flex flex-col justify-center items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden'>
-                {/* Minimal Background Decoration - Simplified */}
-                <div className="absolute top-20 left-10 w-72 h-72 border-4 border-brand-blue/10 rounded-full"></div>
-                <div className="absolute bottom-20 right-10 w-96 h-96 border-4 border-brand-blue/10 rounded-full"></div>
-
-                {/* Section Title */}
-                <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="relative z-10 mb-12 md:mb-16 lg:mb-20"
-                >
-                    <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-3'>
-                        About Me
-                    </h2>
-                </motion.div>
-
-                {/* Content Container */}
-                <div className='relative z-10 max-w-6xl w-full mx-auto px-4'>
-                    <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-10'>
-
-                        {/* Image Section */}
-                        <motion.div
+            <section className='relative min-h-screen flex items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden'>
+                <div className='container mx-auto relative z-10 max-w-7xl'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
+                        
+                        {/* Left Column - Text Content */}
+                        <motion.div 
                             initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                            className='flex flex-col'
+                        >
+                            <h2 className='text-brand-blue font-bold tracking-wider text-3xl md:text-4xl lg:text-5xl uppercase mb-6 md:mb-8'>
+                                About Me
+                            </h2>
+                            
+                            <div className='text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed space-y-6 mb-8'>
+                                <p>
+                                    {deskripsi}
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <Link href="/about">
+                                    <Button className="group relative bg-brand-blue text-black px-8 py-6 text-base font-bold border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-300 hover:translate-y-[2px] hover:translate-x-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
+                                        More about me
+                                        <FaArrowRight className="ml-2 w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                                    </Button>
+                                </Link>
+                            </div>
+                        </motion.div>
+
+                        {/* Right Column - Stats Grid */}
+                        <motion.div 
+                            initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className='w-full lg:w-5/12 flex justify-center lg:justify-start'
+                            className='grid grid-cols-2 gap-4 md:gap-6'
                         >
-                            <div className='relative group w-80 h-96'>
-                                {/* Image container */}
-                                <div className='relative h-full'>
-                                    <div className='relative bg-background p-2 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark rounded-md h-full'>
-                                        <Image
-                                            src={foto}
-                                            alt={nama}
-                                            className='w-full h-full rounded-md object-cover transform group-hover:scale-[1.02] transition-transform duration-500 border-2 border-black dark:border-white'
-                                            loading="lazy"
-                                            width={320}
-                                            height={384}
-                                        />
-                                    </div>
+                            {[
+                                { number: "2+", label: "Years Experience" },
+                                { number: "10+", label: "Projects Built" },
+                                { number: "2+", label: "Companies Worked With" },
+                                { number: "5+", label: "Technologies" }
+                            ].map((stat, index) => (
+                                <div 
+                                    key={index} 
+                                    className='bg-background p-6 md:p-8 flex flex-col items-center justify-center text-center border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark rounded-xl transition-transform hover:-translate-y-1'
+                                >
+                                    <span className='text-4xl md:text-5xl font-bold text-foreground mb-2'>
+                                        {stat.number}
+                                    </span>
+                                    <span className='text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium'>
+                                        {stat.label}
+                                    </span>
                                 </div>
-                            </div>
-                        </motion.div>
-
-                        {/* Text Content Section */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            viewport={{ once: true }}
-                            className='w-full lg:w-7/12'
-                        >
-                            <div className='bg-background rounded-md p-6 md:p-8 shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white'>
-
-                                {/* Greeting */}
-                                <div className='mb-6 md:mb-8'>
-                                    <p className='text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100 leading-tight'>
-                                        Hi, Im{' '}
-                                        <span className='relative inline-block'>
-                                            <span className='relative z-10 text-brand-blue'>{nama}</span>
-                                        </span>
-                                    </p>
-                                </div>
-
-                                {/* Separator with style */}
-                                <div className='relative mb-6 md:mb-8'>
-                                    <Separator className="bg-black dark:bg-white h-[2px]" />
-                                    <div className='absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-brand-blue border-2 border-black dark:border-white rounded-full'></div>
-                                    <div className='absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-brand-blue border-2 border-black dark:border-white rounded-full'></div>
-                                </div>
-
-                                {/* Description */}
-                                <div className='mb-8'>
-                                    <p className='text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed'>
-                                        {deskripsi}
-                                    </p>
-                                </div>
-
-                            </div>
+                            ))}
                         </motion.div>
                     </div>
                 </div>
-            </div>
+            </section>
             {/* About Section End */}
 
             {/* Portfolio Section Start */}

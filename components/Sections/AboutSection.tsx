@@ -72,7 +72,7 @@ function AboutSection(): React.ReactElement {
                             {/* Greeting */}
                             <div className='mb-6 md:mb-8'>
                                 <p className='text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight'>
-                                    Hi, Im{' '}
+                                    Hi, I&apos;m{' '}
                                     <span className='relative inline-block'>
                                         <span className='relative z-10 text-brand-blue'>{nama}</span>
                                     </span>
@@ -91,6 +91,15 @@ function AboutSection(): React.ReactElement {
                                 <p className='text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed'>
                                     {deskripsi}
                                 </p>
+                            </div>
+
+                            {/* CV Button */}
+                            <div className='mt-8'>
+                                <a href={about[0].CV} target="_blank" rel="noopener noreferrer">
+                                    <button className="group relative bg-brand-blue text-black px-8 py-4 text-base font-bold border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-300 hover:translate-y-[2px] hover:translate-x-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
+                                        Download Resume
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </motion.div>
