@@ -197,7 +197,7 @@ export const fullPortfolio: Portfolio[] = [
         nama: "Equichem",
         slug: "equichem",
         category: "web-app",
-        gambar: "/assets/portfolios/equichem.png",
+        gambar: "/assets/portfolios/equichem.jpg",
         gambar2: "/assets/portfolios/equichem/2.png",
         gambar3: "/assets/portfolios/equichem/3.png",
         gambar4: "/assets/portfolios/equichem/4.png",
