@@ -190,6 +190,27 @@ export const fullPortfolio: Portfolio[] = [
         role: "Fullstack Developer",
         platform: "Web Application"
     },
+        {
+        nama: "Equichem",
+        slug: "equichem",
+        category: "web-app",
+        gambar: "/assets/portfolios/equichem.png",
+        gambar2: "/assets/portfolios/equichem/2.png",
+        gambar3: "/assets/portfolios/equichem/3.png",
+        gambar4: "/assets/portfolios/equichem/4.png",
+        deskripsi: "Equichem is an educational platform designed specifically for Indonesian high school students to learn chemistry.",
+        deskripsi2: "Equichem is an educational platform designed specifically for Indonesian high school students to learn chemistry. This platform aims to help students master complex concepts, especially chemical equilibrium, through interactive, modern, and systematic learning methods.",
+        features: [
+            "AI-powered evaluation system that dynamically generates quizzes and student worksheets (LKPD).",
+            "Real-time discussion rooms for collaborative learning and problem-solving between students.",
+            "Interactive chemistry learning materials with detailed visualizations and simulations.",
+            "Quizzes with instant feedback and performance analytics.",
+        ],
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/postgresql.png", "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"],
+        year: "2025",
+        role: "AI Integration & Fullstack Developer",
+        platform: "Web Application"
+    },
     {
         nama: "Fulusin",
         slug: "fulusin",
@@ -367,5 +388,5 @@ export const fullPortfolio: Portfolio[] = [
         year: "2026",
         role: "Fullstack Developer",
         platform: "Web Application"
-    }
+    },
 ]
