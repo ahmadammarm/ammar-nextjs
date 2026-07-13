@@ -66,6 +66,9 @@ export const portfolio: Portfolio[] = [
     },
 ];
 
+// Reverse the array to display newest items first (descending)
+portfolio.reverse();
+
 export const fullPortfolio: Portfolio[] = [
     {
         nama: "Bakso Cak Pendik Landing Page",
@@ -390,3 +393,6 @@ export const fullPortfolio: Portfolio[] = [
         platform: "Web Application"
     },
 ]
+
+// Reverse the array to display newest items first (descending)
+fullPortfolio.reverse();
