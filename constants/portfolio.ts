@@ -209,7 +209,7 @@ export const fullPortfolio: Portfolio[] = [
             "Interactive chemistry learning materials with detailed visualizations and simulations.",
             "Quizzes with instant feedback and performance analytics.",
         ],
-        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/postgresql.png", "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"],
+        teknologi: ["/assets/skills/ts.png", "/assets/skills/nextjs.png", "/assets/skills/postgresql.png"],
         year: "2025",
         role: "AI Integration & Fullstack Developer",
         platform: "Web Application"
