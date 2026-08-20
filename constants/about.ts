@@ -6,7 +6,7 @@ export const about: About[] = [
         negara: 'Malang City',
         role: 'Fullstack Developer & AI Integration Specialist',
         CV: '/assets/CV_Ahmad_Ammar.pdf',
-        deskripsi: "I'm a Fresh Graduate in Informatics Engineering with hands-on experience building scalable full-stack web applications using Next.js, Laravel, Vue.js, PostgreSQL, and MySQL through internships and freelance projects.",
-        foto: '/assets/bg-putih.png'
+        deskripsi: "A software engineer with internship experiences and hands-on experiences developing full-stack web applications through academic, freelance, volunteer, and personal projects. Experienced in building backend services, REST APIs, relational databases, and scalable web applications using various tech stacks like Next.js, Laravel, Go, FastAPI, Vue, Astro, PostgreSQL, and MySQL, while also capable of developing responsive frontend interfaces and delivering end-to-end solutions.",
+        foto: '/assets/ammar-baju-putih.png'
     }
 ]

@@ -6,6 +6,6 @@ export const profile: Profile[] = [
         role: 'Fullstack Developer',
         CV: '/assets/CV_Ahmad_Ammar.pdf',
         deskripsi: 'Professional fullstack developer helping businesses scale with robust web applications and intelligent AI solutions.',
-        foto: ['/assets/kacamata_hitam.png']
+        foto: ['/assets/ammar-baju-putih.png']
     }
 ]
