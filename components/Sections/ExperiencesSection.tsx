@@ -110,20 +110,17 @@ const ExperiencesSection = () => {
                                             </div>
                                         </div>
 
-                                        {/* Job Description Points */}
-                                        <ul className="space-y-3 md:space-y-4 mb-6">
+                                        {/* Job Description */}
+                                        <div className="space-y-3 mb-6">
                                             {exp.deskripsi.map((item, itemIndex) => (
-                                                <li
+                                                <p
                                                     key={itemIndex}
-                                                    className="flex items-start gap-3"
+                                                    className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed"
                                                 >
-                                                    <span className="text-gray-400 dark:text-gray-500 font-bold mt-0.5">•</span>
-                                                    <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                                                        {item}
-                                                    </span>
-                                                </li>
+                                                    {item}
+                                                </p>
                                             ))}
-                                        </ul>
+                                        </div>
 
                                         {/* Tech Stack Badges */}
                                         {exp.logo && exp.logo.length > 0 && (
