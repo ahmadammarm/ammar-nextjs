@@ -4,63 +4,57 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 14 personal portfolio website for Ahmad Ammar Musyaffa, a fullstack developer. The site showcases his projects, experience, skills, and contact information.
+A Next.js 14 personal portfolio website for Ahmad Ammar Musyaffa, a fullstack developer. The site is data-driven, Neobrutalist in styling, and showcases projects, experience, skills, and contact information.
 
 ## Commands
 
 ```bash
-pnpm dev      # Start development server
-pnpm build    # Build for production
-pnpm start    # Start production server
-pnpm lint     # Run ESLint
+pnpm dev        # Start development server on http://localhost:3000
+pnpm build      # Build for production (automatically triggers postbuild next-sitemap)
+pnpm start      # Start production server
+pnpm lint       # Run ESLint check
 ```
 
-Note: This project uses pnpm (pnpm-lock.yaml present).
+Package manager: `pnpm` (`pnpm-lock.yaml` is present).
 
 ## Architecture
 
 ### Directory Structure
 
-```
-app/                    # Next.js App Router
-  (root)/              # Route group - home page
-  about/               # About page
-  contact/             # Contact page
-  portfolio/            # Portfolio listing + dynamic [slug] routes
-  layout.tsx            # Root layout with Navbar, Footer, ThemeProvider
-  globals.css           # Global styles + CSS variables
+```text
+app/                    # Next.js App Router routes and layouts
+  layout.tsx            # Root layout, ThemeProvider, JsonLd, site-wide metadata
+  globals.css           # Global styles and Tailwind CSS variables
+  (root)/               # Home page route group (Hero, Featured, etc.)
+  about/                # About page and route-specific metadata
+  contact/              # Contact form and route-specific metadata
+  portfolio/            # Portfolio listing and dynamic [slug] detail pages
 
 components/
-  ui/                   # shadcn/ui components (Radix UI primitives)
-  Sections/             # Page section components (HeroSection, AboutSection, etc.)
-  Navbar.tsx            # Navigation with mobile menu
+  ui/                   # shadcn/ui primitives (Radix UI based)
+  Sections/             # High-level section components (HeroSection, AboutSection, etc.)
+  Navbar.tsx            # Main navigation with mobile drawer
   Footer.tsx            # Footer component
-  theme-provider.tsx     # next-themes provider
+  JsonLd.tsx            # Schema.org JSON-LD component for SEO
+  theme-provider.tsx    # next-themes provider setup
 
-constants/              # Static data files (portfolio.ts, about.ts, skills.ts, etc.)
-lib/utils.ts           # cn() utility for Tailwind class merging
-types/                  # TypeScript interfaces for constant data structures
+constants/              # Source of truth for site content (portfolio.ts, profile.ts, skills.ts, etc.)
+types/                  # TypeScript interfaces matching constants data structures
+lib/utils.ts            # cn() helper (clsx + tailwind-merge)
+public/                 # Static assets, images, and next-sitemap output files
 ```
 
-### Key Patterns
+### Key Conventions
 
-- **Data-driven**: Content is stored in `constants/*.ts` files and typed via `types/*.d.ts`
-- **shadcn/ui**: UI components live in `components/ui/` - these are copied from shadcn/ui library
-- **Path aliases**: `@/` maps to project root (components/, constants/, lib/, types/)
-- **Route groups**: `(root)` group contains the home page without affecting URL structure
-- **Dynamic routes**: Portfolio detail pages at `/portfolio/[slug]`
-
-### Styling
-
-- Tailwind CSS with CSS variables for theming
-- Dark mode via `next-themes` (class-based, toggled in theme-provider)
-- Framer Motion for scroll animations (whileInView patterns)
-- Primary accent color: teal-500
-
-### Dependencies
-
-- Next.js 14 with App Router
-- Radix UI primitives (via shadcn/ui)
-- Framer Motion for animations
-- React Hook Form + Zod for forms
-- next-themes for dark/light mode
+- **Data-Driven Content**: Website copy and list items live in `constants/*.ts` typed via `types/*.d.ts`. Update content directly in `constants/` rather than modifying page/section components.
+- **Styling Pattern (Neobrutalism)**:
+  - Custom Tailwind box shadows: `shadow-neo` (`4px 4px 0px 0px rgba(0,0,0,1)`), `shadow-neo-hover`, `shadow-neo-dark`, `shadow-neo-hover-dark`.
+  - Borders: standard Neobrutalist border treatment `border-2 border-black` / `dark:border-white`.
+  - Brand accents: `brand-blue` (`#007AFF`) and `teal-500`.
+- **UI Primitives**: Located in `components/ui/` based on shadcn/ui. Use `pnpm dlx shadcn-ui@latest add <component>` if new components are needed.
+- **SEO & Metadata**:
+  - Root layout (`app/layout.tsx`) configures baseline metadata, canonical URL (`https://ahmadammar.my.id`), and Open Graph defaults.
+  - Sub-routes declare page-specific metadata in `layout.tsx`.
+  - Dynamic portfolio pages generate metadata via `generateMetadata` in `app/portfolio/[slug]/page.tsx`.
+  - Sitemap configuration lives in `next-sitemap.config.js` and outputs to `public/` on build.
+- **Path Aliases**: `@/*` maps to the project root directory.

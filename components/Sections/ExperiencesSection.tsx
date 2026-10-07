@@ -61,16 +61,33 @@ const ExperiencesSection = () => {
                                     <div className="p-5 md:p-8">
                                         {/* Header area */}
                                         <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
-                                            <div className="space-y-1.5">
-                                                {/* Role */}
-                                                <h3 className="text-xl md:text-2xl font-bold text-foreground">
-                                                    {exp.jabatan}
-                                                </h3>
-                                                {/* Company & Location */}
-                                                <div className="flex flex-wrap items-center gap-1.5 text-sm md:text-base text-gray-500 dark:text-gray-400">
-                                                    <span className="font-medium text-gray-700 dark:text-gray-300">{exp.nama}</span>
-                                                    <span>·</span>
-                                                    <span>Malang, Indonesia</span>
+                                            <div className="flex items-start gap-4">
+                                                {exp.companyLogo && (
+                                                    <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white p-1.5 shrink-0 flex items-center justify-center shadow-sm">
+                                                        <Image
+                                                            src={exp.companyLogo}
+                                                            alt={`${exp.nama} logo`}
+                                                            width={56}
+                                                            height={56}
+                                                            className="w-full h-full object-contain rounded-lg"
+                                                        />
+                                                    </div>
+                                                )}
+                                                <div className="space-y-1.5">
+                                                    {/* Role */}
+                                                    <h3 className="text-xl md:text-2xl font-bold text-foreground">
+                                                        {exp.jabatan}
+                                                    </h3>
+                                                    {/* Company & Location */}
+                                                    <div className="flex flex-wrap items-center gap-1.5 text-sm md:text-base text-gray-500 dark:text-gray-400">
+                                                        <span className="font-medium text-gray-700 dark:text-gray-300">{exp.nama}</span>
+                                                        {exp.lokasi && (
+                                                            <>
+                                                                <span>·</span>
+                                                                <span>{exp.lokasi}</span>
+                                                            </>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -81,9 +98,11 @@ const ExperiencesSection = () => {
                                                 </div>
                                                 {/* Badges */}
                                                 <div className="flex gap-2 mt-1">
-                                                    <div className="inline-flex items-center rounded-full bg-brand-blue/10 px-3 py-1 text-xs font-semibold text-brand-blue ring-1 ring-inset ring-brand-blue/20">
-                                                        {exp.kontrak}
-                                                    </div>
+                                                    {exp.kontrak && (
+                                                        <div className="inline-flex items-center rounded-full bg-brand-blue/10 px-3 py-1 text-xs font-semibold text-brand-blue ring-1 ring-inset ring-brand-blue/20">
+                                                            {exp.kontrak}
+                                                        </div>
+                                                    )}
                                                     <div className="inline-flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-600 dark:text-green-400 ring-1 ring-inset ring-green-500/20">
                                                         Remote
                                                     </div>
