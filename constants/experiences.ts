@@ -8,12 +8,11 @@ export const experiences: Experiences[] = [
         logo: [
             "/assets/skills/nextjs.png",
             "/assets/skills/postgresql.png",
-            "/assets/skills/mysql.png",
-            "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"
+            "/assets/skills/mysql.png"
         ],
         kontrak: "Part-time",
         deskripsi: [
-            "Contributed to scaling an AI-powered career startup across 5+ platforms including the main platform, institution platform, hire platform and internal tools while serving thousands of users with Next.js, MySQL, PostgreSQL and Google Gemini and implementing prompt injection mitigation across multiple AI features."
+            "Contributed to scaling an AI-powered career startup across 5+ platforms including the main platform, institution platform, hire platform and internal tools while serving thousands of users with Next.js, MySQL, and PostgreSQL and implementing prompt injection mitigation across multiple AI features."
         ],
         tahun: "Nov 2025 - Present"
     },
