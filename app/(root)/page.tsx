@@ -50,7 +50,7 @@ export default function Home() {
             subtext: "Professional collaborations",
         },
         {
-            number: "15+",
+            number: "5+",
             label: "Core Technologies",
             subtext: "Languages, runtimes & frameworks",
         },
