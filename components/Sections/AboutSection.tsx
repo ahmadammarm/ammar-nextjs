@@ -1,134 +1,165 @@
 "use client";
 
-import { about } from '@/constants/about';
-import React from 'react';
-import { Separator } from '@/components/ui/separator';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { about } from "@/constants/about";
+import { Download, MapPin, ArrowRight } from "lucide-react";
 
-function AboutSection(): React.ReactElement {
-    const { nama, deskripsi, foto } = about[0];
+export default function AboutSection(): React.ReactElement {
+    const { nama, negara, role, CV, deskripsi, foto } = about[0];
 
     return (
-        <div className='relative min-h-screen flex flex-col justify-center items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden'>
-            {/* Section Title */}
-            <motion.div 
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className='relative z-10 mb-12 md:mb-16 lg:mb-20'
-            >
-                <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-3'>
-                    About Me
-                </h1>
-            </motion.div>
+        <section className="relative min-h-screen flex flex-col justify-center items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden">
+            {/* Section Header */}
+            <div className="relative z-10 max-w-7xl w-full mx-auto mb-12 md:mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="text-center max-w-3xl mx-auto"
+                >
+                    <div className="inline-block px-4 py-1.5 bg-brand-blue text-black text-xs md:text-sm font-bold uppercase tracking-wider border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark mb-4">
+                        About Me
+                    </div>
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-foreground">
+                        Get to Know <span className="text-brand-blue">Me Better</span>
+                    </h1>
+                </motion.div>
+            </div>
 
-            {/* Content Container */}
-            <div className='relative z-10 max-w-7xl w-full mx-auto'>
-                <div className='flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 xl:gap-16'>
-
-                    {/* Image Section */}
-                    <motion.div 
+            {/* Content Layout */}
+            <div className="relative z-10 max-w-7xl w-full mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    {/* Left Column: Photo Card */}
+                    <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className='w-full lg:w-5/12 xl:w-2/5 flex justify-center lg:justify-end'
+                        className="lg:col-span-5 flex justify-center"
                     >
-                        <div className='relative group'>
-                            {/* Image container with Neobrutalist styling */}
-                            <div className='relative'>
-                                <div className='relative bg-background p-2 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark rounded-md'>
+                        <div className="relative w-full max-w-sm md:max-w-md">
+                            {/* Color Accent Underlay */}
+                            <div className="absolute inset-0 bg-brand-blue border-2 border-black dark:border-white translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4" />
+
+                            {/* Main Photo Card */}
+                            <div className="relative bg-background border-2 border-black dark:border-white p-3 md:p-4 shadow-neo dark:shadow-neo-dark">
+                                <div className="relative w-full aspect-[4/5] overflow-hidden border-2 border-black dark:border-white bg-muted">
                                     <Image
                                         src={foto}
-                                        alt="Ahmad Ammar Musyaffa Biography - Fullstack Developer Portfolio"
-                                        className='w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-[28rem] xl:w-[26rem] xl:h-[32rem] rounded-md object-cover transform group-hover:scale-[1.02] transition-transform duration-500 border-2 border-black dark:border-white'
-                                        width={416}
-                                        height={512}
-                                        loading="lazy"
-                                        priority={false}
+                                        alt={nama}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 400px"
+                                        className="object-cover object-center"
+                                        priority
                                     />
                                 </div>
-                            </div>
 
-                            {/* Floating badge */}
-                            <div className='absolute -bottom-4 -right-4 bg-primary px-6 py-3 rounded-md shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white'>
-                                <span className='text-primary-foreground font-bold text-sm md:text-base'>Hello!</span>
+                                {/* Photo Card Bottom Strip */}
+                                <div className="mt-3 pt-3 border-t-2 border-black dark:border-white flex items-center justify-between text-xs md:text-sm font-bold text-foreground">
+                                    <span className="flex items-center gap-1.5">
+                                        <MapPin className="text-brand-blue w-4 h-4" />
+                                        {negara}, Indonesia
+                                    </span>
+                                    <span className="text-muted-foreground font-semibold">
+                                        Fullstack Dev
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
 
-                    {/* Text Content Section */}
-                    <motion.div 
+                    {/* Right Column: Bio Card */}
+                    <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className='w-full lg:w-7/12 xl:w-3/5 flex flex-col justify-center'
+                        className="lg:col-span-7"
                     >
-                        <div className='bg-background rounded-md p-6 md:p-8 lg:p-10 shadow-neo dark:shadow-neo-dark border-2 border-black dark:border-white'>
-
+                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 lg:p-10">
                             {/* Greeting */}
-                            <div className='mb-6 md:mb-8'>
-                                <p className='text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight'>
-                                    Hi, I&apos;m{' '}
-                                    <span className='relative inline-block'>
-                                        <span className='relative z-10 text-brand-blue'>{nama}</span>
-                                    </span>
+                            <div className="mb-6">
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground">
+                                    Hi, I&apos;m{" "}
+                                    <span className="text-brand-blue">{nama}</span>
+                                </h2>
+                                <p className="text-base sm:text-lg font-bold text-muted-foreground mt-2">
+                                    {role}
                                 </p>
                             </div>
 
-                            {/* Separator with style */}
-                            <div className='relative mb-6 md:mb-8'>
-                                <Separator className="bg-black dark:bg-white h-[2px]" />
-                                <div className='absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-brand-blue border-2 border-black dark:border-white rounded-full'></div>
-                                <div className='absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-brand-blue border-2 border-black dark:border-white rounded-full'></div>
+                            {/* Solid Divider */}
+                            <div className="w-16 h-1.5 bg-brand-blue border-2 border-black dark:border-white mb-6" />
+
+                            {/* Narrative Bio */}
+                            <div className="space-y-4 text-base md:text-lg text-foreground/90 leading-relaxed">
+                                <p>{deskripsi}</p>
                             </div>
 
-                            {/* Description */}
-                            <div className='space-y-6'>
-                                <p className='text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed'>
-                                    {deskripsi}
-                                </p>
+                            {/* Key Highlights Grid */}
+                            <div className="grid grid-cols-2 gap-3 mt-6 pt-6 border-t-2 border-black dark:border-white">
+                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white">
+                                    <p className="text-xs font-bold text-muted-foreground uppercase">
+                                        Location
+                                    </p>
+                                    <p className="font-bold text-sm text-foreground mt-0.5">
+                                        {negara}, ID
+                                    </p>
+                                </div>
+                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white">
+                                    <p className="text-xs font-bold text-muted-foreground uppercase">
+                                        Education
+                                    </p>
+                                    <p className="font-bold text-sm text-foreground mt-0.5">
+                                        Informatics Eng. UM
+                                    </p>
+                                </div>
+                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white">
+                                    <p className="text-xs font-bold text-muted-foreground uppercase">
+                                        Core Stack
+                                    </p>
+                                    <p className="font-bold text-sm text-foreground mt-0.5 truncate">
+                                        Next.js, Laravel, Go
+                                    </p>
+                                </div>
+                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white">
+                                    <p className="text-xs font-bold text-muted-foreground uppercase">
+                                        Specialization
+                                    </p>
+                                    <p className="font-bold text-sm text-foreground mt-0.5">
+                                        Software Engineering &amp; Fullstack
+                                    </p>
+                                </div>
                             </div>
 
-                            {/* CV Button */}
-                            <div className='mt-8'>
-                                <a href={about[0].CV} target="_blank" rel="noopener noreferrer">
-                                    <button className="group relative bg-brand-blue text-black px-8 py-4 text-base font-bold border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-300 hover:translate-y-[2px] hover:translate-x-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
-                                        Download Resume
-                                    </button>
+                            {/* Action Buttons */}
+                            <div className="mt-8 flex flex-wrap items-center gap-4">
+                                <a
+                                    href={CV}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-brand-blue text-black font-bold text-base border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-200"
+                                >
+                                    <Download className="w-4 h-4" />
+                                    <span>Download Resume</span>
                                 </a>
+
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-background text-foreground font-bold text-base border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-200"
+                                >
+                                    <span>Contact Me</span>
+                                    <ArrowRight className="w-3.5 h-3.5" />
+                                </Link>
                             </div>
                         </div>
                     </motion.div>
                 </div>
             </div>
-
-            <style jsx>{`
-                @keyframes wave {
-                    0%, 100% { transform: rotate(0deg); }
-                    25% { transform: rotate(20deg); }
-                    75% { transform: rotate(-20deg); }
-                }
-
-                @keyframes bounce-slow {
-                    0%, 100% { transform: translateY(0); }
-                    50% { transform: translateY(-10px); }
-                }
-
-                .animate-wave {
-                    display: inline-block;
-                    animation: wave 2s ease-in-out infinite;
-                }
-
-                .animate-bounce-slow {
-                    animation: bounce-slow 3s ease-in-out infinite;
-                }
-            `}</style>
-        </div>
+        </section>
     );
 }
-
-export default AboutSection;

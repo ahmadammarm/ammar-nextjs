@@ -1,38 +1,39 @@
-"use client"
+"use client";
 
-import { education } from '@/constants/education'
-import { motion } from 'framer-motion'
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { education } from "@/constants/education";
+import { MapPin } from "lucide-react";
 
-function EducationSection() {
+export default function EducationSection(): React.ReactElement {
     return (
-        <section id="educations" className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
-            <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <section id="educations" className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-muted/20 border-t-2 border-black dark:border-white">
+            <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl relative z-10">
                 {/* Section Title */}
                 <div className="text-center mb-12 md:mb-16">
-                    <motion.h2
+                    <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, ease: 'easeOut' }}
-                        className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground"
+                        transition={{ duration: 0.5 }}
                     >
-                        Education Background
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
-                        className="text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed"
-                    >
-                        Here are my educational journey and background
-                    </motion.p>
+                        <div className="inline-block px-4 py-1.5 bg-brand-blue text-black text-xs md:text-sm font-bold uppercase tracking-wider border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark mb-4">
+                            Education
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground">
+                            Academic <span className="text-brand-blue">Background</span>
+                        </h2>
+                        <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mt-3">
+                            My formal academic education and informatics degree
+                        </p>
+                    </motion.div>
                 </div>
 
                 {/* Timeline Container */}
-                <div className="relative max-w-5xl mx-auto">
-                    {/* Timeline Vertical Line */}
-                    <div className="absolute left-[11px] md:left-[15px] top-4 bottom-4 w-px bg-gray-300 dark:bg-gray-800"></div>
+                <div className="relative max-w-4xl mx-auto">
+                    {/* Vertical Timeline Track */}
+                    <div className="absolute left-[16px] md:left-[24px] top-6 bottom-6 w-[3px] bg-black dark:bg-white" />
 
                     {/* Timeline Items */}
                     <div className="space-y-8 md:space-y-12">
@@ -43,45 +44,50 @@ function EducationSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="relative pl-10 md:pl-16"
+                                className="relative pl-12 md:pl-20"
                             >
-                                {/* Timeline Node */}
-                                <div className="absolute left-0 md:left-1 top-6 transform -translate-y-1/2 z-20">
-                                    <div className="w-6 h-6 md:w-8 md:h-8 bg-background border-2 border-brand-blue rounded-full flex items-center justify-center">
-                                        <div className="w-2 h-2 md:w-3 md:h-3 bg-brand-blue rounded-full"></div>
-                                    </div>
+                                {/* Timeline Dot */}
+                                <div className="absolute left-1 md:left-3 top-7 transform -translate-y-1/2 z-20">
+                                    <div className="w-6 h-6 md:w-7 md:h-7 bg-brand-blue border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark" />
                                 </div>
 
-                                {/* Timeline Card */}
-                                <div className="group relative bg-white dark:bg-[#121212] border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-300 rounded-xl overflow-hidden shadow-sm hover:shadow-md">
-                                    <div className="p-5 md:p-8 flex flex-col md:flex-row gap-6 md:items-start">
-                                        
-                                        {/* Content Column */}
+                                {/* Education Card */}
+                                <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark">
+                                    <div className="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
+                                        {/* Institution Logo */}
+                                        {edu.logo && (
+                                            <div className="relative w-14 h-14 md:w-16 md:h-16 shrink-0 bg-white p-2 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark flex items-center justify-center">
+                                                <Image
+                                                    src={edu.logo}
+                                                    alt={`${edu.nama} logo`}
+                                                    width={56}
+                                                    height={56}
+                                                    className="w-full h-full object-contain"
+                                                />
+                                            </div>
+                                        )}
+
+                                        {/* Content */}
                                         <div className="flex-grow">
-                                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
-                                                <div className="space-y-1.5">
-                                                    {/* Institution Name */}
-                                                    <h3 className="text-xl md:text-2xl font-bold text-brand-blue">
+                                            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                                                <div>
+                                                    <h3 className="text-xl sm:text-2xl font-black text-foreground">
                                                         {edu.nama}
                                                     </h3>
-                                                    {/* Major / Studies */}
-                                                    <div className="text-lg font-medium text-foreground">
+                                                    <p className="text-base sm:text-lg font-bold text-brand-blue mt-0.5">
                                                         {edu.jurusan}
-                                                    </div>
-                                                    <div className="flex flex-wrap items-center gap-1.5 text-sm md:text-base text-gray-500 dark:text-gray-400">
-                                                        <span>Malang, Indonesia</span>
-                                                    </div>
+                                                    </p>
+                                                    <p className="flex items-center gap-1.5 text-sm text-muted-foreground font-semibold mt-1">
+                                                        <MapPin className="w-3.5 h-3.5" />
+                                                        <span>Malang, East Java, Indonesia</span>
+                                                    </p>
                                                 </div>
 
-                                                <div className="flex flex-col items-start md:items-end gap-2 shrink-0">
-                                                    {/* Date Range */}
-                                                    <div className="inline-flex items-center rounded-full bg-brand-blue/10 px-3 py-1 text-xs font-semibold text-brand-blue ring-1 ring-inset ring-brand-blue/20">
-                                                        {edu.tahun}
-                                                    </div>
-                                                </div>
+                                                <span className="self-start sm:self-auto px-3 py-1 bg-brand-blue text-black font-bold text-xs border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]">
+                                                    {edu.tahun}
+                                                </span>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </motion.div>
@@ -92,5 +98,3 @@ function EducationSection() {
         </section>
     );
 }
-
-export default EducationSection;

@@ -108,19 +108,19 @@ export default async function PortfolioDetailPage({ params }: PageProps) {
         ],
     };
 
-    const sanitize = (json: object) => JSON.stringify(json).replace(/</g, '\\u003c');
-
     return (
         <>
             <script
                 type="application/ld+json"
+                suppressHydrationWarning
             >
-                {sanitize(softwareSchema)}
+                {JSON.stringify(softwareSchema)}
             </script>
             <script
                 type="application/ld+json"
+                suppressHydrationWarning
             >
-                {sanitize(breadcrumbSchema)}
+                {JSON.stringify(breadcrumbSchema)}
             </script>
             <PortfolioDetailClient />
         </>
