@@ -1,199 +1,352 @@
-"use client"
+"use client";
 
 import HeroSection from "@/components/Sections/HeroSection";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { about } from "@/constants/about";
 import { portfolio } from "@/constants/portfolio";
+import { contact } from "@/constants/contact";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { FaInfoCircle, FaArrowRight } from "react-icons/fa";
+import React from "react";
+import { FaArrowRight } from "react-icons/fa";
+import { Mail, MessageCircle, MapPin, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
-    const { nama, deskripsi, foto } = about[0];
+    const { deskripsi, negara } = about[0];
+    const whatsappContact = contact.find((c) => c.nama === "WhatsApp");
+    const waLink = whatsappContact ? whatsappContact.link : "https://wa.me/6281217952403";
+
+    const marqueeKeywords = [
+        "NEXT.JS",
+        "GO (GOLANG)",
+        "LARAVEL",
+        "FASTAPI",
+        "TYPESCRIPT",
+        "SPRING BOOT",
+        "POSTGRESQL",
+        "DOCKER",
+        "REACT",
+        "REDIS",
+        "TAILWIND CSS",
+        "RESTFUL APIS",
+        "CLEAN ARCHITECTURE",
+        "FULLSTACK DEVELOPMENT",
+    ];
+
+    const stats = [
+        {
+            number: "2+",
+            label: "Years Experience",
+            subtext: "In web & backend engineering",
+        },
+        {
+            number: "10+",
+            label: "Projects Built",
+            subtext: "Fullstack apps & production tools",
+        },
+        {
+            number: "2+",
+            label: "Companies & Teams",
+            subtext: "Professional collaborations",
+        },
+        {
+            number: "15+",
+            label: "Core Technologies",
+            subtext: "Languages, runtimes & frameworks",
+        },
+    ];
 
     return (
-        <>
+        <div className="w-full bg-background">
+            {/* 1. Hero Section */}
             <HeroSection />
 
-            {/* About Section Start */}
-            <section className='relative min-h-screen flex items-center px-4 py-16 md:py-20 lg:py-24 overflow-hidden'>
-                <div className='container mx-auto relative z-10 max-w-7xl'>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
-                        
-                        {/* Left Column - Text Content */}
-                        <motion.div 
+            {/* 2. Running Marquee Ticker */}
+            <div className="w-full bg-brand-blue text-black border-b-2 border-black dark:border-white py-3 overflow-hidden select-none">
+                <div className="animate-marquee flex items-center gap-6 whitespace-nowrap">
+                    {[...marqueeKeywords, ...marqueeKeywords].map((keyword, index) => (
+                        <div key={index} className="flex items-center gap-6">
+                            <span className="text-xs md:text-sm font-black uppercase tracking-widest">
+                                {keyword}
+                            </span>
+                            <span className="text-black text-xs font-black">★</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* 3. About Snippet & Stats Section */}
+            <section className="relative w-full py-16 md:py-20 lg:py-24 border-b-2 border-black dark:border-white">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                        {/* Left Column: Story & Bio */}
+                        <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6 }}
+                            transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            className='flex flex-col'
+                            className="lg:col-span-7 flex flex-col"
                         >
-                            <h2 className='text-brand-blue font-bold tracking-wider text-3xl md:text-4xl lg:text-5xl uppercase mb-6 md:mb-8'>
+                            <div className="inline-block px-3.5 py-1 bg-brand-blue text-black text-xs md:text-sm font-black uppercase tracking-wider border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] mb-4 w-fit">
                                 About Me
-                            </h2>
-                            
-                            <div className='text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed space-y-6 mb-8'>
-                                <p>
-                                    {deskripsi}
-                                </p>
                             </div>
-                            
+
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground leading-tight mb-6">
+                                Engineering <span className="text-brand-blue">Reliable</span> Web Systems
+                            </h2>
+
+                            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+                                {deskripsi}
+                            </p>
+
+                            {/* Info Stickers */}
+                            <div className="flex flex-wrap gap-2.5 mb-8">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-muted border-2 border-black dark:border-white text-xs font-black uppercase tracking-wider text-foreground shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)]">
+                                    <MapPin className="w-3.5 h-3.5 text-brand-blue" />
+                                    {negara}, Indonesia
+                                </span>
+                            </div>
+
                             <div>
-                                <Link href="/about">
-                                    <Button className="group relative bg-brand-blue text-black px-8 py-6 text-base font-bold border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-300 hover:translate-y-[2px] hover:translate-x-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
-                                        More about me
-                                        <FaArrowRight className="ml-2 w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                                    </Button>
+                                <Link
+                                    href="/about"
+                                    className="group px-6 py-3.5 bg-background text-foreground border-2 border-black dark:border-white font-black text-xs md:text-sm uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-2 cursor-pointer"
+                                >
+                                    <span>Read Full Story &amp; Skills</span>
+                                    <FaArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
                         </motion.div>
 
-                        {/* Right Column - Stats Grid */}
-                        <motion.div 
+                        {/* Right Column: 4 Neobrutalist Stats Cards */}
+                        <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
+                            transition={{ duration: 0.5, delay: 0.15 }}
                             viewport={{ once: true }}
-                            className='grid grid-cols-2 gap-4 md:gap-6'
+                            className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5"
                         >
-                            {[
-                                { number: "2+", label: "Years Experience" },
-                                { number: "10+", label: "Projects Built" },
-                                { number: "2+", label: "Companies Worked With" },
-                                { number: "5+", label: "Technologies" }
-                            ].map((stat, index) => (
-                                <div 
-                                    key={index} 
-                                    className='bg-background p-6 md:p-8 flex flex-col items-center justify-center text-center border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark rounded-xl transition-transform hover:-translate-y-1'
+                            {stats.map((stat, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 md:p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark"
                                 >
-                                    <span className='text-4xl md:text-5xl font-bold text-foreground mb-2'>
+                                    <span className="text-4xl md:text-5xl font-black text-foreground tracking-tight">
                                         {stat.number}
                                     </span>
-                                    <span className='text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium'>
-                                        {stat.label}
-                                    </span>
+                                    <div className="mt-3 pt-3 border-t-2 border-black/10 dark:border-white/10">
+                                        <h4 className="text-xs md:text-sm font-black uppercase tracking-wider text-foreground">
+                                            {stat.label}
+                                        </h4>
+                                        <p className="text-[11px] text-muted-foreground mt-0.5">
+                                            {stat.subtext}
+                                        </p>
+                                    </div>
                                 </div>
                             ))}
                         </motion.div>
                     </div>
                 </div>
             </section>
-            {/* About Section End */}
 
-            {/* Portfolio Section Start */}
-            <div className="relative w-full py-16 md:py-20 lg:py-24 overflow-hidden">
-                {/* Minimal Background Decoration - Simplified */}
-                <div className="absolute top-20 right-0 w-72 h-72 border-4 border-brand-blue/10 rounded-full"></div>
-                <div className="absolute bottom-40 left-0 w-96 h-96 border-4 border-brand-blue/10 rounded-full"></div>
-
-                <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-                    {/* Section Title */}
+            {/* 4. Featured Projects Section */}
+            <section className="relative w-full py-16 md:py-20 lg:py-24 border-b-2 border-black dark:border-white">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+                    {/* Section Header */}
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="text-center mb-12 md:mb-16 max-w-4xl mx-auto"
+                        className="text-center mb-12 md:mb-16 max-w-3xl mx-auto"
                     >
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 text-foreground">
+                        <div className="inline-block px-3.5 py-1 bg-brand-blue text-black text-xs md:text-sm font-black uppercase tracking-wider border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] mb-4">
                             Portfolio
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-foreground">
+                            Featured <span className="text-brand-blue">Projects</span>
                         </h2>
-                        <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 leading-relaxed px-4">
-                            Here are some of the projects I have worked on, including collaborations with teams. Click the detail button to learn more about each project.
+                        <p className="text-base md:text-lg text-muted-foreground mt-3">
+                            A curated selection of web applications, platforms, and fullstack solutions engineered for scale and performance.
                         </p>
                     </motion.div>
 
-                    {/* Portfolio Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 mb-12">
-                        {portfolio.map((port, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className="group h-full"
-                            >
-                                <div className="relative h-full bg-background border-2 border-black dark:border-white rounded-md overflow-hidden shadow-neo dark:shadow-neo-dark">
-                                    {/* Image Container */}
-                                    <div className="relative w-full h-56 md:h-64 overflow-hidden bg-background border-b-2 border-black dark:border-white">
-                                        <Image
-                                            src={port.gambar}
-                                            alt={port.nama}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                                            width={600}
-                                            height={400}
-                                            loading="lazy"
-                                        />
-                                    </div>
+                    {/* Project Cards Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+                        {portfolio.map((port, index) => {
+                            const formattedCategory = port.category
+                                .split("-")
+                                .map((word) => word.toUpperCase())
+                                .join(" ");
 
-                                    {/* Content Container */}
-                                    <div className="p-6 md:p-7 lg:p-8">
-                                        {/* Title */}
-                                        <h3 className="text-xl md:text-2xl font-bold text-brand-blue mb-3 line-clamp-1">
-                                            {port.nama}
-                                        </h3>
+                            return (
+                                <motion.div
+                                    key={port.slug || index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.45, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="group h-full flex flex-col"
+                                >
+                                    <div className="relative h-full bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark flex flex-col overflow-hidden transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark">
+                                        {/* Image Container with Badges */}
+                                        <div className="relative w-full h-52 sm:h-56 md:h-60 border-b-2 border-black dark:border-white overflow-hidden bg-muted">
+                                            {/* Category Sticker */}
+                                            <div className="absolute top-3 right-3 z-10 bg-brand-blue text-black border-2 border-black text-[11px] font-black uppercase px-2.5 py-1 tracking-wider shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                                                {formattedCategory}
+                                            </div>
 
-                                        {/* Divider */}
-                                        <div className="w-12 h-1 bg-black dark:bg-white mb-4 group-hover:w-20 transition-all duration-300"></div>
+                                            {/* Year Sticker */}
+                                            {port.year && (
+                                                <div className="absolute top-3 left-3 z-10 bg-background text-foreground border-2 border-black dark:border-white text-[11px] font-mono font-black px-2 py-0.5 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]">
+                                                    {port.year}
+                                                </div>
+                                            )}
 
-                                        {/* Tech Stack Badges */}
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {port.teknologi.map((tech, i) => {
-                                                const techName = tech.split('/').pop()?.split('.')[0] || 'Tech stack';
-                                                return (
-                                                    <div 
-                                                        key={i} 
-                                                        className="flex items-center justify-center p-1.5 bg-gray-100 dark:bg-slate-800 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
-                                                        title={techName}
-                                                    >
-                                                        <Image src={tech} alt={techName} width={20} height={20} className="w-5 h-5 object-contain" />
-                                                    </div>
-                                                );
-                                            })}
+                                            <Image
+                                                src={port.gambar}
+                                                alt={port.nama}
+                                                fill
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                            />
                                         </div>
 
-                                        {/* Description */}
-                                        <p className='text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-6 line-clamp-3'>
-                                            {port.deskripsi}
-                                        </p>
+                                        {/* Content Area */}
+                                        <div className="p-5 md:p-6 flex flex-col flex-grow">
+                                            {/* Title */}
+                                            <h3 className="text-xl md:text-2xl font-black text-foreground group-hover:text-brand-blue transition-colors line-clamp-1">
+                                                {port.nama}
+                                            </h3>
 
-                                        {/* Action Button */}
-                                        <Link
-                                            href={`/portfolio/${port.slug}`}
-                                            className='inline-flex items-center gap-2 px-5 py-2.5 bg-brand-blue text-black rounded-md border-2 border-black dark:border-white font-bold transition-all duration-300 shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-y-[2px] hover:translate-x-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none'
-                                        >
-                                            <FaInfoCircle className='text-base group-hover:scale-110 transition-transform duration-300' />
-                                            <span>View Details</span>
-                                            <FaArrowRight className='text-sm opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300' />
-                                        </Link>
+                                            {/* Divider */}
+                                            <div className="w-10 h-0.5 bg-black dark:bg-white my-3 group-hover:w-16 transition-all duration-300" />
+
+                                            {/* Description */}
+                                            <p className="text-xs sm:text-sm text-muted-foreground line-clamp-3 leading-relaxed mb-5">
+                                                {port.deskripsi}
+                                            </p>
+
+                                            {/* Tech Stack Badges */}
+                                            <div className="flex flex-wrap items-center gap-1.5 mb-6 mt-auto">
+                                                {port.teknologi.map((tech, i) => {
+                                                    const techName = tech.split("/").pop()?.split(".")[0] || "Tech";
+                                                    const isDarkLogo =
+                                                        tech.includes("nextjs") ||
+                                                        tech.includes("expressjs") ||
+                                                        tech.includes("github");
+
+                                                    return (
+                                                        <div
+                                                            key={i}
+                                                            className={`w-7 h-7 p-1 flex items-center justify-center border border-black dark:border-white shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] ${
+                                                                isDarkLogo ? "bg-white" : "bg-background"
+                                                            }`}
+                                                            title={techName}
+                                                        >
+                                                            <Image
+                                                                src={tech}
+                                                                alt={techName}
+                                                                width={20}
+                                                                height={20}
+                                                                className="w-full h-full object-contain"
+                                                            />
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+
+                                            {/* Action Buttons Row */}
+                                            <div className="flex items-center gap-2 pt-2 border-t border-black/10 dark:border-white/10">
+                                                <Link
+                                                    href={`/portfolio/${port.slug}`}
+                                                    className="flex-1 py-2.5 px-3 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-xs uppercase tracking-wider shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
+                                                >
+                                                    <span>View Details</span>
+                                                    <FaArrowRight className="w-3 h-3" />
+                                                </Link>
+
+                                                {port.link && (
+                                                    <Link
+                                                        href={port.link}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        title="Live Preview"
+                                                        className="p-2.5 bg-background text-foreground border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center justify-center cursor-pointer"
+                                                    >
+                                                        <ArrowUpRight className="w-4 h-4" />
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </motion.div>
-                        ))}
+                                </motion.div>
+                            );
+                        })}
                     </div>
 
-                    {/* More Projects Button */}
+                    {/* Section Footer CTA */}
+                    <div className="flex justify-center">
+                        <Link
+                            href="/portfolio"
+                            className="group px-8 py-4 bg-background text-foreground border-2 border-black dark:border-white font-black text-sm md:text-base uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-3 cursor-pointer"
+                        >
+                            <span>Explore All Projects</span>
+                            <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* 5. Bottom Contact CTA Banner */}
+            <section className="relative w-full py-16 md:py-20 lg:py-24 bg-background">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
+                        transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="flex justify-center items-center"
+                        className="bg-background border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] p-8 sm:p-12 lg:p-16 relative overflow-hidden"
                     >
-                        <Link href={'/portfolio'}>
-                            <Button className="group relative bg-brand-blue text-black px-8 py-4 text-base font-bold border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-300 hover:translate-y-[2px] hover:translate-x-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
-                                More Projects
-                                <FaArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                            </Button>
-                        </Link>
+                        {/* Eyebrow Stamp */}
+                        <div className="inline-block px-3.5 py-1 bg-brand-blue text-black text-xs font-black uppercase tracking-wider border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] mb-4">
+                            Let&apos;s Connect
+                        </div>
+
+                        {/* Title */}
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-foreground leading-[1.1] mb-5 max-w-4xl">
+                            Have A Project In Mind? <span className="text-brand-blue">Let&apos;s Build It Together.</span>
+                        </h2>
+
+                        {/* Description */}
+                        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-8">
+                            Whether you need a scalable fullstack web application, custom backend APIs, database architecture, or have an exciting engineering opportunity, let&apos;s discuss how we can collaborate.
+                        </p>
+
+                        {/* Actions */}
+                        <div className="flex flex-wrap items-center gap-4">
+                            <Link
+                                href="/contact"
+                                className="group px-8 py-4 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-sm md:text-base uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-2 cursor-pointer"
+                            >
+                                <Mail className="w-4 h-4" />
+                                <span>Send Me A Message</span>
+                                <FaArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                            </Link>
+
+                            <Link
+                                href={waLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-4 bg-background text-foreground border-2 border-black dark:border-white font-black text-sm md:text-base uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-2 cursor-pointer"
+                            >
+                                <MessageCircle className="w-4 h-4 text-emerald-500" />
+                                <span>WhatsApp Chat</span>
+                            </Link>
+                        </div>
                     </motion.div>
                 </div>
-            </div>
-            {/* Portfolio Section End */}
-        </>
+            </section>
+        </div>
     );
 }
