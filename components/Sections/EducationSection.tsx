@@ -52,7 +52,7 @@ export default function EducationSection(): React.ReactElement {
                                 </div>
 
                                 {/* Education Card */}
-                                <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
+                                <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8">
                                     <div className="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
                                         {/* Institution Logo */}
                                         {edu.logo && (

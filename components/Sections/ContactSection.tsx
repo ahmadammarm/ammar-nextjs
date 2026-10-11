@@ -124,7 +124,7 @@ export default function ContactSection(): React.JSX.Element {
                         className="lg:col-span-5 space-y-6"
                     >
                         {/* Availability Status Card */}
-                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 md:p-6 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 md:p-6">
                             <div className="flex items-center gap-2.5 pb-3 border-b-2 border-black dark:border-white mb-4">
                                 <span className="w-3 h-3 bg-emerald-500 border border-black dark:border-white animate-pulse" />
                                 <span className="text-xs font-black uppercase tracking-wider text-foreground">
@@ -219,7 +219,7 @@ export default function ContactSection(): React.JSX.Element {
                         </div>
 
                         {/* Social Networks Bar */}
-                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5">
                             <span className="text-xs font-black uppercase tracking-wider text-muted-foreground block mb-3">
                                 Social Networks &amp; Code Repositories
                             </span>
@@ -250,7 +250,7 @@ export default function ContactSection(): React.JSX.Element {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="lg:col-span-7"
                     >
-                        <div className="bg-background border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] p-4 sm:p-6 md:p-8 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-default">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] p-4 sm:p-6 md:p-8">
                             {/* Window Inspector Bar */}
                             <div className="flex items-center justify-between pb-4 mb-6 border-b-2 border-black dark:border-white">
                                 <div className="flex items-center gap-1.5">

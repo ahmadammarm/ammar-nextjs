@@ -46,7 +46,7 @@ export default function AboutSection(): React.ReactElement {
                             <div className="absolute inset-0 bg-brand-blue border-2 border-black dark:border-white translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4" />
 
                             {/* Main Photo Card */}
-                            <div className="relative bg-background border-2 border-black dark:border-white p-3 md:p-4 shadow-neo dark:shadow-neo-dark transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
+                            <div className="relative bg-background border-2 border-black dark:border-white p-3 md:p-4 shadow-neo dark:shadow-neo-dark">
                                 <div className="relative w-full aspect-[4/5] overflow-hidden border-2 border-black dark:border-white bg-muted">
                                     <Image
                                         src={foto}
@@ -80,7 +80,7 @@ export default function AboutSection(): React.ReactElement {
                         viewport={{ once: true }}
                         className="lg:col-span-7"
                     >
-                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 lg:p-10 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 lg:p-10">
                             {/* Greeting */}
                             <div className="mb-6">
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground">
