@@ -42,7 +42,7 @@ export default function StatsSection(): React.ReactElement {
                             className="relative group"
                         >
                             <div
-                                className={`h-full p-6 md:p-8 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark flex flex-col justify-between transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark ${
+                                className={`h-full p-6 md:p-8 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark flex flex-col justify-between transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default ${
                                     stat.featured
                                         ? "bg-brand-blue text-black"
                                         : "bg-background text-foreground"

@@ -85,10 +85,10 @@ export default function PortfolioPage() {
                                     key={tab.key}
                                     type="button"
                                     onClick={() => setActiveCategory(tab.key)}
-                                    className={`px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-black uppercase tracking-wider border-2 border-black dark:border-white transition-all duration-150 flex items-center gap-2 cursor-pointer ${
+                                    className={`px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-black uppercase tracking-wider border-2 border-black dark:border-white transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                                         isActive
                                             ? "bg-brand-blue text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] translate-x-[2px] translate-y-[2px]"
-                                            : "bg-background text-foreground shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-muted"
+                                            : "bg-background text-foreground shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark"
                                     }`}
                                 >
                                     <span
@@ -134,7 +134,7 @@ export default function PortfolioPage() {
                                         transition={{ duration: 0.35, delay: (index % 6) * 0.05 }}
                                         className="group h-full flex flex-col"
                                     >
-                                        <div className="relative h-full bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark flex flex-col overflow-hidden transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark">
+                                        <div className="relative h-full bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark flex flex-col overflow-hidden transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                                             {/* Image Container with Badges */}
                                             <div className="relative w-full h-52 sm:h-56 md:h-60 border-b-2 border-black dark:border-white overflow-hidden bg-muted">
                                                 {/* Category Sticker */}
@@ -207,7 +207,7 @@ export default function PortfolioPage() {
                                                 <div className="flex items-center gap-2 pt-2 border-t border-black/10 dark:border-white/10">
                                                     <Link
                                                         href={`/portfolio/${port.slug}`}
-                                                        className="flex-1 py-2.5 px-3 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-xs uppercase tracking-wider shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
+                                                        className="flex-1 py-2.5 px-3 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-xs uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer text-center"
                                                     >
                                                         <span>View Details</span>
                                                         <FaArrowRight className="w-3 h-3" />
@@ -219,7 +219,7 @@ export default function PortfolioPage() {
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             title="Live Preview"
-                                                            className="p-2.5 bg-background text-foreground border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center justify-center cursor-pointer"
+                                                            className="p-2.5 bg-background text-foreground border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 flex items-center justify-center cursor-pointer"
                                                         >
                                                             <ArrowUpRight className="w-4 h-4" />
                                                         </Link>
@@ -231,7 +231,7 @@ export default function PortfolioPage() {
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             title="Source Code"
-                                                            className="p-2.5 bg-background text-foreground border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center justify-center cursor-pointer"
+                                                            className="p-2.5 bg-background text-foreground border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 flex items-center justify-center cursor-pointer"
                                                         >
                                                             <FaGithub className="w-4 h-4" />
                                                         </Link>

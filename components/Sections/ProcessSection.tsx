@@ -33,7 +33,7 @@ const ProcessSection = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="relative"
                         >
-                            <div className="h-full p-6 bg-white dark:bg-zinc-900 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark flex flex-col items-start rounded-md transform transition-all duration-300 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark">
+                            <div className="h-full p-6 bg-white dark:bg-zinc-900 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark flex flex-col items-start rounded-md transform transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                                 <div className="flex items-center justify-center w-12 h-12 mb-6 bg-brand-blue border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark font-black text-xl">
                                     {index + 1}
                                 </div>

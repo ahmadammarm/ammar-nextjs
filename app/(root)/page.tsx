@@ -102,7 +102,7 @@ export default function Home() {
                             <div>
                                 <Link
                                     href="/about"
-                                    className="group px-6 py-3.5 bg-background text-foreground border-2 border-black dark:border-white font-black text-xs md:text-sm uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-2 cursor-pointer"
+                                    className="group px-6 py-3.5 bg-background text-foreground border-2 border-black dark:border-white font-black text-xs md:text-sm uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 inline-flex items-center gap-2 cursor-pointer"
                                 >
                                     <span>Read Full Story &amp; Skills</span>
                                     <FaArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -121,7 +121,7 @@ export default function Home() {
                             {stats.map((stat, index) => (
                                 <div
                                     key={index}
-                                    className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 md:p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark"
+                                    className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 md:p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default"
                                 >
                                     <span className="text-4xl md:text-5xl font-black text-foreground tracking-tight">
                                         {stat.number}
@@ -180,7 +180,7 @@ export default function Home() {
                                     viewport={{ once: true }}
                                     className="group h-full flex flex-col"
                                 >
-                                    <div className="relative h-full bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark flex flex-col overflow-hidden transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark">
+                                    <div className="relative h-full bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark flex flex-col overflow-hidden transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                                         {/* Image Container with Badges */}
                                         <div className="relative w-full h-52 sm:h-56 md:h-60 border-b-2 border-black dark:border-white overflow-hidden bg-muted">
                                             {/* Category Sticker */}
@@ -252,10 +252,10 @@ export default function Home() {
                                             <div className="flex items-center gap-2 pt-2 border-t border-black/10 dark:border-white/10">
                                                 <Link
                                                     href={`/portfolio/${port.slug}`}
-                                                    className="flex-1 py-2.5 px-3 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-xs uppercase tracking-wider shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
+                                                    className="flex-1 py-2.5 px-3 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-xs uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer text-center"
                                                 >
                                                     <span>View Details</span>
-                                                    <FaArrowRight className="w-3 h-3" />
+                                                    <FaArrowRight className="w-3.5 h-3.5" />
                                                 </Link>
 
                                                 {port.link && (
@@ -264,7 +264,7 @@ export default function Home() {
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         title="Live Preview"
-                                                        className="p-2.5 bg-background text-foreground border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center justify-center cursor-pointer"
+                                                        className="p-2.5 bg-background text-foreground border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 flex items-center justify-center cursor-pointer"
                                                     >
                                                         <ArrowUpRight className="w-4 h-4" />
                                                     </Link>
@@ -281,7 +281,7 @@ export default function Home() {
                     <div className="flex justify-center">
                         <Link
                             href="/portfolio"
-                            className="group px-8 py-4 bg-background text-foreground border-2 border-black dark:border-white font-black text-sm md:text-base uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-3 cursor-pointer"
+                            className="group px-8 py-4 bg-background text-foreground border-2 border-black dark:border-white font-black text-sm md:text-base uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 inline-flex items-center gap-3 cursor-pointer"
                         >
                             <span>Explore All Projects</span>
                             <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -298,7 +298,7 @@ export default function Home() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="bg-background border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] p-8 sm:p-12 lg:p-16 relative overflow-hidden"
+                        className="bg-background border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] p-8 sm:p-12 lg:p-16 relative overflow-hidden transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-default"
                     >
                         {/* Eyebrow Stamp */}
                         <div className="inline-block px-3.5 py-1 bg-brand-blue text-black text-xs font-black uppercase tracking-wider border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] mb-4">
@@ -319,7 +319,7 @@ export default function Home() {
                         <div className="flex flex-wrap items-center gap-4">
                             <Link
                                 href="/contact"
-                                className="group px-8 py-4 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-sm md:text-base uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-2 cursor-pointer"
+                                className="group px-8 py-4 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-sm md:text-base uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 inline-flex items-center gap-2 cursor-pointer"
                             >
                                 <Mail className="w-4 h-4" />
                                 <span>Send Me A Message</span>
@@ -330,7 +330,7 @@ export default function Home() {
                                 href={waLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-6 py-4 bg-background text-foreground border-2 border-black dark:border-white font-black text-sm md:text-base uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-2 cursor-pointer"
+                                className="px-6 py-4 bg-background text-foreground border-2 border-black dark:border-white font-black text-sm md:text-base uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 inline-flex items-center gap-2 cursor-pointer"
                             >
                                 <MessageCircle className="w-4 h-4 text-emerald-500" />
                                 <span>WhatsApp Chat</span>

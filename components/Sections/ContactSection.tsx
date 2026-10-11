@@ -124,7 +124,7 @@ export default function ContactSection(): React.JSX.Element {
                         className="lg:col-span-5 space-y-6"
                     >
                         {/* Availability Status Card */}
-                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 md:p-6">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 md:p-6 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                             <div className="flex items-center gap-2.5 pb-3 border-b-2 border-black dark:border-white mb-4">
                                 <span className="w-3 h-3 bg-emerald-500 border border-black dark:border-white animate-pulse" />
                                 <span className="text-xs font-black uppercase tracking-wider text-foreground">
@@ -162,7 +162,7 @@ export default function ContactSection(): React.JSX.Element {
                                 return (
                                     <div
                                         key={index}
-                                        className="group relative bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-4 sm:p-5 flex items-center justify-between gap-4 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark"
+                                        className="group relative bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-4 sm:p-5 flex items-center justify-between gap-4 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default"
                                     >
                                         {/* Icon & Details */}
                                         <div className="flex items-center gap-4 min-w-0">
@@ -191,7 +191,7 @@ export default function ContactSection(): React.JSX.Element {
                                             <button
                                                 type="button"
                                                 onClick={(e) => copyToClipboard(item.detail, index, e)}
-                                                className="p-2 bg-background border-2 border-black dark:border-white shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[1px] active:translate-y-[1px] transition-all cursor-pointer"
+                                                className="p-2 bg-background border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 cursor-pointer"
                                                 title="Copy to clipboard"
                                                 aria-label={`Copy ${item.nama}`}
                                             >
@@ -206,7 +206,7 @@ export default function ContactSection(): React.JSX.Element {
                                                 href={item.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="p-2 bg-brand-blue text-black border-2 border-black dark:border-white shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[1px] active:translate-y-[1px] transition-all cursor-pointer"
+                                                className="p-2 bg-brand-blue text-black border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 cursor-pointer"
                                                 title={`Open ${item.nama}`}
                                                 aria-label={`Open ${item.nama}`}
                                             >
@@ -219,7 +219,7 @@ export default function ContactSection(): React.JSX.Element {
                         </div>
 
                         {/* Social Networks Bar */}
-                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                             <span className="text-xs font-black uppercase tracking-wider text-muted-foreground block mb-3">
                                 Social Networks &amp; Code Repositories
                             </span>
@@ -232,7 +232,7 @@ export default function ContactSection(): React.JSX.Element {
                                             href={item.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="w-11 h-11 bg-background text-foreground border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] hover:bg-brand-blue hover:text-black transition-all flex items-center justify-center cursor-pointer"
+                                            className="w-11 h-11 bg-background text-foreground border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 flex items-center justify-center cursor-pointer"
                                             aria-label="Social Link"
                                         >
                                             <Icon className="w-5 h-5" />
@@ -250,7 +250,7 @@ export default function ContactSection(): React.JSX.Element {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="lg:col-span-7"
                     >
-                        <div className="bg-background border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] p-4 sm:p-6 md:p-8">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] p-4 sm:p-6 md:p-8 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-default">
                             {/* Window Inspector Bar */}
                             <div className="flex items-center justify-between pb-4 mb-6 border-b-2 border-black dark:border-white">
                                 <div className="flex items-center gap-1.5">
@@ -339,7 +339,7 @@ export default function ContactSection(): React.JSX.Element {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full py-4 px-6 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-sm uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2.5 cursor-pointer"
+                                    className="w-full py-4 px-6 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-sm uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2.5 cursor-pointer"
                                 >
                                     {isSubmitting ? (
                                         <span>Dispatching Transmission...</span>

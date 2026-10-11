@@ -35,7 +35,7 @@ export default function ServicesPage() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: idx * 0.1 }}
-                        className="bg-background border-4 border-black dark:border-white p-8 shadow-neo dark:shadow-neo-dark flex flex-col h-full"
+                        className="bg-background border-4 border-black dark:border-white p-8 shadow-neo dark:shadow-neo-dark flex flex-col h-full transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default"
                     >
                         <div className="bg-brand-blue p-4 border-2 border-black inline-block mb-6 shadow-neo-sm">
                             {icons[service.icon]}
@@ -52,11 +52,11 @@ export default function ServicesPage() {
                                 </li>
                             ))}
                         </ul>
-                        <a 
+                        <a
                             href={`${baseWhatsappUrl}?text=${encodeURIComponent(service.whatsappMessage)}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-brand-blue text-black font-bold py-4 px-6 border-2 border-black shadow-neo hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-2"
+                            className="bg-brand-blue text-black font-bold py-4 px-6 border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
                         >
                             <MessageCircle className="w-5 h-5" />
                             Book Now

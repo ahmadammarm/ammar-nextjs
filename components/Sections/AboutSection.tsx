@@ -46,7 +46,7 @@ export default function AboutSection(): React.ReactElement {
                             <div className="absolute inset-0 bg-brand-blue border-2 border-black dark:border-white translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4" />
 
                             {/* Main Photo Card */}
-                            <div className="relative bg-background border-2 border-black dark:border-white p-3 md:p-4 shadow-neo dark:shadow-neo-dark">
+                            <div className="relative bg-background border-2 border-black dark:border-white p-3 md:p-4 shadow-neo dark:shadow-neo-dark transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                                 <div className="relative w-full aspect-[4/5] overflow-hidden border-2 border-black dark:border-white bg-muted">
                                     <Image
                                         src={foto}
@@ -80,7 +80,7 @@ export default function AboutSection(): React.ReactElement {
                         viewport={{ once: true }}
                         className="lg:col-span-7"
                     >
-                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 lg:p-10">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 lg:p-10 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                             {/* Greeting */}
                             <div className="mb-6">
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground">
@@ -102,7 +102,7 @@ export default function AboutSection(): React.ReactElement {
 
                             {/* Key Highlights Grid */}
                             <div className="grid grid-cols-2 gap-3 mt-6 pt-6 border-t-2 border-black dark:border-white">
-                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white">
+                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] cursor-default">
                                     <p className="text-xs font-bold text-muted-foreground uppercase">
                                         Location
                                     </p>
@@ -110,7 +110,7 @@ export default function AboutSection(): React.ReactElement {
                                         {negara}, ID
                                     </p>
                                 </div>
-                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white">
+                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] cursor-default">
                                     <p className="text-xs font-bold text-muted-foreground uppercase">
                                         Education
                                     </p>
@@ -118,7 +118,7 @@ export default function AboutSection(): React.ReactElement {
                                         Informatics Eng. UM
                                     </p>
                                 </div>
-                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white">
+                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] cursor-default">
                                     <p className="text-xs font-bold text-muted-foreground uppercase">
                                         Core Stack
                                     </p>
@@ -126,7 +126,7 @@ export default function AboutSection(): React.ReactElement {
                                         Next.js, Laravel, Go
                                     </p>
                                 </div>
-                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white">
+                                <div className="p-3 bg-muted/40 border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] cursor-default">
                                     <p className="text-xs font-bold text-muted-foreground uppercase">
                                         Specialization
                                     </p>
@@ -142,7 +142,7 @@ export default function AboutSection(): React.ReactElement {
                                     href={CV}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-brand-blue text-black font-bold text-base border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-200"
+                                    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-brand-blue text-black font-bold text-base border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 cursor-pointer"
                                 >
                                     <Download className="w-4 h-4" />
                                     <span>Download Resume</span>
@@ -150,7 +150,7 @@ export default function AboutSection(): React.ReactElement {
 
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-background text-foreground font-bold text-base border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-200"
+                                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-background text-foreground font-bold text-base border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 cursor-pointer"
                                 >
                                     <span>Contact Me</span>
                                     <ArrowRight className="w-3.5 h-3.5" />

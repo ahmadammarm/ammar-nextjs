@@ -52,10 +52,10 @@ export default function Navbar() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`px-4 py-2 text-sm font-black uppercase tracking-wider border-2 transition-all duration-150 ${
+                                className={`px-4 py-2 text-sm font-black uppercase tracking-wider border-2 transition-all duration-200 cursor-pointer ${
                                     isActivePath(item.href)
-                                        ? 'bg-brand-blue text-black border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] translate-x-[1px] translate-y-[1px]'
-                                        : 'bg-background text-foreground border-transparent hover:border-black dark:hover:border-white hover:bg-muted'
+                                        ? 'bg-brand-blue text-black border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] translate-x-[2px] translate-y-[2px]'
+                                        : 'bg-background text-foreground border-transparent hover:border-black dark:hover:border-white hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo dark:hover:shadow-neo-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark'
                                 }`}
                             >
                                 {item.label}
@@ -74,7 +74,7 @@ export default function Navbar() {
                             size="icon"
                             onClick={() => setIsOpen(!isOpen)}
                             aria-label="Toggle menu"
-                            className="border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] rounded-none bg-background text-foreground hover:bg-muted"
+                            className="border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 rounded-none bg-background text-foreground"
                         >
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                         </Button>
@@ -90,10 +90,10 @@ export default function Navbar() {
                             key={item.href}
                             href={item.href}
                             onClick={() => setIsOpen(false)}
-                            className={`block px-4 py-3 text-sm font-black uppercase tracking-wider border-2 transition-all ${
+                            className={`block px-4 py-3 text-sm font-black uppercase tracking-wider border-2 transition-all duration-200 cursor-pointer ${
                                 isActivePath(item.href)
-                                    ? 'bg-brand-blue text-black border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
-                                    : 'bg-background text-foreground border-black dark:border-white hover:bg-muted'
+                                    ? 'bg-brand-blue text-black border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] translate-x-[2px] translate-y-[2px]'
+                                    : 'bg-background text-foreground border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark'
                             }`}
                         >
                             {item.label}

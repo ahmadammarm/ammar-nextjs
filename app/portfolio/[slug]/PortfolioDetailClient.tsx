@@ -88,7 +88,7 @@ export default function PortfolioDetailClient() {
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-10 pb-6 border-b-2 border-black dark:border-white">
                     <Link
                         href="/portfolio"
-                        className="px-4 py-2 bg-background text-foreground border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-2 font-black text-xs uppercase tracking-wider cursor-pointer"
+                        className="px-4 py-2 bg-background text-foreground border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 inline-flex items-center gap-2 font-black text-xs uppercase tracking-wider cursor-pointer"
                     >
                         <ArrowLeft className="w-4 h-4" />
                         <span>Back to Projects</span>
@@ -121,7 +121,7 @@ export default function PortfolioDetailClient() {
                                 href={portfolio.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group px-7 py-3.5 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-sm uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-2 cursor-pointer"
+                                className="group px-7 py-3.5 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-sm uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 inline-flex items-center gap-2 cursor-pointer"
                             >
                                 <span>Live Demo</span>
                                 <ExternalLink className="w-4 h-4" />
@@ -133,7 +133,7 @@ export default function PortfolioDetailClient() {
                                 href={portfolio.source}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group px-7 py-3.5 bg-background text-foreground border-2 border-black dark:border-white font-black text-sm uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all inline-flex items-center gap-2 cursor-pointer"
+                                className="group px-7 py-3.5 bg-background text-foreground border-2 border-black dark:border-white font-black text-sm uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 inline-flex items-center gap-2 cursor-pointer"
                             >
                                 <Github className="w-4 h-4" />
                                 <span>Source Code</span>
@@ -219,10 +219,10 @@ export default function PortfolioDetailClient() {
                                         key={index}
                                         type="button"
                                         onClick={() => setActiveImage(index)}
-                                        className={`relative w-20 h-14 sm:w-28 sm:h-20 border-2 overflow-hidden transition-all cursor-pointer ${
+                                        className={`relative w-20 h-14 sm:w-28 sm:h-20 border-2 overflow-hidden transition-all duration-200 cursor-pointer ${
                                             isActive
-                                                ? "border-brand-blue shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] translate-x-[2px] translate-y-[2px]"
-                                                : "border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 opacity-75 hover:opacity-100"
+                                                ? "border-brand-blue shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] translate-x-[2px] translate-y-[2px]"
+                                                : "border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] opacity-75 hover:opacity-100"
                                         }`}
                                     >
                                         <Image
@@ -255,7 +255,7 @@ export default function PortfolioDetailClient() {
                                 {portfolio.features.map((feature: string, index: number) => (
                                     <div
                                         key={index}
-                                        className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 flex items-start gap-4 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark"
+                                        className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-5 flex items-start gap-4 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default"
                                     >
                                         <div className="w-8 h-8 flex-shrink-0 bg-brand-blue text-black border-2 border-black font-black text-xs flex items-center justify-center shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
                                             {index + 1}
@@ -301,7 +301,7 @@ export default function PortfolioDetailClient() {
                                     return (
                                         <div
                                             key={index}
-                                            className="flex items-center gap-3 p-3 bg-background border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all"
+                                            className="flex items-center gap-3 p-3 bg-background border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 cursor-default"
                                         >
                                             <div
                                                 className={`w-7 h-7 p-1 flex items-center justify-center border border-black dark:border-white shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] ${
@@ -326,7 +326,7 @@ export default function PortfolioDetailClient() {
                         </div>
 
                         {/* CTA Box */}
-                        <div className="bg-background border-2 border-black dark:border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] p-6 md:p-8">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] p-6 md:p-8 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] cursor-default">
                             <div className="inline-block px-3 py-1 bg-brand-blue text-black border-2 border-black dark:border-white text-xs font-black uppercase tracking-wider shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-3">
                                 Collaborate
                             </div>
@@ -338,7 +338,7 @@ export default function PortfolioDetailClient() {
                             </p>
                             <Link
                                 href="/contact"
-                                className="w-full py-3.5 px-4 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-xs uppercase tracking-wider shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                                className="w-full py-3.5 px-4 bg-brand-blue text-black border-2 border-black dark:border-white font-black text-xs uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
                             >
                                 <span>Get In Touch</span>
                             </Link>

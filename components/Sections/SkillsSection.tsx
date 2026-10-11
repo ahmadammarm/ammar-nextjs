@@ -18,7 +18,7 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, delay: index * 0.03 }}
             viewport={{ once: true }}
-            className="group bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-4 md:p-5 flex flex-col items-center justify-center transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark"
+            className="group bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-4 md:p-5 flex flex-col items-center justify-center transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default"
         >
             {/* Logo Container */}
             <div
@@ -74,7 +74,7 @@ export default function SkillsSection(): React.ReactElement {
                 {/* Categorized Skills Grids */}
                 <div className="space-y-10 md:space-y-12">
                     {/* Category 1: Frameworks & Languages (Tab Filter) */}
-                    <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8">
+                    <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-5 border-b-2 border-black dark:border-white">
                             <div>
                                 <h3 className="text-xl md:text-2xl font-black text-foreground">
@@ -92,10 +92,10 @@ export default function SkillsSection(): React.ReactElement {
                                 <button
                                     type="button"
                                     onClick={() => setActiveTab("frontend")}
-                                    className={`px-5 py-2.5 text-xs md:text-sm font-black uppercase tracking-wider border-2 border-black dark:border-white transition-all duration-150 flex items-center gap-2 cursor-pointer ${
+                                    className={`px-5 py-2.5 text-xs md:text-sm font-black uppercase tracking-wider border-2 border-black dark:border-white transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                                         activeTab === "frontend"
                                             ? "bg-brand-blue text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] translate-x-[2px] translate-y-[2px]"
-                                            : "bg-background text-foreground shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-muted"
+                                            : "bg-background text-foreground shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark"
                                     }`}
                                 >
                                     <span
@@ -109,10 +109,10 @@ export default function SkillsSection(): React.ReactElement {
                                 <button
                                     type="button"
                                     onClick={() => setActiveTab("backend")}
-                                    className={`px-5 py-2.5 text-xs md:text-sm font-black uppercase tracking-wider border-2 border-black dark:border-white transition-all duration-150 flex items-center gap-2 cursor-pointer ${
+                                    className={`px-5 py-2.5 text-xs md:text-sm font-black uppercase tracking-wider border-2 border-black dark:border-white transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                                         activeTab === "backend"
                                             ? "bg-brand-blue text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] translate-x-[2px] translate-y-[2px]"
-                                            : "bg-background text-foreground shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-muted"
+                                            : "bg-background text-foreground shadow-neo dark:shadow-neo-dark hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark"
                                     }`}
                                 >
                                     <span
@@ -145,7 +145,7 @@ export default function SkillsSection(): React.ReactElement {
                     {/* Category 2 & 3: AI Integration & Tools */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* AI & Machine Learning */}
-                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 flex flex-col justify-between">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 flex flex-col justify-between transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                             <div>
                                 <div className="mb-6 pb-4 border-b-2 border-black dark:border-white">
                                     <h3 className="text-xl md:text-2xl font-black text-foreground">
@@ -165,7 +165,7 @@ export default function SkillsSection(): React.ReactElement {
                         </div>
 
                         {/* Tools */}
-                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 flex flex-col justify-between">
+                        <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 flex flex-col justify-between transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                             <div>
                                 <div className="mb-6 pb-4 border-b-2 border-black dark:border-white">
                                     <h3 className="text-xl md:text-2xl font-black text-foreground">

@@ -52,7 +52,7 @@ export default function ExperiencesSection(): React.ReactElement {
                                 </div>
 
                                 {/* Experience Card */}
-                                <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark">
+                                <div className="bg-background border-2 border-black dark:border-white shadow-neo dark:shadow-neo-dark p-6 md:p-8 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-hover dark:hover:shadow-neo-hover-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-active dark:active:shadow-neo-active-dark cursor-default">
                                     {/* Header Row */}
                                     <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-5 pb-5 border-b-2 border-black dark:border-white">
                                         <div className="flex items-start gap-4">

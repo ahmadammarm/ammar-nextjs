@@ -59,6 +59,8 @@ const config = {
         "neo-hover": "6px 6px 0px 0px rgba(0,0,0,1)",
         "neo-dark": "4px 4px 0px 0px rgba(255,255,255,1)",
         "neo-hover-dark": "6px 6px 0px 0px rgba(255,255,255,1)",
+        "neo-active": "2px 2px 0px 0px rgba(0,0,0,1)",
+        "neo-active-dark": "2px 2px 0px 0px rgba(255,255,255,1)",
       },
       borderRadius: {
         lg: "var(--radius)",
