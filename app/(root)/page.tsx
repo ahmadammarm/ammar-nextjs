@@ -8,11 +8,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { Mail, MessageCircle, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, MessageCircle, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
-    const { deskripsi, negara } = about[0];
+    const { deskripsi } = about[0];
     const whatsappContact = contact.find((c) => c.nama === "WhatsApp");
     const waLink = whatsappContact ? whatsappContact.link : "https://wa.me/6281217952403";
 
@@ -95,17 +95,9 @@ export default function Home() {
                                 Engineering <span className="text-brand-blue">Reliable</span> Web Systems
                             </h2>
 
-                            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+                            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
                                 {deskripsi}
                             </p>
-
-                            {/* Info Stickers */}
-                            <div className="flex flex-wrap gap-2.5 mb-8">
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-muted border-2 border-black dark:border-white text-xs font-black uppercase tracking-wider text-foreground shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)]">
-                                    <MapPin className="w-3.5 h-3.5 text-brand-blue" />
-                                    {negara}, Indonesia
-                                </span>
-                            </div>
 
                             <div>
                                 <Link
