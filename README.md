@@ -1,6 +1,6 @@
 # Ammar Next.js Portfolio
 
-Website portofolio personal untuk Ahmad Ammar Musyaffa, seorang fullstack developer dengan ketertarikan pada integrasi AI. Proyek ini dibangun dengan Next.js App Router, TypeScript, Tailwind CSS, serta komponen UI berbasis Radix (shadcn/ui).
+Website portofolio personal untuk Ahmad Ammar Musyaffa, seorang fullstack developer dengan ketertarikan pada integrasi AI. Proyek ini dibangun dengan Next.js App Router, TypeScript, dan Tailwind CSS dengan gaya visual Neobrutalism.
 
 ## Daftar Isi
 
@@ -8,6 +8,8 @@ Website portofolio personal untuk Ahmad Ammar Musyaffa, seorang fullstack develo
 - [Fitur Utama](#fitur-utama)
 - [Tech Stack](#tech-stack)
 - [Struktur Direktori](#struktur-direktori)
+- [Konvensi Kode](#konvensi-kode)
+- [Mengelola Konten](#mengelola-konten)
 - [Setup dan Menjalankan Proyek](#setup-dan-menjalankan-proyek)
 - [Scripts yang Tersedia](#scripts-yang-tersedia)
 - [Implementasi SEO](#implementasi-seo)
@@ -18,23 +20,25 @@ Website portofolio personal untuk Ahmad Ammar Musyaffa, seorang fullstack develo
 
 Website ini menampilkan:
 
-- halaman utama dengan section profil, pengalaman, skill, dan kontak,
-- halaman About,
-- halaman Contact,
-- halaman Portfolio dengan daftar project,
-- halaman detail project dinamis per slug (`/portfolio/[slug]`).
+- halaman utama (hero, ringkasan profil, statistik, project unggulan, dan ajakan kontak),
+- halaman About (profil, statistik, pengalaman kerja, pendidikan, dan skill),
+- halaman Portfolio dengan filter kategori dan infinite scroll,
+- halaman detail project per slug (`/portfolio/[slug]`) yang di-render statis saat build,
+- halaman Services dengan tombol pemesanan via WhatsApp,
+- halaman Contact dengan form yang divalidasi.
 
-Konten utama dikelola secara data-driven melalui folder `constants/`, sehingga pembaruan konten bisa dilakukan tanpa mengubah banyak komponen UI.
+Konten dikelola secara data-driven melalui folder `constants/`, sehingga pembaruan konten tidak perlu mengubah komponen UI.
 
 ## Fitur Utama
 
-- App Router (Next.js 14) dengan route group dan dynamic route.
-- Dark mode menggunakan `next-themes`.
-- UI reusable dengan shadcn/ui + Radix UI primitives.
-- Animasi menggunakan Framer Motion.
-- Validasi form dengan React Hook Form + Zod.
-- SEO on-page menggunakan Metadata API Next.js.
-- Sitemap dan robots.txt otomatis via `next-sitemap` pada proses build.
+- App Router (Next.js 14) dengan route group dan dynamic route yang di-generate statis (`generateStaticParams`).
+- Komponen server-first: hanya bagian interaktif yang menjadi client component.
+- Dark mode menggunakan `next-themes` dengan transisi lingkaran (View Transitions API).
+- Animasi masuk menggunakan Framer Motion melalui wrapper `Reveal`.
+- Form kontak dengan React Hook Form + Zod.
+- SEO on-page menggunakan Metadata API Next.js dan JSON-LD.
+- Sitemap, robots.txt, dan web manifest bawaan Next.js (`app/sitemap.ts`, `app/robots.ts`, `app/manifest.ts`).
+- TypeScript strict tanpa `any`, `unknown`, maupun non-null assertion (ditegakkan oleh ESLint).
 
 ## Tech Stack
 
@@ -47,8 +51,8 @@ Konten utama dikelola secara data-driven melalui folder `constants/`, sehingga p
 ### UI dan Styling
 
 - Tailwind CSS
-- shadcn/ui (komponen di `components/ui/`)
-- Radix UI primitives
+- shadcn/ui (hanya `button`, `toast`, dan `toaster` di `components/ui/`)
+- class-variance-authority
 - Framer Motion
 - Lucide React + React Icons
 
@@ -57,41 +61,85 @@ Konten utama dikelola secara data-driven melalui folder `constants/`, sehingga p
 - React Hook Form
 - Zod
 
-### SEO dan Utility
+### Utility
 
-- Next.js Metadata API
-- next-sitemap
 - clsx + tailwind-merge
+- react-infinite-scroll-component
 
 ### Package Manager
 
-- pnpm (direkomendasikan, karena proyek menyertakan `pnpm-lock.yaml`)
+- pnpm (proyek hanya menyertakan `pnpm-lock.yaml`)
 
 ## Struktur Direktori
 
-Berikut struktur inti yang paling sering digunakan:
-
 ```text
-app/
-	layout.tsx                 # Root layout + metadata global
-	globals.css                # Global styles + CSS variables
-	(root)/page.tsx            # Home page
-	about/                     # About page
-	contact/                   # Contact page
-	portfolio/
-		page.tsx                 # Portfolio listing
-		[slug]/page.tsx          # Dynamic detail page + dynamic metadata
+app/                        # Hanya route: metadata + komposisi komponen
+  layout.tsx                # Root layout: ThemeProvider, Navbar, Footer, Toaster, JSON-LD global
+  template.tsx              # Transisi fade-in antar halaman
+  globals.css               # Layer Tailwind, CSS variables, utility class neo-*
+  sitemap.ts, robots.ts, manifest.ts
+  (root)/page.tsx           # Home
+  about/page.tsx
+  contact/page.tsx
+  services/page.tsx
+  portfolio/page.tsx
+  portfolio/[slug]/page.tsx # generateStaticParams + generateMetadata
 
 components/
-	Sections/                  # Section komponen untuk halaman utama
-	ui/                        # shadcn/ui components
-	Navbar.tsx
-	Footer.tsx
+  home/                     # Section halaman utama
+  about/                    # Section halaman About
+  portfolio/                # Daftar dan detail project
+  contact/                  # Form dan kartu kontak
+  services/                 # Kartu layanan
+  layout/                   # Navbar, Footer, ModeToggle, ThemeProvider, SocialLinks
+  shared/                   # Komponen reusable (SectionHeading, ProjectCard, TechIcon, WindowFrame, dll)
+  motion/Reveal.tsx         # Wrapper animasi masuk (client)
+  seo/JsonLd.tsx            # Render schema JSON-LD
+  ui/                       # Primitive shadcn/ui
 
-constants/                   # Sumber data konten (portfolio, profile, skills, dll)
-types/                       # Type definitions untuk data constants
-public/                      # Asset publik + output sitemap/robots
+constants/                  # Sumber data konten
+types/                      # Tipe untuk data di constants
+lib/                        # Helper: seo, motion, portfolio, contact, theme transition, cn()
+hooks/                      # use-toast, use-incremental-list
+public/                     # Asset statis
 ```
+
+## Konvensi Kode
+
+- `page.tsx` hanya mengekspor `metadata` dan menyusun komponen. UI ditaruh di `components/<fitur>/`, komponen yang dipakai ulang di `components/shared/`, dan logika di `lib/` atau `hooks/`.
+- Komponen default-nya Server Component. Tambahkan `"use client"` hanya jika butuh state, effect, atau event handler. Untuk animasi masuk, bungkus konten dengan `<Reveal>` agar section tetap di server.
+- Tombol dan link CTA memakai `neoButton({ tone })` dari `components/shared/neo-button.ts`.
+- Gaya Neobrutalism memakai utility class `neo-border`, `neo-shadow`, `neo-press`, dan `neo-pressed` di `app/globals.css`, serta token shadow di `tailwind.config.ts`.
+- Import tipe memakai `import { type X }`. Gunakan `catch {}` tanpa variabel error.
+
+## Mengelola Konten
+
+Semua konten berada di `constants/`:
+
+| File | Isi |
+| --- | --- |
+| `site.ts` | URL situs, nama, author, gambar OG, endpoint form kontak |
+| `profile.ts` | Nama, bio, foto, CV, dan highlight profil |
+| `portfolio.ts` | Daftar project (urutan terbaru di atas) dan kategori |
+| `experiences.ts` | Pengalaman kerja |
+| `education.ts` | Riwayat pendidikan |
+| `skills.ts` | Kelompok skill (frontend, backend, AI, tools) |
+| `tech.ts` | Registry teknologi: nama dan logo per `TechId` |
+| `services.ts` | Paket layanan |
+| `contact.ts` | Email, WhatsApp, channel kontak, ketersediaan |
+| `socials.ts` | Link media sosial |
+| `stats.ts` | Statistik di Home dan About |
+| `navigation.ts` | Menu navbar |
+| `home.ts` | Teks marquee dan tech pill di hero |
+
+Contoh menambah project baru:
+
+1. Simpan gambar di `public/assets/portfolios/<slug>/`.
+2. Tambahkan objek baru di bagian atas array `portfolio` di `constants/portfolio.ts`.
+3. Isi `technologies` dengan ID dari `constants/tech.ts` (misalnya `"nextjs"`, `"postgresql"`). Jika teknologinya belum ada, tambahkan dulu ke registry tersebut.
+4. Tambahkan `featured: true` jika project ingin tampil di halaman utama.
+
+Halaman detail, sitemap, dan metadata project akan ikut ter-generate otomatis.
 
 ## Setup dan Menjalankan Proyek
 
@@ -112,19 +160,14 @@ pnpm install
 pnpm dev
 ```
 
-Website akan berjalan di:
-
-```text
-http://localhost:3000
-```
+Website akan berjalan di `http://localhost:3000`.
 
 ## Scripts yang Tersedia
 
 - `pnpm dev`: Menjalankan server development.
-- `pnpm build`: Build production Next.js.
+- `pnpm build`: Build production Next.js, termasuk pre-render semua halaman detail project.
 - `pnpm start`: Menjalankan hasil build production.
 - `pnpm lint`: Menjalankan ESLint.
-- `pnpm postbuild`: Menjalankan `next-sitemap` (otomatis setelah `pnpm build`).
 
 Contoh alur production lokal:
 
@@ -135,76 +178,53 @@ pnpm start
 
 ## Implementasi SEO
 
-Implementasi SEO pada proyek ini menggunakan kombinasi Metadata API Next.js dan `next-sitemap`.
+### 1. Metadata Global
 
-### 1. Metadata Global (Root Layout)
-
-Di `app/layout.tsx`, metadata global sudah dikonfigurasi, mencakup:
-
-- `metadataBase`
-- `title`, `description`, `keywords`
-- `authors`, `creator`
-- `robots` dan `googleBot`
-- Open Graph (`openGraph`)
-- Twitter Card (`twitter`)
-- canonical URL (`alternates.canonical`)
-- favicon/icons (`icons`)
-
-Dengan pendekatan ini, halaman memiliki baseline SEO yang konsisten secara site-wide.
+`app/layout.tsx` mengatur metadata dasar untuk seluruh situs: `metadataBase`, template title, description, keywords, authors, robots, Open Graph, Twitter Card, canonical URL, dan icons. Nilai seperti domain, nama author, dan gambar OG diambil dari `constants/site.ts`.
 
 ### 2. Metadata Per Halaman
 
-Route `about`, `contact`, dan `portfolio` masing-masing memiliki metadata spesifik di:
+Setiap route mengekspor `metadata` langsung dari `page.tsx` menggunakan helper `createPageMetadata` di `lib/seo.ts`:
 
-- `app/about/layout.tsx`
-- `app/contact/layout.tsx`
-- `app/portfolio/layout.tsx`
+```ts
+export const metadata = createPageMetadata({
+    title: "About",
+    path: "/about",
+    description: "...",
+    keywords: ["..."],
+});
+```
 
-Manfaatnya:
+Helper ini otomatis mengisi Open Graph (judul, URL, gambar) dan canonical URL.
 
-- title dan description lebih relevan per intent halaman,
-- Open Graph URL lebih presisi,
-- keyword lebih kontekstual.
+### 3. Metadata Dinamis Detail Project
 
-### 3. Dynamic SEO untuk Portfolio Detail
+`app/portfolio/[slug]/page.tsx` menggunakan:
 
-Pada `app/portfolio/[slug]/page.tsx`, digunakan `generateMetadata` untuk menghasilkan metadata dinamis berbasis data project.
+- `generateStaticParams` untuk me-render semua project saat build,
+- `dynamicParams = false` sehingga slug yang tidak dikenal menghasilkan 404,
+- `generateMetadata` untuk title, description, keywords (dari nama teknologi), Open Graph image, dan Twitter Card per project.
 
-Metadata dinamis yang dihasilkan mencakup:
+### 4. Structured Data (JSON-LD)
 
-- title dan description per project,
-- keywords berdasarkan nama project dan teknologi,
-- Open Graph image dari gambar project,
-- Twitter Card image per project,
-- fallback metadata saat slug tidak ditemukan.
+Schema dibuat oleh fungsi di `lib/seo.ts` dan di-render melalui `components/seo/JsonLd.tsx`:
 
-Ini penting untuk meningkatkan kualitas preview link dan relevansi konten pada tiap halaman detail project.
+- Semua halaman: `Person` dan `WebSite`.
+- `/portfolio`: `BreadcrumbList`.
+- `/portfolio/[slug]`: `SoftwareApplication` dan `BreadcrumbList`.
 
-### 4. Sitemap dan Robots
+### 5. Sitemap dan Robots
 
-Proyek menggunakan `next-sitemap` dengan konfigurasi di `next-sitemap.config.js`.
+- `app/sitemap.ts` menghasilkan `/sitemap.xml` berisi halaman statis dan semua halaman project dari `constants/portfolio.ts`.
+- `app/robots.ts` menghasilkan `/robots.txt` yang menunjuk ke sitemap.
 
-Konfigurasi utama:
+Tidak ada langkah `postbuild` atau file sitemap di `public/`. Project baru otomatis masuk sitemap.
 
-- `siteUrl`: domain utama,
-- `generateRobotsTxt: true`,
-- daftar URL statis (home/about/portfolio/contact),
-- daftar URL dinamis portfolio (berdasarkan slug tertentu),
-- nilai `changefreq`, `priority`, dan `lastmod`.
+### 6. Cara Verifikasi SEO Setelah Deploy
 
-Output hasil build berada di folder `public/`:
-
-- `public/sitemap.xml`
-- `public/sitemap-0.xml`
-- `public/robots.txt`
-
-### 5. Cara Verifikasi SEO Setelah Deploy
-
-Langkah yang direkomendasikan:
-
-1. Periksa source page untuk memastikan title/meta sesuai route.
+1. Periksa source page untuk memastikan title dan meta sesuai route.
 2. Uji preview Open Graph di social debugger.
-3. Pastikan `https://domain.com/robots.txt` dan `https://domain.com/sitemap.xml` dapat diakses.
+3. Pastikan `/robots.txt` dan `/sitemap.xml` dapat diakses.
 4. Submit sitemap ke Google Search Console.
 5. Jalankan audit Lighthouse untuk memeriksa SEO score dan issue teknis.
 
@@ -212,28 +232,21 @@ Langkah yang direkomendasikan:
 
 Deployment dapat dilakukan ke platform yang mendukung Next.js (contoh: Vercel).
 
-Langkah umum:
-
 1. Install dependency: `pnpm install`
 2. Build: `pnpm build`
 3. Jalankan production: `pnpm start`
 
-Catatan:
-
-- Karena ada script `postbuild`, sitemap dan robots akan otomatis di-generate setelah proses build.
-- Pastikan domain production konsisten dengan `siteUrl` pada `next-sitemap.config.js` dan `metadataBase` pada `app/layout.tsx`.
+Pastikan domain production sama dengan `SITE.url` di `constants/site.ts`.
 
 ## Troubleshooting Singkat
 
-- Perubahan konten portfolio tidak muncul di sitemap:
-	- pastikan slug baru ikut di konfigurasi sitemap,
-	- jalankan ulang `pnpm build` agar `postbuild` men-generate sitemap terbaru.
+- Project baru tidak muncul:
+  - pastikan `slug` unik dan semua ID di `technologies` ada di `constants/tech.ts`,
+  - jalankan ulang `pnpm build` agar halaman detail ikut di-generate.
 - Metadata tidak berubah:
-	- pastikan route metadata berada di file layout/page yang benar,
-	- lakukan hard refresh browser dan redeploy bila perlu.
-- Asset OG image tidak tampil:
-	- pastikan path image valid dan dapat diakses publik.
-
----
-
-Dokumentasi ini bisa dikembangkan lebih lanjut dengan menambahkan bagian kontribusi, changelog, dan workflow CI/CD jika proyek mulai melibatkan kolaborasi tim.
+  - pastikan metadata diekspor dari `page.tsx` route yang benar,
+  - lakukan hard refresh browser dan redeploy bila perlu.
+- Gambar remote tidak tampil:
+  - tambahkan hostname-nya ke `images.remotePatterns` di `next.config.mjs`.
+- Form kontak gagal terkirim:
+  - periksa `SITE.contactFormEndpoint` di `constants/site.ts` dan pastikan Google Apps Script masih aktif.
