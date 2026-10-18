@@ -1,5 +1,6 @@
-import Loading from "@/components/Loading";
+import { type ReactElement } from "react";
+import { Loader } from "@/components/shared/Loader";
 
-export default function GlobalLoading() {
-    return <Loading />;
+export default function GlobalLoading(): ReactElement {
+    return <Loader />;
 }

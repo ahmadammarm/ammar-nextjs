@@ -1,16 +1,11 @@
-"use client";
+import { type ReactElement, type ReactNode } from "react";
+import { Reveal } from "@/components/motion/Reveal";
 
-import { motion } from "framer-motion";
-import React from "react";
-
-export default function Template({ children }: { children: React.ReactNode }) {
+/** Fades each page in on navigation. */
+export default function Template({ children }: { children: ReactNode }): ReactElement {
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeOut", duration: 0.5 }}
-        >
+        <Reveal trigger="mount">
             {children}
-        </motion.div>
+        </Reveal>
     );
 }

@@ -1,24 +1,24 @@
+import { type Metadata } from "next";
+import { type ReactElement, type ReactNode } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { ThemeProvider } from "@/components/theme-provider";
-import JsonLd from "@/components/JsonLd";
-import type { Metadata } from "next";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
+import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { Toaster } from "@/components/ui/toaster";
+import { SITE } from "@/constants/site";
+import { personSchema, websiteSchema } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://ahmadammar.my.id"),
-
+    metadataBase: new URL(SITE.url),
     title: {
-        default: "Ahmad Ammar Musyaffa | Personal Website",
-        template: "Ahmad Ammar Musyaffa | %s"
+        default: `${SITE.author} | Personal Website`,
+        template: `${SITE.author} | %s`,
     },
-
-    description:
-        "Professional Fullstack Developer specializing in Next.js, AI integration, and automation. Ahmad Ammar Musyaffa builds intelligent, scalable web applications and SaaS solutions.",
-
+    description: SITE.description,
     keywords: [
         "ahmad ammar musyaffa",
         "ahmad ammar",
@@ -34,16 +34,8 @@ export const metadata: Metadata = {
         "ahmad ammar um",
         "software engineer portfolio",
     ],
-
-    authors: [
-        {
-            name: "Ahmad Ammar Musyaffa",
-            url: "https://ahmadammar.my.id",
-        },
-    ],
-
-    creator: "Ahmad Ammar Musyaffa",
-
+    authors: [{ name: SITE.author, url: SITE.url }],
+    creator: SITE.author,
     robots: {
         index: true,
         follow: true,
@@ -55,67 +47,44 @@ export const metadata: Metadata = {
             "max-snippet": -1,
         },
     },
-
     openGraph: {
-        title: "Ahmad Ammar Musyaffa | Fullstack Developer & AI Enthusiast",
-        description:
-            "Portfolio Ahmad Ammar Musyaffa, a fullstack developer specializing in Next.js, Node.js, Laravel, Go, and AI-powered applications.",
-        url: "https://ahmadammar.my.id",
-        siteName: "Ammar Developer",
-        images: [
-            {
-                url: "/assets/metadata.png",
-                width: 1200,
-                height: 630,
-                alt: "Ahmad Ammar Musyaffa - Fullstack Developer Portfolio",
-            },
-        ],
+        title: `${SITE.author} | Fullstack Developer & AI Enthusiast`,
+        description: `Portfolio ${SITE.author}, a fullstack developer specializing in Next.js, Node.js, Laravel, Go, and AI-powered applications.`,
+        url: SITE.url,
+        siteName: SITE.name,
+        images: [{ ...SITE.ogImage, alt: `${SITE.author} - Fullstack Developer Portfolio` }],
         locale: "en_US",
         alternateLocale: ["id_ID"],
         type: "website",
     },
-
     twitter: {
         card: "summary_large_image",
-        title: "Ahmad Ammar Musyaffa | Fullstack Developer",
-        description:
-            "Fullstack developer with experience in Next.js, Node.js, Laravel, Go, and AI integration.",
-        images: ["/assets/metadata.png"],
-        creator: "@ahmadammarm",
+        title: `${SITE.author} | Fullstack Developer`,
+        description: "Fullstack developer with experience in Next.js, Node.js, Laravel, Go, and AI integration.",
+        images: [SITE.ogImage.url],
+        creator: SITE.twitterHandle,
     },
-
     icons: {
-        icon: [
-            { url: "/favicon.ico" },
-            { url: "/a.png", type: "image/png" }
-        ],
+        icon: [{ url: "/favicon.ico" }, { url: "/a.png", type: "image/png" }],
         shortcut: "/favicon.ico",
         apple: "/a.png",
     },
-
     alternates: {
-        canonical: "https://ahmadammar.my.id",
+        canonical: SITE.url,
     },
 };
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }): ReactElement {
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={inter.className}>
-                <JsonLd />
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="dark"
-                    enableSystem
-                    disableTransitionOnChange
-                >
+                <JsonLd schemas={[personSchema(), websiteSchema()]} />
+                <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
                     <Navbar />
-                    <main>{children}</main>
+                    {/* pt-20 offsets the fixed h-20 navbar */}
+                    <main className="pt-20">{children}</main>
                     <Footer />
+                    <Toaster />
                 </ThemeProvider>
             </body>
         </html>

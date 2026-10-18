@@ -1,128 +1,83 @@
-import type { Metadata } from "next";
+import { type Metadata } from "next";
+import { type ReactElement } from "react";
 import { notFound } from "next/navigation";
-import { fullPortfolio } from "@/constants/portfolio";
-import PortfolioDetailClient from "./PortfolioDetailClient";
+import { ProjectDetail } from "@/components/portfolio/ProjectDetail";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { portfolio } from "@/constants/portfolio";
+import { SITE } from "@/constants/site";
+import { tech } from "@/constants/tech";
+import { getProjectBySlug } from "@/lib/portfolio";
+import { absoluteUrl, breadcrumbSchema, projectSchema } from "@/lib/seo";
 
-interface PageProps {
+type PageProps = {
     params: { slug: string };
-}
-
-const cleanTechName = (path: string) => {
-    const name = path.split("/").pop()?.replace(/\.(png|svg|jpg|jpeg)$/, "") || "";
-    return name.charAt(0).toUpperCase() + name.slice(1);
 };
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { slug } = params;
-    const portfolio = fullPortfolio.find((item) => item.slug === slug);
+export const dynamicParams = false;
 
-    if (!portfolio) {
-        return {
-            title: "Project Not Found | Ahmad Ammar",
-        };
+export function generateStaticParams(): PageProps["params"][] {
+    return portfolio.map((project) => ({ slug: project.slug }));
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+    const project = getProjectBySlug(params.slug);
+
+    if (!project) {
+        return { title: `Project Not Found | ${SITE.shortAuthor}` };
     }
 
-    const seoTitle = portfolio.seoTitle || `${portfolio.nama} | Projects`;
-    const seoDescription = portfolio.seoDescription || portfolio.deskripsi;
+    const title = `${project.name} | Projects`;
+    const url = absoluteUrl(`/portfolio/${project.slug}`);
+    const cover = project.images[0];
 
     return {
-        title: seoTitle,
-        description: seoDescription,
+        title,
+        description: project.description,
         keywords: [
-            portfolio.nama,
+            project.name,
             "ahmad ammar portfolio",
             "software project",
             "web application",
-            "Ahmad Ammar Musyaffa",
-            ...(portfolio.teknologi.map(cleanTechName)),
+            SITE.author,
+            ...project.technologies.map((id) => tech[id].name),
         ],
         openGraph: {
-            title: seoTitle,
-            description: seoDescription,
-            url: `https://ahmadammar.my.id/portfolio/${slug}`,
-            images: [
-                {
-                    url: portfolio.gambar,
-                    width: 1200,
-                    height: 630,
-                    alt: portfolio.nama,
-                },
-            ],
+            title,
+            description: project.description,
+            url,
+            images: [{ url: cover, width: SITE.ogImage.width, height: SITE.ogImage.height, alt: project.name }],
             type: "article",
         },
         twitter: {
             card: "summary_large_image",
-            title: seoTitle,
-            description: seoDescription,
-            images: [portfolio.gambar],
+            title,
+            description: project.description,
+            images: [cover],
         },
         alternates: {
-            canonical: `https://ahmadammar.my.id/portfolio/${slug}`,
+            canonical: url,
         },
     };
 }
 
-export default async function PortfolioDetailPage({ params }: PageProps) {
-    const { slug } = params;
-    const portfolio = fullPortfolio.find((item) => item.slug === slug);
+export default function ProjectDetailPage({ params }: PageProps): ReactElement {
+    const project = getProjectBySlug(params.slug);
 
-    if (!portfolio) notFound();
-
-    const softwareSchema = {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": portfolio.nama,
-        "description": portfolio.deskripsi,
-        "applicationCategory": portfolio.category === "web-app" ? "WebApplication" : "BusinessApplication",
-        "operatingSystem": "Web",
-        "author": {
-            "@type": "Person",
-            "name": "Ahmad Ammar Musyaffa"
-        },
-        "screenshot": `https://ahmadammar.my.id${portfolio.gambar}`,
-        "softwareRequirements": portfolio.teknologi.map(cleanTechName).join(", ")
-    };
-
-    const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://ahmadammar.my.id",
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Portfolio",
-                "item": "https://ahmadammar.my.id/portfolio",
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": portfolio.nama,
-                "item": `https://ahmadammar.my.id/portfolio/${portfolio.slug}`,
-            },
-        ],
-    };
+    if (!project) notFound();
 
     return (
         <>
-            <script
-                type="application/ld+json"
-                suppressHydrationWarning
-            >
-                {JSON.stringify(softwareSchema)}
-            </script>
-            <script
-                type="application/ld+json"
-                suppressHydrationWarning
-            >
-                {JSON.stringify(breadcrumbSchema)}
-            </script>
-            <PortfolioDetailClient />
+            <JsonLd
+                schemas={[
+                    projectSchema(project),
+                    breadcrumbSchema([
+                        { name: "Home", path: "" },
+                        { name: "Portfolio", path: "/portfolio" },
+                        { name: project.name, path: `/portfolio/${project.slug}` },
+                    ]),
+                ]}
+            />
+            <ProjectDetail project={project} />
         </>
     );
 }

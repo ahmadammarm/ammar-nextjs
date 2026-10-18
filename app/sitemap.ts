@@ -1,48 +1,32 @@
-import { MetadataRoute } from "next";
-import { fullPortfolio } from "@/constants/portfolio";
+import { type MetadataRoute } from "next";
+import { portfolio } from "@/constants/portfolio";
+import { absoluteUrl } from "@/lib/seo";
+
+type SitemapEntry = MetadataRoute.Sitemap[number];
+
+const staticPages: Pick<SitemapEntry, "url" | "changeFrequency" | "priority">[] = [
+    { url: "", changeFrequency: "weekly", priority: 1.0 },
+    { url: "/about", changeFrequency: "monthly", priority: 0.8 },
+    { url: "/portfolio", changeFrequency: "weekly", priority: 0.9 },
+    { url: "/services", changeFrequency: "monthly", priority: 0.8 },
+    { url: "/contact", changeFrequency: "monthly", priority: 0.7 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://ahmadammar.my.id";
+    const lastModified = new Date();
 
-    const staticPages: MetadataRoute.Sitemap = [
-        {
-            url: baseUrl,
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 1.0,
-        },
-        {
-            url: `${baseUrl}/about`,
-            lastModified: new Date(),
-            changeFrequency: "monthly",
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/portfolio`,
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 0.9,
-        },
-        {
-            url: `${baseUrl}/services`,
-            lastModified: new Date(),
-            changeFrequency: "monthly",
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/contact`,
-            lastModified: new Date(),
-            changeFrequency: "monthly",
-            priority: 0.7,
-        },
-    ];
+    const pages: MetadataRoute.Sitemap = staticPages.map((page) => ({
+        ...page,
+        url: absoluteUrl(page.url),
+        lastModified,
+    }));
 
-    const portfolioPages: MetadataRoute.Sitemap = fullPortfolio.map((item) => ({
-        url: `${baseUrl}/portfolio/${item.slug}`,
-        lastModified: new Date(),
+    const projects: MetadataRoute.Sitemap = portfolio.map((project) => ({
+        url: absoluteUrl(`/portfolio/${project.slug}`),
+        lastModified,
         changeFrequency: "monthly",
         priority: 0.6,
     }));
 
-    return [...staticPages, ...portfolioPages];
+    return [...pages, ...projects];
 }

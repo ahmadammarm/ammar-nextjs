@@ -1,4 +1,4 @@
-import { Service } from "@/types/services";
+import { type Service } from "@/types/service";
 
 export const services: Service[] = [
     {
@@ -10,7 +10,7 @@ export const services: Service[] = [
             "Fast loading speeds",
             "Modern Neobrutalist UI"
         ],
-        icon: "Layout",
+        icon: "layout",
         whatsappMessage: "Hi Ammar, I'm interested in the Web Foundations package."
     },
     {
@@ -22,7 +22,7 @@ export const services: Service[] = [
             "Database management",
             "Cloud deployment"
         ],
-        icon: "Bot",
+        icon: "bot",
         whatsappMessage: "Hi Ammar, I'm interested in the AI-Enhanced Web Apps package."
     },
     {
@@ -34,7 +34,7 @@ export const services: Service[] = [
             "Workflow automation",
             "Data analysis tools"
         ],
-        icon: "Cpu",
+        icon: "cpu",
         whatsappMessage: "Hi Ammar, I'm interested in Custom AI Solutions for my business."
     }
 ];
