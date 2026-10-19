@@ -8,9 +8,9 @@ export const SITE: SiteConfig = {
     description:
         "Professional Fullstack Developer specializing in Next.js, AI integration, and automation. Ahmad Ammar Musyaffa builds intelligent, scalable web applications and SaaS solutions.",
     ogImage: {
-        url: "/assets/metadata.png",
-        width: 1200,
-        height: 630,
+        url: "/assets/web-image.png",
+        width: 1348,
+        height: 767,
     },
     themeColor: "#007AFF",
     twitterHandle: "@ahmadammarm",
