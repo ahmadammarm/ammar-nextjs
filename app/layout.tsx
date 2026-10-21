@@ -1,6 +1,5 @@
 import { type Metadata } from "next";
 import { type ReactElement, type ReactNode } from "react";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
@@ -8,9 +7,8 @@ import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Toaster } from "@/components/ui/toaster";
 import { SITE } from "@/constants/site";
+import { caveat, inter } from "@/lib/fonts";
 import { personSchema, websiteSchema } from "@/lib/seo";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE.url),
@@ -77,7 +75,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }): ReactElement {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={inter.className}>
+            <body className={`${inter.className} ${caveat.variable}`}>
                 <JsonLd schemas={[personSchema(), websiteSchema()]} />
                 <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
                     <Navbar />

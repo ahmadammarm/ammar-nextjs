@@ -2,8 +2,8 @@ import { type ReactElement } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, DownloadIcon } from "lucide-react";
+import { HeroIntro } from "@/components/home/HeroIntro";
 import { Reveal } from "@/components/motion/Reveal";
-import { Highlight } from "@/components/shared/SectionHeading";
 import { WindowFrame } from "@/components/shared/WindowFrame";
 import { neoButton } from "@/components/shared/neo-button";
 import { heroTech } from "@/constants/home";
@@ -20,12 +20,7 @@ export function HeroSection(): ReactElement {
                         preset="slideLeft"
                         className="w-full lg:w-3/5 flex flex-col items-center lg:items-start text-center lg:text-left"
                     >
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight text-foreground leading-[1.05] mb-5">
-                            Hi, I&apos;m <Highlight>{profile.name}</Highlight>
-                        </h1>
-                        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mb-6">
-                            {profile.heroBio}
-                        </p>
+                        <HeroIntro name={profile.name} bio={profile.heroBio} />
 
                         <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-8">
                             {heroTech.map((name) => (
