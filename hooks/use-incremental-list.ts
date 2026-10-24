@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type IncrementalList<T> = {
     visibleItems: T[];
@@ -6,17 +6,21 @@ type IncrementalList<T> = {
     loadMore: () => void;
 };
 
-/** Reveals `items` in pages of `pageSize`; resets when the `items` reference changes. */
-export function useIncrementalList<T>(items: T[], pageSize: number): IncrementalList<T> {
-    const [count, setCount] = useState(pageSize);
+type PagingState<T> = {
+    source: T[];
+    count: number;
+};
 
-    useEffect(() => {
-        setCount(pageSize);
-    }, [items, pageSize]);
+/** Reveals `items` in pages of `pageSize`; paging restarts whenever the `items` reference changes. */
+export function useIncrementalList<T>(items: T[], pageSize: number): IncrementalList<T> {
+    const [paging, setPaging] = useState<PagingState<T>>({ source: items, count: pageSize });
+
+    // Derive the count instead of resetting it in an effect, so a new list never renders with a stale count.
+    const count = paging.source === items ? paging.count : pageSize;
 
     return {
         visibleItems: items.slice(0, count),
         hasMore: count < items.length,
-        loadMore: () => setCount((current) => current + pageSize),
+        loadMore: () => setPaging({ source: items, count: count + pageSize }),
     };
 }

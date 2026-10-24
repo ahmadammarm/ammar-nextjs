@@ -1,9 +1,10 @@
 "use client";
 
-import { type MouseEvent, type ReactElement, useEffect, useRef, useState } from "react";
+import { type MouseEvent, type ReactElement, useRef } from "react";
 import { flushSync } from "react-dom";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
+import { useMounted } from "@/hooks/use-mounted";
 import { runCircularTransition } from "@/lib/theme-transition";
 
 const buttonClass =
@@ -11,12 +12,8 @@ const buttonClass =
 
 export function ModeToggle(): ReactElement {
     const { setTheme, resolvedTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
+    const mounted = useMounted();
     const buttonRef = useRef<HTMLButtonElement>(null);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     const isDark = resolvedTheme === "dark";
 

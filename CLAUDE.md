@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A Next.js 14 personal portfolio website for Ahmad Ammar Musyaffa, a fullstack developer. The site is data-driven, Neobrutalist in styling, and showcases projects, experience, skills, services, and contact information.
+A Next.js 16 personal portfolio website for Ahmad Ammar Musyaffa, a fullstack developer. The site is data-driven, Neobrutalist in styling, and showcases projects, experience, skills, services, and contact information.
 
 ## Commands
 
@@ -12,10 +12,10 @@ A Next.js 14 personal portfolio website for Ahmad Ammar Musyaffa, a fullstack de
 pnpm dev        # Start development server on http://localhost:3000
 pnpm build      # Build for production (pre-renders all /portfolio/[slug] pages)
 pnpm start      # Start production server
-pnpm lint       # Run ESLint check
+pnpm lint       # Run ESLint (flat config in eslint.config.mjs)
 ```
 
-Package manager: `pnpm` (`pnpm-lock.yaml` is the only lockfile).
+Package manager: `pnpm` (`pnpm-lock.yaml` is the only lockfile). Runtime: Node.js `>=24.22.1 <25` (`engines` in `package.json`, `.nvmrc`); older Node.js releases are affected by the October 2026 security release (Brotli decoder RCE).
 
 ## Architecture
 
@@ -50,7 +50,7 @@ components/
 constants/                  # Source of truth for all content (portfolio, profile, experiences, site, tech, ...)
 types/                      # Types for constants (plain .ts modules, imported explicitly)
 lib/                        # utils (cn), seo, motion presets, portfolio queries, contact schema + submit, theme transition
-hooks/                      # use-toast, use-incremental-list
+hooks/                      # use-toast, use-mounted, use-incremental-list
 public/                     # Static assets
 ```
 
@@ -77,4 +77,5 @@ public/                     # Static assets
   - Schema builders (`personSchema`, `websiteSchema`, `breadcrumbSchema`, `projectSchema`) live in `lib/seo.ts` and render through `components/seo/JsonLd.tsx`.
   - `app/sitemap.ts` and `app/robots.ts` generate `/sitemap.xml` and `/robots.txt` at request/build time; there is no postbuild step.
 - **Contact form**: `components/contact/ContactForm.tsx` uses react-hook-form with the zod schema in `lib/contact.ts`. `submitContactForm` posts to the Google Apps Script endpoint, which expects the message under the `pesan` key.
+- **Next.js 16 specifics**: dynamic route `params` is a `Promise`, so `await params` in `page` and `generateMetadata` (see `app/portfolio/[slug]/page.tsx`). Turbopack is the default bundler and rejects `app/favicon.ico` frames that are not RGBA, so re-encode any new favicon frame as RGBA. Linting runs through `eslint .` because `next lint` no longer exists.
 - **Path aliases**: `@/*` maps to the project root directory.

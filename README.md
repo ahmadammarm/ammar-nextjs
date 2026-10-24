@@ -13,6 +13,7 @@ Personal portfolio website for Ahmad Ammar Musyaffa, a fullstack developer with 
 - [Getting Started](#getting-started)
 - [Available Scripts](#available-scripts)
 - [SEO Implementation](#seo-implementation)
+- [Security and Updates](#security-and-updates)
 - [Deployment](#deployment)
 - [Troubleshooting](#troubleshooting)
 
@@ -31,7 +32,7 @@ Content is data-driven through the `constants/` folder, so updating content does
 
 ## Key Features
 
-- Next.js 14 App Router with a route group and statically generated dynamic routes (`generateStaticParams`).
+- Next.js 16 App Router with a route group and statically generated dynamic routes (`generateStaticParams`).
 - Server-first components: only interactive parts are client components.
 - Dark mode with `next-themes` and a circular reveal transition (View Transitions API).
 - Entry animations with Framer Motion through the `Reveal` wrapper.
@@ -44,8 +45,8 @@ Content is data-driven through the `constants/` folder, so updating content does
 
 ### Core
 
-- Next.js 14 (App Router)
-- React 18
+- Next.js 16 (App Router, Turbopack)
+- React 19
 - TypeScript 5
 
 ### UI and Styling
@@ -100,7 +101,7 @@ components/
 constants/                  # Content data source
 types/                      # Types for the data in constants
 lib/                        # Helpers: seo, motion, portfolio, contact, theme transition, cn()
-hooks/                      # use-toast, use-incremental-list
+hooks/                      # use-toast, use-mounted, use-incremental-list
 public/                     # Static assets
 ```
 
@@ -145,8 +146,8 @@ The detail page, sitemap entry, and project metadata are generated automatically
 
 ### 1. Prerequisites
 
-- Node.js 18.17+ (latest LTS recommended)
-- pnpm 8+
+- Node.js 24.22.1 or newer in the 24.x line (see [Security and Updates](#security-and-updates)); `.nvmrc` selects 24
+- pnpm 11 (the version that produced `pnpm-lock.yaml`)
 
 ### 2. Install dependencies
 
@@ -167,7 +168,7 @@ The site runs at `http://localhost:3000`.
 - `pnpm dev`: Start the development server.
 - `pnpm build`: Create a production build, including pre-rendering every project detail page.
 - `pnpm start`: Serve the production build.
-- `pnpm lint`: Run ESLint.
+- `pnpm lint`: Run ESLint (flat config in `eslint.config.mjs`).
 
 Local production flow:
 
@@ -227,6 +228,12 @@ There is no `postbuild` step and no sitemap file in `public/`. New projects are 
 3. Make sure `/robots.txt` and `/sitemap.xml` are reachable.
 4. Submit the sitemap to Google Search Console.
 5. Run a Lighthouse audit to check the SEO score and technical issues.
+
+## Security and Updates
+
+- **Node.js:** `package.json` requires `>=24.22.1 <25`. The October 21, 2026 Node.js security release (10 CVEs, including a Brotli decoder out-of-bounds write, CVE-2026-111497) is fixed in 24.22.1, 22.23.4, and 26.12.1. Node.js 20 and older receive no fix. Check the running version with `node -v`, and set the same minimum on your hosting platform.
+- **Next.js:** the 14.x line is no longer patched, and the 2026 advisories (including the image-optimization RCEs) affect it. This project runs the 16.x line (16.4.3). Releases are announced on the [Next.js blog](https://nextjs.org/blog); patch to the newest 16.x when a security release ships.
+- **Dependencies:** run `pnpm audit` regularly. Remaining findings are build and lint tooling (ESLint, Tailwind 3) that never ship to production.
 
 ## Deployment
 

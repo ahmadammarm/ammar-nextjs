@@ -9,18 +9,23 @@ import { tech } from "@/constants/tech";
 import { getProjectBySlug } from "@/lib/portfolio";
 import { absoluteUrl, breadcrumbSchema, projectSchema } from "@/lib/seo";
 
+type RouteParams = {
+    slug: string;
+};
+
 type PageProps = {
-    params: { slug: string };
+    params: Promise<RouteParams>;
 };
 
 export const dynamicParams = false;
 
-export function generateStaticParams(): PageProps["params"][] {
+export function generateStaticParams(): RouteParams[] {
     return portfolio.map((project) => ({ slug: project.slug }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-    const project = getProjectBySlug(params.slug);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params;
+    const project = getProjectBySlug(slug);
 
     if (!project) {
         return { title: "Project Not Found" };
@@ -60,8 +65,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
     };
 }
 
-export default function ProjectDetailPage({ params }: PageProps): ReactElement {
-    const project = getProjectBySlug(params.slug);
+export default async function ProjectDetailPage({ params }: PageProps): Promise<ReactElement> {
+    const { slug } = await params;
+    const project = getProjectBySlug(slug);
 
     if (!project) notFound();
 
