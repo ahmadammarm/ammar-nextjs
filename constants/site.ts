@@ -1,3 +1,4 @@
+import { profile } from "@/constants/profile";
 import { type SiteConfig } from "@/types/site";
 
 export const SITE: SiteConfig = {
@@ -5,8 +6,7 @@ export const SITE: SiteConfig = {
     name: "Ammar Developer",
     author: "Ahmad Ammar Musyaffa",
     shortAuthor: "Ahmad Ammar",
-    description:
-        "Professional Fullstack Developer specializing in Next.js, AI integration, and automation. Ahmad Ammar Musyaffa builds intelligent, scalable web applications and SaaS solutions.",
+    description: profile.aboutBio,
     ogImage: {
         url: "/assets/web-image.png",
         width: 1348,

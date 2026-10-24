@@ -12,7 +12,8 @@ export const metadata: Metadata = createPageMetadata({
     path: "/about",
     description:
         "Learn more about Ahmad Ammar Musyaffa, focusing on Software Engineering and Fullstack Development specializing in Next.js, Go, Laravel, and scalable web applications.",
-    ogDescription: "Fullstack developer specializing in Next.js, Node.js, Laravel, Go, and AI-powered applications.",
+    ogDescription:
+        "Software engineer building full-stack web applications with Next.js, Laravel, Go, FastAPI, Vue, PostgreSQL, and MySQL.",
     ogImageAlt: "About Ahmad Ammar",
     keywords: [
         "about ahmad ammar",
