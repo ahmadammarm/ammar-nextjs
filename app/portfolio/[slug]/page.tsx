@@ -23,15 +23,15 @@ export function generateMetadata({ params }: PageProps): Metadata {
     const project = getProjectBySlug(params.slug);
 
     if (!project) {
-        return { title: `Project Not Found | ${SITE.shortAuthor}` };
+        return { title: "Project Not Found" };
     }
 
-    const title = `${project.name} | Projects`;
+    const socialTitle = `${project.name} | Projects`;
     const url = absoluteUrl(`/portfolio/${project.slug}`);
     const cover = project.images[0];
 
     return {
-        title,
+        title: project.name,
         description: project.description,
         keywords: [
             project.name,
@@ -42,7 +42,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
             ...project.technologies.map((id) => tech[id].name),
         ],
         openGraph: {
-            title,
+            title: socialTitle,
             description: project.description,
             url,
             images: [{ url: cover, width: SITE.ogImage.width, height: SITE.ogImage.height, alt: project.name }],
@@ -50,7 +50,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
         },
         twitter: {
             card: "summary_large_image",
-            title,
+            title: socialTitle,
             description: project.description,
             images: [cover],
         },
