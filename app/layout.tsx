@@ -10,10 +10,12 @@ import { SITE } from "@/constants/site";
 import { caveat, inter } from "@/lib/fonts";
 import { personSchema, websiteSchema } from "@/lib/seo";
 
+const HOME_TITLE = `${SITE.author} | Fullstack Developer & AI Enthusiast`;
+
 export const metadata: Metadata = {
     metadataBase: new URL(SITE.url),
     title: {
-        default: `${SITE.author} | Personal Website`,
+        default: HOME_TITLE,
         template: `${SITE.author} | %s`,
     },
     description: SITE.description,
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
         },
     },
     openGraph: {
-        title: `${SITE.author} | Fullstack Developer & AI Enthusiast`,
+        title: HOME_TITLE,
         description: `Portfolio ${SITE.author}, a fullstack developer specializing in Next.js, Node.js, Laravel, Go, and AI-powered applications.`,
         url: SITE.url,
         siteName: SITE.name,
