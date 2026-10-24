@@ -10,7 +10,7 @@ export function Footer(): ReactElement {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-center md:text-left">
                     <p className="font-black text-lg uppercase tracking-tight">{profile.name}</p>
-                    <p className="text-xs md:text-sm font-bold tracking-wide text-black/80 mt-1">
+                    <p className="text-xs md:text-sm font-bold tracking-wide text-black mt-1">
                         &copy; {currentYear} All Rights Reserved.
                     </p>
                 </div>

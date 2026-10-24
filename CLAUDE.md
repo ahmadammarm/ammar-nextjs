@@ -57,7 +57,7 @@ public/                     # Static assets
 ### Key Conventions
 
 - **Pages only compose**: `app/**/page.tsx` exports `metadata` and renders feature components. Put UI in `components/<feature>/`, reusable pieces in `components/shared/`, logic in `lib/` or `hooks/`.
-- **Server-first**: components are Server Components by default. Only add `"use client"` for state, effects, or event handlers. For entry animations, wrap content in `<Reveal>` (`components/motion/Reveal.tsx`, presets in `lib/motion.ts`) instead of making the section a client component.
+- **Server-first**: components are Server Components by default. Only add `"use client"` for state, effects, or event handlers. For entry animations, wrap content in `<Reveal>` (`components/motion/Reveal.tsx`, presets in `lib/motion.ts`) instead of making the section a client component. Above-the-fold content (`app/template.tsx`, the hero) uses the CSS `animate-in` utilities instead: `<Reveal>` renders at opacity 0 until hydration, which delays LCP.
 - **Data-driven content**: copy and list items live in `constants/*.ts`, typed by `types/*.ts`. Field names are in English. Edit content in `constants/`, not in components.
   - `constants/site.ts` holds the site URL, author, OG image, and contact form endpoint. Never hard-code the domain; use `SITE` or `absoluteUrl()` from `lib/seo.ts`.
   - `constants/tech.ts` is the technology registry. Projects, experiences, and skills reference technologies by `TechId`; names and logos come from the registry.

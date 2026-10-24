@@ -14,7 +14,7 @@ export function StatCard({ stat, variant }: StatCardProps): ReactElement {
             <div className="bg-background neo-border neo-press p-5 md:p-6 flex flex-col justify-between cursor-default">
                 <span className="text-4xl md:text-5xl font-black text-foreground tracking-tight">{stat.value}</span>
                 <div className="mt-3 pt-3 border-t-2 border-black/10 dark:border-white/10">
-                    <h4 className="text-xs md:text-sm font-black uppercase tracking-wider text-foreground">{stat.label}</h4>
+                    <h3 className="text-xs md:text-sm font-black uppercase tracking-wider text-foreground">{stat.label}</h3>
                     <p className="text-[11px] text-muted-foreground mt-0.5">{stat.detail}</p>
                 </div>
             </div>
@@ -39,7 +39,7 @@ export function StatCard({ stat, variant }: StatCardProps): ReactElement {
             <p
                 className={cn(
                     "text-xs sm:text-sm mt-3 pt-3 border-t-2 border-black dark:border-white",
-                    featured ? "text-black/80 font-semibold" : "text-muted-foreground"
+                    featured ? "text-black font-semibold" : "text-muted-foreground"
                 )}
             >
                 {stat.detail}
