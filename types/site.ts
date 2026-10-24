@@ -15,3 +15,10 @@ export type SiteConfig = {
     twitterHandle: string;
     contactFormEndpoint: string;
 };
+
+export type SitePage = {
+    /** Path from the site root; empty for the home page. */
+    path: string;
+    label: string;
+    summary: string;
+};

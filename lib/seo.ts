@@ -79,7 +79,8 @@ export function websiteSchema(): JsonLdSchema {
     return {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        name: `${profile.name} | Personal Website`,
+        name: SITE.name,
+        alternateName: profile.name,
         url: SITE.url,
         description: profile.aboutBio,
         author: {
