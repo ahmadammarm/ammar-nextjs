@@ -26,6 +26,7 @@ export function ProjectGallery({ name, slug, images }: ProjectGalleryProps): Rea
                         src={activeImage}
                         alt={name}
                         fill
+                        quality={100}
                         sizes="(max-width: 1200px) 100vw, 1200px"
                         className="object-cover"
                         priority
@@ -51,7 +52,7 @@ export function ProjectGallery({ name, slug, images }: ProjectGalleryProps): Rea
                                         : "border-black dark:border-white neo-press-sm opacity-75 hover:opacity-100"
                                 )}
                             >
-                                <Image src={image} alt={`Preview ${index + 1}`} fill sizes="120px" className="object-cover" />
+                                <Image src={image} alt={`Preview ${index + 1}`} fill quality={100} sizes="120px" className="object-cover" />
                             </button>
                         );
                     })}
