@@ -163,6 +163,10 @@ h2::selection {
   animation: marquee 28s linear infinite;
 }
 
+.animate-marquee-reverse {
+  animation-direction: reverse;
+}
+
 .animate-marquee:hover {
   animation-play-state: paused;
 }
