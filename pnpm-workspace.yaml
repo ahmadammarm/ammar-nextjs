@@ -1,2 +1,13 @@
 allowBuilds:
   unrs-resolver: true
+
+# Transitive dependencies with published advisories (tailwindcss-animate, eslint-config-next).
+# Each selector only matches the vulnerable range; remove once the parents ship patched ranges.
+overrides:
+  "picomatch@<2.3.2": "^2.3.2"
+  "picomatch@>=4.0.0 <4.0.4": "^4.0.4"
+  "postcss-selector-parser@<6.1.5": "^6.1.5"
+  "minimatch@<3.1.4": "^3.1.5"
+  "brace-expansion@<1.1.21": "^1.1.21"
+  "flatted@<3.4.2": "^3.4.2"
+  "zod@<4.6.6": "^4.6.7"
