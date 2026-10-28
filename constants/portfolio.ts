@@ -23,6 +23,32 @@ export const PORTFOLIO_PAGE_SIZE = 6;
 /** Ordered newest first. Set `featured: true` to show a project on the home page. */
 export const portfolio: Portfolio[] = [
     {
+        name: "SARPEBE",
+        slug: "sarpebe",
+        category: "web-app",
+        featured: true,
+        images: [
+            "/assets/Portofolio_Ammar/Sarpebe_-_Sistem_Automasi_Rancangan_Pembelajaran/Main.webp",
+            "/assets/Portofolio_Ammar/Sarpebe_-_Sistem_Automasi_Rancangan_Pembelajaran/1_-_Modul_Ajar.webp",
+            "/assets/Portofolio_Ammar/Sarpebe_-_Sistem_Automasi_Rancangan_Pembelajaran/2_-_Upload_Dokumen_Sumber.webp",
+            "/assets/Portofolio_Ammar/Sarpebe_-_Sistem_Automasi_Rancangan_Pembelajaran/3_-_List_Modul_Ajar.webp",
+            "/assets/Portofolio_Ammar/Sarpebe_-_Sistem_Automasi_Rancangan_Pembelajaran/4_-_Form_Pembuatan_Modul_Ajar.webp",
+        ],
+        description: "SARPEBE is a curriculum automation platform that helps Indonesian teachers draft Kurikulum Merdeka lesson plans in minutes, grounded in official documents.",
+        longDescription: "SARPEBE is a curriculum automation platform that helps Indonesian teachers draft Kurikulum Merdeka lesson plans (Modul Ajar) in minutes. Every lesson plan is grounded in official curriculum documents and cites its source pages.",
+        features: [
+            "Hybrid RAG over official CP, ATP, and Buku Guru PDFs with pgvector, full-text search, and an LLM reranker.",
+            "Grounded Gemini generation with schema checks; stops instead of inventing content.",
+            "Server-built source citations that link each objective to a real document page.",
+            "Fault-tolerant Celery and Redis jobs with retries, live SSE progress, and cost logging.",
+            "Teacher and admin roles with daily quotas, plus editing and PDF or Word export.",
+        ],
+        technologies: ["nextjs", "fastapi", "postgresql", "redis", "gemini"],
+        year: "2026",
+        role: "Fullstack Developer",
+        platform: "Web Application",
+    },
+    {
         name: "Amami",
         slug: "amami",
         category: "web-app",
@@ -78,7 +104,6 @@ export const portfolio: Portfolio[] = [
         name: "Naiju CBT",
         slug: "ujian-cbt",
         category: "web-app",
-        featured: true,
         images: [
             "/assets/Portofolio_Ammar/Naiju_-_Ujian_CBT/Main.webp",
             "/assets/Portofolio_Ammar/Naiju_-_Ujian_CBT/1_-_Dashboard.webp",
