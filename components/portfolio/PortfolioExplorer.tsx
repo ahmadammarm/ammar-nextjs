@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ProjectCard } from "@/components/shared/ProjectCard";
 import { NeoTabs } from "@/components/shared/NeoTabs";
-import { PORTFOLIO_FILTERS, PORTFOLIO_PAGE_SIZE } from "@/constants/portfolio";
+import { PORTFOLIO_FILTERS, PORTFOLIO_PAGE_SIZE, SHOW_PORTFOLIO_FILTERS } from "@/constants/portfolio";
 import { useIncrementalList } from "@/hooks/use-incremental-list";
 import { filterProjects } from "@/lib/portfolio";
 import { type PortfolioFilter } from "@/types/portfolio";
@@ -28,33 +28,37 @@ export function PortfolioExplorer(): ReactElement {
 
     return (
         <>
-            <NeoTabs
-                tabs={PORTFOLIO_FILTERS}
-                value={filter}
-                onChange={setFilter}
-                className="mt-8 mb-12 md:mb-16 justify-center"
-                tabClassName="px-4 sm:px-5 text-xs sm:text-sm"
-            />
+            {SHOW_PORTFOLIO_FILTERS && (
+                <NeoTabs
+                    tabs={PORTFOLIO_FILTERS}
+                    value={filter}
+                    onChange={setFilter}
+                    className="mt-8 mb-12 md:mb-16 justify-center"
+                    tabClassName="px-4 sm:px-5 text-xs sm:text-sm"
+                />
+            )}
 
-            <InfiniteScroll dataLength={visibleItems.length} next={loadMore} hasMore={hasMore} loader={<LoadingMore />}>
-                <AnimatePresence mode="popLayout">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                        {visibleItems.map((project, index) => (
-                            <motion.div
-                                key={project.slug}
-                                layout
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, scale: 0.95 }}
-                                transition={{ duration: 0.35, delay: (index % PORTFOLIO_PAGE_SIZE) * 0.05 }}
-                                className="h-full flex flex-col"
-                            >
-                                <ProjectCard project={project} showSource />
-                            </motion.div>
-                        ))}
-                    </div>
-                </AnimatePresence>
-            </InfiniteScroll>
+            <div className={SHOW_PORTFOLIO_FILTERS ? undefined : "mt-10 md:mt-14"}>
+                <InfiniteScroll dataLength={visibleItems.length} next={loadMore} hasMore={hasMore} loader={<LoadingMore />}>
+                    <AnimatePresence mode="popLayout">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            {visibleItems.map((project, index) => (
+                                <motion.div
+                                    key={project.slug}
+                                    layout
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    transition={{ duration: 0.35, delay: (index % PORTFOLIO_PAGE_SIZE) * 0.05 }}
+                                    className="h-full flex flex-col"
+                                >
+                                    <ProjectCard project={project} showSource />
+                                </motion.div>
+                            ))}
+                        </div>
+                    </AnimatePresence>
+                </InfiniteScroll>
+            </div>
         </>
     );
 }

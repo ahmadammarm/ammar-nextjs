@@ -20,6 +20,9 @@ export const PORTFOLIO_FILTERS: readonly { value: PortfolioFilter; label: string
 
 export const PORTFOLIO_PAGE_SIZE = 6;
 
+/** Category tabs on /portfolio are hidden while there are few projects; the grid shows every category. */
+export const SHOW_PORTFOLIO_FILTERS = false;
+
 /** Ordered newest first. Set `featured: true` to show a project on the home page. */
 export const portfolio: Portfolio[] = [
     {
